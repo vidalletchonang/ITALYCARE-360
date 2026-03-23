@@ -1,5 +1,33 @@
 export type LangCode = 'fr' | 'en' | 'ar' | 'it'
 
+export interface QuizOption {
+  text: string
+  points: number
+}
+
+export interface QuizQuestion {
+  question: string
+  options: QuizOption[]
+}
+
+export interface ServiceDetails {
+  hero: string
+  whatIs: string
+  includes: string[]
+  notIncludes: string[]
+  price: string
+  duration: string
+  quiz: QuizQuestion[]
+}
+
+export interface ServiceItem {
+  icon: string
+  t: string
+  d: string
+  slug: string
+  details: ServiceDetails
+}
+
 export interface Translation {
   nav: {
     services: string
@@ -35,7 +63,7 @@ export interface Translation {
     h2: string
     desc: string
     discover: string
-    items: { icon: string; t: string; d: string }[]
+    items: ServiceItem[]
   }
   process: {
     label: string
@@ -84,5 +112,29 @@ export interface Translation {
     error: string
     errorMsg: string
     close: string
+  }
+  serviceDetail: {
+    backBtn: string
+    eligibilityTitle: string
+    eligibilitySubtitle: string
+    startBtn: string
+    nextBtn: string
+    prevBtn: string
+    resultTitle: string
+    eligible: string
+    partial: string
+    notEligible: string
+    eligibleMsg: string
+    partialMsg: string
+    notEligibleMsg: string
+    rdvBtn: string
+    retryBtn: string
+    question: string
+    of: string
+    included: string
+    notIncluded: string
+    price: string
+    duration: string
+    contact: string
   }
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 
 interface ServicesProps {
@@ -31,7 +32,7 @@ export default function Services({ onRdv }: ServicesProps) {
             <span className="sc-ico">{item.icon}</span>
             <div className="sc-t font-playfair">{item.t}</div>
             <div className="sc-d">{item.d}</div>
-            <button className="sc-lnk" onClick={onRdv}>{t.services.discover}</button>
+            <Link href={`/services/${item.slug}`} className="sc-lnk">{t.services.discover}</Link>
           </div>
         ))}
       </div>

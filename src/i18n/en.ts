@@ -41,14 +41,474 @@ export const en: Translation = {
     desc: 'From real estate to medical care — ITALYCARE covers all your needs in Italy.',
     discover: 'Discover →',
     items: [
-      { icon: '🏠', t: 'Real Estate & Investment', d: 'Purchase, sale, due diligence, notary, tax advice. We find the ideal property and handle all procedures for foreign buyers.' },
-      { icon: '🔨', t: 'Renovation & Works', d: 'Complete restructuring, electricity, plumbing, gas. Coordination with certified craftsmen and remote site monitoring.' },
-      { icon: '🏥', t: 'Medical Care 360°', d: 'Appointment booking, medical interpretation, hospital coordination, support for specialized care in Italy.' },
-      { icon: '📦', t: 'Export Made in Italy', d: 'Selection of authentic Italian producers, international logistics, customs management and certifications.' },
-      { icon: '🎓', t: 'Italian Student Visa', d: 'Complete visa file processing, university enrollment, student housing, arrival support in Italy.' },
-      { icon: '⚖️', t: 'Legal Assistance', d: 'Real estate, tax, inheritance law, company formation in Italy. Multilingual partner lawyers available.' },
-      { icon: '🚗', t: 'Premium Concierge', d: 'Airport transfer, temporary accommodation, official translation, postal domiciliation, daily assistance.' },
-      { icon: '📋', t: 'Administrative Services', d: 'Codice fiscale, permesso di soggiorno, residency, registration — all your official documents handled A to Z.' },
+      {
+        icon: '🏠',
+        t: 'Real Estate & Investment',
+        d: 'Purchase, sale, due diligence, notary, tax advice. We find the ideal property and handle all procedures for foreign buyers.',
+        slug: 'immobilier',
+        details: {
+          hero: "Invest in Italy with complete peace of mind — we handle every step of your property acquisition.",
+          whatIs: "Our real estate service supports foreign buyers from property search to signing at the notary. We guide you through the Italian legal and fiscal framework, identify opportunities matching your budget and manage all administrative procedures. Whether you are looking for a primary residence, holiday home or rental investment, we are by your side every step of the way.",
+          includes: [
+            'Property search and selection according to your criteria',
+            'Legal due diligence and title verification',
+            'Price negotiation and property visit coordination',
+            'Notary coordination and deed preparation',
+            'Codice fiscale (Italian tax number) for the foreign buyer',
+            'Tax advice and investment optimization',
+          ],
+          notIncludes: [
+            'Notary fees and purchase taxes (buyer\'s responsibility)',
+            'Post-purchase renovation or fitting works',
+          ],
+          price: 'From €1,500 (depending on purchase budget)',
+          duration: '4 to 12 weeks depending on the project',
+          quiz: [
+            {
+              question: "What is your investment budget?",
+              options: [
+                { text: 'Less than €50,000', points: 0 },
+                { text: 'Between €50,000 and €150,000', points: 1 },
+                { text: 'Between €150,000 and €500,000', points: 2 },
+                { text: 'More than €500,000', points: 2 },
+              ],
+            },
+            {
+              question: "Do you have an Italian codice fiscale?",
+              options: [
+                { text: "No, I don't know what that is", points: 0 },
+                { text: "No, but I would like to get one", points: 1 },
+                { text: "Yes, I already have one", points: 2 },
+              ],
+            },
+            {
+              question: "What is your residency status?",
+              options: [
+                { text: "I live outside Europe", points: 0 },
+                { text: "I live in Europe (EU)", points: 1 },
+                { text: "I reside or will reside in Italy", points: 2 },
+              ],
+            },
+            {
+              question: "What is your main objective?",
+              options: [
+                { text: "I'm just looking for information", points: 0 },
+                { text: "Rental investment or secondary residence", points: 1 },
+                { text: "Primary residence or concrete project within 6 months", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🔨',
+        t: 'Renovation & Works',
+        d: 'Complete restructuring, electricity, plumbing, gas. Coordination with certified craftsmen and remote site monitoring.',
+        slug: 'renovation',
+        details: {
+          hero: "Transform your Italian property without being on-site — we coordinate everything from your country.",
+          whatIs: "Our renovation service manages all your works in Italy, whether you are present or abroad. We select certified craftsmen, prepare quotes, obtain necessary permits and ensure rigorous site monitoring with weekly photo reports. From small interior works to complete restructuring, every project is handled with the utmost care.",
+          includes: [
+            'Selection and coordination of certified craftsmen',
+            'Quote preparation and comparison',
+            'Building permit applications',
+            'Site monitoring with weekly photo reports',
+            'Final quality control before work handover',
+            'Dispute management and legal warranty handling',
+          ],
+          notIncludes: [
+            'Cost of materials and labor (direct billing)',
+            'Furnishing and interior decoration',
+          ],
+          price: 'From €800 (project management fee)',
+          duration: '2 weeks to 6 months depending on project scope',
+          quiz: [
+            {
+              question: "Do you own a property in Italy?",
+              options: [
+                { text: "No", points: 0 },
+                { text: "I have an ongoing purchase project", points: 1 },
+                { text: "Yes, I own a property in Italy", points: 2 },
+              ],
+            },
+            {
+              question: "What type of works do you want to carry out?",
+              options: [
+                { text: "I don't know yet", points: 0 },
+                { text: "Small works / interior layout", points: 1 },
+                { text: "Complete renovation or restructuring", points: 2 },
+              ],
+            },
+            {
+              question: "Do you have an estimated budget?",
+              options: [
+                { text: "Less than €5,000", points: 0 },
+                { text: "Between €5,000 and €30,000", points: 1 },
+                { text: "More than €30,000", points: 2 },
+              ],
+            },
+            {
+              question: "Are you on-site or remote?",
+              options: [
+                { text: "On-site and managing myself", points: 0 },
+                { text: "I can travel occasionally", points: 1 },
+                { text: "I'm remote and need full monitoring", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🏥',
+        t: 'Medical Care 360°',
+        d: 'Appointment booking, medical interpretation, hospital coordination, support for specialized care in Italy.',
+        slug: 'medical',
+        details: {
+          hero: "Access Italy's top specialists with comprehensive medical support in your own language.",
+          whatIs: "Our medical service gives you access to the Italian healthcare system without any language or administrative barriers. We organize your appointments with renowned specialists, provide medical interpretation during consultations, coordinate hospital admissions and manage all medical documents. For international patients requiring specialized care not available in their home country, we offer full end-to-end support.",
+          includes: [
+            'Appointment scheduling with selected specialists',
+            'Medical interpretation during consultations',
+            'Hospital coordination and admission management',
+            'Translation of medical reports and prescriptions',
+            'Logistical support (transport, medical accommodation)',
+            'Post-consultation follow-up and treatment coordination',
+          ],
+          notIncludes: [
+            'Medical and hospital fees (patient\'s responsibility)',
+            'Medications and medical devices',
+          ],
+          price: 'From €300 / consultation',
+          duration: 'From 1 day to several weeks depending on treatment',
+          quiz: [
+            {
+              question: "What type of care do you need?",
+              options: [
+                { text: "General consultation (available locally)", points: 0 },
+                { text: "Specialized consultation not available in my country", points: 2 },
+                { text: "Surgery or hospital treatment", points: 2 },
+                { text: "Chronic remote medical follow-up", points: 1 },
+              ],
+            },
+            {
+              question: "Do you speak Italian?",
+              options: [
+                { text: "Yes, fluently", points: 0 },
+                { text: "A little, beginner level", points: 1 },
+                { text: "No, I need a medical interpreter", points: 2 },
+              ],
+            },
+            {
+              question: "Do you have international health insurance?",
+              options: [
+                { text: "No", points: 1 },
+                { text: "Yes, basic insurance", points: 1 },
+                { text: "Yes, comprehensive insurance covering Italy", points: 2 },
+              ],
+            },
+            {
+              question: "When do you need care?",
+              options: [
+                { text: "Within 2 weeks (urgent)", points: 2 },
+                { text: "Within the month", points: 1 },
+                { text: "Within 3 to 6 months", points: 1 },
+                { text: "Just gathering information", points: 0 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '📦',
+        t: 'Export Made in Italy',
+        d: 'Selection of authentic Italian producers, international logistics, customs management and certifications.',
+        slug: 'export',
+        details: {
+          hero: "Import Italian excellence directly from producers — authenticity and quality guaranteed.",
+          whatIs: "Our export service connects you with the best Italian producers in food, fashion, furniture and design. We select verified suppliers, negotiate commercial terms, manage international logistics and assist with all customs procedures and certifications. Whether you are a distributor, reseller or direct buyer, we build your Made in Italy supply chain.",
+          includes: [
+            'Sourcing and selection of certified Italian producers',
+            'Commercial negotiation and partnership terms',
+            'Logistics management and shipment coordination',
+            'Customs assistance and export certifications',
+            'Pre-shipment quality control',
+            'Legal assistance for import contracts',
+          ],
+          notIncludes: [
+            'Cost of goods and transport fees',
+            'Taxes and customs duties in destination country',
+          ],
+          price: 'From €1,200 (partnership setup)',
+          duration: '4 to 8 weeks for the first order',
+          quiz: [
+            {
+              question: "Do you already have a legal structure (company)?",
+              options: [
+                { text: "No", points: 0 },
+                { text: "In the process of creating one", points: 1 },
+                { text: "Yes, established company", points: 2 },
+              ],
+            },
+            {
+              question: "What type of Made in Italy products interest you?",
+              options: [
+                { text: "I don't know yet", points: 0 },
+                { text: "Food, fashion, furniture or design", points: 1 },
+                { text: "I have already identified specific products", points: 2 },
+              ],
+            },
+            {
+              question: "What is your target market?",
+              options: [
+                { text: "Local / national only", points: 0 },
+                { text: "Regional / a few countries", points: 1 },
+                { text: "International with volume", points: 2 },
+              ],
+            },
+            {
+              question: "Have you imported products from Europe before?",
+              options: [
+                { text: "No, first time", points: 0 },
+                { text: "Once or twice", points: 1 },
+                { text: "Yes, I have import experience", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🎓',
+        t: 'Italian Student Visa',
+        d: 'Complete visa file processing, university enrollment, student housing, arrival support in Italy.',
+        slug: 'visa-etudiant',
+        details: {
+          hero: "Make your dream of studying in Italy a reality — from university enrollment to your arrival and settlement.",
+          whatIs: "Our student visa service handles your entire study project in Italy. We advise on universities and programs, prepare your application file, handle your visa request and organize your arrival. Our expertise in the Italian university system and consular procedures ensures the most efficient processing of your application.",
+          includes: [
+            'Advice on Italian universities and available programs',
+            'Application file preparation and verification',
+            'Complete student visa file preparation',
+            'Student housing or university residence search',
+            'Arrival support and administrative formalities',
+            'Help opening a bank account and obtaining codice fiscale',
+          ],
+          notIncludes: [
+            'Tuition and visa fees (paid directly to institutions)',
+            'Airfare and personal travel expenses',
+          ],
+          price: 'From €900 (complete file)',
+          duration: '6 to 16 weeks depending on university and consulate',
+          quiz: [
+            {
+              question: "Have you received acceptance from an Italian university?",
+              options: [
+                { text: "No, I haven't applied yet", points: 0 },
+                { text: "I've applied but no response yet", points: 1 },
+                { text: "Yes, I have an acceptance letter", points: 2 },
+              ],
+            },
+            {
+              question: "Do you have sufficient financial resources? (min. €6,000/year)",
+              options: [
+                { text: "No", points: 0 },
+                { text: "Partially", points: 1 },
+                { text: "Yes, I can prove it", points: 2 },
+              ],
+            },
+            {
+              question: "What is your current situation?",
+              options: [
+                { text: "I am in Italy with another visa", points: 1 },
+                { text: "I am in my home country", points: 2 },
+                { text: "I am in a third country", points: 1 },
+              ],
+            },
+            {
+              question: "Do you have accommodation planned in Italy?",
+              options: [
+                { text: "No, no plans", points: 0 },
+                { text: "Still looking", points: 1 },
+                { text: "Yes, university residence or apartment found", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '⚖️',
+        t: 'Legal Assistance',
+        d: 'Real estate, tax, inheritance law, company formation in Italy. Multilingual partner lawyers available.',
+        slug: 'juridique',
+        details: {
+          hero: "Protect your interests in Italy with experienced multilingual partner lawyers.",
+          whatIs: "Our network of Italian partner lawyers covers all areas of law relevant to foreigners in Italy: real estate, tax, corporate, inheritance and family law. We liaise between you and your lawyer, provide necessary legal translations and monitor your case progress. You benefit from high-level Italian legal expertise in your own language.",
+          includes: [
+            'Initial legal consultation with a specialist lawyer',
+            'Translation and analysis of Italian legal documents',
+            'Support for company formation in Italy',
+            'Assistance in real estate and tax law',
+            'Management of inheritance and family law cases',
+            'Litigation representation and follow-up',
+          ],
+          notIncludes: [
+            'Lawyer fees (billed separately depending on the case)',
+            'Court fees and official procedures',
+          ],
+          price: 'From €150 / consultation',
+          duration: 'Variable depending on case complexity',
+          quiz: [
+            {
+              question: "What type of legal assistance are you looking for?",
+              options: [
+                { text: "I don't know yet", points: 0 },
+                { text: "Real estate or tax law", points: 2 },
+                { text: "Company formation in Italy", points: 2 },
+                { text: "Inheritance or family law", points: 1 },
+              ],
+            },
+            {
+              question: "Do you have an urgent case?",
+              options: [
+                { text: "No, just gathering information", points: 0 },
+                { text: "Within the next 3 months", points: 1 },
+                { text: "Urgent — within 2 weeks", points: 2 },
+              ],
+            },
+            {
+              question: "Do you already have Italian-language documents to process?",
+              options: [
+                { text: "No", points: 0 },
+                { text: "Yes, a few documents", points: 1 },
+                { text: "Yes, a complete file", points: 2 },
+              ],
+            },
+            {
+              question: "Do you already have a lawyer or advisor in Italy?",
+              options: [
+                { text: "No", points: 2 },
+                { text: "Yes, but they don't speak my language", points: 1 },
+                { text: "Yes, satisfied with my current services", points: 0 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🚗',
+        t: 'Premium Concierge',
+        d: 'Airport transfer, temporary accommodation, official translation, postal domiciliation, daily assistance.',
+        slug: 'conciergerie',
+        details: {
+          hero: "Your daily life in Italy simplified — we handle everything so you can focus on what matters.",
+          whatIs: "Our premium concierge service takes care of all the logistical and practical aspects of your life in Italy. From your arrival at the airport to your long-term settlement, we orchestrate every detail: accommodation, transport, official translations, domiciliation and daily assistance. A dedicated contact is available 7 days a week to handle all your requests.",
+          includes: [
+            'Airport transfer and arrival reception',
+            'Temporary or permanent accommodation search and booking',
+            'Certified sworn translations',
+            'Postal and administrative domiciliation',
+            'Assistance with everyday procedures (bank, SIM card, etc.)',
+            'Dedicated contact available 7 days a week',
+          ],
+          notIncludes: [
+            'Transport and accommodation costs (rebilled at actual cost)',
+            'Sworn translation fees (depending on volume)',
+          ],
+          price: 'From €200 / month or per service',
+          duration: 'One-time or monthly subscription as needed',
+          quiz: [
+            {
+              question: "When are you planning to arrive in Italy?",
+              options: [
+                { text: "No specific date", points: 0 },
+                { text: "Within 3 months", points: 2 },
+                { text: "Within less than a month", points: 2 },
+              ],
+            },
+            {
+              question: "What services do you need?",
+              options: [
+                { text: "Just an airport transfer", points: 1 },
+                { text: "Accommodation + transport + assistance", points: 2 },
+                { text: "Full service (accommodation, transport, translation, domiciliation)", points: 2 },
+              ],
+            },
+            {
+              question: "How long is your stay?",
+              options: [
+                { text: "Less than a week", points: 0 },
+                { text: "1 to 4 weeks", points: 1 },
+                { text: "More than a month", points: 2 },
+              ],
+            },
+            {
+              question: "Do you need official translations?",
+              options: [
+                { text: "No", points: 0 },
+                { text: "Maybe", points: 1 },
+                { text: "Yes, several documents", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '📋',
+        t: 'Administrative Services',
+        d: 'Codice fiscale, permesso di soggiorno, residency, registration — all your official documents handled A to Z.',
+        slug: 'administratif',
+        details: {
+          hero: "Simplify your administrative procedures in Italy — our team handles every official document for you.",
+          whatIs: "Navigating Italian bureaucracy can seem like an insurmountable challenge for a foreigner. Our administrative service handles all your official procedures: obtaining the codice fiscale, applying for a permesso di soggiorno, registering residency, vehicle registration and any other administrative document. We save you queues, filing errors and unnecessary delays.",
+          includes: [
+            'Obtaining the codice fiscale (Italian tax number)',
+            'Permesso di soggiorno application file preparation',
+            'Residency registration (anagrafe)',
+            'Vehicle and official registration',
+            'Document legalization and apostille',
+            'File monitoring until the final document is obtained',
+          ],
+          notIncludes: [
+            'Administrative fees and official stamps (applicant\'s responsibility)',
+            'Travel to prefectures or questure (if required)',
+          ],
+          price: 'From €150 per procedure',
+          duration: '1 to 8 weeks depending on document type',
+          quiz: [
+            {
+              question: "Do you already have a codice fiscale?",
+              options: [
+                { text: "No", points: 2 },
+                { text: "Yes", points: 0 },
+              ],
+            },
+            {
+              question: "What procedure do you want to complete?",
+              options: [
+                { text: "Get a codice fiscale", points: 2 },
+                { text: "Permesso di soggiorno (residency permit)", points: 2 },
+                { text: "Official residency registration", points: 2 },
+                { text: "Multiple procedures", points: 2 },
+              ],
+            },
+            {
+              question: "Are you currently in Italy?",
+              options: [
+                { text: "No, I am abroad", points: 1 },
+                { text: "Yes, for less than 90 days", points: 2 },
+                { text: "Yes, for more than 90 days without a permit", points: 2 },
+              ],
+            },
+            {
+              question: "Do you speak Italian?",
+              options: [
+                { text: "No", points: 2 },
+                { text: "A little", points: 1 },
+                { text: "Fluently", points: 0 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {
@@ -122,5 +582,29 @@ export const en: Translation = {
     error: 'Error',
     errorMsg: 'An error occurred. Please try again or contact us directly.',
     close: 'Close',
+  },
+  serviceDetail: {
+    backBtn: '← Back to services',
+    eligibilityTitle: 'Are you eligible?',
+    eligibilitySubtitle: 'Answer 4 questions to find out if this service matches your situation',
+    startBtn: 'Start the quiz →',
+    nextBtn: 'Next question →',
+    prevBtn: '← Previous',
+    resultTitle: 'Your eligibility result',
+    eligible: '✅ You are eligible',
+    partial: '⚠️ Partially eligible',
+    notEligible: '❌ Service not suitable',
+    eligibleMsg: 'Excellent! This service is a perfect match for your situation. Schedule a free 30-minute consultation.',
+    partialMsg: 'This service may suit you with some adjustments. Our experts can analyze your situation in detail during a free consultation.',
+    notEligibleMsg: "This service seems not well-suited for your current situation. But don't give up — contact us and we'll find an alternative solution.",
+    rdvBtn: 'Book free consultation →',
+    retryBtn: 'Retake the quiz',
+    question: 'Question',
+    of: 'of',
+    included: '✅ Included in this service',
+    notIncluded: '❌ Not included',
+    price: 'Estimated budget',
+    duration: 'Estimated duration',
+    contact: 'A question? Contact us',
   },
 }
