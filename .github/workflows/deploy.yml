@@ -35,7 +35,7 @@ jobs:
         env:
           # Replace 'italycare360' with your actual GitHub repository name
           # Remove this line if you are using a custom domain (e.g. www.italycare360.com)
-          NEXT_PUBLIC_BASE_PATH: /italycare360
+          NEXT_PUBLIC_BASE_PATH: /ITALYCARE-360
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
