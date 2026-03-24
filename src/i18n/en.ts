@@ -19,7 +19,7 @@ export const en: Translation = {
     btn2: 'View services ↓',
     scroll: 'Scroll',
   },
-  marquee: ['Real Estate', 'Medical Care 360°', 'Renovation & Works', 'Export Made in Italy', 'Student Visa', 'Legal Assistance', 'Premium Concierge', 'Administrative Services'],
+  marquee: ['Real Estate', 'Medical Care 360°', 'Renovation & Works', 'Export Made in Italy', 'Student Visa', 'Legal Assistance', 'Premium Concierge', 'Administrative Services', 'Event Planning', 'Retirement Homes', 'Financing', 'Certified Professionals'],
   about: {
     label: 'Who we are',
     h1: 'More than a service.',
@@ -161,11 +161,11 @@ export const en: Translation = {
       {
         icon: '🏥',
         t: 'Medical Care 360°',
-        d: 'Appointment booking, medical interpretation, hospital coordination, support for specialized care in Italy.',
+        d: 'Appointment booking, medical interpretation, hospital coordination, support for specialized, thermal and respiratory care in Italy.',
         slug: 'medical',
         details: {
           hero: "Access Italy's top specialists with comprehensive medical support in your own language.",
-          whatIs: "Our medical service gives you access to the Italian healthcare system without any language or administrative barriers. We organize your appointments with renowned specialists, provide medical interpretation during consultations, coordinate hospital admissions and manage all medical documents. For international patients requiring specialized care not available in their home country, we offer full end-to-end support.",
+          whatIs: "Our medical service gives you access to the Italian healthcare system without any language or administrative barriers. We organize your appointments with renowned specialists, provide medical interpretation during consultations, coordinate hospital admissions and manage all medical documents. We also organize thermal and respiratory care stays in Italy. For international patients requiring specialized care not available in their home country, we offer full end-to-end support.",
           includes: [
             'Appointment scheduling with selected specialists',
             'Medical interpretation during consultations',
@@ -173,6 +173,7 @@ export const en: Translation = {
             'Translation of medical reports and prescriptions',
             'Logistical support (transport, medical accommodation)',
             'Post-consultation follow-up and treatment coordination',
+            'Organisation of thermal and respiratory care in Italy',
           ],
           notIncludes: [
             'Medical and hospital fees (patient\'s responsibility)',
@@ -504,6 +505,241 @@ export const en: Translation = {
                 { text: "No", points: 2 },
                 { text: "A little", points: 1 },
                 { text: "Fluently", points: 0 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🎉',
+        t: 'Event Planning 360°',
+        d: 'Weddings, christenings, birthdays, corporate seminars in Italy. Venue search, catering, decoration, full logistics.',
+        slug: 'evenements',
+        details: {
+          hero: 'Celebrate your precious moments in Italy — complete event organisation with exceptional care.',
+          whatIs: 'Our event planning service takes care of the full organisation of your events in Italy, whether it is a romantic wedding in Tuscany, a christening in a Roman villa or a corporate seminar in Milan. We manage the search for the perfect venue, supplier selection, logistical coordination and on-the-day management to ensure every moment is perfect.',
+          includes: [
+            'Search and booking of the ideal venue matching your theme',
+            'Caterer selection and menu coordination',
+            'Decoration and event staging',
+            'Full logistics (transport and accommodation for guests)',
+            'On-the-day coordination with real-time follow-up',
+            'Translation and assistance for foreign guests',
+          ],
+          notIncludes: [
+            'Cost of suppliers (catering, venue hire, etc.)',
+            'Airfare for guests',
+          ],
+          price: 'From €800 (project coordination)',
+          duration: '2 to 12 months depending on the event',
+          quiz: [
+            {
+              question: 'What type of event are you planning?',
+              options: [
+                { text: "I haven't decided yet", points: 0 },
+                { text: 'Birthday or private party', points: 1 },
+                { text: 'Wedding, christening or communion', points: 2 },
+                { text: 'Seminar or corporate event', points: 2 },
+              ],
+            },
+            {
+              question: 'How many guests are you expecting?',
+              options: [
+                { text: 'Fewer than 20 people', points: 0 },
+                { text: 'Between 20 and 50 people', points: 1 },
+                { text: 'More than 50 people', points: 2 },
+              ],
+            },
+            {
+              question: 'Do you have a planned date?',
+              options: [
+                { text: 'No, not yet', points: 0 },
+                { text: 'In 6 to 12 months', points: 1 },
+                { text: 'In less than 6 months', points: 2 },
+              ],
+            },
+            {
+              question: 'Do you have a defined budget?',
+              options: [
+                { text: 'No', points: 0 },
+                { text: 'Approximate budget', points: 1 },
+                { text: 'Yes, confirmed budget', points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🏡',
+        t: 'Retirement Homes & Senior Residences',
+        d: 'Search and selection of retirement homes in Italy based on the medical, linguistic and financial needs of each resident.',
+        slug: 'maisons-retraite',
+        details: {
+          hero: 'Find the ideal senior residence in Italy — selected according to the medical, cultural and personal needs of your loved one.',
+          whatIs: 'Our specialist service helps you find the most suitable retirement home or senior residence in Italy based on the medical, linguistic and financial requirements of your loved one. We analyse the medical file, identify matching establishments, arrange visits and handle all admission procedures. Regular follow-up is provided after settling in.',
+          includes: [
+            'Analysis of the medical and personal needs of the resident',
+            'Search and shortlisting of suitable establishments',
+            'Organisation and accompaniment of visits',
+            'Admission file preparation',
+            'Post-settlement follow-up and medical coordination',
+            'Cultural and linguistic mediation with the establishment',
+          ],
+          notIncludes: [
+            'Retirement home stay costs',
+            'Special medical expenses',
+          ],
+          price: 'From €500 (search and placement)',
+          duration: '4 to 10 weeks depending on availability',
+          quiz: [
+            {
+              question: 'Who are you looking for a residence for?',
+              options: [
+                { text: 'For myself', points: 2 },
+                { text: 'For a close family member', points: 2 },
+                { text: 'I am gathering information for the future', points: 0 },
+              ],
+            },
+            {
+              question: 'Are there specific medical needs?',
+              options: [
+                { text: 'No, fully independent', points: 1 },
+                { text: 'Light assistance (daily help)', points: 2 },
+                { text: 'Regular or specialist medical care', points: 2 },
+              ],
+            },
+            {
+              question: 'What is the available monthly budget?',
+              options: [
+                { text: 'Less than €1,500/month', points: 0 },
+                { text: 'Between €1,500 and €3,000/month', points: 1 },
+                { text: 'More than €3,000/month', points: 2 },
+              ],
+            },
+            {
+              question: 'Which region of Italy do you prefer?',
+              options: [
+                { text: 'No preference', points: 1 },
+                { text: 'Northern Italy (Milan, Turin, Venice)', points: 2 },
+                { text: 'Central or Southern Italy (Rome, Florence, Naples)', points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '💰',
+        t: 'Financing & Financial Solutions',
+        d: 'Financing search for your real estate, entrepreneurial or personal projects in Italy. Banking partners and tailor-made solutions.',
+        slug: 'financement',
+        details: {
+          hero: 'Finance your projects in Italy — we identify the best banking and financial solutions for your situation.',
+          whatIs: 'Our financing service supports you in finding the best solutions to fund your projects in Italy. Whether you wish to take out a mortgage, finance the creation of your company or obtain personal credit, our network of Italian banking and financial partners offers conditions tailored to your profile as a foreigner.',
+          includes: [
+            'Financial analysis of your file',
+            'Introduction to our Italian banking partners',
+            'Loan file preparation and optimisation',
+            'Interest rate and terms negotiation',
+            'Monitoring of fund release',
+            'Tax optimisation advice related to financing',
+          ],
+          notIncludes: [
+            'Loan approval guarantee',
+            'Banking and administration fees',
+          ],
+          price: 'From €400 (file review)',
+          duration: '4 to 12 weeks depending on the type of financing',
+          quiz: [
+            {
+              question: 'What type of project are you looking to finance?',
+              options: [
+                { text: "I don't know yet", points: 0 },
+                { text: 'Real estate purchase', points: 2 },
+                { text: 'Company creation or development', points: 2 },
+                { text: 'Personal financing or other project', points: 1 },
+              ],
+            },
+            {
+              question: 'What amount are you looking to finance?',
+              options: [
+                { text: 'Less than €20,000', points: 0 },
+                { text: 'Between €20,000 and €100,000', points: 1 },
+                { text: 'More than €100,000', points: 2 },
+              ],
+            },
+            {
+              question: 'Do you have provable income in Italy or abroad?',
+              options: [
+                { text: 'No', points: 0 },
+                { text: 'Yes, income abroad', points: 1 },
+                { text: 'Yes, income in Italy or mixed', points: 2 },
+              ],
+            },
+            {
+              question: 'Have you previously been refused financing?',
+              options: [
+                { text: 'Yes, several recent refusals', points: 0 },
+                { text: 'No, first application', points: 2 },
+                { text: 'Yes, one refusal but situation has improved', points: 1 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🔍',
+        t: 'Certified Professionals Search',
+        d: 'Connection with surveyors, architects, engineers, specialist doctors, lawyers, accountants and all certified professionals in Italy.',
+        slug: 'professionnels',
+        details: {
+          hero: 'Find the right certified professional in Italy — we select and verify every expert for you.',
+          whatIs: 'Our professional matching service connects you with the best certified Italian experts across all fields: surveyors, architects, engineers for your real estate and construction projects, specialist doctors, lawyers, accountants and chartered accountants. Every professional is verified, assessed and recommended based on their expertise and ability to work with foreign clients.',
+          includes: [
+            'Selection of verified and certified professionals',
+            'Presentation of 3 comparative quotes',
+            'Appointment coordination and scheduling',
+            'Linguistic assistance during exchanges',
+            'Mission follow-up and regular reporting',
+            'Quality guarantee and mediation in case of dispute',
+          ],
+          notIncludes: [
+            'Professional fees',
+            'Travel for assignments outside Italy',
+          ],
+          price: 'From €200 (matching fee)',
+          duration: '48h to 2 weeks depending on the specialty',
+          quiz: [
+            {
+              question: 'What type of professional are you looking for?',
+              options: [
+                { text: "I don't know yet", points: 0 },
+                { text: 'Surveyor, architect or engineer', points: 2 },
+                { text: 'Specialist doctor', points: 2 },
+                { text: 'Lawyer, accountant or financial expert', points: 2 },
+              ],
+            },
+            {
+              question: 'What type of assignment?',
+              options: [
+                { text: 'One-off assignment (quote, consultation)', points: 2 },
+                { text: 'Multi-month project follow-up', points: 2 },
+                { text: 'Just gathering information', points: 0 },
+              ],
+            },
+            {
+              question: 'Must the professional speak your language?',
+              options: [
+                { text: 'No, Italian is fine', points: 0 },
+                { text: 'Preferred but not mandatory', points: 1 },
+                { text: 'Yes, essential', points: 2 },
+              ],
+            },
+            {
+              question: 'Do you have an intervention deadline?',
+              options: [
+                { text: 'No specific deadline', points: 0 },
+                { text: 'Within the month', points: 1 },
+                { text: 'Urgent — within 2 weeks', points: 2 },
               ],
             },
           ],

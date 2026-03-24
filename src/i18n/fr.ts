@@ -19,7 +19,7 @@ export const fr: Translation = {
     btn2: 'Voir les services ↓',
     scroll: 'Défiler',
   },
-  marquee: ['Immobilier', 'Suivi Médical 360°', 'Rénovation & Travaux', 'Export Made in Italy', 'Visa Étudiant', 'Assistance Juridique', 'Conciergerie Premium', 'Démarches Administratives'],
+  marquee: ['Immobilier', 'Suivi Médical 360°', 'Rénovation & Travaux', 'Export Made in Italy', 'Visa Étudiant', 'Assistance Juridique', 'Conciergerie Premium', 'Démarches Administratives', 'Organisation d\'Événements', 'Maisons de Retraite', 'Financement', 'Professionnels Certifiés'],
   about: {
     label: 'Qui sommes-nous',
     h1: "Bien plus qu'un service.",
@@ -161,11 +161,11 @@ export const fr: Translation = {
       {
         icon: '🏥',
         t: 'Suivi Médical 360°',
-        d: "Prise de rendez-vous, interprétariat médical, coordination hospitalière, accompagnement pour soins spécialisés en Italie.",
+        d: "Prise de rendez-vous, interprétariat médical, coordination hospitalière, accompagnement pour soins spécialisés, thermaux et respiratoires en Italie.",
         slug: 'medical',
         details: {
           hero: "Accédez aux meilleurs spécialistes italiens avec un accompagnement médical complet dans votre langue.",
-          whatIs: "Notre service médical vous donne accès au système de santé italien sans barrière linguistique ni administrative. Nous organisons vos rendez-vous avec des spécialistes renommés, assurons l'interprétariat médical lors des consultations, coordonnons les hospitalisations et gérons l'ensemble des documents médicaux. Pour les patients internationaux nécessitant des soins spécialisés non disponibles dans leur pays, nous offrons un accompagnement complet de A à Z.",
+          whatIs: "Notre service médical vous donne accès au système de santé italien sans barrière linguistique ni administrative. Nous organisons vos rendez-vous avec des spécialistes renommés, assurons l'interprétariat médical lors des consultations, coordonnons les hospitalisations et gérons l'ensemble des documents médicaux. Nous organisons également des séjours de soins thermaux et respiratoires en Italie. Pour les patients internationaux nécessitant des soins spécialisés non disponibles dans leur pays, nous offrons un accompagnement complet de A à Z.",
           includes: [
             'Prise de rendez-vous chez des spécialistes sélectionnés',
             'Interprétariat médical lors des consultations',
@@ -173,6 +173,7 @@ export const fr: Translation = {
             'Traduction des rapports médicaux et ordonnances',
             'Accompagnement logistique (transport, hébergement médical)',
             'Suivi post-consultation et coordination du traitement',
+            'Organisation de soins thermaux et respiratoires en Italie',
           ],
           notIncludes: [
             'Frais médicaux et hospitaliers (à la charge du patient)',
@@ -504,6 +505,241 @@ export const fr: Translation = {
                 { text: "Non", points: 2 },
                 { text: "Un peu", points: 1 },
                 { text: "Couramment", points: 0 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🎉',
+        t: "Organisation d'Événements 360°",
+        d: "Mariages, baptêmes, anniversaires, séminaires d'entreprise en Italie. Recherche de salles, traiteurs, décoration, logistique complète.",
+        slug: 'evenements',
+        details: {
+          hero: "Célébrez vos moments précieux en Italie — organisation complète de vos événements avec un soin exceptionnel.",
+          whatIs: "Notre service événementiel prend en charge l'organisation complète de vos événements en Italie, qu'il s'agisse d'un mariage romantique en Toscane, d'un baptême dans une villa romaine ou d'un séminaire d'entreprise à Milan. Nous gérons la recherche du lieu idéal, la sélection des prestataires, la coordination logistique et le suivi le jour J pour que chaque moment soit parfait.",
+          includes: [
+            'Recherche et réservation du lieu idéal selon votre thème',
+            'Sélection de traiteurs et coordination des menus',
+            'Décoration et mise en scène de l\'événement',
+            'Logistique complète (transport, hébergement des invités)',
+            'Coordination le jour J avec suivi en temps réel',
+            'Traduction et assistance pour les invités étrangers',
+          ],
+          notIncludes: [
+            'Coût des prestataires (traiteur, location de salle, etc.)',
+            'Billets d\'avion des invités',
+          ],
+          price: 'À partir de 800€ (coordination de projet)',
+          duration: '2 à 12 mois selon l\'événement',
+          quiz: [
+            {
+              question: "Quel type d'événement planifiez-vous ?",
+              options: [
+                { text: "Je n'ai pas encore décidé", points: 0 },
+                { text: "Anniversaire ou fête privée", points: 1 },
+                { text: "Mariage, baptême ou communion", points: 2 },
+                { text: "Séminaire ou événement professionnel", points: 2 },
+              ],
+            },
+            {
+              question: "Combien de personnes attendez-vous ?",
+              options: [
+                { text: "Moins de 20 personnes", points: 0 },
+                { text: "Entre 20 et 50 personnes", points: 1 },
+                { text: "Plus de 50 personnes", points: 2 },
+              ],
+            },
+            {
+              question: "Avez-vous une date prévue ?",
+              options: [
+                { text: "Non, pas encore", points: 0 },
+                { text: "Dans les 6 à 12 mois", points: 1 },
+                { text: "Dans moins de 6 mois", points: 2 },
+              ],
+            },
+            {
+              question: "Avez-vous un budget défini ?",
+              options: [
+                { text: "Non", points: 0 },
+                { text: "Budget approximatif", points: 1 },
+                { text: "Oui, budget confirmé", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🏡',
+        t: "Maisons de Retraite & Résidences Seniors",
+        d: "Recherche et sélection de maisons de retraite en Italie selon les besoins médicaux, linguistiques et financiers de chaque résident.",
+        slug: 'maisons-retraite',
+        details: {
+          hero: "Trouvez la résidence senior idéale en Italie — sélectionnée selon les besoins médicaux, culturels et personnels de votre proche.",
+          whatIs: "Notre service spécialisé vous aide à trouver la maison de retraite ou résidence senior la mieux adaptée en Italie selon les exigences médicales, linguistiques et financières de votre proche. Nous analysons le dossier médical, identifions les établissements correspondants, effectuons les visites et gérons toutes les démarches d'admission. Un suivi régulier est assuré après l'installation.",
+          includes: [
+            'Analyse des besoins médicaux et personnels du résident',
+            'Recherche et présélection d\'établissements adaptés',
+            'Organisation et accompagnement des visites',
+            'Constitution du dossier d\'admission',
+            'Suivi post-installation et coordination médicale',
+            'Médiation culturelle et linguistique avec l\'établissement',
+          ],
+          notIncludes: [
+            'Frais de séjour en maison de retraite',
+            'Frais médicaux spéciaux',
+          ],
+          price: 'À partir de 500€ (recherche et placement)',
+          duration: '4 à 10 semaines selon disponibilités',
+          quiz: [
+            {
+              question: "Pour qui cherchez-vous une résidence ?",
+              options: [
+                { text: "Pour moi-même", points: 2 },
+                { text: "Pour un parent proche", points: 2 },
+                { text: "Je me renseigne pour l'avenir", points: 0 },
+              ],
+            },
+            {
+              question: "Y a-t-il des besoins médicaux spécifiques ?",
+              options: [
+                { text: "Non, autonomie totale", points: 1 },
+                { text: "Assistance légère (aide quotidienne)", points: 2 },
+                { text: "Soins médicaux réguliers ou spécialisés", points: 2 },
+              ],
+            },
+            {
+              question: "Quel est le budget mensuel disponible ?",
+              options: [
+                { text: "Moins de 1 500€/mois", points: 0 },
+                { text: "Entre 1 500€ et 3 000€/mois", points: 1 },
+                { text: "Plus de 3 000€/mois", points: 2 },
+              ],
+            },
+            {
+              question: "Dans quelle région d'Italie souhaitez-vous ?",
+              options: [
+                { text: "Pas de préférence", points: 1 },
+                { text: "Nord de l'Italie (Milan, Turin, Venise)", points: 2 },
+                { text: "Centre ou Sud (Rome, Florence, Naples)", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '💰',
+        t: "Financement & Solutions Financières",
+        d: "Recherche de financement pour vos projets immobiliers, entrepreneuriaux ou personnels en Italie. Partenaires bancaires et solutions sur mesure.",
+        slug: 'financement',
+        details: {
+          hero: "Financez vos projets en Italie — nous identifions les meilleures solutions bancaires et financières pour votre situation.",
+          whatIs: "Notre service financement vous accompagne dans la recherche des meilleures solutions pour financer vos projets en Italie. Que vous souhaitiez contracter un prêt immobilier, financer la création de votre société ou obtenir un crédit personnel, notre réseau de partenaires bancaires et financiers italiens vous propose des conditions adaptées à votre profil d'étranger.",
+          includes: [
+            'Analyse financière de votre dossier',
+            'Mise en relation avec nos partenaires bancaires italiens',
+            'Constitution et optimisation du dossier de prêt',
+            'Négociation des taux et conditions',
+            'Suivi du déblocage des fonds',
+            'Conseil en optimisation fiscale liée au financement',
+          ],
+          notIncludes: [
+            'Garantie d\'obtention du prêt',
+            'Frais bancaires et de dossier',
+          ],
+          price: 'À partir de 400€ (étude de dossier)',
+          duration: '4 à 12 semaines selon le type de financement',
+          quiz: [
+            {
+              question: "Pour quel type de projet cherchez-vous un financement ?",
+              options: [
+                { text: "Je ne sais pas encore", points: 0 },
+                { text: "Achat immobilier", points: 2 },
+                { text: "Création ou développement d'entreprise", points: 2 },
+                { text: "Financement personnel ou autre projet", points: 1 },
+              ],
+            },
+            {
+              question: "Quel montant cherchez-vous à financer ?",
+              options: [
+                { text: "Moins de 20 000€", points: 0 },
+                { text: "Entre 20 000€ et 100 000€", points: 1 },
+                { text: "Plus de 100 000€", points: 2 },
+              ],
+            },
+            {
+              question: "Avez-vous des revenus justifiables en Italie ou à l'étranger ?",
+              options: [
+                { text: "Non", points: 0 },
+                { text: "Oui, revenus à l'étranger", points: 1 },
+                { text: "Oui, revenus en Italie ou mixtes", points: 2 },
+              ],
+            },
+            {
+              question: "Avez-vous déjà eu un refus de financement ?",
+              options: [
+                { text: "Oui, plusieurs refus récents", points: 0 },
+                { text: "Non, première demande", points: 2 },
+                { text: "Oui, un refus mais situation améliorée", points: 1 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🔍',
+        t: "Recherche de Professionnels Certifiés",
+        d: "Mise en relation avec géomètres, architectes, ingénieurs, médecins spécialistes, avocats, comptables et tous professionnels certifiés en Italie.",
+        slug: 'professionnels',
+        details: {
+          hero: "Trouvez le bon professionnel certifié en Italie — nous sélectionnons et vérifions chaque expert pour vous.",
+          whatIs: "Notre service de mise en relation professionnelle vous connecte aux meilleurs experts certifiés italiens dans tous les domaines : géomètres, architectes, ingénieurs pour vos projets immobiliers et de construction, médecins spécialistes, avocats, comptables et experts-comptables. Chaque professionnel est vérifié, évalué et recommandé sur la base de son expertise et de sa capacité à travailler avec des clients étrangers.",
+          includes: [
+            'Sélection de professionnels vérifiés et certifiés',
+            'Présentation de 3 devis comparatifs',
+            'Coordination et planification des rendez-vous',
+            'Assistance linguistique lors des échanges',
+            'Suivi de mission et compte-rendu régulier',
+            'Garantie qualité et médiation en cas de litige',
+          ],
+          notIncludes: [
+            'Honoraires des professionnels',
+            'Déplacements pour missions hors Italie',
+          ],
+          price: 'À partir de 200€ (mise en relation)',
+          duration: '48h à 2 semaines selon la spécialité',
+          quiz: [
+            {
+              question: "Quel type de professionnel recherchez-vous ?",
+              options: [
+                { text: "Je ne sais pas encore", points: 0 },
+                { text: "Géomètre, architecte ou ingénieur", points: 2 },
+                { text: "Médecin spécialiste", points: 2 },
+                { text: "Avocat, comptable ou expert financier", points: 2 },
+              ],
+            },
+            {
+              question: "Pour quel type de mission ?",
+              options: [
+                { text: "Mission ponctuelle (devis, consultation)", points: 2 },
+                { text: "Suivi de projet sur plusieurs mois", points: 2 },
+                { text: "Je me renseigne", points: 0 },
+              ],
+            },
+            {
+              question: "Le professionnel doit-il parler votre langue ?",
+              options: [
+                { text: "Non, l'italien suffit", points: 0 },
+                { text: "Préférence mais pas obligatoire", points: 1 },
+                { text: "Oui, indispensable", points: 2 },
+              ],
+            },
+            {
+              question: "Avez-vous un délai d'intervention ?",
+              options: [
+                { text: "Pas de délai précis", points: 0 },
+                { text: "Dans le mois", points: 1 },
+                { text: "Urgent — dans les 2 semaines", points: 2 },
               ],
             },
           ],

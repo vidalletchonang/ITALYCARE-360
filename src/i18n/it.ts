@@ -19,7 +19,7 @@ export const it: Translation = {
     btn2: 'Vedi i servizi ↓',
     scroll: 'Scorri',
   },
-  marquee: ['Immobiliare', 'Assistenza Medica 360°', 'Ristrutturazione', 'Export Made in Italy', 'Visto Studente', 'Assistenza Legale', 'Concierge Premium', 'Pratiche Amministrative'],
+  marquee: ['Immobiliare', 'Assistenza Medica 360°', 'Ristrutturazione', 'Export Made in Italy', 'Visto Studente', 'Assistenza Legale', 'Concierge Premium', 'Pratiche Amministrative', 'Organizzazione Eventi', 'Case di Riposo', 'Finanziamento', 'Professionisti Certificati'],
   about: {
     label: 'Chi siamo',
     h1: 'Molto più di un servizio.',
@@ -161,11 +161,11 @@ export const it: Translation = {
       {
         icon: '🏥',
         t: 'Assistenza Medica 360°',
-        d: "Prenotazione appuntamenti, interpretariato medico, coordinamento ospedaliero, accompagnamento per cure specializzate in Italia.",
+        d: "Prenotazione appuntamenti, interpretariato medico, coordinamento ospedaliero, accompagnamento per cure specializzate, termali e respiratorie in Italia.",
         slug: 'medical',
         details: {
           hero: "Accedi ai migliori specialisti italiani con un supporto medico completo nella tua lingua.",
-          whatIs: "Il nostro servizio medico ti dà accesso al sistema sanitario italiano senza barriere linguistiche o amministrative. Organizziamo i tuoi appuntamenti con specialisti rinomati, forniamo interpretariato medico durante le consulenze, coordiniamo i ricoveri ospedalieri e gestiamo tutti i documenti medici. Per i pazienti internazionali che necessitano di cure specializzate non disponibili nel loro paese, offriamo un supporto completo dalla A alla Z.",
+          whatIs: "Il nostro servizio medico ti dà accesso al sistema sanitario italiano senza barriere linguistiche o amministrative. Organizziamo i tuoi appuntamenti con specialisti rinomati, forniamo interpretariato medico durante le consulenze, coordiniamo i ricoveri ospedalieri e gestiamo tutti i documenti medici. Organizziamo anche soggiorni di cure termali e respiratorie in Italia. Per i pazienti internazionali che necessitano di cure specializzate non disponibili nel loro paese, offriamo un supporto completo dalla A alla Z.",
           includes: [
             'Prenotazione appuntamenti con specialisti selezionati',
             'Interpretariato medico durante le consulenze',
@@ -173,6 +173,7 @@ export const it: Translation = {
             'Traduzione di referti medici e prescrizioni',
             'Supporto logistico (trasporto, alloggio medico)',
             'Follow-up post-consulenza e coordinamento del trattamento',
+            'Organizzazione di cure termali e respiratorie in Italia',
           ],
           notIncludes: [
             'Spese mediche e ospedaliere (a carico del paziente)',
@@ -504,6 +505,241 @@ export const it: Translation = {
                 { text: "No", points: 2 },
                 { text: "Un po'", points: 1 },
                 { text: "Correntemente", points: 0 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🎉',
+        t: 'Organizzazione di Eventi 360°',
+        d: 'Matrimoni, battesimi, anniversari, seminari aziendali in Italia. Ricerca di location, catering, decorazione, logistica completa.',
+        slug: 'evenements',
+        details: {
+          hero: 'Celebrate i vostri momenti preziosi in Italia — organizzazione completa dei vostri eventi con cura eccezionale.',
+          whatIs: "Il nostro servizio eventi si occupa dell'organizzazione completa dei vostri eventi in Italia, che si tratti di un matrimonio romantico in Toscana, di un battesimo in una villa romana o di un seminario aziendale a Milano. Gestiamo la ricerca della location ideale, la selezione dei fornitori, il coordinamento logistico e il follow-up il giorno dell'evento affinché ogni momento sia perfetto.",
+          includes: [
+            'Ricerca e prenotazione della location ideale in base al tema',
+            'Selezione del catering e coordinamento dei menu',
+            'Decorazione e allestimento dell\'evento',
+            'Logistica completa (trasporto e alloggio degli ospiti)',
+            'Coordinamento il giorno dell\'evento con follow-up in tempo reale',
+            'Traduzione e assistenza per ospiti stranieri',
+          ],
+          notIncludes: [
+            'Costo dei fornitori (catering, affitto location, ecc.)',
+            'Biglietti aerei degli ospiti',
+          ],
+          price: 'A partire da €800 (coordinamento del progetto)',
+          duration: 'Da 2 a 12 mesi a seconda dell\'evento',
+          quiz: [
+            {
+              question: "Che tipo di evento stai pianificando?",
+              options: [
+                { text: "Non ho ancora deciso", points: 0 },
+                { text: "Compleanno o festa privata", points: 1 },
+                { text: "Matrimonio, battesimo o comunione", points: 2 },
+                { text: "Seminario o evento professionale", points: 2 },
+              ],
+            },
+            {
+              question: "Quanti ospiti vi aspettate?",
+              options: [
+                { text: "Meno di 20 persone", points: 0 },
+                { text: "Tra 20 e 50 persone", points: 1 },
+                { text: "Più di 50 persone", points: 2 },
+              ],
+            },
+            {
+              question: "Avete una data prevista?",
+              options: [
+                { text: "No, non ancora", points: 0 },
+                { text: "Tra 6 e 12 mesi", points: 1 },
+                { text: "In meno di 6 mesi", points: 2 },
+              ],
+            },
+            {
+              question: "Avete un budget definito?",
+              options: [
+                { text: "No", points: 0 },
+                { text: "Budget approssimativo", points: 1 },
+                { text: "Sì, budget confermato", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🏡',
+        t: 'Case di Riposo e Residenze per Anziani',
+        d: 'Ricerca e selezione di case di riposo in Italia in base alle esigenze mediche, linguistiche e finanziarie di ogni residente.',
+        slug: 'maisons-retraite',
+        details: {
+          hero: 'Trovate la residenza senior ideale in Italia — selezionata in base alle esigenze mediche, culturali e personali del vostro caro.',
+          whatIs: "Il nostro servizio specializzato vi aiuta a trovare la casa di riposo o residenza senior più adatta in Italia in base alle esigenze mediche, linguistiche e finanziarie del vostro caro. Analizziamo il fascicolo medico, identifichiamo le strutture corrispondenti, organizziamo le visite e gestiamo tutte le pratiche di ammissione. Un follow-up regolare è garantito dopo l'insediamento.",
+          includes: [
+            'Analisi delle esigenze mediche e personali del residente',
+            'Ricerca e preselezione di strutture adatte',
+            'Organizzazione e accompagnamento alle visite',
+            'Costituzione del fascicolo di ammissione',
+            'Follow-up post-insediamento e coordinamento medico',
+            'Mediazione culturale e linguistica con la struttura',
+          ],
+          notIncludes: [
+            'Spese di soggiorno in casa di riposo',
+            'Spese mediche speciali',
+          ],
+          price: 'A partire da €500 (ricerca e collocamento)',
+          duration: 'Da 4 a 10 settimane a seconda delle disponibilità',
+          quiz: [
+            {
+              question: "Per chi state cercando una residenza?",
+              options: [
+                { text: "Per me stesso", points: 2 },
+                { text: "Per un parente stretto", points: 2 },
+                { text: "Mi sto informando per il futuro", points: 0 },
+              ],
+            },
+            {
+              question: "Ci sono esigenze mediche specifiche?",
+              options: [
+                { text: "No, totale autonomia", points: 1 },
+                { text: "Assistenza leggera (aiuto quotidiano)", points: 2 },
+                { text: "Cure mediche regolari o specializzate", points: 2 },
+              ],
+            },
+            {
+              question: "Qual è il budget mensile disponibile?",
+              options: [
+                { text: "Meno di €1.500/mese", points: 0 },
+                { text: "Tra €1.500 e €3.000/mese", points: 1 },
+                { text: "Più di €3.000/mese", points: 2 },
+              ],
+            },
+            {
+              question: "In quale regione d'Italia preferite?",
+              options: [
+                { text: "Nessuna preferenza", points: 1 },
+                { text: "Nord Italia (Milano, Torino, Venezia)", points: 2 },
+                { text: "Centro o Sud (Roma, Firenze, Napoli)", points: 2 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '💰',
+        t: 'Finanziamento e Soluzioni Finanziarie',
+        d: 'Ricerca di finanziamento per i vostri progetti immobiliari, imprenditoriali o personali in Italia. Partner bancari e soluzioni su misura.',
+        slug: 'financement',
+        details: {
+          hero: 'Finanziate i vostri progetti in Italia — identifichiamo le migliori soluzioni bancarie e finanziarie per la vostra situazione.',
+          whatIs: "Il nostro servizio finanziamento vi accompagna nella ricerca delle migliori soluzioni per finanziare i vostri progetti in Italia. Che vogliate contrarre un mutuo immobiliare, finanziare la creazione della vostra società o ottenere un credito personale, la nostra rete di partner bancari e finanziari italiani vi propone condizioni adatte al vostro profilo di straniero.",
+          includes: [
+            'Analisi finanziaria del vostro fascicolo',
+            'Presentazione ai nostri partner bancari italiani',
+            'Costituzione e ottimizzazione del fascicolo di prestito',
+            'Negoziazione dei tassi e delle condizioni',
+            'Monitoraggio dello sblocco dei fondi',
+            'Consulenza sull\'ottimizzazione fiscale legata al finanziamento',
+          ],
+          notIncludes: [
+            'Garanzia di ottenimento del prestito',
+            'Spese bancarie e di istruttoria',
+          ],
+          price: 'A partire da €400 (studio del fascicolo)',
+          duration: 'Da 4 a 12 settimane a seconda del tipo di finanziamento',
+          quiz: [
+            {
+              question: "Per quale tipo di progetto cercate un finanziamento?",
+              options: [
+                { text: "Non lo so ancora", points: 0 },
+                { text: "Acquisto immobiliare", points: 2 },
+                { text: "Creazione o sviluppo d'impresa", points: 2 },
+                { text: "Finanziamento personale o altro progetto", points: 1 },
+              ],
+            },
+            {
+              question: "Quale importo volete finanziare?",
+              options: [
+                { text: "Meno di €20.000", points: 0 },
+                { text: "Tra €20.000 e €100.000", points: 1 },
+                { text: "Più di €100.000", points: 2 },
+              ],
+            },
+            {
+              question: "Avete redditi documentabili in Italia o all'estero?",
+              options: [
+                { text: "No", points: 0 },
+                { text: "Sì, redditi all'estero", points: 1 },
+                { text: "Sì, redditi in Italia o misti", points: 2 },
+              ],
+            },
+            {
+              question: "Avete già avuto un rifiuto di finanziamento?",
+              options: [
+                { text: "Sì, diversi rifiuti recenti", points: 0 },
+                { text: "No, prima richiesta", points: 2 },
+                { text: "Sì, un rifiuto ma situazione migliorata", points: 1 },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        icon: '🔍',
+        t: 'Ricerca di Professionisti Certificati',
+        d: 'Messa in contatto con geometri, architetti, ingegneri, medici specialisti, avvocati, commercialisti e tutti i professionisti certificati in Italia.',
+        slug: 'professionnels',
+        details: {
+          hero: 'Trovate il giusto professionista certificato in Italia — selezioniamo e verifichiamo ogni esperto per voi.',
+          whatIs: "Il nostro servizio di messa in contatto professionale vi collega ai migliori esperti certificati italiani in tutti i settori: geometri, architetti, ingegneri per i vostri progetti immobiliari e di costruzione, medici specialisti, avvocati, commercialisti e revisori contabili. Ogni professionista è verificato, valutato e raccomandato in base alla sua competenza e capacità di lavorare con clienti stranieri.",
+          includes: [
+            'Selezione di professionisti verificati e certificati',
+            'Presentazione di 3 preventivi comparativi',
+            'Coordinamento e pianificazione degli appuntamenti',
+            'Assistenza linguistica durante gli scambi',
+            'Follow-up della missione e rendiconti regolari',
+            'Garanzia di qualità e mediazione in caso di controversia',
+          ],
+          notIncludes: [
+            'Onorari dei professionisti',
+            'Spostamenti per missioni fuori dall\'Italia',
+          ],
+          price: 'A partire da €200 (messa in contatto)',
+          duration: 'Da 48h a 2 settimane a seconda della specialità',
+          quiz: [
+            {
+              question: "Che tipo di professionista state cercando?",
+              options: [
+                { text: "Non lo so ancora", points: 0 },
+                { text: "Geometra, architetto o ingegnere", points: 2 },
+                { text: "Medico specialista", points: 2 },
+                { text: "Avvocato, commercialista o esperto finanziario", points: 2 },
+              ],
+            },
+            {
+              question: "Per quale tipo di missione?",
+              options: [
+                { text: "Missione puntuale (preventivo, consulenza)", points: 2 },
+                { text: "Gestione di progetto su più mesi", points: 2 },
+                { text: "Mi sto informando", points: 0 },
+              ],
+            },
+            {
+              question: "Il professionista deve parlare la vostra lingua?",
+              options: [
+                { text: "No, l'italiano è sufficiente", points: 0 },
+                { text: "Preferenza ma non obbligatorio", points: 1 },
+                { text: "Sì, indispensabile", points: 2 },
+              ],
+            },
+            {
+              question: "Avete un termine per l'intervento?",
+              options: [
+                { text: "Nessun termine preciso", points: 0 },
+                { text: "Entro il mese", points: 1 },
+                { text: "Urgente — entro 2 settimane", points: 2 },
               ],
             },
           ],
