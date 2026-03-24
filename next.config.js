@@ -8,6 +8,7 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    domains: ['images.unsplash.com', 'videos.pexels.com'],
   },
 }
 

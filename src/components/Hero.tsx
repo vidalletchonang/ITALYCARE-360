@@ -15,8 +15,34 @@ export default function Hero({ onRdv }: HeroProps) {
 
   return (
     <section className="hero">
-      <div className="hero-glow" />
-      <div className="hero-glow2" />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          opacity: 0.18,
+          zIndex: 0,
+        }}
+      >
+        <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+      </video>
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(135deg, rgba(12,12,10,0.92) 0%, rgba(14,61,34,0.85) 100%)',
+          zIndex: 1,
+        }}
+      />
+      <div className="hero-glow" style={{ zIndex: 2 }} />
+      <div className="hero-glow2" style={{ zIndex: 2 }} />
       <div className="hero-content">
         <div className="hero-tag">
           <div className="ht-line" />
@@ -55,7 +81,7 @@ export default function Hero({ onRdv }: HeroProps) {
         </div>
       </div>
 
-      <div className="scroll-ind">
+      <div className="scroll-ind" style={{ zIndex: 2 }}>
         <div className="sc-line" />
         <span className="sc-txt">{t.hero.scroll}</span>
       </div>
