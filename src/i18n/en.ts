@@ -843,4 +843,23 @@ export const en: Translation = {
     duration: 'Estimated duration',
     contact: 'A question? Contact us',
   },
+  gallery: {
+    label: 'Italy in pictures',
+    h1: 'The most beautiful',
+    h2: 'destinations',
+    photos: [
+      { label: 'Florence' },
+      { label: 'Rome' },
+      { label: 'Amalfi Coast' },
+      { label: 'Venice' },
+      { label: 'Tuscany' },
+      { label: 'Milan' },
+    ],
+  },
+  video: {
+    label: 'Discover Italy',
+    h1: 'Italy is',
+    h2: 'waiting for you',
+    p: 'From Tuscany to Sicily, discover why thousands of expats choose Italy to live, invest and thrive.',
+  },
 }

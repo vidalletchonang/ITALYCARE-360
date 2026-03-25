@@ -843,4 +843,23 @@ export const it: Translation = {
     duration: 'Durata stimata',
     contact: 'Una domanda? Contattaci',
   },
+  gallery: {
+    label: "L'Italia in immagini",
+    h1: 'Le più belle',
+    h2: 'destinazioni',
+    photos: [
+      { label: 'Firenze' },
+      { label: 'Roma' },
+      { label: 'Costiera Amalfitana' },
+      { label: 'Venezia' },
+      { label: 'Toscana' },
+      { label: 'Milano' },
+    ],
+  },
+  video: {
+    label: "Scopri l'Italia",
+    h1: "L'Italia vi",
+    h2: 'aspetta',
+    p: "Dalla Toscana alla Sicilia, scopri perché migliaia di stranieri scelgono l'Italia per vivere, investire e realizzarsi.",
+  },
 }

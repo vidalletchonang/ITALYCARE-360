@@ -137,4 +137,16 @@ export interface Translation {
     duration: string
     contact: string
   }
+  gallery: {
+    label: string
+    h1: string
+    h2: string
+    photos: { label: string }[]
+  }
+  video: {
+    label: string
+    h1: string
+    h2: string
+    p: string
+  }
 }

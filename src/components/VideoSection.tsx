@@ -6,14 +6,14 @@ export default function VideoSection() {
   return (
     <section className="video-section">
       <div className="sl" style={{ justifyContent: 'center', marginBottom: 12 }}>
-        <div className="sl-ln" /><span>Découvrez l'Italie</span><div className="sl-ln" />
+        <div className="sl-ln" /><span>{t.video.label}</span><div className="sl-ln" />
       </div>
-      <h2 className="font-playfair vs-h2">L'Italie vous <em>attend</em></h2>
-      <p className="vs-p">De la Toscane à la Sicile, découvrez pourquoi des milliers d'étrangers choisissent l'Italie pour vivre, investir et s'épanouir.</p>
+      <h2 className="font-playfair vs-h2">{t.video.h1} <em>{t.video.h2}</em></h2>
+      <p className="vs-p">{t.video.p}</p>
       <div className="video-wrap">
         <iframe
           src="https://www.youtube.com/embed/YrPpAB0a6T0?autoplay=0&rel=0&modestbranding=1"
-          title="Découvrez l'Italie"
+          title={t.video.label}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

@@ -843,4 +843,23 @@ export const fr: Translation = {
     duration: 'Durée estimée',
     contact: 'Une question ? Contactez-nous',
   },
+  gallery: {
+    label: "L'Italie en images",
+    h1: 'Les plus belles',
+    h2: 'destinations',
+    photos: [
+      { label: 'Florence' },
+      { label: 'Rome' },
+      { label: 'Côte Amalfitaine' },
+      { label: 'Venise' },
+      { label: 'Toscane' },
+      { label: 'Milan' },
+    ],
+  },
+  video: {
+    label: "Découvrez l'Italie",
+    h1: "L'Italie vous",
+    h2: 'attend',
+    p: "De la Toscane à la Sicile, découvrez pourquoi des milliers d'étrangers choisissent l'Italie pour vivre, investir et s'épanouir.",
+  },
 }
