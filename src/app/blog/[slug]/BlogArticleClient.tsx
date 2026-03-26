@@ -5,7 +5,6 @@ import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
-import ScrollFade from '@/components/ScrollFade'
 import { useLang } from '@/context/LangContext'
 import type { LangCode } from '@/i18n'
 
@@ -997,100 +996,89 @@ Geometra, architetto, ingegnere, medico specialista, avvocato, commercialista �
   },
 ]
 
-function BlogPageContent() {
-  const { lang } = useLang()
-  const [filter, setFilter] = useState('all')
-
-  const categories = ['all', 'immobilier', 'renovation', 'medical', 'visa-etudiant', 'export', 'juridique', 'administratif', 'conciergerie', 'evenements', 'maisons-retraite', 'financement', 'professionnels']
-
-  const catLabels: Record<string, Record<string, string>> = {
-    all: { fr: 'Tous', en: 'All', it: 'Tutti', ar: 'الكل' },
-    immobilier: { fr: 'Immobilier', en: 'Real Estate', it: 'Immobiliare', ar: 'عقارات' },
-    renovation: { fr: 'Rénovation', en: 'Renovation', it: 'Ristrutturazione', ar: 'تجديد' },
-    medical: { fr: 'Médical', en: 'Medical', it: 'Medico', ar: 'طبي' },
-    'visa-etudiant': { fr: 'Visa', en: 'Visa', it: 'Visto', ar: 'تأشيرة' },
-    export: { fr: 'Export', en: 'Export', it: 'Export', ar: 'تصدير' },
-    juridique: { fr: 'Juridique', en: 'Legal', it: 'Legale', ar: 'قانوني' },
-    administratif: { fr: 'Administratif', en: 'Administrative', it: 'Amministrativo', ar: 'إداري' },
-    conciergerie: { fr: 'Conciergerie', en: 'Concierge', it: 'Concierge', ar: 'كونسيرج' },
-    evenements: { fr: 'Événements', en: 'Events', it: 'Eventi', ar: 'فعاليات' },
-    'maisons-retraite': { fr: 'Retraite', en: 'Retirement', it: 'Pensione', ar: 'تقاعد' },
-    financement: { fr: 'Financement', en: 'Financing', it: 'Finanziamento', ar: 'تمويل' },
-    professionnels: { fr: 'Professionnels', en: 'Professionals', it: 'Professionisti', ar: 'مهنيون' },
-  }
-
-  const blogTitles: Record<string, string> = {
-    fr: 'Blog & Guides', en: 'Blog & Guides', it: 'Blog & Guide', ar: 'المدونة والأدلة'
-  }
-  const blogSubtitles: Record<string, string> = {
-    fr: 'Conseils experts pour réussir vos projets en Italie',
-    en: 'Expert advice to succeed in your Italian projects',
-    it: 'Consigli esperti per il successo dei vostri progetti in Italia',
-    ar: 'نصائح الخبراء لنجاح مشاريعك في إيطاليا'
-  }
-  const readMoreLabels: Record<string, string> = {
-    fr: "Lire l'article →", en: 'Read article →', it: 'Leggi articolo →', ar: '← اقرأ المقال'
-  }
-  const minLabels: Record<string, string> = {
-    fr: 'min de lecture', en: 'min read', it: 'min di lettura', ar: 'دقيقة قراءة'
-  }
-
-  const filtered = filter === 'all' ? ARTICLES : ARTICLES.filter(a => a.category === filter)
-  const l = lang as LangCode
-
-  return (
-    <div className="blog-page">
-      <div className="blog-page-header">
-        <h1 className="font-playfair blog-page-h1">{blogTitles[l] || blogTitles.en}</h1>
-        <p className="blog-page-sub">{blogSubtitles[l] || blogSubtitles.en}</p>
-
-        <div className="blog-filters">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              className={`blog-filter-btn${filter === cat ? ' active' : ''}`}
-              onClick={() => setFilter(cat)}
-            >
-              {catLabels[cat]?.[l] || catLabels[cat]?.en || cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="blog-grid">
-        {filtered.map((article) => (
-          <Link key={article.slug} href={`/blog/${article.slug}`} className="blog-card">
-            <div className="blog-card-img">
-              <img src={article.image} alt={article.title[l as keyof typeof article.title] || article.title.en} loading="lazy" />
-              <div className="blog-card-cat">{catLabels[article.category]?.[l] || article.category}</div>
-            </div>
-            <div className="blog-card-body">
-              <div className="blog-card-meta">
-                <span>{article.date}</span>
-                <span>·</span>
-                <span>{article.readTime} {minLabels[l] || minLabels.en}</span>
-              </div>
-              <h2 className="font-playfair blog-card-title">{article.title[l as keyof typeof article.title] || article.title.en}</h2>
-              <p className="blog-card-excerpt">{article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en}</p>
-              <span className="blog-card-link">{readMoreLabels[l] || readMoreLabels.en}</span>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  )
+function renderMarkdown(text: string): JSX.Element[] {
+  return text.split('\n').map((line, i) => {
+    if (line.startsWith('## ')) {
+      return <h2 key={i} className="article-h2 font-playfair">{line.replace('## ', '')}</h2>
+    }
+    if (line.trim() === '') return <br key={i} />
+    // Replace **bold** inline
+    const parts = line.split(/\*\*(.*?)\*\*/g)
+    if (parts.length > 1) {
+      return (
+        <p key={i} className="article-p">
+          {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : part)}
+        </p>
+      )
+    }
+    return <p key={i} className="article-p">{line}</p>
+  })
 }
 
-export default function BlogPage() {
+export default function BlogArticleClient({ slug }: { slug: string }) {
+  const { lang, t } = useLang()
   const [modalOpen, setModalOpen] = useState(false)
+  const l = lang as LangCode
+
+  const article = ARTICLES.find(a => a.slug === slug)
+
+  const backLabels: Record<string, string> = {
+    fr: '← Retour au Blog', en: '← Back to Blog', it: '← Torna al Blog', ar: '→ العودة للمدونة'
+  }
+  const ctaLabels: Record<string, string> = {
+    fr: 'Prendre rendez-vous gratuit →',
+    en: 'Book free consultation →',
+    it: 'Prenota consulenza gratuita →',
+    ar: '← احجز استشارة مجانية'
+  }
+
+  if (!article) {
+    return (
+      <>
+        <Nav onRdv={() => setModalOpen(true)} />
+        <div style={{ padding: '120px 6vw', textAlign: 'center' }}>
+          <h1>Article not found</h1>
+          <Link href="/blog">← Back to Blog</Link>
+        </div>
+        <Footer />
+        <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      </>
+    )
+  }
+
   return (
     <>
       <Cursor />
-      <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
-      <div style={{ paddingTop: '80px', minHeight: '100vh', background: 'var(--cr)' }}>
-        <BlogPageContent />
+
+      <div className="article-hero">
+        <img src={article.image} alt={article.title[l as keyof typeof article.title] || article.title.en} />
+        <div className="article-hero-overlay" />
+        <div className="article-hero-content">
+          <Link href="/blog" className="article-back">{backLabels[l] || backLabels.en}</Link>
+          <div className="article-meta">
+            <span className="article-cat">{article.category}</span>
+            <span>·</span>
+            <span>{article.date}</span>
+            <span>·</span>
+            <span>{article.readTime} min</span>
+          </div>
+          <h1 className="font-playfair article-title">{article.title[l as keyof typeof article.title] || article.title.en}</h1>
+        </div>
       </div>
+
+      <div className="article-body">
+        <p className="article-excerpt">{article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en}</p>
+        <div className="article-content">
+          {renderMarkdown(article.content[l as keyof typeof article.content] || article.content.en)}
+        </div>
+
+        <div className="article-cta">
+          <h3 className="font-playfair">{t.cta.h1} <em>{t.cta.h2}</em></h3>
+          <button className="btn-gold" onClick={() => setModalOpen(true)}>{ctaLabels[l] || ctaLabels.en}</button>
+        </div>
+      </div>
+
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </>
