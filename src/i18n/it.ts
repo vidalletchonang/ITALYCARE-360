@@ -789,7 +789,7 @@ export const it: Translation = {
     btn2: 'Vedi tutti i servizi',
   },
   bar: [
-    { icon: '📧', text: 'contact@italycare360.com' },
+    { icon: '📧', text: 'info@italycare360.com' },
     { icon: '📱', text: '+39 02 1234 5678' },
     { icon: '📍', text: 'Milano · Roma · Firenze' },
     { icon: '💬', text: 'WhatsApp 7/7' },
