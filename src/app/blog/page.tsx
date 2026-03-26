@@ -15,7 +15,7 @@ const ARTICLES = [
     category: 'immobilier',
     date: '2025-03-10',
     readTime: 8,
-    image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Acheter un bien immobilier en Italie : guide complet pour les étrangers",
       en: "Buying Property in Italy: The Complete Guide for Foreigners",
@@ -126,7 +126,7 @@ Il nostro team è pronto a guidarvi in ogni fase. **Contattateci per una consule
     category: 'renovation',
     date: '2025-02-20',
     readTime: 6,
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Rénovation en Italie depuis l'étranger : comment coordonner vos travaux à distance",
       en: "Renovation in Italy from Abroad: How to Coordinate Your Works Remotely",
@@ -223,7 +223,7 @@ L'Italia offre significativi incentivi fiscali: Superbonus, Bonus Ristrutturazio
     category: 'medical',
     date: '2025-01-15',
     readTime: 7,
-    image: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Soins médicaux en Italie : ce que les patients étrangers doivent savoir",
       en: "Medical Care in Italy: What Foreign Patients Need to Know",
@@ -310,7 +310,7 @@ L'Italia è leader mondiale nelle terapie termali e respiratorie. Terme di Satur
     category: 'visa-etudiant',
     date: '2025-01-05',
     readTime: 9,
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Visa étudiant pour l'Italie : guide complet 2025",
       en: "Student Visa for Italy: Complete Guide 2025",
@@ -397,7 +397,7 @@ Lettera di accettazione universitaria, prova di alloggio, documentazione finanzi
     category: 'export',
     date: '2024-12-10',
     readTime: 6,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Exporter des produits italiens : opportunités et démarches pour les importateurs",
       en: "Exporting Italian Products: Opportunities and Steps for Importers",
@@ -476,7 +476,7 @@ Connessione con produttori autentici certificati, gestione delle certificazioni 
     category: 'juridique',
     date: '2024-11-20',
     readTime: 7,
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Droit immobilier et fiscal en Italie : ce que tout étranger doit connaître",
       en: "Real Estate and Tax Law in Italy: What Every Foreigner Must Know",
@@ -551,7 +551,7 @@ Avvocati partner specializzati in diritto immobiliare, fiscale, successorio e so
     category: 'administratif',
     date: '2024-11-05',
     readTime: 5,
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Codice Fiscale et Permesso di Soggiorno : le guide pratique pour les étrangers",
       en: "Codice Fiscale and Permesso di Soggiorno: The Practical Guide for Foreigners",
@@ -625,7 +625,7 @@ Gestiamo tutte le procedure amministrative italiane dalla A alla Z, nella vostra
     category: 'conciergerie',
     date: '2024-10-15',
     readTime: 5,
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Service de conciergerie en Italie : vivez l'Italie sans contraintes",
       en: "Concierge Service in Italy: Experience Italy Without Constraints",
@@ -694,7 +694,7 @@ Transfer aeroporto con autista multilingue, alloggio temporaneo selezionato, tra
     category: 'evenements',
     date: '2024-09-20',
     readTime: 6,
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Organiser son mariage en Italie : le guide ultime pour les couples internationaux",
       en: "Planning Your Wedding in Italy: The Ultimate Guide for International Couples",
@@ -769,7 +769,7 @@ Toscana, Lago di Como, Roma, Costiera Amalfitana — scenari incomparabili per u
     category: 'maisons-retraite',
     date: '2024-08-30',
     readTime: 6,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Choisir une maison de retraite en Italie : critères essentiels et meilleures régions",
       en: "Choosing a Retirement Home in Italy: Essential Criteria and Best Regions",
@@ -848,7 +848,7 @@ Valutazione personalizzata delle esigenze, identificazione delle strutture, orga
     category: 'financement',
     date: '2024-08-01',
     readTime: 7,
-    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Financer un projet immobilier en Italie en tant que non-résident : ce qu'il faut savoir",
       en: "Financing Real Estate in Italy as a Non-Resident: What You Need to Know",
@@ -921,7 +921,7 @@ Analisi finanziaria gratuita, connessione con partner bancari, negoziazione dell
     category: 'professionnels',
     date: '2024-07-10',
     readTime: 5,
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Trouver les bons professionnels en Italie : architectes, géomètres, médecins et avocats",
       en: "Finding the Right Professionals in Italy: Architects, Surveyors, Doctors and Lawyers",
