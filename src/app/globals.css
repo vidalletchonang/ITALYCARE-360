@@ -164,12 +164,12 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   list-style: none;
 }
 .nav-links a {
   font-size: 10px;
-  letter-spacing: 2.5px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
   text-decoration: none;
@@ -1567,4 +1567,44 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 }
 @media (max-width: 480px) {
   .team-pg-grid { grid-template-columns: 1fr; }
+}
+
+/* ===================== BLOG ===================== */
+.blog-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 6vw;
+  text-align: center;
+  min-height: 60vh;
+}
+.blog-soon-icon { font-size: 4rem; margin-bottom: 24px; }
+.blog-soon-h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #1a1814;
+  margin-bottom: 20px;
+}
+.blog-soon-h1 em { color: var(--g); }
+.blog-soon-p {
+  color: var(--ts);
+  font-size: 1.15rem;
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.blog-soon-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.blog-soon-tags span {
+  background: var(--op);
+  color: var(--gd);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--gw);
 }

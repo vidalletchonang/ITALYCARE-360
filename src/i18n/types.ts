@@ -30,10 +30,12 @@ export interface ServiceItem {
 
 export interface Translation {
   nav: {
+    home: string
     services: string
     about: string
     process: string
     testi: string
+    blog: string
     contact: string
     cta: string
   }

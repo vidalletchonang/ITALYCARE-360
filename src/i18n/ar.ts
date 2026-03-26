@@ -2,10 +2,12 @@ import type { Translation } from './types'
 
 export const ar: Translation = {
   nav: {
+    home: 'الرئيسية',
     services: 'الخدمات',
     about: 'من نحن',
     process: 'كيف نعمل',
     testi: 'آراء العملاء',
+    blog: 'المدونة',
     contact: 'تواصل',
     cta: 'استشارة مجانية',
   },

@@ -16,11 +16,13 @@ export default function Nav({ onRdv }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const links = [
-    { href: '#services', label: t.nav.services },
+    { href: '/', label: t.nav.home, isPage: true },
+    { href: '#services', label: t.nav.services, isPage: false },
     { href: '/about', label: t.nav.about, isPage: true },
-    { href: '#process', label: t.nav.process },
-    { href: '#testi', label: t.nav.testi },
-    { href: '#contact', label: t.nav.contact },
+    { href: '#process', label: t.nav.process, isPage: false },
+    { href: '#testi', label: t.nav.testi, isPage: false },
+    { href: '/blog', label: t.nav.blog, isPage: true },
+    { href: '#contact', label: t.nav.contact, isPage: false },
   ]
 
   const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
