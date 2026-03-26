@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import type { LangCode } from '@/i18n'
 
@@ -16,7 +17,7 @@ export default function Nav({ onRdv }: NavProps) {
 
   const links = [
     { href: '#services', label: t.nav.services },
-    { href: '#about', label: t.nav.about },
+    { href: '/about', label: t.nav.about, isPage: true },
     { href: '#process', label: t.nav.process },
     { href: '#testi', label: t.nav.testi },
     { href: '#contact', label: t.nav.contact },
@@ -43,7 +44,11 @@ export default function Nav({ onRdv }: NavProps) {
         <ul className="nav-links">
           {links.map(l => (
             <li key={l.href}>
-              <a href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
+              {l.isPage ? (
+                <Link href={l.href}>{l.label}</Link>
+              ) : (
+                <a href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -71,7 +76,11 @@ export default function Nav({ onRdv }: NavProps) {
 
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
         {links.map(l => (
-          <a key={l.href} href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
+          l.isPage ? (
+            <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</Link>
+          ) : (
+            <a key={l.href} href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
+          )
         ))}
         <button className="nav-cta" onClick={() => { onRdv(); setMenuOpen(false) }} style={{ marginTop: 8 }}>
           {t.nav.cta}
