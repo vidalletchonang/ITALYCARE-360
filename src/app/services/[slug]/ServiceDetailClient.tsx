@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
+import Cursor from '@/components/Cursor'
 
 type QuizState = 'intro' | 'quiz' | 'result'
 
@@ -99,6 +100,7 @@ export default function ServiceDetailClient({ slug }: Props) {
 
   return (
     <div dir={dir} style={{ background: cr, minHeight: '100vh', fontFamily: bodyFont }}>
+      <Cursor />
 
       {/* Header */}
       <div style={{ background: bk, padding: '1rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

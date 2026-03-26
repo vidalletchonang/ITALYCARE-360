@@ -863,4 +863,14 @@ export const fr: Translation = {
     h2: 'attend',
     p: "De la Toscane à la Sicile, découvrez pourquoi des milliers d'étrangers choisissent l'Italie pour vivre, investir et s'épanouir.",
   },
+  team: {
+    label: 'Notre Équipe',
+    h1: 'Les experts qui',
+    h2: 'vous accompagnent',
+    desc: 'Une équipe internationale de spécialistes — juristes, experts immobiliers, conseillers visa et ingénieurs — entièrement dédiée à votre réussite en Italie.',
+    badge: 'ITALYCARE 360',
+    emailBtn: 'Envoyer un e-mail',
+    readMore: 'Lire la suite →',
+    readLess: '← Réduire',
+  },
 }

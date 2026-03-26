@@ -863,4 +863,14 @@ export const it: Translation = {
     h2: 'aspetta',
     p: "Dalla Toscana alla Sicilia, scopri perché migliaia di stranieri scelgono l'Italia per vivere, investire e realizzarsi.",
   },
+  team: {
+    label: 'Il Nostro Team',
+    h1: 'Gli esperti che',
+    h2: 'ti accompagnano',
+    desc: 'Un team internazionale di specialisti — avvocati, esperti immobiliari, consulenti visti e ingegneri — interamente dedicati al tuo successo in Italia.',
+    badge: 'ITALYCARE 360',
+    emailBtn: "Invia un'email",
+    readMore: 'Leggi di più →',
+    readLess: '← Riduci',
+  },
 }

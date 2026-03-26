@@ -863,4 +863,14 @@ export const en: Translation = {
     h2: 'waiting for you',
     p: 'From Tuscany to Sicily, discover why thousands of expats choose Italy to live, invest and thrive.',
   },
+  team: {
+    label: 'Our Team',
+    h1: 'The experts who',
+    h2: 'support you',
+    desc: 'An international team of specialists — lawyers, real estate experts, visa advisors and engineers — entirely dedicated to your success in Italy.',
+    badge: 'ITALYCARE 360',
+    emailBtn: 'Send an email',
+    readMore: 'Read more →',
+    readLess: '← Read less',
+  },
 }

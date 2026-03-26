@@ -149,4 +149,14 @@ export interface Translation {
     h2: string
     p: string
   }
+  team: {
+    label: string
+    h1: string
+    h2: string
+    desc: string
+    badge: string
+    emailBtn: string
+    readMore: string
+    readLess: string
+  }
 }
