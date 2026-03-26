@@ -56,6 +56,7 @@ export const en: Translation = {
             'Notary coordination and deed preparation',
             'Codice fiscale (Italian tax number) for the foreign buyer',
             'Tax advice and investment optimization',
+            'Signature with special power of attorney',
           ],
           notIncludes: [
             'Notary fees and purchase taxes (buyer\'s responsibility)',

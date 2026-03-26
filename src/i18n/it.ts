@@ -56,6 +56,7 @@ export const it: Translation = {
             'Coordinamento con il notaio italiano',
             'Ottenimento del codice fiscale per l\'acquirente straniero',
             'Consulenza fiscale e ottimizzazione dell\'investimento',
+            'Firma con procura speciale',
           ],
           notIncludes: [
             'Spese notarili e tasse d\'acquisto (a carico dell\'acquirente)',

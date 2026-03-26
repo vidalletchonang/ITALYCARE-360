@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { LangProvider } from '@/context/LangContext'
+import Cursor from '@/components/Cursor'
 
 export const metadata: Metadata = {
   title: 'ITALYCARE 360 — Votre Vie en Italie, Réinventée',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&family=Jost:wght@200;300;400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <Cursor />
         <LangProvider>
           {children}
         </LangProvider>

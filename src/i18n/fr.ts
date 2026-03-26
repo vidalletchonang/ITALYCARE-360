@@ -56,6 +56,7 @@ export const fr: Translation = {
             'Coordination avec le notaire italien',
             'Obtention du codice fiscale pour l\'acheteur étranger',
             'Conseils fiscaux et optimisation de l\'investissement',
+            'Signature avec procuration spéciale',
           ],
           notIncludes: [
             'Frais de notaire et taxes d\'achat (à la charge de l\'acheteur)',
