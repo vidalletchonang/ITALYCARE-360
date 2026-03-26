@@ -49,6 +49,47 @@ a, button, [role="button"], input, select, textarea, label {
   font-family: var(--font-cairo) !important;
 }
 
+/* RTL — Hero fixes */
+[dir="rtl"] .hero {
+  direction: rtl;
+}
+[dir="rtl"] .hero-content {
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+}
+[dir="rtl"] .hero-right {
+  right: auto;
+  left: 48px;
+  align-items: flex-start;
+}
+[dir="rtl"] .hero-stat .n,
+[dir="rtl"] .hero-stat .l {
+  text-align: left;
+}
+[dir="rtl"] .hdiv {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir="rtl"] .scroll-ind {
+  left: auto;
+  right: 48px;
+}
+[dir="rtl"] .hero-tag {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .hero-actions {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .hero-glow {
+  right: auto;
+  left: -60px;
+}
+[dir="rtl"] .hero-glow2 {
+  left: auto;
+  right: 80px;
+}
+
 /* ===================== CURSOR ===================== */
 .cursor {
   width: 10px;
