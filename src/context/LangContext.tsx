@@ -14,14 +14,14 @@ interface LangContextValue {
 }
 
 const LangContext = createContext<LangContextValue>({
-  lang: 'fr',
-  t: fr,
+  lang: 'en',
+  t: en,
   setLang: () => {},
   isRTL: false,
 })
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<LangCode>('fr')
+  const [lang, setLangState] = useState<LangCode>('en')
 
   const setLang = (l: LangCode) => {
     setLangState(l)
