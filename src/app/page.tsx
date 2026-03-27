@@ -8,6 +8,8 @@ import MarqueeBanner from '@/components/MarqueeBanner'
 import Gallery from '@/components/Gallery'
 import About from '@/components/About'
 import Services from '@/components/Services'
+import ItalyMap from '@/components/ItalyMap'
+import CostCalculator from '@/components/CostCalculator'
 import Process from '@/components/Process'
 import Numbers from '@/components/Numbers'
 import Testimonials from '@/components/Testimonials'
@@ -17,6 +19,7 @@ import ContactBar from '@/components/ContactBar'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -31,6 +34,8 @@ export default function Home() {
       <Gallery />
       <About />
       <Services onRdv={() => setModalOpen(true)} />
+      <ItalyMap onRdv={() => setModalOpen(true)} />
+      <CostCalculator onRdv={() => setModalOpen(true)} />
       <Process />
       <Numbers />
       <Testimonials />
@@ -39,6 +44,7 @@ export default function Home() {
       <ContactBar />
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <WhatsAppButton />
     </>
   )
 }
