@@ -2679,3 +2679,54 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   .calc-cta { width: 100%; }
   .calc-section { padding: 64px 16px; }
 }
+
+/* ── Nav Estimate button ─────────────────────────────── */
+.nav-estimate-btn {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--o);
+  border: 1.5px solid rgba(201,168,76,0.5);
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--font-jost);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.nav-estimate-btn:hover {
+  background: var(--o);
+  color: var(--bk);
+}
+@media (max-width: 900px) {
+  .nav-estimate-btn { display: none; }
+}
+
+/* ── Hero Estimate button ────────────────────────────── */
+.btn-estimate {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.75);
+  padding: 12px 22px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-jost);
+  border-radius: 4px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-estimate:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .btn-estimate { width: 100%; justify-content: center; }
+}

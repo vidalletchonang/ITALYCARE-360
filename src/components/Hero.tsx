@@ -6,8 +6,13 @@ interface HeroProps {
   onRdv: () => void
 }
 
+const estimateLabel: Record<string, string> = {
+  fr: 'Estimer mon projet', en: 'Estimate my project',
+  it: 'Stima il progetto', ar: 'قدّر مشروعي',
+}
+
 export default function Hero({ onRdv }: HeroProps) {
-  const { t } = useLang()
+  const { t, lang } = useLang()
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -60,6 +65,9 @@ export default function Hero({ onRdv }: HeroProps) {
           </button>
           <button className="btn-ghost-w" onClick={() => scrollTo('#services')}>
             {t.hero.btn2}
+          </button>
+          <button className="btn-estimate" onClick={() => scrollTo('#calculator')}>
+            🧮 {estimateLabel[lang] || estimateLabel.en}
           </button>
         </div>
       </div>

@@ -34,8 +34,8 @@ export default function Home() {
       <Gallery />
       <About />
       <Services onRdv={() => setModalOpen(true)} />
-      <ItalyMap onRdv={() => setModalOpen(true)} />
       <CostCalculator onRdv={() => setModalOpen(true)} />
+      <ItalyMap onRdv={() => setModalOpen(true)} />
       <Process />
       <Numbers />
       <Testimonials />
