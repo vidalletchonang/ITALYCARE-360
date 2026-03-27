@@ -93,6 +93,18 @@ export default function Nav({ onRdv }: NavProps) {
             <a key={l.href} href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
           )
         ))}
+        {/* Language switcher inside mobile menu */}
+        <div className="mobile-langs">
+          {LANGS.map(l => (
+            <button
+              key={l}
+              className={`lang-btn${lang === l ? ' active' : ''}`}
+              onClick={() => { setLang(l); setMenuOpen(false) }}
+            >
+              {l.toUpperCase()}
+            </button>
+          ))}
+        </div>
         <button className="nav-cta" onClick={() => { onRdv(); setMenuOpen(false) }} style={{ marginTop: 8 }}>
           {t.nav.cta}
         </button>
