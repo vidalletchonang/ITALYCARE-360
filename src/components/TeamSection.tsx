@@ -7,7 +7,7 @@ import type { LangCode } from '@/i18n'
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const TEAM_MEMBERS = [
-  { name: 'Fabrizio Permunian', role: { fr:'Expert Immobilier & Directeur', en:'Real Estate Expert & Business Manager', it:'Esperto Immobiliare & Direttore', ar:'خبير عقاري ومدير' }, email: 'fabrizio.p@italianrealestatelawyers.com', photo: `${BASE}/team/fabrizio.svg`, initials: 'FP', color: '#1a6b3c', badge: true, bio: 'Fabrizio is a businessman and a dynamic leader who lives in Italy. He is an expert in the Italian real estate market and business success and is a frequent guest speaker on talk shows. He also features in dozens of newspaper and magazine articles about real estate in Italy.' },
+  { name: 'Fabrizio Permunian', role: { fr:'PDG & Expert Immobilier', en:'CEO & Real Estate Expert', it:'CEO & Esperto Immobiliare', ar:'الرئيس التنفيذي وخبير العقارات' }, email: 'fabrizio.p@italianrealestatelawyers.com', photo: `${BASE}/team/fabrizio.svg`, initials: 'FP', color: '#1a6b3c', badge: true, pdg: true, bio: 'Fabrizio is a businessman and a dynamic leader who lives in Italy. He is an expert in the Italian real estate market and business success and is a frequent guest speaker on talk shows. He also features in dozens of newspaper and magazine articles about real estate in Italy.' },
   { name: 'Linda Balboni', role: { fr:'Directrice Générale & Experte Immobilier', en:'General Manager & Real Estate Expert', it:'Direttrice Generale & Esperta Immobiliare', ar:'مديرة عامة وخبيرة عقارية' }, email: 'linda@italianrealestatelawyers.com', photo: `${BASE}/team/linda.webp`, initials: 'LB', color: '#c9a84c', badge: false, bio: "Linda graduated in Foreign Languages and Literature from the University of Ferrara and earned a master's degree in Legal Translation in 2018. She developed expertise in business, marketing, taxation, and property management, working with prestigious real estate firms in Italy. Since 2020, she has assisted clients at Italian Real Estate Lawyers. She is fluent in English and Spanish." },
   { name: 'Emma Piva', role: { fr:'Experte Immobilier', en:'ITALYCARE 360 & Real Estate Expert', it:'Esperta Immobiliare', ar:'خبيرة عقارية' }, email: 'emma@italianrealestatelawyers.com', photo: `${BASE}/team/emma.png`, initials: 'EP', color: '#1a6b3c', badge: true, bio: "Emma earned her Bachelor's degree in Languages, Civilizations and Language Sciences and her Master's degree in Comparative International Relations from Ca' Foscari University of Venice. She assists international clients throughout the property purchasing process, coordinating communication between all parties and supporting complex transactions. She has been Vice Manager of the firm for the past four years. Emma speaks Italian, English, Spanish, and French." },
   { name: 'Gaia Procopio', role: { fr:'Consultante Juridique', en:'Legal Consultant', it:'Consulente Legale', ar:'مستشارة قانونية' }, email: 'gaiaprocopio@italianrealestatelawyers.com', photo: `${BASE}/team/gaia.png`, initials: 'GP', color: '#b5261e', badge: false, bio: "Gaia earned her Law degree from the University of Ferrara in 2015 and gained experience in law firms and a notary office, developing strong expertise in real estate law. She later worked as a legal consultant for construction companies and businesses. At Italian Real Estate Lawyers, she assists clients through all stages of the purchasing process. She speaks Italian, English, and Spanish." },
@@ -31,6 +31,7 @@ interface Member {
   initials: string
   color: string
   badge: boolean
+  pdg?: boolean
   bio: string
 }
 
@@ -49,9 +50,26 @@ export default function TeamSection() {
         <p className="team-pg-desc">{t.team.desc}</p>
       </div>
 
-      {/* Grid */}
+      {/* PDG Card – Fabrizio */}
+      {TEAM_MEMBERS.filter(m => m.pdg).map((m, i) => (
+        <div key={`pdg-${i}`} className="tm-pdg-card" onClick={() => setSelected(m)}>
+          <div className="tm-pdg-photo">
+            <img src={m.photo!} alt={m.name} />
+            <div className="tm-pdg-badge">PDG · CEO</div>
+          </div>
+          <div className="tm-pdg-info">
+            <div className="tm-pdg-label">ITALYCARE 360 · FONDATEUR</div>
+            <h2 className="font-playfair tm-pdg-name">{m.name}</h2>
+            <p className="tm-pdg-role">{m.role[lang as LangCode] || m.role['en']}</p>
+            <p className="tm-pdg-bio">{m.bio}</p>
+            <button className="tm-pdg-btn">{t.team.readMore} →</button>
+          </div>
+        </div>
+      ))}
+
+      {/* Grid – rest of the team */}
       <div className="team-pg-grid">
-        {TEAM_MEMBERS.map((m, i) => (
+        {TEAM_MEMBERS.filter(m => !m.pdg).map((m, i) => (
           <div key={i} className="tm-card" onClick={() => setSelected(m)}>
             {/* Photo or avatar */}
             <div className="tm-photo">
