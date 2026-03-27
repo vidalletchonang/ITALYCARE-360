@@ -249,6 +249,86 @@ const ARTICLES = [
     },
     content: { en: '', fr: '', it: '', ar: '' }
   },
+  {
+    slug: 'silver-economy-retraite-italie-seniors',
+    category: 'silver-economy',
+    date: '2026-03-01',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80',
+    title: {
+      fr: "S'installer en Italie après 60 ans : le guide complet pour les seniors",
+      en: "Settling in Italy After 60: The Complete Guide for Seniors",
+      it: "Trasferirsi in Italia Dopo i 60 Anni: La Guida Completa per i Senior",
+      ar: "الاستقرار في إيطاليا بعد سن الستين: الدليل الشامل لكبار السن"
+    },
+    excerpt: {
+      fr: "L'Italie est l'une des destinations préférées des retraités du monde entier. Climat exceptionnel, gastronomie, culture et soins de santé de qualité : découvrez comment ITALYCARE 360 accompagne les seniors dans leur projet de vie en Italie.",
+      en: "Italy is one of the most sought-after destinations for retirees worldwide. Exceptional climate, gastronomy, culture and quality healthcare: discover how ITALYCARE 360 supports seniors in their Italian lifestyle project.",
+      it: "L'Italia è una delle destinazioni preferite dai pensionati di tutto il mondo. Clima eccezionale, gastronomia, cultura e sanità di qualità: scopri come ITALYCARE 360 accompagna i senior nel loro progetto di vita in Italia.",
+      ar: "إيطاليا من الوجهات المفضلة للمتقاعدين حول العالم. مناخ استثنائي وطبخ وثقافة ورعاية صحية متميزة: اكتشف كيف يرافق ITALYCARE 360 كبار السن في مشروع حياتهم الإيطالية."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
+  {
+    slug: 'property-care-gerer-bien-italie-distance',
+    category: 'property-care',
+    date: '2026-02-15',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    title: {
+      fr: "Gérer son bien immobilier en Italie à distance : nos solutions Property Care",
+      en: "Managing Your Property in Italy Remotely: Our Property Care Solutions",
+      it: "Gestire il Proprio Immobile in Italia a Distanza: Le Nostre Soluzioni Property Care",
+      ar: "إدارة عقارك في إيطاليا عن بُعد: حلول Property Care لدينا"
+    },
+    excerpt: {
+      fr: "Posséder un bien en Italie sans y vivre soulève de nombreux défis : entretien, sécurité, urgences. Découvrez comment notre service Property Care vous garantit une gestion complète et sereine de votre propriété.",
+      en: "Owning property in Italy without living there raises many challenges: maintenance, security, emergencies. Discover how our Property Care service guarantees complete and worry-free management of your property.",
+      it: "Possedere un immobile in Italia senza viverci solleva molte sfide: manutenzione, sicurezza, emergenze. Scopri come il nostro servizio Property Care garantisce una gestione completa e serena della tua proprietà.",
+      ar: "امتلاك عقار في إيطاليا دون الإقامة فيه يطرح تحديات عديدة: الصيانة والأمن والطوارئ. اكتشف كيف تضمن خدمة Property Care لدينا إدارة كاملة ومريحة لممتلكاتك."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
+  {
+    slug: 'thermal-wellness-cures-thermales-italie',
+    category: 'thermal-wellness',
+    date: '2026-01-20',
+    readTime: 8,
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
+    title: {
+      fr: "Cures thermales en Italie : bienfaits, meilleures stations et comment s'organiser",
+      en: "Thermal Cures in Italy: Benefits, Best Resorts and How to Organise Your Stay",
+      it: "Cure Termali in Italia: Benefici, Migliori Stazioni e Come Organizzarsi",
+      ar: "العلاجات الحرارية في إيطاليا: الفوائد وأفضل المنتجعات وكيفية التنظيم"
+    },
+    excerpt: {
+      fr: "L'Italie est l'une des premières destinations mondiales pour les cures thermales et le wellness médical. Fangothérapie, balnéothérapie, hydrokinésithérapie : découvrez comment organiser votre séjour thérapeutique avec ITALYCARE 360.",
+      en: "Italy is one of the world's leading destinations for thermal cures and medical wellness. Mud therapy, balneotherapy, hydrotherapy: discover how to organise your therapeutic stay with ITALYCARE 360.",
+      it: "L'Italia è una delle principali destinazioni mondiali per le cure termali e il wellness medico. Fangoterapia, balneoterapia, idrokinesiterapia: scopri come organizzare il tuo soggiorno terapeutico con ITALYCARE 360.",
+      ar: "إيطاليا من الوجهات الأولى عالميًا للعلاجات الحرارية والعافية الطبية. علاج الطين والمعالجة المائية: اكتشف كيف تنظم إقامتك العلاجية مع ITALYCARE 360."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
+  {
+    slug: 'aviation-privee-italie-guide',
+    category: 'aviation-privee',
+    date: '2026-01-05',
+    readTime: 5,
+    image: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1200&q=80',
+    title: {
+      fr: "Aviation privée vers l'Italie : guide pratique pour un voyage VIP sans stress",
+      en: "Private Aviation to Italy: Practical Guide for a Stress-Free VIP Journey",
+      it: "Aviazione Privata verso l'Italia: Guida Pratica per un Viaggio VIP Senza Stress",
+      ar: "الطيران الخاص إلى إيطاليا: الدليل العملي لرحلة VIP خالية من التوتر"
+    },
+    excerpt: {
+      fr: "Voyager en jet privé ou en hélicoptère vers l'Italie offre confort, discrétion et flexibilité inégalés. Découvrez comment ITALYCARE 360 coordonne votre expérience d'aviation privée de A à Z.",
+      en: "Travelling by private jet or helicopter to Italy offers unmatched comfort, discretion and flexibility. Discover how ITALYCARE 360 coordinates your private aviation experience from start to finish.",
+      it: "Viaggiare in jet privato o in elicottero verso l'Italia offre comfort, discrezione e flessibilità senza pari. Scopri come ITALYCARE 360 coordina la tua esperienza di aviazione privata dalla A alla Z.",
+      ar: "السفر بطائرة خاصة أو مروحية إلى إيطاليا يوفر راحة وسرية ومرونة لا مثيل لها. اكتشف كيف ينسق ITALYCARE 360 تجربة طيرانك الخاص من الألف إلى الياء."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
 ]
 
 function renderMarkdown(text: string): JSX.Element[] {
