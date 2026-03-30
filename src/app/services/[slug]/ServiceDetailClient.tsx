@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import Cursor from '@/components/Cursor'
+import ContactModal from '@/components/ContactModal'
 
 type QuizState = 'intro' | 'quiz' | 'result'
 
@@ -20,6 +21,7 @@ export default function ServiceDetailClient({ slug }: Props) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
+  const [modalOpen, setModalOpen] = useState(false)
 
   if (!service) {
     return (
@@ -315,11 +317,7 @@ export default function ServiceDetailClient({ slug }: Props) {
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
                   {result !== 'notEligible' && (
                     <button
-                      onClick={() => {
-                        if (typeof window !== 'undefined') {
-                          window.dispatchEvent(new CustomEvent('openRdv'))
-                        }
-                      }}
+                      onClick={() => setModalOpen(true)}
                       style={{ background: `linear-gradient(135deg, ${o}, #e6c97a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer' }}
                     >
                       {sd.rdvBtn}
@@ -346,13 +344,15 @@ export default function ServiceDetailClient({ slug }: Props) {
             <a href="mailto:contact@italycare360.com" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
               📧 contact@italycare360.com
             </a>
-            <a href="https://wa.me/390212345678" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
+            <a href="https://wa.me/393517501164" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
               💬 WhatsApp
             </a>
           </div>
         </div>
 
       </div>
+
+      <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   )
 }

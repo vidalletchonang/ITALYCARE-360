@@ -29,7 +29,6 @@ interface Member {
   email: string
   photo: string | null
   photoPos?: string
-  photoZoom?: number
   initials: string
   color: string
   badge: boolean
@@ -80,10 +79,7 @@ export default function TeamSection() {
                   src={m.photo}
                   alt={m.name}
                   loading="lazy"
-                  style={{
-                    ...(m.photoPos ? { objectPosition: m.photoPos } : {}),
-                    ...(m.photoZoom ? { '--zoom': String(m.photoZoom) } as React.CSSProperties : {}),
-                  }}
+                  style={m.photoPos ? { objectPosition: m.photoPos } : undefined}
                 />
               ) : (
                 <div className="tm-avatar" style={{ background: m.color }}>
