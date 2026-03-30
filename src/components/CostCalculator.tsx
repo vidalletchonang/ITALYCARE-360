@@ -87,7 +87,7 @@ export default function CostCalculator({ onRdv }: { onRdv: () => void }) {
     setStep(0); setService(null); setCity(null); setBudget(null); setTimeline(null)
   }
 
-  const sn = (obj: Record<string, string>) => obj[lang] || obj.en
+  const sn = (obj: Record<string, string | number>) => String(obj[lang] || obj['en'] || '')
 
   return (
     <section className="calc-section" id="calculator">
