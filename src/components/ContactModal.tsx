@@ -23,24 +23,52 @@ interface FormData {
   phone: string
   service: string
   date: string
+  time: string
   message: string
 }
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
+// ── Slot generator ────────────────────────────────────────────────────
+function generateSlots(startH: number, startM: number, endH: number, endM: number): string[] {
+  const slots: string[] = []
+  let h = startH, m = startM
+  while (h < endH || (h === endH && m <= endM)) {
+    slots.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`)
+    m += 30
+    if (m >= 60) { h += 1; m = 0 }
+  }
+  return slots
+}
+
+const SLOTS_WEEKDAY = generateSlots(9, 0, 16, 30)  // Lun–Jeu : 9h00–16h30
+const SLOTS_FRIDAY  = generateSlots(9, 0, 14, 30)  // Ven    : 9h00–14h30
+
+function getSlotsForDate(dateStr: string): string[] | null {
+  if (!dateStr) return null
+  const d = new Date(dateStr + 'T12:00:00')
+  const day = d.getDay() // 0=Sun, 1=Mon, ..., 5=Fri, 6=Sat
+  if (day === 0 || day === 6) return null   // weekend — bloqué
+  if (day === 5) return SLOTS_FRIDAY
+  return SLOTS_WEEKDAY
+}
+
+// ── Component ─────────────────────────────────────────────────────────
 export default function ContactModal({ open, onClose }: ContactModalProps) {
   const { t, isRTL } = useLang()
 
   const [form, setForm] = useState<FormData>({
-    name: '', email: '', phone: '', service: '', date: '', message: '',
+    name: '', email: '', phone: '', service: '', date: '', time: '', message: '',
   })
   const [status, setStatus] = useState<Status>('idle')
+  const [weekendError, setWeekendError] = useState(false)
 
   // Reset when modal opens
   useEffect(() => {
     if (open) {
       setStatus('idle')
-      setForm({ name: '', email: '', phone: '', service: '', date: '', message: '' })
+      setWeekendError(false)
+      setForm({ name: '', email: '', phone: '', service: '', date: '', time: '', message: '' })
     }
   }, [open])
 
@@ -62,14 +90,25 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => setForm(f => ({ ...f, [field]: e.target.value }))
 
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value
+    const slots = getSlotsForDate(val)
+    setWeekendError(val !== '' && slots === null)
+    setForm(f => ({ ...f, date: val, time: '' }))
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (weekendError) return
     setStatus('sending')
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ ...form, _subject: `ITALYCARE 360 — RDV: ${form.service}` }),
+        body: JSON.stringify({
+          ...form,
+          _subject: `ITALYCARE 360 — RDV ${form.date} ${form.time} : ${form.service}`,
+        }),
       })
       setStatus(res.ok ? 'success' : 'error')
     } catch {
@@ -77,8 +116,8 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
     }
   }
 
-  // Today's date for min date input
   const today = new Date().toISOString().split('T')[0]
+  const slots = getSlotsForDate(form.date)
 
   return (
     <div className="modal-overlay" onClick={e => { if (e.target === e.currentTarget) onClose() }}>
@@ -107,6 +146,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 </div>
               )}
 
+              {/* Nom + Email */}
               <div className="form-row">
                 <div className="form-group">
                   <label>{t.form.name} *</label>
@@ -130,6 +170,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 </div>
               </div>
 
+              {/* Téléphone + Service */}
               <div className="form-row">
                 <div className="form-group">
                   <label>{t.form.phone}</label>
@@ -141,26 +182,52 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                   />
                 </div>
                 <div className="form-group">
+                  <label>{t.form.service} *</label>
+                  <select value={form.service} onChange={set('service')} required>
+                    <option value="">—</option>
+                    {t.form.serviceOpts.map((opt, i) => (
+                      <option key={i} value={opt}>{opt}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Date + Créneau */}
+              <div className="form-row">
+                <div className="form-group">
                   <label>{t.form.date}</label>
                   <input
                     type="date"
                     value={form.date}
-                    onChange={set('date')}
+                    onChange={handleDateChange}
                     min={today}
+                    className={weekendError ? 'input-error' : ''}
                   />
+                  {weekendError && (
+                    <span className="form-field-error">{t.form.weekendError}</span>
+                  )}
+                </div>
+                <div className="form-group">
+                  <label>{t.form.time}</label>
+                  <select
+                    value={form.time}
+                    onChange={set('time')}
+                    disabled={!slots}
+                  >
+                    <option value="">{slots ? t.form.timeSelect : '—'}</option>
+                    {(slots ?? []).map(s => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label>{t.form.service} *</label>
-                <select value={form.service} onChange={set('service')} required>
-                  <option value="">—</option>
-                  {t.form.serviceOpts.map((opt, i) => (
-                    <option key={i} value={opt}>{opt}</option>
-                  ))}
-                </select>
+              {/* Note disponibilité */}
+              <div className="form-avail-note">
+                🕐 {t.form.availability}
               </div>
 
+              {/* Message */}
               <div className="form-group">
                 <label>{t.form.message} *</label>
                 <textarea
@@ -175,7 +242,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
               <button
                 type="submit"
                 className="form-submit"
-                disabled={status === 'sending'}
+                disabled={status === 'sending' || weekendError}
               >
                 {status === 'sending' ? t.form.sending : t.form.submit}
               </button>

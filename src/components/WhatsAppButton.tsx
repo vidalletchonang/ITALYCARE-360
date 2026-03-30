@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useLang } from '@/context/LangContext'
 
-const WHATSAPP_NUMBER = '393000000000' // placeholder – to be updated
+const WHATSAPP_NUMBER = '393517501164'
 
 const labels: Record<string, string> = {
   fr: 'Discutons sur WhatsApp',

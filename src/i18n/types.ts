@@ -106,6 +106,10 @@ export interface Translation {
     service: string
     serviceOpts: string[]
     date: string
+    time: string
+    timeSelect: string
+    weekendError: string
+    availability: string
     message: string
     submit: string
     sending: string

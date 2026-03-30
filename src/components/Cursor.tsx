@@ -16,8 +16,8 @@ export default function Cursor() {
       mx = e.clientX
       my = e.clientY
       if (curRef.current) {
-        curRef.current.style.left = mx - 5 + 'px'
-        curRef.current.style.top = my - 5 + 'px'
+        curRef.current.style.left = mx - 1.5 + 'px'
+        curRef.current.style.top = my - 1.5 + 'px'
       }
     }
 
@@ -25,8 +25,8 @@ export default function Cursor() {
       rx += (mx - rx) * 0.12
       ry += (my - ry) * 0.12
       if (ringRef.current) {
-        ringRef.current.style.left = rx - 16 + 'px'
-        ringRef.current.style.top = ry - 16 + 'px'
+        ringRef.current.style.left = rx - 0.5 + 'px'
+        ringRef.current.style.top = ry - 14 + 'px'
       }
       rafId = requestAnimationFrame(animate)
     }
@@ -35,8 +35,8 @@ export default function Cursor() {
     rafId = requestAnimationFrame(animate)
 
     const hover = () => {
-      if (curRef.current) curRef.current.style.transform = 'scale(2)'
-      if (ringRef.current) ringRef.current.style.transform = 'scale(1.4)'
+      if (curRef.current) curRef.current.style.transform = 'scale(2.5)'
+      if (ringRef.current) ringRef.current.style.transform = 'scale(1.5)'
     }
     const unhover = () => {
       if (curRef.current) curRef.current.style.transform = 'scale(1)'

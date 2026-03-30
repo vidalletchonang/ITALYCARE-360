@@ -51,7 +51,6 @@ export default function Services({ onRdv }: ServicesProps) {
               <img src={serviceImages[item.slug] || ''} alt={item.t} loading="lazy" />
             </div>
             <div className="sc-n">{String(i + 1).padStart(2, '0')}</div>
-            <span className="sc-ico">{item.icon}</span>
             <div className="sc-t font-playfair">{item.t}</div>
             <div className="sc-d">{item.d}</div>
             <Link href={`/services/${item.slug}`} className="sc-lnk">{t.services.discover}</Link>
