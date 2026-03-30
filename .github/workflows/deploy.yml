@@ -35,6 +35,9 @@ jobs:
           # Replace 'italycare360' with your actual GitHub repository name
           # Remove this line if you are using a custom domain (e.g. www.italycare360.com)
           NEXT_PUBLIC_BASE_PATH: /ITALYCARE-360
+          # Google Analytics 4 — add NEXT_PUBLIC_GA_ID in GitHub repo Secrets
+          # Settings → Secrets and variables → Actions → New repository secret
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

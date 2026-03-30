@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useLang } from '@/context/LangContext'
+import { trackWhatsApp } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '393517501164'
 
@@ -23,6 +24,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       className="wa-btn"
       aria-label="WhatsApp"
+      onClick={() => trackWhatsApp()}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

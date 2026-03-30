@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useLang } from '@/context/LangContext'
+import { trackRdvOpen, trackCalendlyOpen } from '@/lib/analytics'
 
 // =====================================================================
 // CALENDLY SETUP:
@@ -43,13 +44,14 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
 
-  // Reset when modal opens
+  // Reset + track when modal opens
   useEffect(() => {
     if (open) {
       setStep('form')
       setError(false)
       setSending(false)
       setForm({ name: '', email: '', phone: '', service: '', message: '' })
+      trackRdvOpen('modal')
     }
   }, [open])
 
@@ -89,6 +91,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
       // on continue even if Formspree fails — Calendly remains the source of truth
     }
     setSending(false)
+    trackCalendlyOpen(form.service)
     setStep('calendly')
   }
 
