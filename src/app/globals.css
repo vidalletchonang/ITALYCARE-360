@@ -1663,7 +1663,6 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   object-fit: cover;
   object-position: top center;
   transform: scale(var(--zoom, 1));
-  transform-origin: top center;
   transition: transform 0.5s ease;
 }
 .tm-card:hover .tm-photo img {
