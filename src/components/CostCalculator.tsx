@@ -15,7 +15,7 @@ const SERVICES_DATA = [
   { id: 'maisons-retraite', icon: '🏡', fr: 'Maison de Retraite', en: 'Senior Residence', it: 'Casa di Riposo', ar: 'دار المسنين', base: 1500 },
   { id: 'financement',    icon: '💰', fr: 'Financement', en: 'Financing', it: 'Finanziamenti', ar: 'تمويل', base: 1000 },
   { id: 'property-care',  icon: '🏘️', fr: 'Gestion Immobilière', en: 'Property Care', it: 'Property Care', ar: 'إدارة العقارات', base: 300 },
-  { id: 'silver-economy', icon: '👴', fr: 'Silver Economy', en: 'Silver Economy', it: 'Silver Economy', ar: 'اقتصاد الفضة', base: 2000 },
+  { id: 'silver-economy', icon: '💎', fr: 'Silver Economy', en: 'Silver Economy', it: 'Silver Economy', ar: 'اقتصاد الفضة', base: 2000 },
   { id: 'thermal-wellness', icon: '🌿', fr: 'Bien-être Thermal', en: 'Thermal Wellness', it: 'Benessere Termale', ar: 'عافية حرارية', base: 600 },
   { id: 'aviation-privee', icon: '✈️', fr: 'Aviation Privée', en: 'Private Aviation', it: 'Aviazione Privata', ar: 'طيران خاص', base: 3000 },
 ]

@@ -757,7 +757,7 @@ export const en: Translation = {
         },
       },
       {
-        icon: '👴',
+        icon: '💎',
         t: 'Silver Economy Support',
         d: 'Assisted relocation for seniors, long-term planning, healthcare and insurance support, real estate management and lifestyle integration in Italy.',
         slug: 'silver-economy',
