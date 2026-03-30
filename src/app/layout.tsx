@@ -7,7 +7,7 @@ import Cursor from '@/components/Cursor'
 // ─── Google Analytics 4 ───────────────────────────────────────────────────────
 // Remplacez GA_MEASUREMENT_ID par votre vrai ID (ex: G-ABC123XYZ)
 // Obtenez-le sur : https://analytics.google.com → Admin → Flux de données → Web
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-PLACEHOLDER'
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-231ZPSFTRX'
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&family=Jost:wght@200;300;400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
         {/* Google Analytics 4 */}
-        {GA_ID !== 'G-PLACEHOLDER' && (
+        {GA_ID && (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
