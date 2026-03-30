@@ -33,11 +33,6 @@ body {
   background: var(--cr);
   overflow-x: hidden;
   color: #1a1814;
-  cursor: none;
-}
-
-a, button, [role="button"], input, select, textarea, label {
-  cursor: none !important;
 }
 
 /* RTL support */
@@ -90,51 +85,6 @@ a, button, [role="button"], input, select, textarea, label {
   right: 80px;
 }
 
-/* ===================== CURSOR ===================== */
-body { cursor: none; }
-
-/* Tiny center dot */
-.cursor {
-  width: 3px;
-  height: 3px;
-  background: var(--o);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  transition: transform 0.12s, opacity 0.15s;
-}
-
-/* Trailing thin cross */
-.cursor-ring {
-  width: 1px;
-  height: 28px;
-  background: rgba(201, 168, 76, 0.55);
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  transition: transform 0.22s ease;
-}
-
-/* Horizontal bar of the cross */
-.cursor-ring::before {
-  content: '';
-  position: absolute;
-  width: 28px;
-  height: 1px;
-  background: rgba(201, 168, 76, 0.55);
-  left: -13.5px;
-  top: 13.5px;
-}
-
-@media (max-width: 768px) {
-  body { cursor: auto; }
-  .cursor, .cursor-ring { display: none; }
-}
 
 /* ===================== FLAG BAR ===================== */
 .flag-bar {
