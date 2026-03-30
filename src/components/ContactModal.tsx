@@ -10,7 +10,7 @@ import { useLang } from '@/context/LangContext'
 // 3. Remplacez l'URL ci-dessous par votre lien Calendly
 // Exemple: https://calendly.com/italycare360/consultation-30min
 // =====================================================================
-const CALENDLY_URL = 'https://calendly.com/italycare360/consultation-30min'
+const CALENDLY_URL = 'https://calendly.com/italycare360/30min'
 
 // =====================================================================
 // FORMSPREE SETUP (pour enregistrer les infos client):
