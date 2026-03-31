@@ -2,16 +2,14 @@
 import { useState } from 'react'
 import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
-import About from '@/components/About'
-import TeamSection from '@/components/TeamSection'
-import Process from '@/components/Process'
-import VideoSection from '@/components/VideoSection'
-import Numbers from '@/components/Numbers'
+import Services from '@/components/Services'
+import CostCalculator from '@/components/CostCalculator'
+import ItalyMap from '@/components/ItalyMap'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
 
-export default function AboutPage() {
+export default function ServicesPage() {
   const [modalOpen, setModalOpen] = useState(false)
   return (
     <>
@@ -19,11 +17,9 @@ export default function AboutPage() {
       <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
       <div style={{ paddingTop: '80px' }}>
-        <About />
-        <Numbers />
-        <Process />
-        <VideoSection />
-        <TeamSection />
+        <Services onRdv={() => setModalOpen(true)} />
+        <CostCalculator onRdv={() => setModalOpen(true)} />
+        <ItalyMap onRdv={() => setModalOpen(true)} />
       </div>
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />

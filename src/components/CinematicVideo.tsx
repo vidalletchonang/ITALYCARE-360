@@ -3,11 +3,31 @@ import { useEffect, useRef, useState } from 'react'
 import { useLang } from '@/context/LangContext'
 
 const SLIDES = [
-  { src: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=85', city: 'Cinque Terre' },
-  { src: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=85', city: 'Rome' },
-  { src: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1600&q=85', city: 'Amalfi Coast' },
-  { src: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=85', city: 'Venice' },
-  { src: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=85', city: 'Tuscany' },
+  {
+    // Rome — Colosseum at dusk
+    src: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=85',
+    city: 'Rome',
+  },
+  {
+    // Venice — Grand Canal with gondolas
+    src: 'https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1600&q=85',
+    city: 'Venice',
+  },
+  {
+    // Tuscany — rolling hills with cypress trees
+    src: 'https://images.unsplash.com/photo-1476401573545-cc1f4f8a9f84?auto=format&fit=crop&w=1600&q=85',
+    city: 'Tuscany',
+  },
+  {
+    // Amalfi Coast — colourful coastal village
+    src: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1600&q=85',
+    city: 'Amalfi Coast',
+  },
+  {
+    // Florence — Ponte Vecchio & Arno river
+    src: 'https://images.unsplash.com/photo-1541370976299-4d24be5f5b46?auto=format&fit=crop&w=1600&q=85',
+    city: 'Florence',
+  },
 ]
 
 const LABELS = {
