@@ -14,13 +14,13 @@ const SLIDES = [
     city: 'Venice',
   },
   {
-    // Tuscany — rolling hills with cypress trees
-    src: 'https://images.unsplash.com/photo-1476401573545-cc1f4f8a9f84?auto=format&fit=crop&w=1600&q=85',
+    // Tuscany — rolling hills, cypress trees, Val d'Orcia
+    src: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=85',
     city: 'Tuscany',
   },
   {
-    // Amalfi Coast — Positano colourful clifftop village
-    src: 'https://images.unsplash.com/photo-1568604163289-e9df1a4a0f9e?auto=format&fit=crop&w=1600&q=85',
+    // Amalfi Coast — coastal village on the cliff
+    src: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1600&q=85',
     city: 'Amalfi Coast',
   },
   {
