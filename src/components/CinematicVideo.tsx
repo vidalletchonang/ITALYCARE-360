@@ -2,32 +2,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLang } from '@/context/LangContext'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const SLIDES = [
-  {
-    // Rome — Colosseum at dusk
-    src: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=85',
-    city: 'Rome',
-  },
-  {
-    // Venice — Grand Canal with gondolas
-    src: 'https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1600&q=85',
-    city: 'Venice',
-  },
-  {
-    // Tuscany — rolling hills, cypress trees, Val d'Orcia
-    src: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=85',
-    city: 'Tuscany',
-  },
-  {
-    // Amalfi Coast — coastal village on the cliff
-    src: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1600&q=85',
-    city: 'Amalfi Coast',
-  },
-  {
-    // Florence — Piazza del Duomo aerial view
-    src: 'https://images.unsplash.com/photo-1543429257-3eb0b65d9c58?auto=format&fit=crop&w=1600&q=85',
-    city: 'Florence',
-  },
+  { src: `${BASE}/italy/rome.jpg`,    city: 'Rome'        },
+  { src: `${BASE}/italy/venice.jpg`,  city: 'Venice'      },
+  { src: `${BASE}/italy/tuscany.jpg`, city: 'Tuscany'     },
+  { src: `${BASE}/italy/amalfi.jpg`,  city: 'Amalfi Coast'},
+  { src: `${BASE}/italy/florence.jpg`,city: 'Florence'    },
 ]
 
 const LABELS = {
