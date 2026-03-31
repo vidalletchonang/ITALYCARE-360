@@ -25,10 +25,10 @@ export default function ServiceDetailClient({ slug }: Props) {
 
   if (!service) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0c0c0a', color: '#f5edd6' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0b1a36', color: '#eef4ff' }}>
         <div style={{ textAlign: 'center' }}>
           <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Service introuvable</p>
-          <Link href="/" style={{ color: '#c9a84c', textDecoration: 'none' }}>← Retour à l'accueil</Link>
+          <Link href="/" style={{ color: '#d4a843', textDecoration: 'none' }}>← Retour à l'accueil</Link>
         </div>
       </div>
     )
@@ -89,12 +89,12 @@ export default function ServiceDetailClient({ slug }: Props) {
   const result = quizState === 'result' ? getResult() : null
   const progressPercent = quizState === 'quiz' ? ((currentQuestion) / totalQuestions) * 100 : 0
 
-  const bk = '#0c0c0a'
-  const o = '#c9a84c'
-  const g = '#1a6b3c'
-  const gd = '#0e3d22'
-  const op = '#f5edd6'
-  const cr = '#fdfaf4'
+  const bk = '#0b1a36'
+  const o = '#d4a843'
+  const g = '#1a8f5c'
+  const gd = '#0b3d28'
+  const op = '#eef4ff'
+  const cr = '#f8faff'
 
   const dir = isRTL ? 'rtl' : 'ltr'
   const titleFont = isRTL ? "'Cairo', sans-serif" : "'Playfair Display', serif"
@@ -203,7 +203,7 @@ export default function ServiceDetailClient({ slug }: Props) {
                 </p>
                 <button
                   onClick={() => setQuizState('quiz')}
-                  style={{ background: `linear-gradient(135deg, ${o}, #e6c97a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer', letterSpacing: '0.02em' }}
+                  style={{ background: `linear-gradient(135deg, ${o}, #f0cb6a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer', letterSpacing: '0.02em' }}
                 >
                   {sd.startBtn}
                 </button>
@@ -270,7 +270,7 @@ export default function ServiceDetailClient({ slug }: Props) {
                     onClick={handleNext}
                     disabled={selectedOption === null}
                     style={{
-                      background: selectedOption !== null ? `linear-gradient(135deg, ${o}, #e6c97a)` : 'rgba(255,255,255,0.1)',
+                      background: selectedOption !== null ? `linear-gradient(135deg, ${o}, #f0cb6a)` : 'rgba(255,255,255,0.1)',
                       border: 'none',
                       color: selectedOption !== null ? bk : 'rgba(255,255,255,0.3)',
                       borderRadius: 50,
@@ -318,7 +318,7 @@ export default function ServiceDetailClient({ slug }: Props) {
                   {result !== 'notEligible' && (
                     <button
                       onClick={() => setModalOpen(true)}
-                      style={{ background: `linear-gradient(135deg, ${o}, #e6c97a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer' }}
+                      style={{ background: `linear-gradient(135deg, ${o}, #f0cb6a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer' }}
                     >
                       {sd.rdvBtn}
                     </button>

@@ -134,8 +134,8 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             {/* Glow definitions */}
             <defs>
               <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#1a6b3c" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#0c0c0a" stopOpacity="0" />
+                <stop offset="0%" stopColor="#1a8f5c" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#0b1a36" stopOpacity="0" />
               </radialGradient>
               <filter id="glow">
                 <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
@@ -150,7 +150,7 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             <path
               d="M 88,52 C 100,42 118,38 138,40 C 158,42 175,46 192,56 C 205,64 212,76 210,92 L 205,118 L 210,148 L 218,178 L 222,205 L 218,228 L 210,248 L 202,262 L 192,272 L 186,262 L 180,248 L 174,256 L 168,270 L 160,265 L 155,250 L 158,232 L 164,212 L 158,192 L 150,170 L 140,148 L 128,126 L 112,106 L 95,88 L 82,70 Z"
               fill="#1a3a25"
-              stroke="#c9a84c"
+              stroke="#d4a843"
               strokeWidth="1.2"
               strokeLinejoin="round"
             />
@@ -158,14 +158,14 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             <path
               d="M 218,228 L 225,240 L 232,258 L 235,275 L 228,292 L 218,302 L 208,295 L 202,280 L 202,262 L 210,248 Z"
               fill="#1a3a25"
-              stroke="#c9a84c"
+              stroke="#d4a843"
               strokeWidth="1.2"
             />
             {/* Calabria toe */}
             <path
               d="M 164,270 L 170,282 L 165,295 L 155,298 L 148,285 L 152,272 L 160,265 Z"
               fill="#1a3a25"
-              stroke="#c9a84c"
+              stroke="#d4a843"
               strokeWidth="1.2"
             />
 
@@ -173,7 +173,7 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             <path
               d="M 118,355 L 138,345 L 162,348 L 172,360 L 165,372 L 140,378 L 118,372 Z"
               fill="#1a3a25"
-              stroke="#c9a84c"
+              stroke="#d4a843"
               strokeWidth="1.2"
             />
 
@@ -181,7 +181,7 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             <path
               d="M 52,168 L 66,158 L 76,164 L 78,186 L 70,202 L 52,204 L 44,188 Z"
               fill="#1a3a25"
-              stroke="#c9a84c"
+              stroke="#d4a843"
               strokeWidth="1.2"
             />
 
@@ -190,7 +190,7 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
               <line
                 x1={active.cx} y1={active.cy}
                 x2={140} y2={210}
-                stroke="#c9a84c" strokeWidth="0.5" strokeDasharray="3 3" opacity="0.3"
+                stroke="#d4a843" strokeWidth="0.5" strokeDasharray="3 3" opacity="0.3"
               />
             )}
 
@@ -206,21 +206,21 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
                 <circle
                   cx={city.cx} cy={city.cy} r={active?.id === city.id ? 14 : 9}
                   fill="none"
-                  stroke={active?.id === city.id ? '#c9a84c' : 'rgba(201,168,76,0.3)'}
+                  stroke={active?.id === city.id ? '#d4a843' : 'rgba(201,168,76,0.3)'}
                   strokeWidth={active?.id === city.id ? 1.5 : 1}
                   className={active?.id !== city.id ? 'city-ring-anim' : ''}
                 />
                 {/* Inner dot */}
                 <circle
                   cx={city.cx} cy={city.cy} r={active?.id === city.id ? 6 : 4}
-                  fill={active?.id === city.id ? '#c9a84c' : 'rgba(201,168,76,0.7)'}
+                  fill={active?.id === city.id ? '#d4a843' : 'rgba(201,168,76,0.7)'}
                 />
                 {/* City label */}
                 <text
                   x={city.cx} y={city.cy - 16}
                   textAnchor="middle"
                   fontSize="7"
-                  fill={active?.id === city.id ? '#c9a84c' : 'rgba(253,250,244,0.6)'}
+                  fill={active?.id === city.id ? '#d4a843' : 'rgba(253,250,244,0.6)'}
                   fontFamily="Jost, sans-serif"
                   letterSpacing="0.8"
                   style={{ textTransform: 'uppercase' }}
