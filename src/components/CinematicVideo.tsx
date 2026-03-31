@@ -19,13 +19,13 @@ const SLIDES = [
     city: 'Tuscany',
   },
   {
-    // Amalfi Coast — colourful coastal village
-    src: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1600&q=85',
+    // Amalfi Coast — Positano colourful clifftop village
+    src: 'https://images.unsplash.com/photo-1568604163289-e9df1a4a0f9e?auto=format&fit=crop&w=1600&q=85',
     city: 'Amalfi Coast',
   },
   {
-    // Florence — Ponte Vecchio & Arno river
-    src: 'https://images.unsplash.com/photo-1541370976299-4d24be5f5b46?auto=format&fit=crop&w=1600&q=85',
+    // Florence — Piazza del Duomo aerial view
+    src: 'https://images.unsplash.com/photo-1543429257-3eb0b65d9c58?auto=format&fit=crop&w=1600&q=85',
     city: 'Florence',
   },
 ]
