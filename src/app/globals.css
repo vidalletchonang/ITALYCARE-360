@@ -2885,11 +2885,15 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   inset: 0;
   opacity: 0;
   z-index: 1;
-  transition: opacity 1.4s ease;
 }
 .cv-slide.active {
   opacity: 1;
   z-index: 2;
+  animation: cv-fadein 1.2s ease forwards;
+}
+@keyframes cv-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .cv-slide-img {
   width: 100%;

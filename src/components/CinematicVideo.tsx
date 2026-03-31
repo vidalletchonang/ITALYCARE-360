@@ -20,8 +20,8 @@ const LABELS = {
 export default function CinematicVideo() {
   const { lang } = useLang()
   const sectionRef = useRef<HTMLDivElement>(null)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [current, setCurrent] = useState(0)
-  const [visible, setVisible] = useState(true)
 
   const s = (k: keyof typeof LABELS) =>
     (LABELS[k] as Record<string, string>)[lang] || (LABELS[k] as Record<string, string>)['en']
@@ -34,16 +34,6 @@ export default function CinematicVideo() {
     return () => clearInterval(interval)
   }, [])
 
-  // Scroll reveal
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
-
   function goTo(i: number) {
     setCurrent(i)
   }
@@ -53,9 +43,7 @@ export default function CinematicVideo() {
       ref={sectionRef}
       className="cv-section"
       style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(50px)',
-        transition: 'opacity 1s ease, transform 1s ease',
+        opacity: 1,
       }}
     >
       {/* Header */}
@@ -80,7 +68,8 @@ export default function CinematicVideo() {
           {SLIDES.map((slide, i) => (
             <div
               key={i}
-              className={`cv-slide${i === current ? ' active' : ''}`}
+              className="cv-slide"
+              style={{ opacity: i === current ? 1 : 0, zIndex: i === current ? 2 : 1 }}
             >
               <img src={slide.src} alt={slide.city} className="cv-slide-img" />
             </div>
