@@ -20,6 +20,7 @@ import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import CinematicVideo from '@/components/CinematicVideo'
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -31,6 +32,7 @@ export default function Home() {
       <Nav onRdv={() => setModalOpen(true)} />
       <Hero onRdv={() => setModalOpen(true)} />
       <MarqueeBanner />
+      <CinematicVideo />
       <Gallery />
       <About />
       <Services onRdv={() => setModalOpen(true)} />
