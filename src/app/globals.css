@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&family=Jost:wght@200;300;400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&family=Jost:wght@200;300;400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
   margin: 0;
@@ -30,6 +30,7 @@
   --ts:   #7a8fbb;   /* muted blue-grey text                */
   --gw:   #d6ddf0;   /* border / divider blue-grey          */
 
+  --font-cormorant: 'Cormorant Garamond', serif;
   --font-playfair: 'Playfair Display', serif;
   --font-jost: 'Jost', sans-serif;
   --font-cairo: 'Cairo', sans-serif;
@@ -3024,4 +3025,350 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   .cv-video-wrap { aspect-ratio: 16/9; }
   .cv-section { padding: 60px 20px; }
   .cv-corner-bl, .cv-corner-br { bottom: 56px; }
+}
+
+/* =====================================================================
+   ITALIAN REFINEMENT — Cormorant Garamond + Luxury Details
+   ===================================================================== */
+
+/* --- Headings: Cormorant Garamond everywhere --- */
+.hero-h1,
+.svc-hd h2,
+.about-h2,
+.proc-c h2,
+.testi-c h2,
+.cta h2,
+.team-h2,
+h1, h2, h3,
+.font-playfair {
+  font-family: var(--font-cormorant) !important;
+  letter-spacing: 0.01em;
+}
+
+/* Hero heading: more cinematic */
+.hero-h1 {
+  font-size: clamp(56px, 8vw, 100px) !important;
+  font-weight: 300 !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.01em !important;
+}
+.hero-h1 em {
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+/* Nav: taller, more refined */
+nav {
+  height: 76px !important;
+  border-bottom: 1px solid rgba(212,168,67,0.18) !important;
+  backdrop-filter: blur(10px);
+}
+.nav-logo-shield {
+  border-radius: 6px !important;
+  border: 1px solid rgba(212,168,67,0.15) !important;
+}
+.nl-main {
+  font-family: var(--font-cormorant) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  letter-spacing: 6px !important;
+}
+.nl-sub {
+  font-size: 9px !important;
+  letter-spacing: 4px !important;
+  color: rgba(255,255,255,0.45) !important;
+}
+.nav-links a {
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.7) !important;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0; right: 0;
+  height: 1px;
+  background: var(--o);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a:hover { color: var(--o) !important; }
+
+/* Nav CTA: more elegant */
+.nav-cta {
+  padding: 9px 22px !important;
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+}
+
+/* --- Gold ornament on section labels --- */
+.sl {
+  gap: 14px !important;
+  margin-bottom: 20px !important;
+}
+.sl-ln { width: 36px !important; }
+.sl span {
+  font-size: 10px !important;
+  letter-spacing: 5px !important;
+  font-weight: 400 !important;
+}
+
+/* --- Gold dividers between major sections --- */
+.svc, .about, .proc, .nums, .testi, .cta {
+  border-top: 1px solid rgba(212,168,67,0.08);
+}
+
+/* --- Service cards: taller image, refined typography --- */
+.sc-img {
+  height: 200px !important;
+  border-radius: 0 !important;
+  margin-bottom: 24px !important;
+  position: relative;
+}
+.sc-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,26,54,0.55) 0%, transparent 60%);
+  pointer-events: none;
+}
+.sc-t {
+  font-family: var(--font-cormorant) !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.25 !important;
+  color: #fff !important;
+  margin-bottom: 12px !important;
+}
+.sc-n {
+  font-family: var(--font-cormorant) !important;
+  font-size: 40px !important;
+  font-weight: 300 !important;
+  color: rgba(212,168,67,0.12) !important;
+  top: 8px !important; right: 16px !important;
+}
+.sc:hover .sc-n { color: rgba(212,168,67,0.18) !important; }
+.sc-d {
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.72) !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.01em !important;
+}
+.sc-lnk {
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  font-weight: 500 !important;
+}
+.sc { padding: 32px 28px 36px !important; }
+.sc:hover { background: rgba(212,168,67,0.05) !important; }
+
+/* --- Hero paragraph --- */
+.hero-p {
+  font-size: 15px !important;
+  letter-spacing: 0.03em !important;
+  line-height: 2 !important;
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* --- Hero tag --- */
+.hero-tag span {
+  font-size: 10px !important;
+  letter-spacing: 6px !important;
+  font-weight: 400 !important;
+}
+
+/* --- Buttons: more refined --- */
+.btn-gold {
+  padding: 14px 44px !important;
+  font-size: 10px !important;
+  letter-spacing: 4px !important;
+  font-weight: 500 !important;
+  transition: background 0.3s, transform 0.3s !important;
+}
+.btn-gold:hover {
+  opacity: 1 !important;
+  background: var(--ol) !important;
+  transform: translateY(-1px);
+}
+.btn-ghost-w {
+  padding: 14px 32px !important;
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+}
+.btn-ghost-w:hover {
+  border-color: rgba(212,168,67,0.5) !important;
+  color: var(--ol) !important;
+}
+
+/* --- Hero stats: more refined --- */
+.hero-stat .n {
+  font-family: var(--font-cormorant) !important;
+  font-size: 50px !important;
+  font-weight: 300 !important;
+}
+.hero-stat .l {
+  font-size: 9px !important;
+  letter-spacing: 3px !important;
+}
+
+/* --- Marquee: more refined --- */
+.mq { padding: 11px 0 !important; }
+.mq-item {
+  font-size: 10px !important;
+  letter-spacing: 5px !important;
+  font-weight: 500 !important;
+}
+.mq-dot { width: 2px !important; height: 2px !important; }
+
+/* --- Numbers section: replace green glow with gold --- */
+.nums::before {
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,168,67,0.07) 0%, transparent 70%) !important;
+}
+.ni-n {
+  font-family: var(--font-cormorant) !important;
+  font-size: 62px !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.02em !important;
+}
+.ni-l {
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* --- Testimonials: more elegant --- */
+.tc-q {
+  font-family: var(--font-cormorant) !important;
+  font-size: 80px !important;
+  color: rgba(212,168,67,0.2) !important;
+}
+.tc-txt {
+  font-family: var(--font-cormorant) !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.9 !important;
+  color: #1a2a4a !important;
+}
+.tc-name {
+  font-size: 13px !important;
+  letter-spacing: 1px !important;
+}
+.tc-meta {
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+  color: rgba(11,26,54,0.45) !important;
+}
+.testi-c h2 {
+  font-size: clamp(38px, 5vw, 60px) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* --- CTA section: more refined --- */
+.cta h2 {
+  font-size: clamp(44px, 6vw, 72px) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.01em !important;
+}
+.cta h2 em { color: var(--o) !important; }
+.btn-green {
+  background: var(--bk) !important;
+  font-size: 10px !important;
+  letter-spacing: 4px !important;
+  padding: 16px 48px !important;
+  transition: background 0.3s, transform 0.3s !important;
+}
+.btn-green:hover {
+  background: var(--bk2) !important;
+  transform: translateY(-2px) !important;
+}
+.btn-outline {
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  padding: 16px 40px !important;
+  border-color: rgba(11,26,54,0.25) !important;
+}
+.btn-outline:hover {
+  background: var(--bk) !important;
+  border-color: var(--bk) !important;
+}
+
+/* --- Footer: more refined --- */
+.fb-logo {
+  font-family: var(--font-cormorant) !important;
+  font-size: 24px !important;
+  letter-spacing: 6px !important;
+  font-weight: 500 !important;
+}
+.fb-sub {
+  font-size: 9px !important;
+  letter-spacing: 4px !important;
+  color: rgba(255,255,255,0.25) !important;
+}
+
+/* --- Section headings uniform refinement --- */
+.svc-hd h2,
+.proc-c h2 {
+  font-weight: 300 !important;
+  letter-spacing: -0.01em !important;
+}
+.svc-hd h2 { font-size: clamp(42px, 5.5vw, 66px) !important; }
+
+/* --- About section --- */
+.about-h2 {
+  font-size: clamp(36px, 4vw, 52px) !important;
+  font-weight: 300 !important;
+}
+
+/* --- Cinematic video section headings --- */
+.cv-title {
+  font-family: var(--font-cormorant) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* --- Process step titles --- */
+.ps-t {
+  font-family: var(--font-cormorant) !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+.ps-c {
+  width: 58px !important; height: 58px !important;
+  border-color: rgba(212,168,67,0.2) !important;
+}
+.ps:hover .ps-c {
+  background: var(--bk) !important;
+  border-color: var(--o) !important;
+}
+.ps-num {
+  background: var(--o) !important;
+  font-family: var(--font-cormorant) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+}
+
+/* --- nav estimate btn --- */
+.nav-estimate-btn {
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  color: rgba(255,255,255,0.65) !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.25s;
+}
+.nav-estimate-btn:hover {
+  color: var(--o) !important;
+  border-color: rgba(212,168,67,0.35) !important;
 }
