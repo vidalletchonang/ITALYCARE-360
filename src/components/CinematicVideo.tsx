@@ -5,11 +5,11 @@ import { useLang } from '@/context/LangContext'
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const SLIDES = [
-  { src: `${BASE}/italy/rome.jpg`,    city: 'Rome'        },
-  { src: `${BASE}/italy/venice.jpg`,  city: 'Venice'      },
-  { src: `${BASE}/italy/tuscany.jpg`, city: 'Tuscany'     },
-  { src: `${BASE}/italy/amalfi.jpg`,  city: 'Amalfi Coast'},
-  { src: `${BASE}/italy/florence.jpg`,city: 'Florence'    },
+  { src: `${BASE}/italy/rome.jpg`,         city: 'Rome'         },
+  { src: `${BASE}/italy/venice.jpg`,       city: 'Venice'       },
+  { src: `${BASE}/italy/florence.jpg`,     city: 'Florence'     },
+  { src: `${BASE}/italy/cinque_terre.jpg`, city: 'Cinque Terre' },
+  { src: `${BASE}/italy/vatican.jpg`,      city: 'Vatican'      },
 ]
 
 const LABELS = {
