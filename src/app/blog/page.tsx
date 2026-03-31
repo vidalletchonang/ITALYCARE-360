@@ -195,7 +195,7 @@ const ARTICLES = [
     category: 'maisons-retraite',
     date: '2024-08-30',
     readTime: 6,
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191011?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Choisir une maison de retraite en Italie : critères essentiels et meilleures régions",
       en: "Choosing a Retirement Home in Italy: Essential Criteria and Best Regions",
