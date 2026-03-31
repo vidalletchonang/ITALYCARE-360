@@ -3,8 +3,10 @@
 import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const serviceImages: Record<string, string> = {
-  immobilier: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=400&q=80',
+  immobilier: `${BASE}/services/immobilier.jpg`,
   renovation: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80',
   medical: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=400&q=80',
   export: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=80',
