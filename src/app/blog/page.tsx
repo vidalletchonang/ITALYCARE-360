@@ -75,7 +75,7 @@ const ARTICLES = [
     category: 'visa-etudiant',
     date: '2025-01-05',
     readTime: 9,
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Visa étudiant pour l'Italie : guide complet 2025",
       en: "Student Visa for Italy: Complete Guide 2025",
@@ -195,7 +195,7 @@ const ARTICLES = [
     category: 'maisons-retraite',
     date: '2024-08-30',
     readTime: 6,
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191011?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Choisir une maison de retraite en Italie : critères essentiels et meilleures régions",
       en: "Choosing a Retirement Home in Italy: Essential Criteria and Best Regions",
