@@ -7,7 +7,7 @@ import Cursor from '@/components/Cursor'
 // ─── Google Analytics 4 ───────────────────────────────────────────────────────
 // Remplacez GA_MEASUREMENT_ID par votre vrai ID (ex: G-ABC123XYZ)
 // Obtenez-le sur : https://analytics.google.com → Admin → Flux de données → Web
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-231ZPSFTRX'
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-PCT2YT8RWG'
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
