@@ -4,22 +4,22 @@ import { useLang } from '@/context/LangContext'
 
 /* ── Data ─────────────────────────────────────────────── */
 const SERVICES_DATA = [
-  { id: 'immobilier',       icon: '🏠', fr: 'Immobilier',                   en: 'Real Estate',         it: 'Immobiliare',              ar: 'عقارات',              base: 3000 },
-  { id: 'renovation',       icon: '🔨', fr: 'Rénovation',                   en: 'Renovation',          it: 'Ristrutturazione',         ar: 'تجديد',               base: 1000 },
-  { id: 'medical',          icon: '🏥', fr: 'Assistance Médicale 360°',     en: 'Medical Assistance 360°', it: 'Assistenza Medica 360°', ar: 'مساعدة طبية 360°',  base: 500  },
-  { id: 'export',           icon: '📦', fr: 'Export Made in Italy',         en: 'Export Made in Italy', it: 'Export Made in Italy',    ar: 'تصدير صنع في إيطاليا', base: 1500 },
-  { id: 'visa-etudiant',    icon: '🎓', fr: 'Visa Étudiant',                en: 'Student Visa',        it: 'Visto Studenti',           ar: 'تأشيرة طالب',         base: 2500 },
-  { id: 'juridique',        icon: '⚖️', fr: 'Assistance Légale',            en: 'Legal Assistance',    it: 'Assistenza Legale',        ar: 'مساعدة قانونية',      base: 500  },
-  { id: 'conciergerie',     icon: '🌟', fr: 'Conciergerie Premium',         en: 'Premium Concierge',   it: 'Conciergerie Premium',     ar: 'كونسيرج مميز',        base: 250  },
-  { id: 'administratif',    icon: '📋', fr: 'Pratiques Administratives',    en: 'Administrative',      it: 'Pratiche Amministrative',  ar: 'إجراءات إدارية',      base: 250  },
-  { id: 'evenements',       icon: '🎭', fr: 'Organisation Événement',       en: 'Event Planning',      it: 'Organizzazione Eventi',    ar: 'تنظيم فعاليات',       base: 500  },
-  { id: 'maisons-retraite', icon: '🏡', fr: 'Maison de Retraite & Résidences Seniors', en: 'Senior Residence', it: 'Casa di Riposo e Residenze Anziani', ar: 'دار المسنين', base: 2000 },
-  { id: 'financement',      icon: '💰', fr: 'Financement',                  en: 'Financing',           it: 'Finanziamenti',            ar: 'تمويل',               base: 500  },
-  { id: 'professionnels',   icon: '🔍', fr: 'Recherche de Professionnels',  en: 'Find Professionals',  it: 'Ricerca Professionisti',   ar: 'البحث عن محترفين',    base: 500  },
-  { id: 'silver-economy',   icon: '💎', fr: 'Accompagnement Silver Economy', en: 'Silver Economy',     it: 'Silver Economy',           ar: 'اقتصاد الفضة',        base: 1500 },
-  { id: 'property-care',    icon: '🏘️', fr: 'Assistance Case & Propriété', en: 'Property Care',       it: 'Assistenza Case e Proprietà', ar: 'رعاية العقارات',    base: 500  },
-  { id: 'thermal-wellness', icon: '🌿', fr: 'Monitorage Médical & Thermal', en: 'Medical & Thermal Monitoring', it: 'Monitoraggio Medico e Termale', ar: 'مراقبة طبية وحرارية', base: 1000 },
-  { id: 'aviation-privee',  icon: '✈️', fr: 'Aviation Privée',              en: 'Private Aviation',    it: 'Aviazione Privata',        ar: 'طيران خاص',           base: 5000 },
+  { id: 'immobilier',       icon: '◈', fr: 'Immobilier',                   en: 'Real Estate',         it: 'Immobiliare',              ar: 'عقارات',              base: 3000 },
+  { id: 'renovation',       icon: '◧', fr: 'Rénovation',                   en: 'Renovation',          it: 'Ristrutturazione',         ar: 'تجديد',               base: 1000 },
+  { id: 'medical',          icon: '✚', fr: 'Assistance Médicale 360°',     en: 'Medical Assistance 360°', it: 'Assistenza Medica 360°', ar: 'مساعدة طبية 360°',  base: 500  },
+  { id: 'export',           icon: '◻', fr: 'Export Made in Italy',         en: 'Export Made in Italy', it: 'Export Made in Italy',    ar: 'تصدير صنع في إيطاليا', base: 1500 },
+  { id: 'visa-etudiant',    icon: '◆', fr: 'Visa Étudiant',                en: 'Student Visa',        it: 'Visto Studenti',           ar: 'تأشيرة طالب',         base: 2500 },
+  { id: 'juridique',        icon: '⊖', fr: 'Assistance Légale',            en: 'Legal Assistance',    it: 'Assistenza Legale',        ar: 'مساعدة قانونية',      base: 500  },
+  { id: 'conciergerie',     icon: '◇', fr: 'Conciergerie Premium',         en: 'Premium Concierge',   it: 'Conciergerie Premium',     ar: 'كونسيرج مميز',        base: 250  },
+  { id: 'administratif',    icon: '▣', fr: 'Pratiques Administratives',    en: 'Administrative',      it: 'Pratiche Amministrative',  ar: 'إجراءات إدارية',      base: 250  },
+  { id: 'evenements',       icon: '◎', fr: 'Organisation Événement',       en: 'Event Planning',      it: 'Organizzazione Eventi',    ar: 'تنظيم فعاليات',       base: 500  },
+  { id: 'maisons-retraite', icon: '⊕', fr: 'Maison de Retraite & Résidences Seniors', en: 'Senior Residence', it: 'Casa di Riposo e Residenze Anziani', ar: 'دار المسنين', base: 2000 },
+  { id: 'financement',      icon: '◉', fr: 'Financement',                  en: 'Financing',           it: 'Finanziamenti',            ar: 'تمويل',               base: 500  },
+  { id: 'professionnels',   icon: '◈', fr: 'Recherche de Professionnels',  en: 'Find Professionals',  it: 'Ricerca Professionisti',   ar: 'البحث عن محترفين',    base: 500  },
+  { id: 'silver-economy',   icon: '◈', fr: 'Accompagnement Silver Economy', en: 'Silver Economy',     it: 'Silver Economy',           ar: 'اقتصاد الفضة',        base: 1500 },
+  { id: 'property-care',    icon: '▦', fr: 'Assistance Case & Propriété', en: 'Property Care',       it: 'Assistenza Case e Proprietà', ar: 'رعاية العقارات',    base: 500  },
+  { id: 'thermal-wellness', icon: '◌', fr: 'Monitorage Médical & Thermal', en: 'Medical & Thermal Monitoring', it: 'Monitoraggio Medico e Termale', ar: 'مراقبة طبية وحرارية', base: 1000 },
+  { id: 'aviation-privee',  icon: '▷', fr: 'Aviation Privée',              en: 'Private Aviation',    it: 'Aviazione Privata',        ar: 'طيران خاص',           base: 5000 },
 ]
 
 const BUDGETS = [

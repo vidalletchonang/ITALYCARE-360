@@ -342,10 +342,10 @@ export default function ServiceDetailClient({ slug }: Props) {
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem' }}>
             <a href="mailto:contact@italycare360.com" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
-              📧 contact@italycare360.com
+              contact@italycare360.com
             </a>
             <a href="https://wa.me/393517501164" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
-              💬 WhatsApp
+              WhatsApp
             </a>
           </div>
         </div>

@@ -67,7 +67,7 @@ export default function Hero({ onRdv }: HeroProps) {
             {t.hero.btn2}
           </button>
           <button className="btn-estimate" onClick={() => scrollTo('#calculator')}>
-            🧮 {estimateLabel[lang] || estimateLabel.en}
+            {estimateLabel[lang] || estimateLabel.en}
           </button>
         </div>
       </div>
