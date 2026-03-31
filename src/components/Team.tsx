@@ -10,7 +10,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: 'Fabrizio is a businessman and a dynamic leader who lives in Italy. He is an expert in the Italian real estate market and business success and is a frequent guest speaker on talk shows. He also features in dozens of newspaper and magazine articles about real estate in Italy.',
     initials: 'FP',
-    color: '#1a8f5c',
+    color: '#1e3d72',
   },
   {
     name: 'Marco Permunian',
@@ -19,7 +19,7 @@ const TEAM = [
     tag: '',
     bio: 'Marco received his law degree from the University of Ferrara, Italy. He focuses on all facets of Italian real estate, tax and immigration law. He is fluent in English and Spanish. Prior to joining the company, Marco worked in New York with firms specializing in domestic and cross-border real estate transactions.',
     initials: 'MP',
-    color: '#0b3d28',
+    color: '#071228',
   },
   {
     name: 'Linda Balboni',
@@ -37,7 +37,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: "Emma earned her Bachelor's in Languages and her Master's in Comparative International Relations from Ca' Foscari University of Venice. She assists international clients throughout the property purchasing process and has been Vice Manager of the firm for four years. Emma speaks Italian, English, Spanish, and French.",
     initials: 'EP',
-    color: '#1a8f5c',
+    color: '#1e3d72',
   },
   {
     name: 'Gaia Procopio',
@@ -55,7 +55,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: "Elena earned her degree in Translation and a Master's specializing in legal, medical, and technical translation. Since 2021, she has assisted clients managing communications and supporting every step of the purchasing process. She speaks Italian, English, and German.",
     initials: 'EB',
-    color: '#0b3d28',
+    color: '#071228',
   },
   {
     name: 'Mary Ann Alibin Tomis',
@@ -64,7 +64,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: 'Mary Ann grew up between the Philippines and Italy, embracing multicultural environments. She holds a degree in Languages and a Master\'s in American Languages and Literatures from the University of Naples "L\'Orientale." She excels in customer relations and problem-solving.',
     initials: 'MA',
-    color: '#1a8f5c',
+    color: '#1e3d72',
   },
   {
     name: 'Alexandra Munteanu',
@@ -82,7 +82,7 @@ const TEAM = [
     tag: '',
     bio: 'Aurora specializes in Language Studies and facilitates the process after the sale or rental of a property. She provides services concerning utilities, taxes, renovation works, and bank accounts. In her free time, Aurora enjoys practicing extreme martial arts. She is fluent in Italian, English, and Spanish.',
     initials: 'AC',
-    color: '#0b3d28',
+    color: '#071228',
   },
   {
     name: 'Tyra Bencivenga',
@@ -91,7 +91,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: "Tyra holds a degree in Foreign Languages and International Politics from Ca' Foscari University of Venice. She studied in France and Germany, gaining a strong international perspective. She is skilled in communication, teamwork, and cross-cultural relations.",
     initials: 'TB',
-    color: '#1a8f5c',
+    color: '#1e3d72',
   },
   {
     name: 'Giorgia Zanardo',
@@ -109,7 +109,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: "Maryam holds a Master's in Foreign Applied Languages with certifications in Content Creation, Corporate Communication, and Negotiation. Having grown up between multiple cultures, she brings diplomacy and precision to every exchange. She is fluent in Italian, English, French, Arabic, and Spanish.",
     initials: 'MZ',
-    color: '#0b3d28',
+    color: '#071228',
   },
   {
     name: 'Annemarie Săvulescu',
@@ -118,7 +118,7 @@ const TEAM = [
     tag: 'ITALYCARE 360',
     bio: 'Having studied and lived in London for over a decade, Annemarie graduated from Brunel University London with an LLB in Law. She guides property buyers through every stage of the purchasing process. She is fluent in Italian, English, Spanish, and Romanian.',
     initials: 'AS',
-    color: '#1a8f5c',
+    color: '#1e3d72',
   },
   {
     name: 'Vidalle Newgep Tchonang',
@@ -136,7 +136,7 @@ const TEAM = [
     tag: '',
     bio: "Holding a Bachelor's degree in Computer Science from the University of Ferrara (Unife), Anton brings solid technical expertise to the development of digital solutions. Specializing in software architecture and systems optimization, he transforms complex technological challenges into high-performing, user-centric tools.",
     initials: 'AB',
-    color: '#0b3d28',
+    color: '#071228',
   },
 ]
 

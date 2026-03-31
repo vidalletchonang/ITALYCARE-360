@@ -91,8 +91,8 @@ export default function ServiceDetailClient({ slug }: Props) {
 
   const bk = '#0b1a36'
   const o = '#d4a843'
-  const g = '#1a8f5c'
-  const gd = '#0b3d28'
+  const g = '#1e3d72'
+  const gd = '#071228'
   const op = '#eef4ff'
   const cr = '#f8faff'
 
@@ -114,7 +114,7 @@ export default function ServiceDetailClient({ slug }: Props) {
 
       {/* Hero Section */}
       <div style={{ background: `linear-gradient(135deg, ${bk} 0%, ${gd} 100%)`, padding: '4rem 2rem 5rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(26,107,60,0.12) 0%, transparent 50%)' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(30,61,114,0.12) 0%, transparent 50%)' }} />
         <div style={{ position: 'relative', maxWidth: 700, margin: '0 auto' }}>
           <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>{service.icon}</div>
           <h1 style={{ fontFamily: titleFont, fontSize: 'clamp(2rem, 4vw, 3rem)', color: cr, marginBottom: '1rem', fontWeight: 700 }}>
@@ -300,7 +300,7 @@ export default function ServiceDetailClient({ slug }: Props) {
                   borderRadius: 16,
                   padding: '1.5rem 2.5rem',
                   marginBottom: '1.5rem',
-                  border: `1px solid ${result === 'eligible' ? 'rgba(26,107,60,0.5)' : result === 'partial' ? 'rgba(201,168,76,0.5)' : 'rgba(181,38,30,0.5)'}`,
+                  border: `1px solid ${result === 'eligible' ? 'rgba(30,61,114,0.5)' : result === 'partial' ? 'rgba(201,168,76,0.5)' : 'rgba(181,38,30,0.5)'}`,
                 }}>
                   <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>
                     {result === 'eligible' ? sd.eligible : result === 'partial' ? sd.partial : sd.notEligible}

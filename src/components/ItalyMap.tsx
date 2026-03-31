@@ -134,7 +134,7 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             {/* Glow definitions */}
             <defs>
               <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#1a8f5c" stopOpacity="0.3" />
+                <stop offset="0%" stopColor="#1e3d72" stopOpacity="0.3" />
                 <stop offset="100%" stopColor="#0b1a36" stopOpacity="0" />
               </radialGradient>
               <filter id="glow">
