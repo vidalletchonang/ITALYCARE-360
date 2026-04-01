@@ -2922,12 +2922,12 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   font-weight: 300 !important;
 }
 .calc-from {
-  color: rgba(255,255,255,0.6) !important;
+  color: rgba(255,255,255,0.9) !important;
   font-size: 11px !important;
   letter-spacing: 3px !important;
 }
-.calc-result-note { color: rgba(255,255,255,0.45) !important; }
-.calc-result-service { color: rgba(255,255,255,0.8) !important; flex-wrap: wrap !important; padding: 0 16px !important; }
+.calc-result-note { color: rgba(255,255,255,0.7) !important; }
+.calc-result-service { color: rgba(255,255,255,0.95) !important; flex-wrap: wrap !important; padding: 0 16px !important; }
 .calc-result-includes {
   background: #ffffff !important;
   border-bottom: 1px solid #edf0f8 !important;
