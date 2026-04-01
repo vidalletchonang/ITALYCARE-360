@@ -191,11 +191,11 @@ export default function ItalyMap({ onRdv }: { onRdv: () => void }) {
             <defs>
               <radialGradient id="mapGlow" cx="50%" cy="45%" r="55%">
                 <stop offset="0%" stopColor="#1e3d72" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#1c3460" stopOpacity="0" />
+                <stop offset="100%" stopColor="#1a2744" stopOpacity="0" />
               </radialGradient>
               <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#1e3f72" />
-                <stop offset="100%" stopColor="#183460" />
+                <stop offset="0%" stopColor="#2e4470" />
+                <stop offset="100%" stopColor="#1a2744" />
               </linearGradient>
               <filter id="glow">
                 <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
