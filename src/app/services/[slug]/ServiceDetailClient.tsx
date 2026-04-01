@@ -422,21 +422,21 @@ export default function ServiceDetailClient({ slug }: Props) {
 
                 <div style={{
                   display: 'inline-block',
-                  background: 'rgba(255,255,255,0.08)',
+                  background: result === 'eligible' ? 'rgba(34,197,94,0.18)' : result === 'partial' ? 'rgba(212,168,67,0.18)' : 'rgba(220,60,60,0.18)',
                   borderRadius: 16,
                   padding: '1.5rem 2.5rem',
                   marginBottom: '1.5rem',
-                  border: `1px solid ${result === 'eligible' ? 'rgba(30,61,114,0.5)' : result === 'partial' ? 'rgba(201,168,76,0.5)' : 'rgba(181,38,30,0.5)'}`,
+                  border: `2px solid ${result === 'eligible' ? 'rgba(34,197,94,0.7)' : result === 'partial' ? 'rgba(212,168,67,0.7)' : 'rgba(220,60,60,0.7)'}`,
                 }}>
-                  <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>
+                  <div style={{ fontSize: '2rem', marginBottom: '0.5rem', color: '#ffffff' }}>
                     {result === 'eligible' ? sd.eligible : result === 'partial' ? sd.partial : sd.notEligible}
                   </div>
-                  <div style={{ color: 'rgba(245,237,214,0.6)', fontSize: '0.9rem' }}>
+                  <div style={{ color: '#ffffff', fontSize: '1rem', fontWeight: 600, letterSpacing: '1px' }}>
                     Score: {totalScore} / {maxScore}
                   </div>
                 </div>
 
-                <p style={{ color: 'rgba(245,237,214,0.85)', fontSize: '1rem', lineHeight: 1.7, maxWidth: 520, margin: '0 auto 2rem' }}>
+                <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '1rem', lineHeight: 1.7, maxWidth: 520, margin: '0 auto 2rem' }}>
                   {result === 'eligible' ? sd.eligibleMsg : result === 'partial' ? sd.partialMsg : sd.notEligibleMsg}
                 </p>
 
