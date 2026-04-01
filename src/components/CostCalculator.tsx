@@ -203,12 +203,15 @@ export default function CostCalculator({ onRdv }: { onRdv: () => void }) {
 
   return (
     <section className="calc-section" id="calculator">
-      <div className="calc-header">
-        <span className="calc-label">ITALYCARE 360 · ESTIMATEUR</span>
-        <h2 className="font-playfair calc-h2">{t('title')}</h2>
-        <p className="calc-sub">{t('sub')}</p>
+      <div className="calc-header-band">
+        <div className="calc-header">
+          <span className="calc-label">ITALYCARE 360 · ESTIMATEUR</span>
+          <h2 className="font-playfair calc-h2">{t('title')}</h2>
+          <p className="calc-sub">{t('sub')}</p>
+        </div>
       </div>
 
+      <div className="calc-body">
       <div className="calc-card">
         {/* Progress bar */}
         {step < 4 && (
@@ -335,6 +338,7 @@ export default function CostCalculator({ onRdv }: { onRdv: () => void }) {
             </div>
           </div>
         )}
+      </div>
       </div>
     </section>
   )
