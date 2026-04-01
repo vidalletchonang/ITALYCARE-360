@@ -6,6 +6,130 @@ import { useLang } from '@/context/LangContext'
 import Cursor from '@/components/Cursor'
 import ContactModal from '@/components/ContactModal'
 
+const SERVICE_ICONS: Record<string, React.ReactNode> = {
+  immobilier: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M6 20L24 6l18 14v22a2 2 0 01-2 2H8a2 2 0 01-2-2V20z"/>
+      <path d="M18 42V28h12v14"/>
+    </svg>
+  ),
+  renovation: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M34 8l6 6-22 22-6-6L34 8z"/>
+      <path d="M8 38l4-4 4 4-4 4-4-4z"/>
+      <path d="M36 6l6 6"/>
+      <path d="M10 36l2-2"/>
+    </svg>
+  ),
+  medical: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <rect x="6" y="14" width="36" height="28" rx="3"/>
+      <path d="M16 14V10a8 8 0 0116 0v4"/>
+      <path d="M24 22v12M18 28h12"/>
+    </svg>
+  ),
+  export: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M40 32v6a2 2 0 01-2 2H10a2 2 0 01-2-2V10a2 2 0 012-2h6"/>
+      <path d="M26 8h14v14"/>
+      <path d="M20 28L40 8"/>
+    </svg>
+  ),
+  'visa-etudiant': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M24 6L44 16l-20 10L4 16 24 6z"/>
+      <path d="M12 22v12c0 4 5.4 8 12 8s12-4 12-8V22"/>
+      <path d="M44 16v10"/>
+    </svg>
+  ),
+  juridique: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M24 6v36M6 40h36"/>
+      <path d="M10 18l8 16M10 18L2 34M38 18l8 16M38 18l-8 16"/>
+      <circle cx="10" cy="18" r="2" fill="currentColor" stroke="none"/>
+      <circle cx="38" cy="18" r="2" fill="currentColor" stroke="none"/>
+    </svg>
+  ),
+  conciergerie: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <circle cx="18" cy="16" r="8"/>
+      <path d="M10 16a8 8 0 018-8"/>
+      <path d="M26 22l12 12"/>
+      <path d="M34 30l4-4 4 4-4 4-4-4z"/>
+    </svg>
+  ),
+  administratif: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <rect x="10" y="6" width="28" height="36" rx="3"/>
+      <path d="M18 16h12M18 24h12M18 32h8"/>
+      <path d="M10 12h4M10 20h4M10 28h4"/>
+    </svg>
+  ),
+  evenements: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <rect x="6" y="12" width="36" height="30" rx="3"/>
+      <path d="M6 20h36"/>
+      <path d="M16 8v8M32 8v8"/>
+      <path d="M16 28h4v4h-4zM22 28h4v4h-4zM28 28h4v4h-4z"/>
+    </svg>
+  ),
+  'maisons-retraite': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <circle cx="24" cy="12" r="6"/>
+      <path d="M14 42v-6a10 10 0 0120 0v6"/>
+      <path d="M10 42h28"/>
+      <path d="M16 30a6 6 0 01-4 4M32 30a6 6 0 004 4"/>
+    </svg>
+  ),
+  financement: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <rect x="6" y="30" width="8" height="12"/>
+      <rect x="20" y="20" width="8" height="22"/>
+      <rect x="34" y="10" width="8" height="32"/>
+      <path d="M6 26l10-10 10 6 14-14"/>
+      <path d="M36 8l4 4h-4"/>
+    </svg>
+  ),
+  professionnels: (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <circle cx="16" cy="14" r="6"/>
+      <circle cx="32" cy="14" r="6"/>
+      <path d="M4 42v-4a10 10 0 0124 0v4"/>
+      <path d="M36 22a10 10 0 018 8v4h-8"/>
+    </svg>
+  ),
+  'silver-economy': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <circle cx="24" cy="12" r="6"/>
+      <path d="M10 42c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+      <path d="M24 28v6M20 38l4-4 4 4"/>
+      <path d="M12 22a6 6 0 01-4 8M36 22a6 6 0 004 8"/>
+    </svg>
+  ),
+  'property-care': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M6 20L24 6l18 14v22a2 2 0 01-2 2H8a2 2 0 01-2-2V20z"/>
+      <circle cx="31" cy="30" r="6"/>
+      <path d="M28 34l-4 4M34 26l-2 2"/>
+      <path d="M34 34l-2-2M28 28l2 2"/>
+    </svg>
+  ),
+  'thermal-wellness': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M24 6c0 6-8 10-8 18a8 8 0 0016 0c0-8-8-12-8-18z"/>
+      <path d="M14 28c-4 0-8-4-8-8 0 0 4 2 8 0"/>
+      <path d="M34 28c4 0 8-4 8-8 0 0-4 2-8 0"/>
+      <path d="M18 42h12"/>
+    </svg>
+  ),
+  'aviation-privee': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M6 28l8-8 20 4 8-8c2-2 2-6 0-8-2-2-6-2-8 0l-8 8-20 4-4 8 8-4 4 4-4 4 4 4z"/>
+      <path d="M8 40h32"/>
+    </svg>
+  ),
+}
+
 type QuizState = 'intro' | 'quiz' | 'result'
 
 interface Props {
@@ -116,7 +240,9 @@ export default function ServiceDetailClient({ slug }: Props) {
       <div style={{ background: `linear-gradient(135deg, ${bk} 0%, ${gd} 100%)`, padding: '4rem 2rem 5rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(30,61,114,0.12) 0%, transparent 50%)' }} />
         <div style={{ position: 'relative', maxWidth: 700, margin: '0 auto' }}>
-          <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>{service.icon}</div>
+          <div style={{ color: '#d4a843', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+            {SERVICE_ICONS[slug] || null}
+          </div>
           <h1 style={{ fontFamily: titleFont, fontSize: 'clamp(2rem, 4vw, 3rem)', color: cr, marginBottom: '1rem', fontWeight: 700 }}>
             {service.t}
           </h1>

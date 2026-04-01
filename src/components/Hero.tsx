@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import { useLang } from '@/context/LangContext'
 
 interface HeroProps {
@@ -13,6 +14,7 @@ const estimateLabel: Record<string, string> = {
 
 export default function Hero({ onRdv }: HeroProps) {
   const { t, lang } = useLang()
+  const router = useRouter()
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -66,7 +68,7 @@ export default function Hero({ onRdv }: HeroProps) {
           <button className="btn-ghost-w" onClick={() => scrollTo('#services')}>
             {t.hero.btn2}
           </button>
-          <button className="btn-estimate" onClick={() => scrollTo('#calculator')}>
+          <button className="btn-estimate" onClick={() => router.push('/services#calculator')}>
             {estimateLabel[lang] || estimateLabel.en}
           </button>
         </div>

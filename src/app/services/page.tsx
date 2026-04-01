@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Services from '@/components/Services'
@@ -11,6 +11,16 @@ import ScrollFade from '@/components/ScrollFade'
 
 export default function ServicesPage() {
   const [modalOpen, setModalOpen] = useState(false)
+
+  // Scroll to #calculator anchor after page load
+  useEffect(() => {
+    if (window.location.hash === '#calculator') {
+      setTimeout(() => {
+        document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })
+      }, 300)
+    }
+  }, [])
+
   return (
     <>
       <Cursor />

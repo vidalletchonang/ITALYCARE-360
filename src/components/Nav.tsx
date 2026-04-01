@@ -74,7 +74,7 @@ export default function Nav({ onRdv }: NavProps) {
               </button>
             ))}
           </div>
-          <Link href="/#calculator" className="nav-estimate-btn">
+          <Link href="/services#calculator" className="nav-estimate-btn">
             {{ fr:'Devis', en:'Estimate', it:'Preventivo', ar:'تقدير' }[lang] || 'Estimate'}
           </Link>
           <button className="nav-cta" onClick={onRdv}>
