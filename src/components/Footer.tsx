@@ -9,8 +9,15 @@ export default function Footer() {
     <footer>
       <div className="ft">
         <div>
-          <div className="fb-logo">ITALY<span>CARE</span></div>
-          <div className="fb-sub">360° Services en Italie</div>
+          <div className="fb-logo">
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-original.png`}
+              alt="ItalyCare360 logo"
+              style={{ height: '52px', width: 'auto', marginBottom: '8px' }}
+            />
+            <div>ITALY<span style={{ fontStyle: 'italic' }}>Care</span></div>
+          </div>
+          <div className="fb-sub">360° Services in Italy</div>
           <p className="fb-p">{t.footer.desc}</p>
           <div className="socials">
             <a href="#" className="soc">f</a>
