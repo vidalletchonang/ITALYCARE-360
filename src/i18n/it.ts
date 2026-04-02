@@ -40,7 +40,7 @@ export const it: Translation = {
     label: 'Cosa facciamo',
     h1: 'I nostri',
     h2: 'Servizi 360°',
-    desc: "Dall'immobiliare alle cure mediche — ITALYCARE copre tutte le tue esigenze in Italia.",
+    desc: "Dall'immobiliare alle cure mediche — ITALYCARE gestisce tutti gli aspetti della tua vita quotidiana in Italia & molto altro.",
     discover: 'Scopri →',
     items: [
       {
