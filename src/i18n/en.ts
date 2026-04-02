@@ -40,7 +40,7 @@ export const en: Translation = {
     label: 'What we do',
     h1: 'Our',
     h2: 'Services 360°',
-    desc: 'From real estate to medical care — ITALYCARE covers all your needs in Italy.',
+    desc: 'ITALYCARE manages all the aspects related to your everyday life in Italy & more.',
     discover: 'Discover →',
     items: [
       {
