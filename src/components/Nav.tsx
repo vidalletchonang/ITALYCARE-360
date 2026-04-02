@@ -37,7 +37,7 @@ export default function Nav({ onRdv }: NavProps) {
       </div>
       <nav>
         <div className="nav-logo">
-          <div className="nav-logo-shield">
+          <div className="nav-logo-shield" style={{ background: '#1a2744' }}>
             <img
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-original.png`}
               alt="ItalyCare360 logo"
@@ -45,8 +45,8 @@ export default function Nav({ onRdv }: NavProps) {
             />
           </div>
           <div>
-            <div className="nl-main">ITALY<span>CARE</span></div>
-            <div className="nl-sub">360° Services en Italie</div>
+            <div className="nl-main">ITALY<span style={{ fontStyle: 'italic' }}>Care</span></div>
+            <div className="nl-sub">360° Services in Italy</div>
           </div>
         </div>
 
