@@ -3505,9 +3505,11 @@ nav {
   font-weight: 500 !important;
 }
 .fb-sub {
+  font-family: var(--font-jost) !important;
   font-size: 9px !important;
+  font-weight: 400 !important;
   letter-spacing: 4px !important;
-  color: rgba(255,255,255,0.55) !important;
+  color: rgba(255,255,255,0.45) !important;
   text-transform: uppercase !important;
   margin-bottom: 0 !important;
 }
