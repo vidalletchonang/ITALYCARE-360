@@ -3603,3 +3603,27 @@ footer, .footer { background: #111d35 !important; }
 
 /* Calculator result includes */
 .calc-result-includes { background: #f8f9fe !important; }
+
+/* ══════════════════════════════════════════════════════
+   FILTRE UNIFORME — même traitement visuel sur toutes
+   les images du site pour cohérence avec la palette
+   navy / or
+   ══════════════════════════════════════════════════════ */
+.sc-img img,
+.cv-slide-img,
+.tm-pdg-photo img,
+.team-card img,
+.article-hero img,
+.blog-card-img img,
+.sd-hero-img,
+.about-img img {
+  filter: brightness(0.88) contrast(1.05) saturate(0.75) sepia(0.10) !important;
+  transition: filter 0.4s ease, transform 0.5s ease !important;
+}
+
+/* On hover : légèrement plus lumineux */
+.sc:hover .sc-img img,
+.tm-pdg-card:hover .tm-pdg-photo img,
+.team-card:hover img {
+  filter: brightness(0.96) contrast(1.05) saturate(0.85) sepia(0.08) !important;
+}
