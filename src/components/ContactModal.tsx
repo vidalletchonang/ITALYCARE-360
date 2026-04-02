@@ -96,7 +96,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
   }
 
   // Build Calendly URL with prefilled name + email
-  const calendlyFull = `${CALENDLY_URL}?name=${encodeURIComponent(form.name)}&email=${encodeURIComponent(form.email)}&hide_gdpr_banner=1&hide_event_type_details=0&background_color=0c0c0a&text_color=f5edd6&primary_color=c9a84c`
+  const calendlyFull = `${CALENDLY_URL}?name=${encodeURIComponent(form.name)}&email=${encodeURIComponent(form.email)}&hide_gdpr_banner=1&hide_event_type_details=0&background_color=ffffff&text_color=1a2744&primary_color=d4a843`
 
   const dir = isRTL ? 'rtl' : 'ltr'
 
