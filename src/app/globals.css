@@ -3550,6 +3550,7 @@ nav {
   background: var(--bk) !important;
   border-color: var(--o) !important;
 }
+.ps:hover .ps-c .ps-icon { stroke: #ffffff !important; }
 .ps-num {
   background: var(--o) !important;
   font-family: var(--font-cormorant) !important;
