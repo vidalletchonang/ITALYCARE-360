@@ -1152,7 +1152,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   .langs   { display: none; }
 
   /* Logo sizing */
-  .nav-logo-shield { width: 44px; height: 50px; }
+  .nav-logo-shield img { height: 46px !important; }
   .nl-main { font-size: 18px; letter-spacing: 3px; }
   .nl-sub  { display: none; }
 

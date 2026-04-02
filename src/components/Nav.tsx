@@ -41,6 +41,7 @@ export default function Nav({ onRdv }: NavProps) {
             <img
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-shield.svg`}
               alt="ItalyCare360 shield"
+              style={{ height: '56px', width: 'auto' }}
             />
           </div>
           <div>

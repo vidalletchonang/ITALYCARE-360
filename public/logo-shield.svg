@@ -1,47 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none">
   <defs>
     <clipPath id="sc">
-      <path d="M50 8 L88 22 L88 55 C88 78 50 92 50 92 C50 92 12 78 12 55 L12 22 Z"/>
+      <path d="M22 48 Q100 14 178 48 L178 120 C178 167 100 212 100 212 C100 212 22 167 22 120 Z"/>
     </clipPath>
   </defs>
 
-  <!-- Q top-left: navy -->
-  <rect x="12" y="8" width="38" height="50" fill="#1a2744" clip-path="url(#sc)"/>
-  <!-- Q top-right: coral -->
-  <rect x="50" y="8" width="38" height="50" fill="#c85a52" clip-path="url(#sc)"/>
-  <!-- Q bottom-left: gold -->
-  <rect x="12" y="57" width="38" height="35" fill="#c9952a" clip-path="url(#sc)"/>
-  <!-- Q bottom-right: teal -->
-  <rect x="50" y="57" width="38" height="35" fill="#1e7a6a" clip-path="url(#sc)"/>
+  <!-- TL quadrant: navy blue -->
+  <rect x="0"   y="0"   width="100" height="120" fill="#1a2744" clip-path="url(#sc)"/>
+  <!-- TR quadrant: coral red -->
+  <rect x="100" y="0"   width="100" height="120" fill="#c85a52" clip-path="url(#sc)"/>
+  <!-- BL quadrant: gold -->
+  <rect x="0"   y="120" width="100" height="100" fill="#d4a843" clip-path="url(#sc)"/>
+  <!-- BR quadrant: teal -->
+  <rect x="100" y="120" width="100" height="100" fill="#2a7a6e" clip-path="url(#sc)"/>
 
   <!-- Dividers -->
-  <rect x="47" y="8" width="6" height="84" fill="#1a2744" clip-path="url(#sc)"/>
-  <rect x="12" y="54" width="76" height="6" fill="#1a2744" clip-path="url(#sc)"/>
+  <rect x="97"  y="0"   width="6"   height="220" fill="rgba(255,255,255,0.18)" clip-path="url(#sc)"/>
+  <rect x="0"   y="117" width="200" height="6"   fill="rgba(255,255,255,0.18)" clip-path="url(#sc)"/>
 
-  <!-- Center diamond -->
-  <rect x="46" y="52" width="8" height="8" fill="white" transform="rotate(45 50 56)" clip-path="url(#sc)"/>
+  <!-- Center white diamond -->
+  <polygon points="100,108 113,120 100,132 87,120" fill="white" clip-path="url(#sc)"/>
 
-  <!-- House (top-left) -->
-  <polygon points="31,17 18,28 44,28" fill="white" clip-path="url(#sc)"/>
-  <rect x="20" y="28" width="22" height="14" fill="white" clip-path="url(#sc)"/>
-  <rect x="27" y="34" width="8" height="8" fill="#1a2744" clip-path="url(#sc)"/>
+  <!-- ── HOUSE (TL, center ≈ 60, 72) ── -->
+  <!-- Roof -->
+  <polygon points="60,28 22,66 98,66" fill="white" clip-path="url(#sc)"/>
+  <!-- Body -->
+  <rect x="30" y="66" width="60" height="42" fill="white" clip-path="url(#sc)"/>
+  <!-- Door (navy cutout) -->
+  <rect x="44" y="76" width="32" height="32" rx="3" fill="#1a2744" clip-path="url(#sc)"/>
 
-  <!-- Plus (top-right) -->
-  <rect x="63" y="16" width="7" height="24" rx="2" fill="white" clip-path="url(#sc)"/>
-  <rect x="55" y="22" width="23" height="8" rx="2" fill="white" clip-path="url(#sc)"/>
+  <!-- ── PLUS (TR, center ≈ 140, 72) ── -->
+  <!-- Vertical bar -->
+  <rect x="133" y="36" width="14" height="60" rx="5" fill="white" clip-path="url(#sc)"/>
+  <!-- Horizontal bar -->
+  <rect x="110" y="59" width="60" height="14" rx="5" fill="white" clip-path="url(#sc)"/>
 
-  <!-- Lock (bottom-left) -->
-  <path d="M22 68 C22 61 42 61 42 68" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" clip-path="url(#sc)"/>
-  <rect x="18" y="68" width="24" height="18" rx="4" fill="white" clip-path="url(#sc)"/>
-  <circle cx="30" cy="75" r="3.5" fill="#c9952a" clip-path="url(#sc)"/>
-  <rect x="28.5" y="77" width="3" height="5" rx="1" fill="#c9952a" clip-path="url(#sc)"/>
+  <!-- ── LOCK (BL, center ≈ 60, 162) ── -->
+  <!-- Shackle (U-shape) -->
+  <path d="M40 156 C40 132 80 132 80 156" stroke="white" stroke-width="11" fill="none" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- Lock body -->
+  <rect x="28" y="156" width="64" height="46" rx="8" fill="white" clip-path="url(#sc)"/>
+  <!-- Minus dash on body -->
+  <rect x="40" y="177" width="40" height="8" rx="4" fill="#d4a843" clip-path="url(#sc)"/>
 
-  <!-- Pin (bottom-right) -->
-  <ellipse cx="69" cy="64" rx="7" ry="8" fill="white" clip-path="url(#sc)"/>
-  <circle cx="69" cy="64" r="3" fill="#1e7a6a" clip-path="url(#sc)"/>
-  <path d="M69 72 L64 85" stroke="white" stroke-width="4" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- ── PIN (BR, center ≈ 140, 160) ── -->
+  <!-- Pin circular head -->
+  <circle cx="140" cy="152" r="24" fill="white" clip-path="url(#sc)"/>
+  <!-- Pin triangle point -->
+  <polygon points="125,169 155,169 140,200" fill="white" clip-path="url(#sc)"/>
+  <!-- Inner circle (teal bg) -->
+  <circle cx="140" cy="152" r="10" fill="#2a7a6e" clip-path="url(#sc)"/>
 
-  <!-- Shield border -->
-  <path d="M50 8 L88 22 L88 55 C88 78 50 92 50 92 C50 92 12 78 12 55 L12 22 Z"
-        fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+  <!-- Shield outline -->
+  <path d="M22 48 Q100 14 178 48 L178 120 C178 167 100 212 100 212 C100 212 22 167 22 120 Z"
+        fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
 </svg>
