@@ -2,6 +2,15 @@
 
 import { useLang } from '@/context/LangContext'
 
+/* ── Orbit labels per language ── */
+const ORBIT_LABELS: Record<string, string[]> = {
+  fr: ['Immo',     'Santé',    'Rénov.',   'Export',   'Visa',     'Droit',  'Concierg.', 'Admin'],
+  en: ['Real Est.','Medical',  'Renov.',   'Export',   'Visa',     'Legal',  'Concierge', 'Admin'],
+  it: ['Immobile', 'Medico',   'Ristruttu.','Export',  'Visto',    'Legale', 'Concierg.', 'Amm.'],
+  ar: ['عقارات',   'صحة',      'تجديد',    'تصدير',    'فيزا',    'قانون',  'كونسيرج',   'إداري'],
+  ru: ['Недвиж.',  'Медицина', 'Ремонт',   'Экспорт',  'Виза',    'Право',  'Консьерж',  'Адм.'],
+}
+
 /* ── Professional SVG icons for the 4 value cards (right) ── */
 const VAL_ICONS = [
   /* Shield + checkmark → Total Trust */
@@ -27,7 +36,8 @@ const VAL_ICONS = [
 ]
 
 export default function About() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
+  const ol = ORBIT_LABELS[lang] ?? ORBIT_LABELS.en
 
   return (
     <section className="about" id="about">
@@ -45,7 +55,7 @@ export default function About() {
               <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
               <path d="M9 21V12h6v9"/>
             </svg>
-            <div className="oi-lbl">Immo</div>
+            <div className="oi-lbl">{ol[0]}</div>
           </div>
 
           {/* Santé — stethoscope */}
@@ -55,7 +65,7 @@ export default function About() {
               <circle cx="15.5" cy="4.5" r="1" fill="currentColor" stroke="none"/>
               <circle cx="4.5" cy="4.5" r="1" fill="currentColor" stroke="none"/>
             </svg>
-            <div className="oi-lbl">Santé</div>
+            <div className="oi-lbl">{ol[1]}</div>
           </div>
 
           {/* Rénov. — hammer */}
@@ -65,7 +75,7 @@ export default function About() {
               <path d="M17.64 15L22 10.36 17 5l-4.64 4.64"/>
               <path d="M13 7l2-2 4 4-2 2"/>
             </svg>
-            <div className="oi-lbl">Rénov.</div>
+            <div className="oi-lbl">{ol[2]}</div>
           </div>
 
           {/* Export — globe with arrow */}
@@ -75,7 +85,7 @@ export default function About() {
               <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
               <path d="M16 8l-4-4-4 4M12 4v8"/>
             </svg>
-            <div className="oi-lbl">Export</div>
+            <div className="oi-lbl">{ol[3]}</div>
           </div>
 
           {/* Visa — passport */}
@@ -85,7 +95,7 @@ export default function About() {
               <circle cx="12" cy="11" r="3"/>
               <path d="M8 17h8M9 7h2M13 7h2"/>
             </svg>
-            <div className="oi-lbl">Visa</div>
+            <div className="oi-lbl">{ol[4]}</div>
           </div>
 
           {/* Droit — scales of justice */}
@@ -94,7 +104,7 @@ export default function About() {
               <path d="M12 3v18M3 21h18"/>
               <path d="M6 8l-3 6h6L6 8zM18 6l-3 6h6L18 6z"/>
             </svg>
-            <div className="oi-lbl">Droit</div>
+            <div className="oi-lbl">{ol[5]}</div>
           </div>
 
           {/* Concierg. — concierge bell */}
@@ -104,7 +114,7 @@ export default function About() {
               <path d="M3 16h18"/>
               <path d="M12 4v2M12 8v.5"/>
             </svg>
-            <div className="oi-lbl">Concierg.</div>
+            <div className="oi-lbl">{ol[6]}</div>
           </div>
 
           {/* Admin — clipboard */}
@@ -114,7 +124,7 @@ export default function About() {
               <path d="M9 3a3 3 0 006 0"/>
               <path d="M9 12h6M9 16h4"/>
             </svg>
-            <div className="oi-lbl">Admin</div>
+            <div className="oi-lbl">{ol[7]}</div>
           </div>
 
         </div>
