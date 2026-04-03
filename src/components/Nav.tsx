@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import type { LangCode } from '@/i18n'
 
-const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it']
+const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
 
 interface NavProps {
   onRdv: () => void
@@ -75,7 +75,7 @@ export default function Nav({ onRdv }: NavProps) {
             ))}
           </div>
           <Link href="/services#calculator" className="nav-estimate-btn">
-            {{ fr:'Devis', en:'Estimate', it:'Preventivo', ar:'تقدير' }[lang] || 'Estimate'}
+            {{ fr:'Devis', en:'Estimate', it:'Preventivo', ar:'تقدير', ru:'Оценка' }[lang] || 'Estimate'}
           </Link>
           <button className="nav-cta" onClick={onRdv}>
             {t.nav.cta}
