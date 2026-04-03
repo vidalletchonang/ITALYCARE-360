@@ -779,8 +779,8 @@ nav {
   gap: 48px;
   flex-wrap: wrap;
 }
-.cb { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--bk); letter-spacing: 0.3px; }
-.cb-ic { font-size: 16px; }
+.cb { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; color: var(--bk); letter-spacing: 0.3px; }
+.cb-ic { font-size: 18px; }
 
 /* ===================== FOOTER ===================== */
 footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255,0.78); }
