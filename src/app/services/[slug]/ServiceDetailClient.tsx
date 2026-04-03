@@ -230,7 +230,7 @@ export default function ServiceDetailClient({ slug }: Props) {
 
       {/* Header */}
       <div style={{ background: bk, padding: '1rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/" style={{ color: o, textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em' }}>
+        <Link href="/services" style={{ color: o, textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em' }}>
           {sd.backBtn}
         </Link>
         <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>ITALYCARE 360</span>
