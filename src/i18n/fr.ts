@@ -32,7 +32,7 @@ export const fr: Translation = {
     vals: [
       { icon: '🛡️', h: 'Confiance totale', p: 'Partenaires vérifiés, contrats clairs, aucune surprise cachée.' },
       { icon: '⚡', h: 'Réactivité 48h', p: 'Chaque demande reçoit une réponse qualifiée sous 48 heures.' },
-      { icon: '🌍', h: 'Multi-langue', p: 'FR, EN, AR, ES, IT — service dans votre langue.' },
+      { icon: '🌍', h: 'Multi-langue', p: 'FR, EN, AR, IT, RU — service dans votre langue.' },
       { icon: '📊', h: 'Suivi temps réel', p: 'Tableau de bord dédié — chaque étape visible en direct.' },
     ],
   },
