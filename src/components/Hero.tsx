@@ -9,12 +9,21 @@ interface HeroProps {
 
 const estimateLabel: Record<string, string> = {
   fr: 'Estimer mon projet', en: 'Estimate my project',
-  it: 'Stima il progetto', ar: 'قدّر مشروعي',
+  it: 'Stima il progetto', ar: 'قدّر مشروعي', ru: 'Оценить проект',
+}
+
+const heroStats: Record<string, [string, string, string]> = {
+  fr: ['Couverture services', 'Pays clients', 'Satisfaction client'],
+  en: ['Service coverage', 'Client countries', 'Client satisfaction'],
+  it: ['Copertura servizi', 'Paesi clienti', 'Soddisfazione clienti'],
+  ar: ['تغطية الخدمات', 'دول العملاء', 'رضا العملاء'],
+  ru: ['Покрытие услуг', 'Стран клиентов', 'Удовлетворённость'],
 }
 
 export default function Hero({ onRdv }: HeroProps) {
   const { t, lang } = useLang()
   const router = useRouter()
+  const stats = heroStats[lang] ?? heroStats.en
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -77,17 +86,17 @@ export default function Hero({ onRdv }: HeroProps) {
       <div className="hero-right">
         <div className="hero-stat">
           <div className="n">360<span>°</span></div>
-          <div className="l">Couverture services</div>
+          <div className="l">{stats[0]}</div>
         </div>
         <div className="hdiv" />
         <div className="hero-stat">
           <div className="n">20<span>+</span></div>
-          <div className="l">Pays clients</div>
+          <div className="l">{stats[1]}</div>
         </div>
         <div className="hdiv" />
         <div className="hero-stat">
           <div className="n">98<span>%</span></div>
-          <div className="l">Satisfaction client</div>
+          <div className="l">{stats[2]}</div>
         </div>
       </div>
 

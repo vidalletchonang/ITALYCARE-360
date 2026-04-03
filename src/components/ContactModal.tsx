@@ -110,13 +110,13 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
             {step === 'form'
               ? t.form.title
               : step === 'calendly'
-              ? ({ fr: 'Choisissez votre créneau', en: 'Choose your slot', it: 'Scegli il tuo orario', ar: 'اختر موعدك' }[lang] || 'Choose your slot')
+              ? ({ fr: 'Choisissez votre créneau', en: 'Choose your slot', it: 'Scegli il tuo orario', ar: 'اختر موعدك', ru: 'Выберите время' }[lang] || 'Choose your slot')
               : t.form.success}
           </div>
           {step === 'form' && <div className="modal-subtitle">{t.form.subtitle}</div>}
           {step === 'calendly' && (
             <div className="modal-subtitle">
-              {{ fr: 'Consultation gratuite de 30 min · Lun–Jeu 9h–16h30 · Ven 9h–14h30', en: 'Free 30-min consultation · Mon–Thu 9am–4:30pm · Fri 9am–2:30pm', it: 'Consulenza gratuita 30 min · Lun–Gio 9–16:30 · Ven 9–14:30', ar: 'استشارة مجانية 30 دقيقة · الإثنين–الخميس 9–16:30 · الجمعة 9–14:30' }[lang] || 'Free 30-min consultation'}
+              {{ fr: 'Consultation gratuite de 30 min · Lun–Jeu 9h–16h30 · Ven 9h–14h30', en: 'Free 30-min consultation · Mon–Thu 9am–4:30pm · Fri 9am–2:30pm', it: 'Consulenza gratuita 30 min · Lun–Gio 9–16:30 · Ven 9–14:30', ar: 'استشارة مجانية 30 دقيقة · الإثنين–الخميس 9–16:30 · الجمعة 9–14:30', ru: 'Бесплатная 30-мин консультация · Пн–Чт 9–16:30 · Пт 9–14:30' }[lang] || 'Free 30-min consultation'}
             </div>
           )}
           <button className="modal-close" onClick={onClose} aria-label="close">✕</button>
@@ -138,12 +138,12 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
               <div className="calendly-steps">
                 <div className="calendly-step active">
                   <span className="step-num">1</span>
-                  <span className="step-label">{{ fr:'Vos infos', en:'Your info', it:'Le tue info', ar:'معلوماتك' }[lang] || 'Your info'}</span>
+                  <span className="step-label">{{ fr:'Vos infos', en:'Your info', it:'Le tue info', ar:'معلوماتك', ru:'Ваши данные' }[lang] || 'Your info'}</span>
                 </div>
                 <div className="step-line" />
                 <div className="calendly-step">
                   <span className="step-num">2</span>
-                  <span className="step-label">{{ fr:'Votre créneau', en:'Your slot', it:'Il tuo orario', ar:'موعدك' }[lang] || 'Your slot'}</span>
+                  <span className="step-label">{{ fr:'Votre créneau', en:'Your slot', it:'Il tuo orario', ar:'موعدك', ru:'Ваше время' }[lang] || 'Your slot'}</span>
                 </div>
               </div>
 
@@ -185,7 +185,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
               <button type="submit" className="form-submit" disabled={sending}>
                 {sending
                   ? t.form.sending
-                  : ({ fr: 'Choisir mon créneau →', en: 'Choose my slot →', it: 'Scegli il mio orario →', ar: 'اختر موعدي ←' }[lang] || 'Choose my slot →')}
+                  : ({ fr: 'Choisir mon créneau →', en: 'Choose my slot →', it: 'Scegli il mio orario →', ar: 'اختر موعدي ←', ru: 'Выбрать время →' }[lang] || 'Choose my slot →')}
               </button>
 
               <p className="form-avail-note" style={{ textAlign: 'center', marginTop: 12 }}>
@@ -199,7 +199,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
             <div className="calendly-wrap">
               {/* Back button */}
               <button className="calendly-back" onClick={() => setStep('form')}>
-                ← {{ fr:'Modifier mes infos', en:'Edit my info', it:'Modifica le mie info', ar:'تعديل معلوماتي' }[lang] || 'Edit my info'}
+                ← {{ fr:'Modifier mes infos', en:'Edit my info', it:'Modifica le mie info', ar:'تعديل معلوماتي', ru:'Изменить данные' }[lang] || 'Edit my info'}
               </button>
 
               {/* Calendly inline iframe */}
@@ -212,7 +212,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
               />
 
               <p className="calendly-note">
-                {{ fr: '📅 Vous recevrez une confirmation par email après la réservation.', en: '📅 You will receive a confirmation email after booking.', it: '📅 Riceverai un\'email di conferma dopo la prenotazione.', ar: '📅 ستتلقى بريدًا إلكترونيًا للتأكيد بعد الحجز.' }[lang] || '📅 Confirmation email will be sent after booking.'}
+                {{ fr: '📅 Vous recevrez une confirmation par email après la réservation.', en: '📅 You will receive a confirmation email after booking.', it: '📅 Riceverai un\'email di conferma dopo la prenotazione.', ar: '📅 ستتلقى بريدًا إلكترونيًا للتأكيد بعد الحجز.', ru: '📅 Вы получите письмо с подтверждением после бронирования.' }[lang] || '📅 Confirmation email will be sent after booking.'}
               </p>
             </div>
           )}

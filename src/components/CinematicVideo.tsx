@@ -13,10 +13,10 @@ const SLIDES = [
 ]
 
 const LABELS = {
-  tag: { fr: "L'ITALIE EN IMAGES", en: 'ITALY IN PICTURES', it: "L'ITALIA IN IMMAGINI", ar: 'إيطاليا في الصور' },
-  h1:  { fr: "Vivez l'Italie", en: 'Experience Italy', it: "Vivi l'Italia", ar: 'عِش إيطاليا' },
-  h2:  { fr: 'avant même d\'y être', en: 'before you arrive', it: 'prima ancora di arrivarci', ar: 'قبل أن تصل' },
-  sub: { fr: 'Architecture millénaire, dolce vita, paysages à couper le souffle — votre nouvelle vie vous attend.', en: 'Millennial architecture, dolce vita, breathtaking landscapes — your new life awaits.', it: 'Architettura millenaria, dolce vita, paesaggi mozzafiato — la tua nuova vita ti aspetta.', ar: 'معمار عريق، دولتشي فيتا، مناظر خلابة — حياتك الجديدة تنتظرك.' },
+  tag: { fr: "L'ITALIE EN IMAGES", en: 'ITALY IN PICTURES', it: "L'ITALIA IN IMMAGINI", ar: 'إيطاليا في الصور', ru: 'ИТАЛИЯ В КАДРЕ' },
+  h1:  { fr: "Vivez l'Italie", en: 'Experience Italy', it: "Vivi l'Italia", ar: 'عِش إيطاليا', ru: 'Почувствуйте Италию' },
+  h2:  { fr: 'avant même d\'y être', en: 'before you arrive', it: 'prima ancora di arrivarci', ar: 'قبل أن تصل', ru: 'ещё до приезда' },
+  sub: { fr: 'Architecture millénaire, dolce vita, paysages à couper le souffle — votre nouvelle vie vous attend.', en: 'Millennial architecture, dolce vita, breathtaking landscapes — your new life awaits.', it: 'Architettura millenaria, dolce vita, paesaggi mozzafiato — la tua nuova vita ti aspetta.', ar: 'معمار عريق، دولتشي فيتا، مناظر خلابة — حياتك الجديدة تنتظرك.', ru: 'Тысячелетняя архитектура, дольче вита, захватывающие пейзажи — ваша новая жизнь ждёт вас.' },
 }
 
 export default function CinematicVideo() {
