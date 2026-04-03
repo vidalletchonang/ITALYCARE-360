@@ -48,14 +48,20 @@ export default function Services({ onRdv }: ServicesProps) {
 
       <div className="svc-grid">
         {t.services.items.map((item, i) => (
-          <div key={i} className="sc fade-item">
+          <div key={i} className="sc fade-item" style={{ position: 'relative', cursor: 'pointer' }}>
+            {/* Invisible link covering the entire card */}
+            <Link
+              href={`/services/${item.slug}`}
+              aria-label={item.t}
+              style={{ position: 'absolute', inset: 0, zIndex: 1 }}
+            />
             <div className="sc-img">
               <img src={serviceImages[item.slug] || ''} alt={item.t} loading="lazy" />
             </div>
             <div className="sc-n">{String(i + 1).padStart(2, '0')}</div>
             <div className="sc-t font-playfair">{item.t}</div>
             <div className="sc-d">{item.d}</div>
-            <Link href={`/services/${item.slug}`} className="sc-lnk">{t.services.discover}</Link>
+            <Link href={`/services/${item.slug}`} className="sc-lnk" style={{ position: 'relative', zIndex: 2 }}>{t.services.discover}</Link>
           </div>
         ))}
       </div>

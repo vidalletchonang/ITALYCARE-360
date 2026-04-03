@@ -574,7 +574,7 @@ nav {
   position: relative;
   overflow: hidden;
   transition: background 0.35s;
-  cursor: default;
+  cursor: pointer;
 }
 .sc:hover { background: #f8f9ff; }
 .sc::after {
