@@ -2,6 +2,30 @@
 
 import { useLang } from '@/context/LangContext'
 
+/* ── Professional SVG icons for the 4 value cards (right) ── */
+const VAL_ICONS = [
+  /* Shield + checkmark → Total Trust */
+  <svg key="trust" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    <path d="M9 12l2 2 4-4"/>
+  </svg>,
+  /* Clock → 48h Response */
+  <svg key="clock" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 6v6l4 2"/>
+  </svg>,
+  /* Globe → Multi-language */
+  <svg key="globe" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+  </svg>,
+  /* Bar chart → Real-time tracking */
+  <svg key="chart" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
+    <path d="M18 20V10M12 20V4M6 20v-6"/>
+    <path d="M3 20h18"/>
+  </svg>,
+]
+
 export default function About() {
   const { t } = useLang()
 
@@ -14,14 +38,85 @@ export default function About() {
           <div className="orbit-center">
             <div className="oc-t">ITALY<br />CARE<br />360°</div>
           </div>
-          <div className="oi oi1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg><div className="oi-lbl">Immo</div></div>
-          <div className="oi oi2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg><div className="oi-lbl">Santé</div></div>
-          <div className="oi oi3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg><div className="oi-lbl">Rénov.</div></div>
-          <div className="oi oi4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg><div className="oi-lbl">Export</div></div>
-          <div className="oi oi5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><div className="oi-lbl">Visa</div></div>
-          <div className="oi oi6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div className="oi-lbl">Droit</div></div>
-          <div className="oi oi7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg><div className="oi-lbl">Concierg.</div></div>
-          <div className="oi oi8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="20" height="20"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg><div className="oi-lbl">Admin</div></div>
+
+          {/* Immo — building */}
+          <div className="oi oi1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+              <path d="M9 21V12h6v9"/>
+            </svg>
+            <div className="oi-lbl">Immo</div>
+          </div>
+
+          {/* Santé — stethoscope */}
+          <div className="oi oi2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <path d="M4.5 6.5a2 2 0 104 0V11a4.5 4.5 0 009 0v-1a2 2 0 10-2 0v1a2.5 2.5 0 01-5 0V6.5a2 2 0 10-4 0z" strokeWidth="1.5"/>
+              <circle cx="15.5" cy="4.5" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="4.5" cy="4.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            <div className="oi-lbl">Santé</div>
+          </div>
+
+          {/* Rénov. — hammer */}
+          <div className="oi oi3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <path d="M15 12l-8.5 8.5a2.12 2.12 0 01-3-3L12 9"/>
+              <path d="M17.64 15L22 10.36 17 5l-4.64 4.64"/>
+              <path d="M13 7l2-2 4 4-2 2"/>
+            </svg>
+            <div className="oi-lbl">Rénov.</div>
+          </div>
+
+          {/* Export — globe with arrow */}
+          <div className="oi oi4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              <path d="M16 8l-4-4-4 4M12 4v8"/>
+            </svg>
+            <div className="oi-lbl">Export</div>
+          </div>
+
+          {/* Visa — passport */}
+          <div className="oi oi5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <rect x="3" y="4" width="18" height="16" rx="2"/>
+              <circle cx="12" cy="11" r="3"/>
+              <path d="M8 17h8M9 7h2M13 7h2"/>
+            </svg>
+            <div className="oi-lbl">Visa</div>
+          </div>
+
+          {/* Droit — scales of justice */}
+          <div className="oi oi6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <path d="M12 3v18M3 21h18"/>
+              <path d="M6 8l-3 6h6L6 8zM18 6l-3 6h6L18 6z"/>
+            </svg>
+            <div className="oi-lbl">Droit</div>
+          </div>
+
+          {/* Concierg. — concierge bell */}
+          <div className="oi oi7">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <path d="M20 16H4a8 8 0 0116 0z"/>
+              <path d="M3 16h18"/>
+              <path d="M12 4v2M12 8v.5"/>
+            </svg>
+            <div className="oi-lbl">Concierg.</div>
+          </div>
+
+          {/* Admin — clipboard */}
+          <div className="oi oi8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+              <rect x="5" y="3" width="14" height="18" rx="2"/>
+              <path d="M9 3a3 3 0 006 0"/>
+              <path d="M9 12h6M9 16h4"/>
+            </svg>
+            <div className="oi-lbl">Admin</div>
+          </div>
+
         </div>
       </div>
 
@@ -40,7 +135,7 @@ export default function About() {
         <div className="vals">
           {t.about.vals.map((v, i) => (
             <div key={i} className="val fade-item">
-              <div className="val-ico">{v.icon}</div>
+              <div className="val-ico">{VAL_ICONS[i] ?? v.icon}</div>
               <div>
                 <h4>{v.h}</h4>
                 <p>{v.p}</p>
