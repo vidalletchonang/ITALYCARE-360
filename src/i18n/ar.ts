@@ -1042,7 +1042,7 @@ export const ar: Translation = {
   bar: [
     { icon: '📧', text: 'info@italycare360.com' },
     { icon: '📱', text: '+39 351 750 1164' },
-    { icon: '📍', text: 'ميلانو · روما · فلورنسا' },
+    { icon: '📍', text: 'Via del Popolo 222, Rovigo' },
     { icon: '💬', text: 'واتساب · 39 351 750 1164+' },
   ],
   footer: {
