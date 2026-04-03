@@ -1,11 +1,29 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import type { LangCode } from '@/i18n'
 
 const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
+
+/* Sub-labels for About dropdown */
+const ABOUT_SUB: Record<string, { story: string; team: string; gallery: string; video: string }> = {
+  fr: { story: 'Notre histoire',    team: 'Notre équipe',   gallery: 'Galerie',  video: 'Vidéo' },
+  en: { story: 'Our story',         team: 'Our team',       gallery: 'Gallery',  video: 'Video' },
+  it: { story: 'La nostra storia',  team: 'Il nostro team', gallery: 'Galleria', video: 'Video' },
+  ar: { story: 'قصتنا',             team: 'فريقنا',         gallery: 'معرض',     video: 'فيديو' },
+  ru: { story: 'Наша история',      team: 'Наша команда',   gallery: 'Галерея',  video: 'Видео' },
+}
+
+/* Sub-labels for Blog dropdown */
+const BLOG_SUB: Record<string, { all: string; guides: string; news: string }> = {
+  fr: { all: 'Tous les articles', guides: 'Guides pratiques', news: 'Actualités' },
+  en: { all: 'All articles',      guides: 'Practical guides', news: 'News'       },
+  it: { all: 'Tutti gli articoli', guides: 'Guide pratiche', news: 'Notizie'     },
+  ar: { all: 'كل المقالات',       guides: 'أدلة عملية',      news: 'أخبار'       },
+  ru: { all: 'Все статьи',        guides: 'Практические гиды', news: 'Новости'   },
+}
 
 interface NavProps {
   onRdv: () => void
@@ -14,14 +32,19 @@ interface NavProps {
 export default function Nav({ onRdv }: NavProps) {
   const { lang, setLang, t } = useLang()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [openDd, setOpenDd] = useState<string | null>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const links = [
-    { href: '/', label: t.nav.home, isPage: true },
-    { href: '/services', label: t.nav.services, isPage: true },
-    { href: '/about', label: t.nav.about, isPage: true },
-    { href: '/blog', label: t.nav.blog, isPage: true },
-    { href: '/#contact', label: t.nav.contact, isPage: true },
-  ]
+  const ab = ABOUT_SUB[lang] ?? ABOUT_SUB.en
+  const bl = BLOG_SUB[lang]  ?? BLOG_SUB.en
+
+  const openMenu  = (key: string) => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    setOpenDd(key)
+  }
+  const closeMenu = () => {
+    timerRef.current = setTimeout(() => setOpenDd(null), 120)
+  }
 
   const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -51,15 +74,80 @@ export default function Nav({ onRdv }: NavProps) {
         </div>
 
         <ul className="nav-links">
-          {links.map(l => (
-            <li key={l.href}>
-              {l.isPage ? (
-                <Link href={l.href}>{l.label}</Link>
-              ) : (
-                <a href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
-              )}
-            </li>
-          ))}
+          {/* Home */}
+          <li><Link href="/">{t.nav.home}</Link></li>
+
+          {/* Services — dropdown with all 16 services */}
+          <li
+            className="has-dd"
+            onMouseEnter={() => openMenu('services')}
+            onMouseLeave={closeMenu}
+          >
+            <Link href="/services" className="dd-trigger">
+              {t.nav.services}
+              <svg className="dd-arrow" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" width="10" height="6"><path d="M1 1l4 4 4-4"/></svg>
+            </Link>
+            {openDd === 'services' && (
+              <div className="nav-dd nav-dd--wide" onMouseEnter={() => openMenu('services')} onMouseLeave={closeMenu}>
+                <div className="nav-dd-grid">
+                  {t.services.items.map(item => (
+                    <Link key={item.slug} href={`/services/${item.slug}`} className="nav-dd-item" onClick={() => setOpenDd(null)}>
+                      {item.t}
+                    </Link>
+                  ))}
+                </div>
+                <div className="nav-dd-footer">
+                  <Link href="/services" className="nav-dd-all" onClick={() => setOpenDd(null)}>
+                    {t.nav.services} →
+                  </Link>
+                </div>
+              </div>
+            )}
+          </li>
+
+          {/* About — dropdown with sub-sections */}
+          <li
+            className="has-dd"
+            onMouseEnter={() => openMenu('about')}
+            onMouseLeave={closeMenu}
+          >
+            <Link href="/about" className="dd-trigger">
+              {t.nav.about}
+              <svg className="dd-arrow" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" width="10" height="6"><path d="M1 1l4 4 4-4"/></svg>
+            </Link>
+            {openDd === 'about' && (
+              <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('about')} onMouseLeave={closeMenu}>
+                <Link href="/about"        className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
+                <Link href="/about#team"   className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
+                <Link href="/about#gallery" className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.gallery}</Link>
+                <Link href="/about#video"  className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
+              </div>
+            )}
+          </li>
+
+          {/* Blog — dropdown */}
+          <li
+            className="has-dd"
+            onMouseEnter={() => openMenu('blog')}
+            onMouseLeave={closeMenu}
+          >
+            <Link href="/blog" className="dd-trigger">
+              {t.nav.blog}
+              <svg className="dd-arrow" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" width="10" height="6"><path d="M1 1l4 4 4-4"/></svg>
+            </Link>
+            {openDd === 'blog' && (
+              <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('blog')} onMouseLeave={closeMenu}>
+                <Link href="/blog"              className="nav-dd-item" onClick={() => setOpenDd(null)}>{bl.all}</Link>
+                <Link href="/blog?cat=guides"   className="nav-dd-item" onClick={() => setOpenDd(null)}>{bl.guides}</Link>
+                <Link href="/blog?cat=news"     className="nav-dd-item" onClick={() => setOpenDd(null)}>{bl.news}</Link>
+              </div>
+            )}
+          </li>
+
+          {/* Contact */}
+          <li>
+            <a href="/#contact" onClick={e => smoothScroll(e, '#contact')}>{t.nav.contact}</a>
+          </li>
         </ul>
 
         <div className="nav-right">
@@ -86,15 +174,39 @@ export default function Nav({ onRdv }: NavProps) {
         </div>
       </nav>
 
+      {/* Mobile menu */}
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
-        {links.map(l => (
-          l.isPage ? (
-            <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</Link>
-          ) : (
-            <a key={l.href} href={l.href} onClick={e => smoothScroll(e, l.href)}>{l.label}</a>
-          )
-        ))}
-        {/* Language switcher inside mobile menu */}
+        <Link href="/" onClick={() => setMenuOpen(false)}>{t.nav.home}</Link>
+
+        {/* Services with sub-items */}
+        <Link href="/services" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.services}</Link>
+        <div className="mobile-sub">
+          {t.services.items.map(item => (
+            <Link key={item.slug} href={`/services/${item.slug}`} onClick={() => setMenuOpen(false)} className="mobile-sub-item">
+              {item.t}
+            </Link>
+          ))}
+        </div>
+
+        {/* About with sub-items */}
+        <Link href="/about" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.about}</Link>
+        <div className="mobile-sub">
+          <Link href="/about"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
+          <Link href="/about#team"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
+          <Link href="/about#gallery" onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.gallery}</Link>
+          <Link href="/about#video"   onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
+        </div>
+
+        {/* Blog with sub-items */}
+        <Link href="/blog" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.blog}</Link>
+        <div className="mobile-sub">
+          <Link href="/blog"             onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.all}</Link>
+          <Link href="/blog?cat=guides"  onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.guides}</Link>
+          <Link href="/blog?cat=news"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.news}</Link>
+        </div>
+
+        <a href="/#contact" onClick={e => smoothScroll(e, '#contact')}>{t.nav.contact}</a>
+
         <div className="mobile-langs">
           {LANGS.map(l => (
             <button

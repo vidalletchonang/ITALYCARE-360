@@ -2956,6 +2956,118 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   color: #1a2744 !important;
 }
 
+/* ── Nav Dropdowns ───────────────────────────────────── */
+.has-dd { position: relative; }
+
+.dd-trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.dd-arrow {
+  opacity: 0.55;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.has-dd:hover .dd-arrow { transform: rotate(180deg); opacity: 1; }
+
+/* Shared dropdown panel */
+.nav-dd {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid rgba(26,39,68,0.08);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(26,39,68,0.14);
+  z-index: 999;
+  padding: 12px;
+  animation: ddFadeIn 0.15s ease;
+}
+@keyframes ddFadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Wide grid for services (2 columns) */
+.nav-dd--wide {
+  width: 480px;
+  left: 0;
+  transform: none;
+}
+.nav-dd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+/* Small for About / Blog */
+.nav-dd--sm {
+  width: 210px;
+  left: 0;
+  transform: none;
+}
+
+/* Individual dropdown item */
+.nav-dd-item {
+  display: block;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a2744;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+}
+.nav-dd-item:hover {
+  background: #f4f6fb;
+  color: #d4a843;
+}
+
+/* Footer "See all" link */
+.nav-dd-footer {
+  border-top: 1px solid rgba(26,39,68,0.07);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.nav-dd-all {
+  display: block;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #d4a843;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.nav-dd-all:hover { background: #fdf8ed; }
+
+/* Mobile sub-items */
+.mobile-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 16px;
+  border-left: 2px solid rgba(212,168,67,0.3);
+  margin: 4px 0 12px 8px;
+}
+.mobile-sub-item {
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.65) !important;
+  padding: 6px 0 !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mobile-sub-item:hover { color: #d4a843 !important; }
+
 /* ── Nav Estimate button ─────────────────────────────── */
 .nav-estimate-btn {
   font-size: 15px;
