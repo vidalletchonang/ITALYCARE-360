@@ -31,12 +31,9 @@ export default function Hero({ onRdv }: HeroProps) {
 
   return (
     <section className="hero">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
+      <img
+        src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
+        alt="Italy landscape"
         style={{
           position: 'absolute',
           top: 0,
@@ -44,17 +41,14 @@ export default function Hero({ onRdv }: HeroProps) {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
-          opacity: 0.18,
           zIndex: 0,
         }}
-      >
-        <source src="https://videos.pexels.com/video-files/3571264/3571264-sd_960_540_25fps.mp4" type="video/mp4" />
-      </video>
+      />
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(135deg, rgba(11,26,54,0.92) 0%, rgba(11,42,60,0.85) 100%)',
+          background: 'linear-gradient(135deg, rgba(14,20,32,0.88) 0%, rgba(20,28,43,0.82) 50%, rgba(14,20,32,0.9) 100%)',
           zIndex: 1,
         }}
       />
