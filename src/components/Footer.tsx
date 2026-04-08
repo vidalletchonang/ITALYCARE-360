@@ -1,6 +1,36 @@
 'use client'
 
+import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
+
+/* Map footer link labels → actual routes */
+const LINK_MAP: Record<string, string> = {
+  'Mentions légales': '/privacy-policy',
+  'CGU / RGPD': '/privacy-policy',
+  'Legal notices': '/privacy-policy',
+  'T&C / GDPR': '/privacy-policy',
+  'Note legali': '/privacy-policy',
+  'T&C / GDPR ': '/privacy-policy',
+  'إشعارات قانونية': '/privacy-policy',
+  'الشروط / GDPR': '/privacy-policy',
+  'Правовые уведомления': '/privacy-policy',
+  'Условия / GDPR': '/privacy-policy',
+  'Consultation gratuite': '/contact',
+  'Free consultation': '/contact',
+  'Consulenza gratuita': '/contact',
+  'استشارة مجانية': '/contact',
+  'Бесплатная консультация': '/contact',
+  'À propos': '/about',
+  'About us': '/about',
+  'Chi siamo': '/about',
+  'من نحن': '/about',
+  'О нас': '/about',
+  'Blog & Guides': '/blog',
+  'Blog & Guide': '/blog',
+  'Blog & Guides ': '/blog',
+  'مدونة ودليل': '/blog',
+  'Блог и гиды': '/blog',
+}
 
 export default function Footer() {
   const { t } = useLang()
@@ -32,9 +62,14 @@ export default function Footer() {
           <div key={i} className="fc">
             <h4>{col.title}</h4>
             <ul>
-              {col.links.map((link, j) => (
-                <li key={j}><a href="#">{link}</a></li>
-              ))}
+              {col.links.map((link, j) => {
+                const href = LINK_MAP[link] || LINK_MAP[link.trim()] || '#'
+                return href !== '#' ? (
+                  <li key={j}><Link href={href}>{link}</Link></li>
+                ) : (
+                  <li key={j}><a href="#">{link}</a></li>
+                )
+              })}
             </ul>
           </div>
         ))}
