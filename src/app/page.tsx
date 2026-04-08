@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import MarqueeBanner from '@/components/MarqueeBanner'
-import CinematicVideo from '@/components/CinematicVideo'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import CTA from '@/components/CTA'
@@ -23,7 +22,6 @@ export default function Home() {
       <Nav onRdv={() => setModalOpen(true)} />
       <Hero onRdv={() => setModalOpen(true)} />
       <MarqueeBanner />
-      <CinematicVideo />
       <Services onRdv={() => setModalOpen(true)} />
       <Testimonials />
       <CTA onRdv={() => setModalOpen(true)} />
