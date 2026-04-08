@@ -163,8 +163,13 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   list-style: none;
+  align-items: center;
+}
+.nav-links li {
+  display: flex;
+  align-items: center;
 }
 .nav-links a {
   font-size: 15px;
@@ -3453,6 +3458,11 @@ nav {
   font-weight: 500 !important;
   color: rgba(255,255,255,0.85) !important;
   position: relative;
+  display: flex !important;
+  align-items: center !important;
+  height: 100%;
+  line-height: 76px !important;
+  white-space: nowrap;
 }
 .nav-links a::after {
   content: '';
