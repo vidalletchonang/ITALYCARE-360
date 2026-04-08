@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import MarqueeBanner from '@/components/MarqueeBanner'
@@ -20,7 +19,6 @@ export default function Home() {
 
   return (
     <>
-      <Cursor />
       <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
       <Hero onRdv={() => setModalOpen(true)} />
