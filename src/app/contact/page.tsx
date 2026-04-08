@@ -66,7 +66,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Nav />
+      <Nav onRdv={() => {}} />
       <main style={{ paddingTop: 100 }}>
         {/* Hero */}
         <section className="contact-hero">
