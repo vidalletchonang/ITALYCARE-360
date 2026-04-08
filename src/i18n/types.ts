@@ -121,22 +121,14 @@ export interface Translation {
   }
   serviceDetail: {
     backBtn: string
-    eligibilityTitle: string
-    eligibilitySubtitle: string
-    startBtn: string
-    nextBtn: string
-    prevBtn: string
-    resultTitle: string
-    eligible: string
-    partial: string
-    notEligible: string
-    eligibleMsg: string
-    partialMsg: string
-    notEligibleMsg: string
-    rdvBtn: string
-    retryBtn: string
-    question: string
-    of: string
+    formTitle: string
+    formSubtitle: string
+    formName: string
+    formEmail: string
+    formMessage: string
+    formSend: string
+    formSuccess: string
+    formSuccessMsg: string
     included: string
     notIncluded: string
     price: string

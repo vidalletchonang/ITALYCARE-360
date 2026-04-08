@@ -138,8 +138,6 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
   ),
 }
 
-type QuizState = 'intro' | 'quiz' | 'result'
-
 interface Props {
   slug: string
 }
@@ -149,11 +147,11 @@ export default function ServiceDetailClient({ slug }: Props) {
 
   const service = t.services.items.find((item) => item.slug === slug)
 
-  const [quizState, setQuizState] = useState<QuizState>('intro')
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [answers, setAnswers] = useState<number[]>([])
-  const [selectedOption, setSelectedOption] = useState<number | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const [formName, setFormName] = useState('')
+  const [formEmail, setFormEmail] = useState('')
+  const [formMessage, setFormMessage] = useState('')
+  const [formSent, setFormSent] = useState(false)
 
   if (!service) {
     return (
@@ -167,59 +165,14 @@ export default function ServiceDetailClient({ slug }: Props) {
   }
 
   const sd = t.serviceDetail
-  const quiz = service.details.quiz
-  const totalQuestions = quiz.length
 
-  const totalScore = answers.reduce((sum, a) => sum + a, 0)
-  const maxScore = quiz.reduce((sum, q) => sum + Math.max(...q.options.map((o) => o.points)), 0)
-
-  function getResult() {
-    const ratio = totalScore / maxScore
-    if (ratio >= 0.75) return 'eligible'
-    if (ratio >= 0.45) return 'partial'
-    return 'notEligible'
+  function handleFormSubmit() {
+    if (!service) return
+    const subject = encodeURIComponent(`ITALYCARE 360 — ${service.t}`)
+    const body = encodeURIComponent(`Nom: ${formName}\nEmail: ${formEmail}\n\nMessage:\n${formMessage}\n\nService: ${service.t}`)
+    window.open(`mailto:info@italycare360.com?subject=${subject}&body=${body}`, '_blank')
+    setFormSent(true)
   }
-
-  function handleSelectOption(_points: number, idx: number) {
-    setSelectedOption(idx)
-  }
-
-  function handleNext() {
-    if (selectedOption === null) return
-    const points = quiz[currentQuestion].options[selectedOption].points
-    const newAnswers = [...answers, points]
-    setAnswers(newAnswers)
-    setSelectedOption(null)
-    if (currentQuestion + 1 < totalQuestions) {
-      setCurrentQuestion(currentQuestion + 1)
-    } else {
-      setQuizState('result')
-    }
-  }
-
-  function handlePrev() {
-    if (currentQuestion === 0) {
-      setQuizState('intro')
-      setAnswers([])
-      setCurrentQuestion(0)
-      setSelectedOption(null)
-      return
-    }
-    const newAnswers = answers.slice(0, -1)
-    setAnswers(newAnswers)
-    setCurrentQuestion(currentQuestion - 1)
-    setSelectedOption(null)
-  }
-
-  function handleRetry() {
-    setQuizState('intro')
-    setAnswers([])
-    setCurrentQuestion(0)
-    setSelectedOption(null)
-  }
-
-  const result = quizState === 'result' ? getResult() : null
-  const progressPercent = quizState === 'quiz' ? ((currentQuestion) / totalQuestions) * 100 : 0
 
   const bk = '#0b1a36'
   const o = '#d4a843'
@@ -316,154 +269,105 @@ export default function ServiceDetailClient({ slug }: Props) {
           </div>
         </div>
 
-        {/* Eligibility Quiz */}
+        {/* Contact Form */}
         <div style={{ background: bk, borderRadius: 20, padding: '2.5rem', marginBottom: '2rem', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg, ${o}, ${g})` }} />
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 90% 10%, rgba(201,168,76,0.06) 0%, transparent 50%)' }} />
 
-          <div style={{ position: 'relative' }}>
-
-            {/* INTRO STATE */}
-            {quizState === 'intro' && (
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ display: 'inline-block', background: 'rgba(201,168,76,0.12)', borderRadius: 50, padding: '0.75rem 1.5rem', marginBottom: '1.5rem' }}>
-                  <span style={{ color: o, fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Quiz</span>
-                </div>
-                <h2 style={{ fontFamily: titleFont, fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', color: cr, marginBottom: '1rem' }}>
-                  {sd.eligibilityTitle}
-                </h2>
-                <p style={{ color: 'rgba(245,237,214,0.7)', fontSize: '1rem', lineHeight: 1.7, maxWidth: 500, margin: '0 auto 2rem' }}>
-                  {sd.eligibilitySubtitle}
-                </p>
-                <button
-                  onClick={() => setQuizState('quiz')}
-                  style={{ background: `linear-gradient(135deg, ${o}, #f0cb6a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer', letterSpacing: '0.02em' }}
-                >
-                  {sd.startBtn}
-                </button>
-              </div>
-            )}
-
-            {/* QUIZ STATE */}
-            {quizState === 'quiz' && (
-              <div>
-                {/* Progress */}
-                <div style={{ marginBottom: '2rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                    <span style={{ color: o, fontSize: '0.85rem', fontWeight: 600 }}>
-                      {sd.question} {currentQuestion + 1} {sd.of} {totalQuestions}
-                    </span>
-                    <span style={{ color: 'rgba(245,237,214,0.5)', fontSize: '0.8rem' }}>
-                      {Math.round(((currentQuestion) / totalQuestions) * 100)}%
-                    </span>
-                  </div>
-                  <div style={{ height: 6, background: 'rgba(255,255,255,0.1)', borderRadius: 3, overflow: 'hidden' }}>
-                    <div style={{ height: '100%', width: `${progressPercent}%`, background: `linear-gradient(90deg, ${o}, ${g})`, borderRadius: 3, transition: 'width 0.4s ease' }} />
-                  </div>
+          <div style={{ position: 'relative', maxWidth: 520, margin: '0 auto' }}>
+            {!formSent ? (
+              <>
+                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                  <h2 style={{ fontFamily: titleFont, fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: cr, marginBottom: '0.75rem' }}>
+                    {sd.formTitle}
+                  </h2>
+                  <p style={{ color: 'rgba(245,237,214,0.6)', fontSize: '1rem', lineHeight: 1.7 }}>
+                    {sd.formSubtitle}
+                  </p>
                 </div>
 
-                {/* Question */}
-                <h3 style={{ color: cr, fontSize: '1.2rem', fontWeight: 600, marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                  {quiz[currentQuestion].question}
-                </h3>
-
-                {/* Options */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
-                  {quiz[currentQuestion].options.map((opt, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleSelectOption(opt.points, idx)}
-                      style={{
-                        background: selectedOption === idx ? 'rgba(201,168,76,0.2)' : 'rgba(255,255,255,0.05)',
-                        border: selectedOption === idx ? `2px solid ${o}` : '2px solid rgba(255,255,255,0.1)',
-                        borderRadius: 12,
-                        padding: '1rem 1.25rem',
-                        color: selectedOption === idx ? o : op,
-                        fontSize: '0.95rem',
-                        cursor: 'pointer',
-                        textAlign: isRTL ? 'right' : 'left',
-                        transition: 'all 0.2s ease',
-                        fontFamily: bodyFont,
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {opt.text}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Navigation */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <button
-                    onClick={handlePrev}
-                    style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(245,237,214,0.6)', borderRadius: 50, padding: '0.7rem 1.5rem', fontSize: '0.9rem', cursor: 'pointer' }}
-                  >
-                    {sd.prevBtn}
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    disabled={selectedOption === null}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <input
+                    type="text"
+                    placeholder={sd.formName}
+                    value={formName}
+                    onChange={e => setFormName(e.target.value)}
                     style={{
-                      background: selectedOption !== null ? `linear-gradient(135deg, ${o}, #f0cb6a)` : 'rgba(255,255,255,0.1)',
+                      background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid rgba(255,255,255,0.15)',
+                      borderRadius: 8,
+                      padding: '0.9rem 1.2rem',
+                      color: '#fff',
+                      fontSize: '1rem',
+                      fontFamily: bodyFont,
+                      outline: 'none',
+                    }}
+                  />
+                  <input
+                    type="email"
+                    placeholder={sd.formEmail}
+                    value={formEmail}
+                    onChange={e => setFormEmail(e.target.value)}
+                    style={{
+                      background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid rgba(255,255,255,0.15)',
+                      borderRadius: 8,
+                      padding: '0.9rem 1.2rem',
+                      color: '#fff',
+                      fontSize: '1rem',
+                      fontFamily: bodyFont,
+                      outline: 'none',
+                    }}
+                  />
+                  <textarea
+                    placeholder={sd.formMessage}
+                    value={formMessage}
+                    onChange={e => setFormMessage(e.target.value)}
+                    rows={4}
+                    style={{
+                      background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid rgba(255,255,255,0.15)',
+                      borderRadius: 8,
+                      padding: '0.9rem 1.2rem',
+                      color: '#fff',
+                      fontSize: '1rem',
+                      fontFamily: bodyFont,
+                      outline: 'none',
+                      resize: 'vertical',
+                    }}
+                  />
+                  <button
+                    onClick={handleFormSubmit}
+                    disabled={!formName || !formEmail}
+                    style={{
+                      background: formName && formEmail ? `linear-gradient(135deg, ${o}, #dfc06e)` : 'rgba(255,255,255,0.1)',
+                      color: formName && formEmail ? bk : 'rgba(255,255,255,0.3)',
                       border: 'none',
-                      color: selectedOption !== null ? bk : 'rgba(255,255,255,0.3)',
-                      borderRadius: 50,
-                      padding: '0.7rem 2rem',
-                      fontSize: '0.95rem',
+                      borderRadius: 4,
+                      padding: '1rem 2rem',
+                      fontSize: '0.9rem',
                       fontWeight: 600,
-                      cursor: selectedOption !== null ? 'pointer' : 'not-allowed',
-                      transition: 'all 0.2s ease',
+                      letterSpacing: '2px',
+                      textTransform: 'uppercase',
+                      cursor: formName && formEmail ? 'pointer' : 'not-allowed',
+                      fontFamily: bodyFont,
+                      transition: 'all 0.3s ease',
+                      marginTop: '0.5rem',
                     }}
                   >
-                    {sd.nextBtn}
+                    {sd.formSend}
                   </button>
                 </div>
-              </div>
-            )}
-
-            {/* RESULT STATE */}
-            {quizState === 'result' && result && (
-              <div style={{ textAlign: 'center' }}>
-                <h2 style={{ fontFamily: titleFont, color: cr, fontSize: '1.5rem', marginBottom: '1rem' }}>
-                  {sd.resultTitle}
+              </>
+            ) : (
+              <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✓</div>
+                <h2 style={{ fontFamily: titleFont, color: cr, fontSize: '1.5rem', marginBottom: '0.75rem' }}>
+                  {sd.formSuccess}
                 </h2>
-
-                <div style={{
-                  display: 'inline-block',
-                  background: result === 'eligible' ? 'rgba(34,197,94,0.18)' : result === 'partial' ? 'rgba(212,168,67,0.18)' : 'rgba(220,60,60,0.18)',
-                  borderRadius: 16,
-                  padding: '1.5rem 2.5rem',
-                  marginBottom: '1.5rem',
-                  border: `2px solid ${result === 'eligible' ? 'rgba(34,197,94,0.7)' : result === 'partial' ? 'rgba(212,168,67,0.7)' : 'rgba(220,60,60,0.7)'}`,
-                }}>
-                  <div style={{ fontSize: '2rem', marginBottom: '0.5rem', color: '#ffffff' }}>
-                    {result === 'eligible' ? sd.eligible : result === 'partial' ? sd.partial : sd.notEligible}
-                  </div>
-                  <div style={{ color: '#ffffff', fontSize: '1rem', fontWeight: 600, letterSpacing: '1px' }}>
-                    Score: {totalScore} / {maxScore}
-                  </div>
-                </div>
-
-                <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '1rem', lineHeight: 1.7, maxWidth: 520, margin: '0 auto 2rem' }}>
-                  {result === 'eligible' ? sd.eligibleMsg : result === 'partial' ? sd.partialMsg : sd.notEligibleMsg}
+                <p style={{ color: 'rgba(245,237,214,0.7)', fontSize: '1rem', lineHeight: 1.7 }}>
+                  {sd.formSuccessMsg}
                 </p>
-
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-                  {result !== 'notEligible' && (
-                    <button
-                      onClick={() => setModalOpen(true)}
-                      style={{ background: `linear-gradient(135deg, ${o}, #f0cb6a)`, color: bk, border: 'none', borderRadius: 50, padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: 700, cursor: 'pointer' }}
-                    >
-                      {sd.rdvBtn}
-                    </button>
-                  )}
-                  <button
-                    onClick={handleRetry}
-                    style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(245,237,214,0.6)', borderRadius: 50, padding: '0.7rem 1.75rem', fontSize: '0.9rem', cursor: 'pointer' }}
-                  >
-                    {sd.retryBtn}
-                  </button>
-                </div>
               </div>
             )}
           </div>
