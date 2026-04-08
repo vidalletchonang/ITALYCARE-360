@@ -128,6 +128,14 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
       <path d="M8 40h32"/>
     </svg>
   ),
+  'assistenza-scolastica': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M24 4L4 14l20 10 20-10L24 4z"/>
+      <path d="M4 14v14l20 10 20-10V14"/>
+      <path d="M24 24v20"/>
+      <path d="M36 19v10"/>
+    </svg>
+  ),
 }
 
 type QuizState = 'intro' | 'quiz' | 'result'

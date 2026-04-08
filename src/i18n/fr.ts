@@ -1000,6 +1000,67 @@ export const fr: Translation = {
           ],
         },
       },
+      {
+        icon: '🎓',
+        t: 'Assistance Scolaire',
+        d: "Inscription de vos enfants dans les écoles italiennes — publiques, privées, internationales. Accompagnement administratif complet, choix de l'établissement et suivi d'intégration.",
+        slug: 'assistenza-scolastica',
+        details: {
+          hero: "Inscrivez vos enfants dans les meilleures écoles en Italie — nous gérons chaque étape, de la recherche d'établissement à l'inscription finale.",
+          whatIs: "Notre service d'assistance scolaire accompagne les familles étrangères dans le choix et l'inscription de leurs enfants dans le système scolaire italien. Que vous recherchiez une école publique italienne, un établissement privé bilingue ou une école internationale, nous identifions les meilleures options selon le profil de votre enfant, votre localisation et vos objectifs éducatifs. Nous gérons l'intégralité des démarches administratives : dossier d'inscription, traduction et légalisation des bulletins scolaires, obtention du codice fiscale pour l'enfant, et coordination directe avec les établissements.",
+          includes: [
+            "Conseil et orientation scolaire personnalisé",
+            "Recherche d'écoles publiques, privées et internationales",
+            "Constitution du dossier d'inscription complet",
+            "Traduction et légalisation des documents scolaires",
+            "Obtention du codice fiscale pour l'enfant",
+            "Accompagnement aux visites d'établissements",
+            "Suivi d'intégration post-inscription",
+          ],
+          notIncludes: [
+            "Frais de scolarité (variables selon l'établissement)",
+            "Cours de langue italienne préparatoires (service séparé)",
+          ],
+          price: 'À partir de 800€ (selon le type d\'école)',
+          duration: '2 à 6 semaines selon la période',
+          quiz: [
+            {
+              question: "Quel type d'école recherchez-vous pour votre enfant ?",
+              options: [
+                { text: 'École publique italienne', points: 1 },
+                { text: 'École privée bilingue', points: 2 },
+                { text: 'École internationale (anglais, français...)', points: 2 },
+                { text: 'Je ne sais pas encore', points: 1 },
+              ],
+            },
+            {
+              question: "Quel âge a votre enfant ?",
+              options: [
+                { text: 'Maternelle (3-5 ans)', points: 1 },
+                { text: 'Primaire (6-10 ans)', points: 2 },
+                { text: 'Collège (11-13 ans)', points: 2 },
+                { text: 'Lycée (14-18 ans)', points: 2 },
+              ],
+            },
+            {
+              question: "Votre enfant parle-t-il italien ?",
+              options: [
+                { text: 'Oui, couramment', points: 2 },
+                { text: 'Niveau débutant', points: 1 },
+                { text: 'Pas du tout', points: 1 },
+              ],
+            },
+            {
+              question: "Quand prévoyez-vous l'inscription ?",
+              options: [
+                { text: 'Pour la prochaine rentrée scolaire', points: 2 },
+                { text: 'En cours d\'année', points: 1 },
+                { text: 'Je me renseigne pour plus tard', points: 0 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {

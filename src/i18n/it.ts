@@ -1000,6 +1000,67 @@ export const it: Translation = {
           ],
         },
       },
+      {
+        icon: '🎓',
+        t: 'Assistenza Scolastica',
+        d: "Iscrizione dei vostri figli nelle scuole italiane — pubbliche, private, internazionali. Supporto amministrativo completo, scelta dell'istituto e follow-up di integrazione.",
+        slug: 'assistenza-scolastica',
+        details: {
+          hero: "Iscrivete i vostri figli nelle migliori scuole in Italia — gestiamo ogni fase, dalla ricerca dell'istituto all'iscrizione finale.",
+          whatIs: "Il nostro servizio di assistenza scolastica accompagna le famiglie straniere nella scelta e nell'iscrizione dei figli nel sistema scolastico italiano. Che stiate cercando una scuola pubblica italiana, un istituto privato bilingue o una scuola internazionale, identifichiamo le migliori opzioni in base al profilo del bambino, alla vostra posizione e ai vostri obiettivi educativi. Gestiamo tutte le pratiche amministrative: fascicolo d'iscrizione, traduzione e legalizzazione delle pagelle, ottenimento del codice fiscale per il minore e coordinamento diretto con gli istituti.",
+          includes: [
+            'Consulenza e orientamento scolastico personalizzato',
+            'Ricerca di scuole pubbliche, private e internazionali',
+            "Preparazione completa del fascicolo d'iscrizione",
+            'Traduzione e legalizzazione dei documenti scolastici',
+            'Ottenimento del codice fiscale per il minore',
+            'Accompagnamento alle visite degli istituti',
+            "Follow-up di integrazione post-iscrizione",
+          ],
+          notIncludes: [
+            "Rette scolastiche (variabili in base all'istituto)",
+            'Corsi preparatori di lingua italiana (servizio separato)',
+          ],
+          price: 'A partire da 800€ (in base al tipo di scuola)',
+          duration: 'Da 2 a 6 settimane a seconda del periodo',
+          quiz: [
+            {
+              question: 'Che tipo di scuola cercate per vostro figlio?',
+              options: [
+                { text: 'Scuola pubblica italiana', points: 1 },
+                { text: 'Scuola privata bilingue', points: 2 },
+                { text: 'Scuola internazionale (inglese, francese...)', points: 2 },
+                { text: 'Non sono ancora sicuro', points: 1 },
+              ],
+            },
+            {
+              question: 'Quanti anni ha vostro figlio?',
+              options: [
+                { text: 'Scuola materna (3-5 anni)', points: 1 },
+                { text: 'Scuola primaria (6-10 anni)', points: 2 },
+                { text: 'Scuola media (11-13 anni)', points: 2 },
+                { text: 'Scuola superiore (14-18 anni)', points: 2 },
+              ],
+            },
+            {
+              question: 'Vostro figlio parla italiano?',
+              options: [
+                { text: 'Sì, fluentemente', points: 2 },
+                { text: 'Livello principiante', points: 1 },
+                { text: 'Per niente', points: 1 },
+              ],
+            },
+            {
+              question: "Quando prevedete l'iscrizione?",
+              options: [
+                { text: 'Per il prossimo anno scolastico', points: 2 },
+                { text: 'Iscrizione in corso d\'anno', points: 1 },
+                { text: 'Mi sto informando per dopo', points: 0 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {

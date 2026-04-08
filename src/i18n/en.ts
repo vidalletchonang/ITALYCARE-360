@@ -1000,6 +1000,67 @@ export const en: Translation = {
           ],
         },
       },
+      {
+        icon: '🎓',
+        t: 'School Assistance',
+        d: 'Enroll your children in Italian schools — public, private, or international. Full administrative support, school selection, and integration follow-up.',
+        slug: 'assistenza-scolastica',
+        details: {
+          hero: 'Enroll your children in the best schools in Italy — we manage every step, from school search to final registration.',
+          whatIs: 'Our school assistance service supports foreign families in choosing and enrolling their children in the Italian school system. Whether you are looking for an Italian public school, a bilingual private school, or an international school, we identify the best options based on your child\'s profile, your location, and your educational goals. We handle all administrative procedures: enrollment files, translation and legalization of school records, obtaining the child\'s codice fiscale, and direct coordination with the schools.',
+          includes: [
+            'Personalised school guidance and orientation',
+            'Search for public, private and international schools',
+            'Complete enrollment file preparation',
+            'Translation and legalization of school documents',
+            'Codice fiscale for the child',
+            'Accompanied school visits',
+            'Post-enrollment integration follow-up',
+          ],
+          notIncludes: [
+            'Tuition fees (vary by school)',
+            'Preparatory Italian language courses (separate service)',
+          ],
+          price: 'From €800 (depending on school type)',
+          duration: '2 to 6 weeks depending on the period',
+          quiz: [
+            {
+              question: 'What type of school are you looking for?',
+              options: [
+                { text: 'Italian public school', points: 1 },
+                { text: 'Bilingual private school', points: 2 },
+                { text: 'International school (English, French...)', points: 2 },
+                { text: 'I\'m not sure yet', points: 1 },
+              ],
+            },
+            {
+              question: 'How old is your child?',
+              options: [
+                { text: 'Kindergarten (3-5 years)', points: 1 },
+                { text: 'Primary (6-10 years)', points: 2 },
+                { text: 'Middle school (11-13 years)', points: 2 },
+                { text: 'High school (14-18 years)', points: 2 },
+              ],
+            },
+            {
+              question: 'Does your child speak Italian?',
+              options: [
+                { text: 'Yes, fluently', points: 2 },
+                { text: 'Beginner level', points: 1 },
+                { text: 'Not at all', points: 1 },
+              ],
+            },
+            {
+              question: 'When do you plan to enroll?',
+              options: [
+                { text: 'For the next school year', points: 2 },
+                { text: 'Mid-year enrollment', points: 1 },
+                { text: 'I\'m researching for later', points: 0 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {
