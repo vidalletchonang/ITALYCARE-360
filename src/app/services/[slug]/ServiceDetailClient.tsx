@@ -239,43 +239,43 @@ export default function ServiceDetailClient({ slug }: Props) {
       {/* Hero Section */}
       <div style={{ background: `linear-gradient(135deg, ${bk} 0%, ${gd} 100%)`, padding: '4rem 2rem 5rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(30,61,114,0.12) 0%, transparent 50%)' }} />
-        <div style={{ position: 'relative', maxWidth: 700, margin: '0 auto' }}>
+        <div style={{ position: 'relative', maxWidth: 860, margin: '0 auto' }}>
           <div style={{ color: '#d4a843', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
             {SERVICE_ICONS[slug] || null}
           </div>
           <h1 style={{ fontFamily: titleFont, fontSize: 'clamp(2rem, 4vw, 3rem)', color: cr, marginBottom: '1rem', fontWeight: 700 }}>
             {service.t}
           </h1>
-          <p style={{ color: op, fontSize: '1.1rem', lineHeight: 1.7, opacity: 0.9 }}>
+          <p style={{ color: op, fontSize: '1.25rem', lineHeight: 1.7, opacity: 0.9 }}>
             {service.details.hero}
           </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '3rem 1.5rem' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '3.5rem 2.5rem' }}>
 
         {/* What Is Section */}
-        <div style={{ background: '#fff', borderRadius: 16, padding: '2rem', marginBottom: '2rem', boxShadow: '0 2px 20px rgba(0,0,0,0.06)', border: '1px solid rgba(201,168,76,0.12)' }}>
-          <h2 style={{ fontFamily: titleFont, fontSize: '1.6rem', color: bk, marginBottom: '1rem' }}>
+        <div style={{ background: '#fff', borderRadius: 16, padding: '2.5rem 3rem', marginBottom: '2.5rem', boxShadow: '0 2px 20px rgba(0,0,0,0.06)', border: '1px solid rgba(201,168,76,0.12)' }}>
+          <h2 style={{ fontFamily: titleFont, fontSize: '2rem', color: bk, marginBottom: '1.2rem' }}>
             {service.t}
           </h2>
-          <p style={{ color: '#3a3730', lineHeight: 1.8, fontSize: '1rem' }}>
+          <p style={{ color: '#3a3730', lineHeight: 1.9, fontSize: '1.15rem' }}>
             {service.details.whatIs}
           </p>
         </div>
 
         {/* Includes / Not Includes */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
           {/* Included */}
-          <div style={{ background: '#f0faf4', borderRadius: 16, padding: '1.75rem', border: '1px solid #c3e6d0' }}>
-            <h3 style={{ color: g, fontSize: '1rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.02em' }}>
+          <div style={{ background: '#f0faf4', borderRadius: 16, padding: '2.25rem', border: '1px solid #c3e6d0' }}>
+            <h3 style={{ color: g, fontSize: '1.2rem', fontWeight: 600, marginBottom: '1.2rem', letterSpacing: '0.02em' }}>
               {sd.included}
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {service.details.includes.map((item, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', marginBottom: '0.7rem', color: '#2a4a35', fontSize: '0.9rem', lineHeight: 1.5 }}>
-                  <span style={{ color: g, marginTop: '0.1rem', flexShrink: 0 }}>✓</span>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.7rem', marginBottom: '0.85rem', color: '#2a4a35', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                  <span style={{ color: g, marginTop: '0.15rem', flexShrink: 0, fontSize: '1.1rem' }}>✓</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -283,26 +283,26 @@ export default function ServiceDetailClient({ slug }: Props) {
           </div>
 
           {/* Not Included + Price & Duration */}
-          <div style={{ background: '#fdf4f4', borderRadius: 16, padding: '1.75rem', border: '1px solid #e8c5c5' }}>
-            <h3 style={{ color: '#b5261e', fontSize: '1rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.02em' }}>
+          <div style={{ background: '#fdf4f4', borderRadius: 16, padding: '2.25rem', border: '1px solid #e8c5c5' }}>
+            <h3 style={{ color: '#b5261e', fontSize: '1.2rem', fontWeight: 600, marginBottom: '1.2rem', letterSpacing: '0.02em' }}>
               {sd.notIncluded}
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {service.details.notIncludes.map((item, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', marginBottom: '0.7rem', color: '#5a2a2a', fontSize: '0.9rem', lineHeight: 1.5 }}>
-                  <span style={{ color: '#b5261e', marginTop: '0.1rem', flexShrink: 0 }}>✗</span>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.7rem', marginBottom: '0.85rem', color: '#5a2a2a', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                  <span style={{ color: '#b5261e', marginTop: '0.15rem', flexShrink: 0, fontSize: '1.1rem' }}>✗</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <div style={{ marginTop: '1.5rem', paddingTop: '1.2rem', borderTop: '1px solid #e8c5c5' }}>
-              <div style={{ marginBottom: '0.7rem' }}>
-                <span style={{ fontSize: '0.75rem', color: '#8a7a6a', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>{sd.price}</span>
-                <p style={{ color: bk, fontWeight: 600, fontSize: '0.95rem', marginTop: '0.2rem' }}>{service.details.price}</p>
+            <div style={{ marginTop: '1.8rem', paddingTop: '1.4rem', borderTop: '1px solid #e8c5c5' }}>
+              <div style={{ marginBottom: '0.9rem' }}>
+                <span style={{ fontSize: '0.85rem', color: '#8a7a6a', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>{sd.price}</span>
+                <p style={{ color: bk, fontWeight: 600, fontSize: '1.1rem', marginTop: '0.3rem' }}>{service.details.price}</p>
               </div>
               <div>
-                <span style={{ fontSize: '0.75rem', color: '#8a7a6a', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>{sd.duration}</span>
-                <p style={{ color: bk, fontWeight: 600, fontSize: '0.95rem', marginTop: '0.2rem' }}>{service.details.duration}</p>
+                <span style={{ fontSize: '0.85rem', color: '#8a7a6a', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>{sd.duration}</span>
+                <p style={{ color: bk, fontWeight: 600, fontSize: '1.1rem', marginTop: '0.3rem' }}>{service.details.duration}</p>
               </div>
             </div>
           </div>
