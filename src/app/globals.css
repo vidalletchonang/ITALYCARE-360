@@ -3886,4 +3886,3 @@ footer, .footer { background: #111d35 !important; }
 @media (max-width: 550px) {
   .contact-cards { grid-template-columns: 1fr; }
 }
-}
