@@ -2997,9 +2997,8 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 
 /* ── Shared dropdown panel ── */
 .nav-dd {
-  position: absolute;
-  top: calc(100% + 16px);
-  left: 0;
+  position: fixed;
+  top: 76px;
   background: #0e1420;
   border: 1px solid rgba(201,168,76,0.18);
   border-top: 2px solid var(--o);
@@ -3008,7 +3007,6 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   z-index: 999;
   padding: 8px;
   animation: ddSlide 0.2s cubic-bezier(0.16,1,0.3,1);
-  /* small upward triangle pointer */
 }
 .nav-dd::before {
   content: '';
@@ -3017,9 +3015,10 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   left: 24px;
   width: 14px;
   height: 8px;
-  background: #d4a843;
+  background: var(--o);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+.nav-dd--wide::before { display: none; }
 
 @keyframes ddSlide {
   from { opacity: 0; transform: translateY(-8px); }
@@ -3030,12 +3029,10 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .nav-dd--wide {
   width: 720px;
   padding: 20px 24px;
-  left: 50%;
+  left: 50vw;
   transform: translateX(-50%);
-}
-.nav-dd--wide::before {
-  left: 50%;
-  transform: translateX(-50%);
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
 }
 .nav-dd-heading {
   font-family: var(--font-jost);
