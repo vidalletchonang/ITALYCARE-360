@@ -293,34 +293,41 @@ nav {
 
 .btn-gold {
   background: var(--o);
-  color: var(--bk);
+  color: #0d1b38;
   border: none;
-  padding: 15px 38px;
-  font-size: 15px;
-  letter-spacing: 3px;
+  padding: 14px 40px;
+  font-size: 12px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-jost);
-  transition: opacity 0.2s;
+  border-radius: 2px;
+  transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
-.btn-gold:hover { opacity: 0.85; }
+.btn-gold:hover {
+  background: #c49a36;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212,168,67,0.3);
+}
 
 .btn-ghost-w {
   background: transparent;
-  color: rgba(255,255,255,0.82);
-  border: 1px solid rgba(255,255,255,0.14);
-  padding: 15px 28px;
-  font-size: 15px;
-  letter-spacing: 2px;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 14px 36px;
+  font-size: 12px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: 500;
   cursor: pointer;
   font-family: var(--font-jost);
-  transition: all 0.2s;
+  border-radius: 2px;
+  transition: all 0.35s ease;
 }
 .btn-ghost-w:hover {
-  border-color: rgba(255,255,255,0.80);
-  color: #fff;
+  border-color: var(--o);
+  color: var(--o);
 }
 
 .hero-right {
@@ -741,33 +748,40 @@ nav {
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 .btn-green {
-  background: var(--g);
-  color: #fff;
+  background: var(--o);
+  color: #0d1b38;
   border: none;
-  padding: 18px 52px;
-  font-size: 16px;
-  letter-spacing: 3px;
+  padding: 15px 44px;
+  font-size: 12px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-jost);
-  transition: all 0.25s;
+  border-radius: 2px;
+  transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
-.btn-green:hover { background: var(--gd); transform: translateY(-2px); }
+.btn-green:hover {
+  background: #c49a36;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212,168,67,0.3);
+}
 
 .btn-outline {
   background: transparent;
   color: #1a2744;
-  border: 1px solid var(--gw);
-  padding: 18px 52px;
-  font-size: 16px;
-  letter-spacing: 2px;
+  border: 1px solid rgba(26,39,68,0.25);
+  padding: 15px 44px;
+  font-size: 12px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: 500;
   cursor: pointer;
   font-family: var(--font-jost);
-  transition: all 0.25s;
+  border-radius: 2px;
+  transition: all 0.35s ease;
 }
-.btn-outline:hover { border-color: #1a2744; background: #1a1814; color: #fff; }
+.btn-outline:hover { border-color: var(--o); color: var(--o); }
 
 /* ===================== CONTACT BAR ===================== */
 .cbar {
@@ -3455,11 +3469,19 @@ nav {
 
 /* Nav CTA: more elegant */
 .nav-cta {
-  padding: 9px 22px !important;
+  padding: 10px 26px !important;
   font-size: 10px !important;
   letter-spacing: 3px !important;
-  border-radius: 0 !important;
-  font-weight: 500 !important;
+  border-radius: 2px !important;
+  font-weight: 600 !important;
+  background: var(--o) !important;
+  color: #0d1b38 !important;
+  transition: background 0.3s ease, box-shadow 0.3s ease !important;
+}
+.nav-cta:hover {
+  background: #c49a36 !important;
+  opacity: 1 !important;
+  box-shadow: 0 4px 14px rgba(212,168,67,0.3) !important;
 }
 
 /* --- Gold ornament on section labels --- */
@@ -3635,30 +3657,32 @@ nav {
   letter-spacing: -0.01em !important;
 }
 .cta h2 em { color: var(--o) !important; }
-.btn-green {
-  background: var(--bk) !important;
-  font-size: 14px !important;
-  letter-spacing: 3px !important;
-  padding: 20px 56px !important;
-  transition: background 0.3s, transform 0.3s !important;
+.cta .btn-green {
+  background: var(--o) !important;
+  color: #0d1b38 !important;
+  font-size: 12px !important;
+  letter-spacing: 3.5px !important;
+  padding: 16px 48px !important;
+  border-radius: 2px !important;
+  transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease !important;
 }
-.btn-green:hover {
-  background: var(--bk2) !important;
+.cta .btn-green:hover {
+  background: #c49a36 !important;
   transform: translateY(-2px) !important;
-}
-.btn-outline {
-  font-size: 14px !important;
-  letter-spacing: 2.5px !important;
-  padding: 20px 48px !important;
-  border-color: rgba(28,52,96,0.25) !important;
+  box-shadow: 0 6px 20px rgba(212,168,67,0.35) !important;
 }
 .cta .btn-outline {
-  color: #fff !important;
-  border-color: rgba(255,255,255,0.35) !important;
+  color: rgba(255,255,255,0.85) !important;
+  border-color: rgba(255,255,255,0.25) !important;
+  font-size: 12px !important;
+  letter-spacing: 3px !important;
+  padding: 16px 48px !important;
+  border-radius: 2px !important;
 }
-.btn-outline:hover {
-  background: var(--bk) !important;
-  border-color: var(--bk) !important;
+.cta .btn-outline:hover {
+  color: var(--o) !important;
+  border-color: var(--o) !important;
+  background: transparent !important;
 }
 
 /* --- Footer: more refined --- */
