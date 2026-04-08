@@ -16,7 +16,7 @@ export const en: Translation = {
     line1: 'Italy,',
     line2: 'simplified',
     line3: 'for you.',
-    desc: 'ITALYCARE 360 guides expats through all their projects in Italy — real estate, healthcare, renovation, export, student visa and more. One contact, total expertise.',
+    desc: 'Buy property in Italy, get an Italian student visa, access healthcare in Italy, renovate a house or export Made in Italy products — ITALYCARE 360 guides expats through every step. One contact, in your language.',
     btn1: 'Start my project →',
     btn2: 'View services ↓',
     scroll: 'Scroll',
@@ -40,13 +40,13 @@ export const en: Translation = {
     label: 'What we do',
     h1: 'Our',
     h2: 'Services 360°',
-    desc: 'From real estate to medical care — ITALYCARE manages all the aspects related to your everyday life in Italy & more.',
+    desc: 'Property investment, student visa, medical care, renovation, legal assistance, concierge — ITALYCARE manages every aspect of your life in Italy.',
     discover: 'Discover →',
     items: [
       {
         icon: '🏠',
         t: 'Real Estate & Investment',
-        d: 'Purchase, sale, due diligence, notary, tax advice. We find the ideal property and handle all procedures for foreign buyers.',
+        d: 'Buy a house in Italy: property search, due diligence, notary, Italian tax advice. Full support to invest in Italian real estate with confidence.',
         slug: 'immobilier',
         details: {
           hero: "Invest in Italy with complete peace of mind — we handle every step of your property acquisition.",

@@ -16,7 +16,7 @@ export const fr: Translation = {
     line1: "L'Italie,",
     line2: 'simplifiée',
     line3: 'pour vous.',
-    desc: "ITALYCARE 360 accompagne les étrangers dans tous leurs projets en Italie — immobilier, santé, rénovation, export, visa étudiant et bien plus. Un seul interlocuteur, une expertise totale.",
+    desc: "Acheter un bien immobilier en Italie, obtenir un visa étudiant, accéder aux soins médicaux italiens, rénover une maison ou exporter le Made in Italy — ITALYCARE 360 accompagne les étrangers à chaque étape. Un seul interlocuteur, dans votre langue.",
     btn1: 'Démarrer mon projet →',
     btn2: 'Voir les services ↓',
     scroll: 'Défiler',
@@ -40,13 +40,13 @@ export const fr: Translation = {
     label: 'Ce que nous faisons',
     h1: 'Nos',
     h2: 'Services 360°',
-    desc: "De l'immobilier aux soins médicaux — ITALYCARE gère tous les aspects de votre vie quotidienne en Italie & bien plus encore.",
+    desc: "Achat immobilier, visa étudiant, suivi médical, rénovation, assistance juridique, conciergerie — ITALYCARE gère tous les aspects de votre vie en Italie.",
     discover: 'Découvrir →',
     items: [
       {
         icon: '🏠',
         t: 'Immobilier & Investissement',
-        d: "Achat, vente, due diligence, notaire, conseils fiscaux. Nous trouvons le bien idéal et gérons toutes les démarches pour les acquéreurs étrangers.",
+        d: "Acheter une maison en Italie : recherche de biens, due diligence, notaire, fiscalité italienne. Accompagnement complet pour investir dans l'immobilier italien en toute sérénité.",
         slug: 'immobilier',
         details: {
           hero: "Investissez en Italie en toute sérénité — nous gérons chaque étape de votre acquisition immobilière.",

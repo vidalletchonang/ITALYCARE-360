@@ -16,7 +16,7 @@ export const it: Translation = {
     line1: "L'Italia,",
     line2: 'semplificata',
     line3: 'per te.',
-    desc: "ITALYCARE 360 accompagna gli stranieri in tutti i loro progetti in Italia — immobiliare, salute, ristrutturazione, export, visto studente e molto altro. Un solo interlocutore, competenza totale.",
+    desc: "Comprare casa in Italia, ottenere un visto studentesco, accedere alle cure mediche italiane, ristrutturare un immobile o esportare il Made in Italy — ITALYCARE 360 accompagna gli stranieri in ogni passo. Un solo interlocutore, nella tua lingua.",
     btn1: 'Inizia il mio progetto →',
     btn2: 'Vedi i servizi ↓',
     scroll: 'Scorri',
@@ -40,13 +40,13 @@ export const it: Translation = {
     label: 'Cosa facciamo',
     h1: 'I nostri',
     h2: 'Servizi 360°',
-    desc: "Dall'immobiliare alle cure mediche — ITALYCARE gestisce tutti gli aspetti della tua vita quotidiana in Italia & molto altro.",
+    desc: "Acquisto immobiliare, visto studente, assistenza medica, ristrutturazione, assistenza legale, concierge — ITALYCARE gestisce ogni aspetto della tua vita in Italia.",
     discover: 'Scopri →',
     items: [
       {
         icon: '🏠',
         t: 'Immobiliare & Investimenti',
-        d: "Acquisto, vendita, due diligence, notaio, consulenza fiscale. Troviamo l'immobile ideale e gestiamo tutte le pratiche per gli acquirenti stranieri.",
+        d: "Comprare casa in Italia: ricerca immobili, due diligence, notaio, fiscalità italiana. Supporto completo per investire nell'immobiliare italiano con tranquillità.",
         slug: 'immobilier',
         details: {
           hero: "Investi in Italia in tutta tranquillità — gestiamo ogni fase del tuo acquisto immobiliare.",

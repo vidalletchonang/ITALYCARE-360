@@ -11,9 +11,16 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-PCT2YT8RWG'
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'ITALYCARE 360 — Votre Vie en Italie, Réinventée',
-  description: 'ITALYCARE 360 accompagne les étrangers dans tous leurs projets en Italie — immobilier, santé, rénovation, export, visa étudiant et bien plus.',
+  title: 'ITALYCARE 360 — Acheter un bien en Italie | Visa Étudiant Italie | Services pour Étrangers',
+  description: 'Achat immobilier en Italie, visa étudiant italien, soins médicaux en Italie, rénovation maison Italie, export Made in Italy, assistance juridique — ITALYCARE 360 accompagne les étrangers dans tous leurs projets en Italie. Consultation gratuite.',
+  keywords: 'acheter maison Italie, immobilier Italie étranger, visa étudiant Italie, soins médicaux Italie, rénovation Italie, export Made in Italy, avocat Italie étranger, vivre en Italie, investir en Italie, conciergerie Italie, buy property Italy, Italian student visa, healthcare Italy expats, Italy relocation services',
   icons: { icon: '/favicon.ico' },
+  openGraph: {
+    title: 'ITALYCARE 360 — Your Life in Italy, Simplified',
+    description: 'Buy property in Italy, student visa, medical care, renovation, legal assistance — one partner for your entire life in Italy.',
+    type: 'website',
+    siteName: 'ITALYCARE 360',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
