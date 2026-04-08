@@ -59,6 +59,7 @@ export const en: Translation = {
             'Price and terms negotiation',
             'Post-purchase support',
             'Rental management and property management',
+            'Signing with special power of attorney',
           ],
           notIncludes: [
             'Notary fees and purchase taxes (buyer\'s responsibility)',

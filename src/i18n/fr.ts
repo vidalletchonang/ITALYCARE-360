@@ -59,6 +59,7 @@ export const fr: Translation = {
             'Négociation prix et conditions',
             'Support post-achat',
             'Gestion des locations et property management',
+            'Signature avec procuration spéciale',
           ],
           notIncludes: [
             'Frais de notaire et taxes d\'achat (à la charge de l\'acheteur)',
