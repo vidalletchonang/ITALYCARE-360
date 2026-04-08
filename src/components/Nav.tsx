@@ -89,6 +89,7 @@ export default function Nav({ onRdv }: NavProps) {
             </Link>
             {openDd === 'services' && (
               <div className="nav-dd nav-dd--wide" onMouseEnter={() => openMenu('services')} onMouseLeave={closeMenu}>
+                <div className="nav-dd-heading">{t.nav.services}</div>
                 <div className="nav-dd-grid">
                   {t.services.items.map(item => (
                     <Link key={item.slug} href={`/services/${item.slug}`} className="nav-dd-item" onClick={() => setOpenDd(null)}>
@@ -98,7 +99,8 @@ export default function Nav({ onRdv }: NavProps) {
                 </div>
                 <div className="nav-dd-footer">
                   <Link href="/services" className="nav-dd-all" onClick={() => setOpenDd(null)}>
-                    {t.nav.services} →
+                    <span>{t.nav.services}</span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                   </Link>
                 </div>
               </div>
@@ -146,7 +148,7 @@ export default function Nav({ onRdv }: NavProps) {
 
           {/* Contact */}
           <li>
-            <a href="/#contact" onClick={e => smoothScroll(e, '#contact')}>{t.nav.contact}</a>
+            <Link href="/contact">{t.nav.contact}</Link>
           </li>
         </ul>
 
@@ -205,7 +207,7 @@ export default function Nav({ onRdv }: NavProps) {
           <Link href="/blog?cat=news"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.news}</Link>
         </div>
 
-        <a href="/#contact" onClick={e => smoothScroll(e, '#contact')}>{t.nav.contact}</a>
+        <Link href="/contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</Link>
 
         <div className="mobile-langs">
           {LANGS.map(l => (
