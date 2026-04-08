@@ -7,31 +7,31 @@
 }
 
 :root {
-  /* === PALETTE LOGO ===
-     Dark (= logo background): #1a2744
-     Gold:                     #d4a843
-     White:                    #ffffff                      */
-  --bk:   #1a2744;   /* logo bg navy – dark sections         */
-  --o:    #d4a843;   /* warm gold – accents & CTA            */
-  --cr:   #ffffff;   /* white – light section backgrounds    */
+  /* === PALETTE LUXE ===
+     Dark charcoal:  #141C2B (less blue, more neutral)
+     Gold:           #c9a84c (richer, warmer gold)
+     Cream:          #FAF8F4 (warm ivory, not cold white)   */
+  --bk:   #141C2B;   /* dark charcoal – dark sections        */
+  --o:    #c9a84c;   /* rich gold – accents & CTA            */
+  --cr:   #FAF8F4;   /* warm ivory – light section backgrounds */
 
   /* Tints & shades */
-  --bk2:  #233358;   /* medium navy                          */
-  --bk3:  #2e4470;   /* lighter navy                         */
-  --bk-a: #111d35;   /* darkest navy                         */
-  --ol:   #f0cb6a;   /* light gold                           */
-  --o-a:  #a8832e;   /* dark gold                            */
-  --cr2:  #f4f6fb;   /* very light grey-white                */
-  --cr3:  #e8ecf5;   /* soft grey border                     */
+  --bk2:  #1e2738;   /* medium dark                          */
+  --bk3:  #2a3448;   /* lighter charcoal                     */
+  --bk-a: #0e1420;   /* deepest dark                         */
+  --ol:   #dfc06e;   /* light gold                           */
+  --o-a:  #a08530;   /* dark gold                            */
+  --cr2:  #F5F2ED;   /* warm light beige                     */
+  --cr3:  #E8E4DD;   /* warm grey border                     */
 
   /* Aliases */
-  --g:    #2e4470;   /* medium navy for links/accents        */
-  --gd:   #1a2744;   /* dark navy = --bk                     */
-  --gl:   #3a5a9a;   /* vivid navy-blue                      */
-  --op:   #f4f6fb;   /* light bg text areas                  */
-  --r:    #a8832e;   /* dark gold for warnings               */
-  --ts:   #6b7ea0;   /* muted text                           */
-  --gw:   #e8ecf5;   /* borders / dividers                   */
+  --g:    #2a3448;   /* medium charcoal for links/accents    */
+  --gd:   #141C2B;   /* dark charcoal = --bk                 */
+  --gl:   #3a5a9a;   /* accent blue (rare use)               */
+  --op:   #F5F2ED;   /* light bg text areas                  */
+  --r:    #a08530;   /* dark gold for warnings               */
+  --ts:   #6E7585;   /* neutral muted text (less blue)       */
+  --gw:   #E8E4DD;   /* warm borders / dividers              */
 
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-playfair: 'Playfair Display', serif;
@@ -213,7 +213,7 @@ nav {
 
 /* ===================== HERO ===================== */
 .hero {
-  background: var(--bk);
+  background: linear-gradient(160deg, #0e1420 0%, #141C2B 40%, #1a2233 100%);
   min-height: 92vh;
   display: flex;
   align-items: center;
@@ -1121,7 +1121,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   position: fixed;
   top: 60px;
   left: 0; right: 0; bottom: 0;
-  background: #0e0e0c;
+  background: #0e1420;
   border-top: 1px solid rgba(201,168,76,0.15);
   padding: 28px 24px 100px;
   flex-direction: column;
@@ -2995,9 +2995,9 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   position: absolute;
   top: calc(100% + 16px);
   left: 0;
-  background: #0d1b38;
-  border: 1px solid rgba(212,168,67,0.22);
-  border-top: 2px solid #d4a843;
+  background: #0e1420;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-top: 2px solid var(--o);
   border-radius: 0 0 12px 12px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 4px 16px rgba(0,0,0,0.25);
   z-index: 999;
@@ -3534,7 +3534,7 @@ nav {
 .sc:hover .sc-n { color: rgba(212,168,67,0.1) !important; }
 .sc-d {
   font-size: 13px !important;
-  color: #4a5e82 !important;
+  color: #5a5f6b !important;
   line-height: 1.75 !important;
   letter-spacing: 0.01em !important;
 }
@@ -3633,7 +3633,7 @@ nav {
   font-size: 16px !important;
   font-weight: 300 !important;
   line-height: 1.9 !important;
-  color: #1a2a4a !important;
+  color: #2a2d35 !important;
 }
 .tc-name {
   font-size: 13px !important;
@@ -3642,7 +3642,7 @@ nav {
 .tc-meta {
   font-size: 11px !important;
   letter-spacing: 1px !important;
-  color: rgba(28,52,96,0.45) !important;
+  color: rgba(40,44,55,0.5) !important;
 }
 .testi-c h2 {
   font-size: clamp(38px, 5vw, 60px) !important;
@@ -3767,22 +3767,31 @@ nav {
    #1a2744 (fond logo) pour sections sombres
    ══════════════════════════════════════════════════════ */
 
-/* CTA section → dark navy avec texte blanc */
-.cta { background: #1a2744 !important; }
+/* CTA section → warm dark with elegant gradient */
+.cta { background: linear-gradient(165deg, #141C2B 0%, #1a2233 50%, #1e2638 100%) !important; }
 .cta h2 { color: #ffffff !important; }
-.cta-p { color: rgba(255,255,255,0.78) !important; font-size: 19px !important; max-width: 640px !important; }
+.cta-p { color: rgba(255,255,255,0.75) !important; font-size: 19px !important; max-width: 640px !important; }
 
 /* ItalyMap section → dark */
-.italy-map-section { background: #1a2744 !important; }
+.italy-map-section { background: #141C2B !important; }
 
-/* Footer → dark */
-footer, .footer { background: #111d35 !important; }
+/* Footer → deepest dark */
+footer, .footer { background: #0e1420 !important; }
 
-/* Marquee → gold */
-.mq { background: #d4a843 !important; }
+/* Marquee → rich gold */
+.mq { background: var(--o) !important; }
 
-/* about-vis (gauche de la section about) reste navy */
-.about-vis { background: #1a2744 !important; }
+/* about-vis → dark charcoal */
+.about-vis { background: #141C2B !important; }
+
+/* Services section → warm cream */
+.svc { background: var(--cr) !important; }
+
+/* Testimonials → subtle warm tone */
+.testi { background: #F5F2ED !important; }
+
+/* Process section → white */
+.proc { background: #ffffff !important; }
 
 /* Remove the svc-hd background override (already handled above) */
 .svc-hd { background: transparent !important; }
@@ -3806,7 +3815,7 @@ footer, .footer { background: #111d35 !important; }
 .blog-card-img img,
 .sd-hero-img,
 .about-img img {
-  filter: brightness(0.88) contrast(1.05) saturate(0.75) sepia(0.10) !important;
+  filter: brightness(0.92) contrast(1.04) saturate(0.85) sepia(0.05) !important;
   transition: filter 0.4s ease, transform 0.5s ease !important;
 }
 
@@ -3821,7 +3830,7 @@ footer, .footer { background: #111d35 !important; }
 .contact-hero {
   text-align: center;
   padding: 60px 24px 40px;
-  background: linear-gradient(135deg, #0d1b38 0%, #162a52 100%);
+  background: linear-gradient(135deg, #0e1420 0%, #141C2B 100%);
   color: #fff;
 }
 .contact-hero-inner { max-width: 640px; margin: 0 auto; }
