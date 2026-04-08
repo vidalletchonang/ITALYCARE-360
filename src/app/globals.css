@@ -737,15 +737,15 @@ nav {
 .cta-inner { position: relative; }
 .cta h2 { font-family: var(--font-playfair); font-size: clamp(38px, 5vw, 60px); font-weight: 700; line-height: 1.1; margin-bottom: 18px; color: #1a2744; }
 .cta h2 em { font-style: italic; color: var(--g); }
-.cta-p { font-size: 15px; color: var(--ts); font-weight: 400; max-width: 450px; margin: 0 auto 42px; line-height: 1.9; }
+.cta-p { font-size: 18px; color: var(--ts); font-weight: 400; max-width: 600px; margin: 0 auto 48px; line-height: 1.9; }
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 .btn-green {
   background: var(--g);
   color: #fff;
   border: none;
-  padding: 16px 44px;
-  font-size: 15px;
+  padding: 18px 52px;
+  font-size: 16px;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 600;
@@ -759,8 +759,8 @@ nav {
   background: transparent;
   color: #1a2744;
   border: 1px solid var(--gw);
-  padding: 16px 44px;
-  font-size: 15px;
+  padding: 18px 52px;
+  font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
@@ -3434,10 +3434,10 @@ nav {
   color: rgba(255,255,255,0.45) !important;
 }
 .nav-links a {
-  font-size: 11px !important;
-  letter-spacing: 3px !important;
-  font-weight: 400 !important;
-  color: rgba(255,255,255,0.7) !important;
+  font-size: 13px !important;
+  letter-spacing: 2.5px !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.85) !important;
   position: relative;
 }
 .nav-links a::after {
@@ -3637,9 +3637,9 @@ nav {
 .cta h2 em { color: var(--o) !important; }
 .btn-green {
   background: var(--bk) !important;
-  font-size: 10px !important;
-  letter-spacing: 4px !important;
-  padding: 16px 48px !important;
+  font-size: 14px !important;
+  letter-spacing: 3px !important;
+  padding: 20px 56px !important;
   transition: background 0.3s, transform 0.3s !important;
 }
 .btn-green:hover {
@@ -3647,10 +3647,14 @@ nav {
   transform: translateY(-2px) !important;
 }
 .btn-outline {
-  font-size: 10px !important;
-  letter-spacing: 3px !important;
-  padding: 16px 40px !important;
+  font-size: 14px !important;
+  letter-spacing: 2.5px !important;
+  padding: 20px 48px !important;
   border-color: rgba(28,52,96,0.25) !important;
+}
+.cta .btn-outline {
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.35) !important;
 }
 .btn-outline:hover {
   background: var(--bk) !important;
@@ -3742,7 +3746,7 @@ nav {
 /* CTA section → dark navy avec texte blanc */
 .cta { background: #1a2744 !important; }
 .cta h2 { color: #ffffff !important; }
-.cta-p { color: rgba(255,255,255,0.72) !important; }
+.cta-p { color: rgba(255,255,255,0.78) !important; font-size: 19px !important; max-width: 640px !important; }
 
 /* ItalyMap section → dark */
 .italy-map-section { background: #1a2744 !important; }
