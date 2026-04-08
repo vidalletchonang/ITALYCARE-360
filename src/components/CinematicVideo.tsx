@@ -13,10 +13,10 @@ const SLIDES = [
 ]
 
 const LABELS = {
-  tag: { fr: "L'ITALIE EN IMAGES", en: 'ITALY IN PICTURES', it: "L'ITALIA IN IMMAGINI", ar: 'إيطاليا في الصور', ru: 'ИТАЛИЯ В КАДРЕ' },
-  h1:  { fr: "Vivez l'Italie", en: 'Experience Italy', it: "Vivi l'Italia", ar: 'عِش إيطاليا', ru: 'Почувствуйте Италию' },
-  h2:  { fr: 'avant même d\'y être', en: 'before you arrive', it: 'prima ancora di arrivarci', ar: 'قبل أن تصل', ru: 'ещё до приезда' },
-  sub: { fr: 'Architecture millénaire, dolce vita, paysages à couper le souffle — votre nouvelle vie vous attend.', en: 'Millennial architecture, dolce vita, breathtaking landscapes — your new life awaits.', it: 'Architettura millenaria, dolce vita, paesaggi mozzafiato — la tua nuova vita ti aspetta.', ar: 'معمار عريق، دولتشي فيتا، مناظر خلابة — حياتك الجديدة تنتظرك.', ru: 'Тысячелетняя архитектура, дольче вита, захватывающие пейзажи — ваша новая жизнь ждёт вас.' },
+  tag: { fr: 'CE QUE NOUS FAISONS', en: 'WHAT WE DO', it: 'COSA FACCIAMO', ar: 'ما نقوم به', ru: 'ЧТО МЫ ДЕЛАЕМ' },
+  h1:  { fr: 'Un seul interlocuteur', en: 'One single partner', it: 'Un unico interlocutore', ar: 'شريك واحد', ru: 'Один партнёр' },
+  h2:  { fr: 'pour toute votre vie en Italie', en: 'for your entire life in Italy', it: 'per tutta la tua vita in Italia', ar: 'لحياتك بأكملها في إيطاليا', ru: 'для всей вашей жизни в Италии' },
+  sub: { fr: 'Immobilier, santé, rénovation, visa, juridique, export, conciergerie — ITALYCARE 360 accompagne les étrangers dans chaque démarche en Italie, dans votre langue.', en: 'Real estate, healthcare, renovation, visa, legal, export, concierge — ITALYCARE 360 supports foreigners in every step of life in Italy, in your language.', it: 'Immobiliare, sanità, ristrutturazione, visto, legale, export, concierge — ITALYCARE 360 accompagna gli stranieri in ogni passo della vita in Italia, nella tua lingua.', ar: 'عقارات، صحة، تجديد، تأشيرة، قانون، تصدير، كونسيرج — ITALYCARE 360 يرافق الأجانب في كل خطوة في إيطاليا، بلغتكم.', ru: 'Недвижимость, здоровье, ремонт, виза, юриспруденция, экспорт, консьерж — ITALYCARE 360 сопровождает иностранцев на каждом шагу жизни в Италии, на вашем языке.' },
 }
 
 export default function CinematicVideo() {
