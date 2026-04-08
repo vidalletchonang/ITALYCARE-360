@@ -69,7 +69,6 @@ export default function Nav({ onRdv }: NavProps) {
           </div>
           <div>
             <div className="nl-main">ITALY<span style={{ fontStyle: 'italic' }}>Care</span></div>
-            <div className="nl-sub">360° Services in Italy</div>
           </div>
         </div>
 

@@ -47,7 +47,6 @@ export default function Footer() {
             />
             <div>
               <div>ITALY<span style={{ fontStyle: 'italic' }}>Care</span></div>
-              <div className="fb-sub" style={{ marginTop: '2px', marginBottom: 0 }}>360° Services in Italy</div>
             </div>
           </div>
           <p className="fb-p">{t.footer.desc}</p>
