@@ -1053,7 +1053,7 @@ export const fr: Translation = {
       { title: 'Société', links: ['À propos', 'Notre équipe', 'Partenaires', 'Témoignages', 'Blog & Guides', 'Carrières'] },
       { title: 'Contact', links: ['Consultation gratuite', 'WhatsApp', 'Espace client', 'FAQ', 'Mentions légales', 'CGU / RGPD'] },
     ],
-    copy: '© 2025 ITALYCARE 360 — Tous droits réservés',
+    copy: '© 2026 ITALYCARE 360 — Tous droits réservés',
     tagline: "Fait avec ♥ pour les amoureux de l'Italie",
   },
   form: {
