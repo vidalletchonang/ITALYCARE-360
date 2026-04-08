@@ -36,6 +36,7 @@ export default function Hero({ onRdv }: HeroProps) {
         muted
         loop
         playsInline
+        preload="none"
         style={{
           position: 'absolute',
           top: 0,
@@ -47,7 +48,7 @@ export default function Hero({ onRdv }: HeroProps) {
           zIndex: 0,
         }}
       >
-        <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/3571264/3571264-sd_960_540_25fps.mp4" type="video/mp4" />
       </video>
       <div
         style={{
