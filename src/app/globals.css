@@ -252,7 +252,7 @@ nav {
   pointer-events: none;
 }
 
-.hero-content { position: relative; z-index: 2; max-width: 660px; }
+.hero-content { position: relative; z-index: 2; max-width: 720px; }
 
 .hero-tag {
   display: inline-flex;
@@ -272,23 +272,23 @@ nav {
 
 .hero-h1 {
   font-family: var(--font-playfair);
-  font-size: clamp(50px, 7vw, 86px);
+  font-size: clamp(54px, 8vw, 96px);
   font-weight: 900;
   line-height: 1.0;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   opacity: 0;
   animation: fadeUp 0.9s 0.5s forwards;
 }
 .hero-h1 em { font-style: italic; color: var(--o); display: block; }
 
 .hero-p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   color: rgba(255,255,255,0.85);
   line-height: 1.9;
-  max-width: 480px;
-  margin-bottom: 40px;
+  max-width: 560px;
+  margin-bottom: 44px;
   opacity: 0;
   animation: fadeUp 0.9s 0.7s forwards;
 }
@@ -3172,26 +3172,27 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 /* ── Hero Estimate button ────────────────────────────── */
 .btn-estimate {
   background: transparent;
-  border: 1.5px solid rgba(255,255,255,0.65);
-  color: rgba(255,255,255,0.75);
-  padding: 12px 22px;
-  font-size: 15px;
-  letter-spacing: 1.5px;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.7);
+  padding: 17px 44px;
+  font-size: 13px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-jost);
-  border-radius: 4px;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  border-radius: 3px;
+  transition: all 0.3s ease;
   white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 .btn-estimate:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.85);
-  color: #fff;
+  background: rgba(201,168,76,0.1);
+  border-color: var(--o);
+  color: var(--o);
+  transform: translateY(-3px);
 }
 @media (max-width: 600px) {
   .btn-estimate { width: 100%; justify-content: center; }
@@ -3577,41 +3578,45 @@ nav {
 
 /* --- Hero paragraph --- */
 .hero-p {
-  font-size: 15px !important;
-  letter-spacing: 0.03em !important;
-  line-height: 2 !important;
-  color: rgba(255,255,255,0.72) !important;
+  font-size: 17px !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.9 !important;
+  color: rgba(255,255,255,0.78) !important;
 }
 
 /* --- Hero tag --- */
 .hero-tag span {
-  font-size: 10px !important;
+  font-size: 11px !important;
   letter-spacing: 6px !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
 
-/* --- Buttons: more refined --- */
+/* --- Hero buttons: bigger and bolder --- */
 .btn-gold {
-  padding: 14px 44px !important;
-  font-size: 10px !important;
-  letter-spacing: 4px !important;
-  font-weight: 500 !important;
-  transition: background 0.3s, transform 0.3s !important;
+  padding: 18px 52px !important;
+  font-size: 13px !important;
+  letter-spacing: 3.5px !important;
+  font-weight: 700 !important;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s !important;
 }
 .btn-gold:hover {
   opacity: 1 !important;
-  background: var(--ol) !important;
-  transform: translateY(-1px);
+  background: #dfc06e !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 28px rgba(201,168,76,0.4) !important;
 }
 .btn-ghost-w {
-  padding: 14px 32px !important;
-  font-size: 10px !important;
+  padding: 17px 44px !important;
+  font-size: 13px !important;
   letter-spacing: 3px !important;
-  border: 1px solid rgba(255,255,255,0.22) !important;
+  border: 2px solid rgba(255,255,255,0.25) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
 }
 .btn-ghost-w:hover {
-  border-color: rgba(212,168,67,0.5) !important;
-  color: var(--ol) !important;
+  border-color: var(--o) !important;
+  color: var(--o) !important;
+  transform: translateY(-3px) !important;
 }
 
 /* --- Hero stats: more refined --- */
