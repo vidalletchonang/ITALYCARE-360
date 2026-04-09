@@ -739,7 +739,7 @@ nav {
 [dir="rtl"] .tc-stars { right: auto; left: 28px; }
 
 /* ===================== CTA ===================== */
-.cta { padding: 110px 48px; background: var(--cr); text-align: center; position: relative; overflow: hidden; }
+.cta { padding: 140px 48px; background: var(--cr); text-align: center; position: relative; overflow: hidden; }
 .cta::before {
   content: 'ITALIA';
   font-family: var(--font-playfair);
@@ -756,7 +756,7 @@ nav {
 .cta h2 { font-family: var(--font-playfair); font-size: clamp(38px, 5vw, 60px); font-weight: 700; line-height: 1.1; margin-bottom: 18px; color: #1a2744; }
 .cta h2 em { font-style: italic; color: var(--g); }
 .cta-p { font-size: 18px; color: var(--ts); font-weight: 400; max-width: 600px; margin: 0 auto 48px; line-height: 1.9; }
-.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
 .btn-green {
   background: var(--o);
@@ -3678,39 +3678,44 @@ nav {
   letter-spacing: -0.01em !important;
 }
 
-/* --- CTA section: more refined --- */
+/* --- CTA section: big and impactful --- */
 .cta h2 {
-  font-size: clamp(44px, 6vw, 72px) !important;
+  font-size: clamp(48px, 7vw, 80px) !important;
   font-weight: 300 !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 24px !important;
 }
 .cta h2 em { color: var(--o) !important; }
 .cta .btn-green {
   background: var(--o) !important;
-  color: #0d1b38 !important;
-  font-size: 12px !important;
+  color: #0e1420 !important;
+  font-size: 14px !important;
   letter-spacing: 3.5px !important;
-  padding: 16px 48px !important;
-  border-radius: 2px !important;
+  padding: 20px 56px !important;
+  border-radius: 3px !important;
+  font-weight: 700 !important;
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease !important;
 }
 .cta .btn-green:hover {
-  background: #c49a36 !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(212,168,67,0.35) !important;
+  background: #dfc06e !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 28px rgba(201,168,76,0.4) !important;
 }
 .cta .btn-outline {
   color: #141C2B !important;
-  border-color: rgba(20,28,43,0.25) !important;
-  font-size: 12px !important;
+  border: 2px solid rgba(20,28,43,0.2) !important;
+  font-size: 14px !important;
   letter-spacing: 3px !important;
-  padding: 16px 48px !important;
-  border-radius: 2px !important;
+  padding: 19px 52px !important;
+  border-radius: 3px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
 }
 .cta .btn-outline:hover {
   color: var(--o) !important;
   border-color: var(--o) !important;
-  background: transparent !important;
+  background: rgba(201,168,76,0.05) !important;
+  transform: translateY(-3px) !important;
 }
 
 /* --- Footer: more refined --- */
@@ -3798,7 +3803,7 @@ nav {
 /* CTA section → elegant cream with gold accent */
 .cta { background: #F5F2ED !important; }
 .cta h2 { color: #141C2B !important; }
-.cta-p { color: #6E7585 !important; font-size: 19px !important; max-width: 640px !important; }
+.cta-p { color: #4a4f58 !important; font-size: 20px !important; max-width: 680px !important; line-height: 1.8 !important; margin-bottom: 52px !important; }
 
 /* ItalyMap section → dark */
 .italy-map-section { background: #141C2B !important; }
