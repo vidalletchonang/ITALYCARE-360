@@ -2825,10 +2825,11 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   color: #f5efe6 !important;
   font-family: var(--font-cormorant) !important;
   font-weight: 300 !important;
-  font-size: clamp(2.4rem, 4vw, 3.2rem) !important;
+  font-size: clamp(2.8rem, 5vw, 4rem) !important;
 }
 .calc-sub {
-  color: rgba(245,239,230,0.6) !important;
+  color: rgba(245,239,230,0.7) !important;
+  font-size: 17px !important;
 }
 
 /* White card (on light body) */
@@ -2851,7 +2852,9 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   background: #f0f3fa !important;
   border-color: #c8d0e4 !important;
   color: #8899bb !important;
-  font-size: 13px !important;
+  font-size: 16px !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 .calc-prog-step.done .calc-prog-dot {
   background: var(--o) !important;
@@ -2860,7 +2863,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 }
 .calc-prog-label {
   color: #8899bb !important;
-  font-size: 9px !important;
+  font-size: 11px !important;
   letter-spacing: 1.5px !important;
 }
 .calc-progress { border-bottom: 1px solid #edf0f8 !important; padding-bottom: 24px !important; }
@@ -2869,7 +2872,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .calc-step-title {
   color: #1a2744 !important;
   font-family: var(--font-cormorant) !important;
-  font-size: 1.5rem !important;
+  font-size: 2rem !important;
   font-weight: 400 !important;
   letter-spacing: 0.3px;
 }
@@ -2878,21 +2881,25 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .calc-chip {
   background: #f8f9fe !important;
   border: 1px solid #dde3f0 !important;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
   transition: all 0.22s ease !important;
 }
 .calc-chip:hover {
   background: #fff8ec !important;
   border-color: var(--o) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 .calc-chip.selected {
   background: #fff3d4 !important;
   border-color: var(--o) !important;
 }
+.calc-chip-icon { font-size: 2rem !important; }
 .calc-chip-label {
   color: #2d3d60 !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
   letter-spacing: 0.3px;
 }
 .calc-chip.selected .calc-chip-label { color: #9a6a00 !important; }
