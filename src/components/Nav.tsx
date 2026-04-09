@@ -25,6 +25,27 @@ const BLOG_SUB: Record<string, { all: string; guides: string; news: string }> = 
   ru: { all: 'Все статьи',        guides: 'Практические гиды', news: 'Новости'   },
 }
 
+/* Short service names for dropdown menu */
+const SVC_SHORT: Record<string, Record<string, string>> = {
+  'immobilier':            { fr: 'Immobilier',        en: 'Real Estate',        it: 'Immobiliare',         ar: 'عقارات',           ru: 'Недвижимость' },
+  'renovation':            { fr: 'Rénovation',        en: 'Renovation',         it: 'Ristrutturazione',    ar: 'تجديد',            ru: 'Ремонт' },
+  'medical':               { fr: 'Suivi Médical',     en: 'Medical Care',       it: 'Assistenza Medica',   ar: 'رعاية طبية',       ru: 'Медицина' },
+  'export':                { fr: 'Export Italy',      en: 'Export Italy',       it: 'Export Italy',        ar: 'تصدير إيطالي',     ru: 'Экспорт' },
+  'visa-etudiant':         { fr: 'Visa Étudiant',     en: 'Student Visa',       it: 'Visto Studente',      ar: 'تأشيرة طالب',      ru: 'Виза студента' },
+  'juridique':             { fr: 'Juridique',         en: 'Legal',              it: 'Legale',              ar: 'قانوني',           ru: 'Юридическая' },
+  'conciergerie':          { fr: 'Conciergerie',      en: 'Concierge',          it: 'Concierge',           ar: 'كونسيرج',          ru: 'Консьерж' },
+  'administratif':         { fr: 'Administratif',     en: 'Administrative',     it: 'Amministrativo',      ar: 'إداري',            ru: 'Админ.' },
+  'evenements':            { fr: 'Événements',        en: 'Events',             it: 'Eventi',              ar: 'فعاليات',          ru: 'Мероприятия' },
+  'maisons-retraite':      { fr: 'Maisons Retraite',  en: 'Retirement Homes',   it: 'Case di Riposo',      ar: 'دور مسنين',        ru: 'Дома престарелых' },
+  'financement':           { fr: 'Financement',       en: 'Financing',          it: 'Finanziamento',       ar: 'تمويل',            ru: 'Финансирование' },
+  'professionnels':        { fr: 'Professionnels',    en: 'Professionals',      it: 'Professionisti',      ar: 'مهنيون',           ru: 'Специалисты' },
+  'silver-economy':        { fr: 'Silver Economy',    en: 'Silver Economy',     it: 'Silver Economy',      ar: 'Silver Economy',   ru: 'Silver Economy' },
+  'property-care':         { fr: 'Property Care',     en: 'Property Care',      it: 'Property Care',       ar: 'Property Care',    ru: 'Property Care' },
+  'thermal-wellness':      { fr: 'Thermal Wellness',  en: 'Thermal Wellness',   it: 'Terme & Wellness',    ar: 'علاج حراري',       ru: 'Термы' },
+  'aviation-privee':       { fr: 'Aviation Privée',   en: 'Private Aviation',   it: 'Aviazione Privata',   ar: 'طيران خاص',        ru: 'Авиация' },
+  'assistenza-scolastica': { fr: 'Scolarité',         en: 'School Assistance',  it: 'Assistenza Scolastica', ar: 'مدرسة',          ru: 'Школа' },
+}
+
 interface NavProps {
   onRdv: () => void
 }
@@ -92,7 +113,7 @@ export default function Nav({ onRdv }: NavProps) {
                 <div className="nav-dd-grid">
                   {t.services.items.map(item => (
                     <Link key={item.slug} href={`/services/${item.slug}`} className="nav-dd-item" onClick={() => setOpenDd(null)}>
-                      {item.t}
+                      {SVC_SHORT[item.slug]?.[lang] || item.t}
                     </Link>
                   ))}
                 </div>
