@@ -3517,13 +3517,7 @@ nav {
   margin-bottom: 24px !important;
   position: relative;
 }
-.sc-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(28,52,96,0.55) 0%, transparent 60%);
-  pointer-events: none;
-}
+.sc-img::after { display: none; }
 .sc-t {
   font-family: var(--font-cormorant) !important;
   font-size: 22px !important;
@@ -3833,15 +3827,15 @@ footer, .footer { background: #0e1420 !important; }
 .blog-card-img img,
 .sd-hero-img,
 .about-img img {
-  filter: brightness(0.92) contrast(1.04) saturate(0.85) sepia(0.05) !important;
+  filter: none !important;
   transition: filter 0.4s ease, transform 0.5s ease !important;
 }
 
-/* On hover : légèrement plus lumineux */
+/* On hover : subtle zoom */
 .sc:hover .sc-img img,
 .tm-pdg-card:hover .tm-pdg-photo img,
 .team-card:hover img {
-  filter: brightness(0.96) contrast(1.05) saturate(0.85) sepia(0.08) !important;
+  filter: brightness(1.03) !important;
 }
 
 /* ── Page Hero with Background Image ── */
