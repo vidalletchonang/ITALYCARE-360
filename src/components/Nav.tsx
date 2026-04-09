@@ -8,12 +8,12 @@ import type { LangCode } from '@/i18n'
 const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
 
 /* Sub-labels for About dropdown */
-const ABOUT_SUB: Record<string, { story: string; team: string; gallery: string; video: string }> = {
-  fr: { story: 'Notre histoire',    team: 'Notre équipe',   gallery: 'Galerie',  video: 'Vidéo' },
-  en: { story: 'Our story',         team: 'Our team',       gallery: 'Gallery',  video: 'Video' },
-  it: { story: 'La nostra storia',  team: 'Il nostro team', gallery: 'Galleria', video: 'Video' },
-  ar: { story: 'قصتنا',             team: 'فريقنا',         gallery: 'معرض',     video: 'فيديو' },
-  ru: { story: 'Наша история',      team: 'Наша команда',   gallery: 'Галерея',  video: 'Видео' },
+const ABOUT_SUB: Record<string, { story: string; team: string; video: string }> = {
+  fr: { story: 'Notre histoire',    team: 'Notre équipe',   video: 'Vivre ou investir en Italie' },
+  en: { story: 'Our story',         team: 'Our team',       video: 'Live or invest in Italy' },
+  it: { story: 'La nostra storia',  team: 'Il nostro team', video: 'Vivere o investire in Italia' },
+  ar: { story: 'قصتنا',             team: 'فريقنا',         video: 'العيش أو الاستثمار في إيطاليا' },
+  ru: { story: 'Наша история',      team: 'Наша команда',   video: 'Жить или инвестировать в Италии' },
 }
 
 /* Sub-labels for Blog dropdown */
@@ -141,7 +141,6 @@ export default function Nav({ onRdv }: NavProps) {
               <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('about')} onMouseLeave={closeMenu}>
                 <Link href="/about"        className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
                 <Link href="/about#team"   className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
-                <Link href="/about#gallery" className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.gallery}</Link>
                 <Link href="/about#video"  className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
               </div>
             )}
@@ -215,7 +214,6 @@ export default function Nav({ onRdv }: NavProps) {
         <div className="mobile-sub">
           <Link href="/about"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
           <Link href="/about#team"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
-          <Link href="/about#gallery" onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.gallery}</Link>
           <Link href="/about#video"   onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
         </div>
 
