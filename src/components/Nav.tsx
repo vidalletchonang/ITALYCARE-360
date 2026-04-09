@@ -9,11 +9,11 @@ const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
 
 /* Sub-labels for About dropdown */
 const ABOUT_SUB: Record<string, { story: string; team: string; video: string }> = {
-  fr: { story: 'Notre histoire',    team: 'Notre équipe',   video: 'Vivre ou investir en Italie' },
-  en: { story: 'Our story',         team: 'Our team',       video: 'Live or invest in Italy' },
-  it: { story: 'La nostra storia',  team: 'Il nostro team', video: 'Vivere o investire in Italia' },
-  ar: { story: 'قصتنا',             team: 'فريقنا',         video: 'العيش أو الاستثمار في إيطاليا' },
-  ru: { story: 'Наша история',      team: 'Наша команда',   video: 'Жить или инвестировать в Италии' },
+  fr: { story: 'Notre histoire',    team: 'Notre équipe',   video: 'Vidéo de nos services' },
+  en: { story: 'Our story',         team: 'Our team',       video: 'Our services video' },
+  it: { story: 'La nostra storia',  team: 'Il nostro team', video: 'Video dei nostri servizi' },
+  ar: { story: 'قصتنا',             team: 'فريقنا',         video: 'فيديو خدماتنا' },
+  ru: { story: 'Наша история',      team: 'Наша команда',   video: 'Видео наших услуг' },
 }
 
 /* Sub-labels for Blog dropdown */
