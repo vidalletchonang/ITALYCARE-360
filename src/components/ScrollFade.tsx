@@ -5,6 +5,10 @@ import { useEffect } from 'react'
 export default function ScrollFade() {
   useEffect(() => {
     const items = document.querySelectorAll('.fade-item')
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('visible'))
+      return
+    }
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach((entry, i) => {
@@ -16,10 +20,14 @@ export default function ScrollFade() {
           }
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px 50px 0px' }
     )
     items.forEach(el => observer.observe(el))
-    return () => observer.disconnect()
+    // Fallback: make all visible after 2s if observer didn't trigger
+    const fallback = setTimeout(() => {
+      items.forEach(el => el.classList.add('visible'))
+    }, 1000)
+    return () => { observer.disconnect(); clearTimeout(fallback) }
   }, [])
 
   return null
