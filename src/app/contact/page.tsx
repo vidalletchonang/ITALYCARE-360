@@ -67,11 +67,13 @@ export default function ContactPage() {
   return (
     <>
       <Nav onRdv={() => {}} />
-      <main style={{ paddingTop: 100 }}>
+      <main style={{ paddingTop: 76 }}>
         {/* Hero */}
-        <section className="contact-hero">
-          <div className="contact-hero-inner">
-            <span className="contact-tag">ITALYCARE 360</span>
+        <section className="page-hero">
+          <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1920&q=80')" }} />
+          <div className="page-hero-overlay" />
+          <div className="page-hero-inner">
+            <span className="page-hero-tag">ITALYCARE 360</span>
             <h1>{TITLE[l]}</h1>
             <p>{SUBTITLE[l]}</p>
           </div>

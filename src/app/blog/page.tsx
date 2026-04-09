@@ -420,6 +420,30 @@ function BlogPageContent() {
   )
 }
 
+const BLOG_HERO: Record<string, { tag: string; h1: string; p: string }> = {
+  fr: { tag: 'BLOG & GUIDES', h1: 'Nos conseils pour réussir en Italie', p: "Guides pratiques, actualités et conseils d'experts pour vos projets en Italie." },
+  en: { tag: 'BLOG & GUIDES', h1: 'Our tips to succeed in Italy', p: 'Practical guides, news and expert advice for your projects in Italy.' },
+  it: { tag: 'BLOG & GUIDE', h1: 'I nostri consigli per avere successo in Italia', p: 'Guide pratiche, notizie e consigli di esperti per i vostri progetti in Italia.' },
+  ar: { tag: 'المدونة والأدلة', h1: 'نصائحنا للنجاح في إيطاليا', p: 'أدلة عملية وأخبار ونصائح خبراء لمشاريعكم في إيطاليا.' },
+  ru: { tag: 'БЛОГ И ГИДЫ', h1: 'Наши советы для успеха в Италии', p: 'Практические гиды, новости и экспертные советы для ваших проектов в Италии.' },
+}
+
+function BlogHero() {
+  const { lang } = useLang()
+  const h = BLOG_HERO[lang] || BLOG_HERO.en
+  return (
+    <section className="page-hero">
+      <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80')" }} />
+      <div className="page-hero-overlay" />
+      <div className="page-hero-inner">
+        <span className="page-hero-tag">{h.tag}</span>
+        <h1>{h.h1}</h1>
+        <p>{h.p}</p>
+      </div>
+    </section>
+  )
+}
+
 export default function BlogPage() {
   const [modalOpen, setModalOpen] = useState(false)
   return (
@@ -427,7 +451,8 @@ export default function BlogPage() {
       <Cursor />
       <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
-      <div style={{ paddingTop: '80px', minHeight: '100vh', background: 'var(--cr)' }}>
+      <div style={{ paddingTop: '76px', minHeight: '100vh', background: 'var(--cr)' }}>
+        <BlogHero />
         <BlogPageContent />
       </div>
       <Footer />
