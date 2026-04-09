@@ -3053,8 +3053,8 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 
 /* ── Small panel (About / Blog) ── */
 .nav-dd--sm {
-  width: 230px;
-  padding: 8px;
+  width: 280px;
+  padding: 10px;
 }
 
 /* ── Individual item ── */
