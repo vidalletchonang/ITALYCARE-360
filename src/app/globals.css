@@ -183,16 +183,17 @@ nav {
 
 .nav-right { display: flex; align-items: center; gap: 16px; }
 
-.langs { display: flex; gap: 2px; }
+.langs { display: flex; gap: 4px; }
 .lang-btn {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.70);
   cursor: pointer;
-  padding: 4px 8px;
-  border: 1px solid transparent;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.15);
   background: none;
   font-family: var(--font-jost);
+  font-weight: 500;
   border-radius: 28px;
   transition: all 0.25s ease;
 }
