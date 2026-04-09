@@ -181,7 +181,7 @@ nav {
 }
 .nav-links a:hover { color: var(--o); }
 
-.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-right { display: flex; align-items: center; gap: 16px; position: relative; z-index: 10; }
 
 .langs { display: flex; gap: 4px; }
 .lang-btn {
@@ -3453,9 +3453,8 @@ nav {
   position: relative;
   display: flex !important;
   align-items: center !important;
-  height: 100%;
-  line-height: 76px !important;
   white-space: nowrap;
+  padding: 8px 0 !important;
   transition: color 0.3s ease, transform 0.3s ease !important;
 }
 .nav-links a::after {
