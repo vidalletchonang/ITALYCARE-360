@@ -2267,34 +2267,46 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 
 /* ===================== ITALY MAP ===================== */
 .italy-map-section {
-  padding: 100px 6vw;
-  background: var(--bk);
+  padding: 130px 6vw;
+  background: linear-gradient(170deg, #0e1420 0%, #141C2B 50%, #1a2233 100%);
   overflow: hidden;
+  position: relative;
+}
+.italy-map-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse 60% 50% at 30% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 .im-header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 72px;
+  position: relative;
 }
 .im-label {
-  font-size: 0.68rem;
-  letter-spacing: 3.5px;
+  font-size: 12px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--o);
-  font-weight: 700;
+  font-weight: 600;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .im-h2 {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.6rem, 5vw, 4rem);
   color: var(--cr);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 .im-h2 em { color: var(--o); font-style: italic; }
 .im-sub {
-  color: rgba(253,250,244,0.55);
-  font-size: 1.05rem;
-  max-width: 500px;
+  color: rgba(253,250,244,0.7);
+  font-size: 1.15rem;
+  max-width: 540px;
   margin: 0 auto;
+  line-height: 1.7;
 }
 .im-layout {
   display: grid;
@@ -2311,38 +2323,43 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 }
 .im-svg {
   width: 100%;
-  max-width: 320px;
+  max-width: 380px;
   height: auto;
   cursor: default;
+  filter: drop-shadow(0 0 30px rgba(201,168,76,0.1));
 }
 .city-ring-anim {
   animation: cityPulse 2.5s ease-in-out infinite;
 }
 @keyframes cityPulse {
-  0%, 100% { opacity: 0.3; r: 9px; }
-  50%       { opacity: 0.9; r: 11px; }
+  0%, 100% { opacity: 0.3; r: 8px; }
+  50%       { opacity: 1; r: 13px; }
 }
 /* Panel */
 .im-panel {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.04);
   border: 1px solid rgba(201,168,76,0.15);
-  border-radius: 20px;
-  min-height: 380px;
+  border-radius: 24px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.3s;
+  transition: border-color 0.4s, box-shadow 0.4s;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(8px);
 }
-.im-panel.active { border-color: rgba(201,168,76,0.4); }
+.im-panel.active {
+  border-color: rgba(201,168,76,0.5);
+  box-shadow: 0 0 40px rgba(201,168,76,0.08);
+}
 .im-panel-empty {
   text-align: center;
-  padding: 40px 32px;
-  color: rgba(253,250,244,0.4);
+  padding: 48px 36px;
+  color: rgba(253,250,244,0.5);
 }
-.im-panel-icon { font-size: 3rem; margin-bottom: 16px; }
-.im-panel-empty p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 28px; }
+.im-panel-icon { font-size: 3.5rem; margin-bottom: 20px; }
+.im-panel-empty p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 32px; }
 .im-cities-hint {
   display: flex;
   flex-wrap: wrap;
@@ -2350,19 +2367,25 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   justify-content: center;
 }
 .im-city-chip {
-  background: rgba(201,168,76,0.1);
-  border: 1px solid rgba(201,168,76,0.2);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.25);
   color: var(--o);
-  font-size: 16px;
-  letter-spacing: 1.5px;
+  font-size: 14px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 20px;
+  padding: 8px 18px;
+  border-radius: 28px;
   cursor: pointer;
   font-family: var(--font-jost);
-  transition: background 0.2s;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-.im-city-chip:hover { background: rgba(201,168,76,0.2); }
+.im-city-chip:hover {
+  background: var(--o);
+  color: #0e1420;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(201,168,76,0.3);
+}
 .im-panel-content {
   padding: 40px 36px;
   width: 100%;
