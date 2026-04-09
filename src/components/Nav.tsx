@@ -159,8 +159,6 @@ export default function Nav({ onRdv }: NavProps) {
             {openDd === 'blog' && (
               <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('blog')} onMouseLeave={closeMenu}>
                 <Link href="/blog"              className="nav-dd-item" onClick={() => setOpenDd(null)}>{bl.all}</Link>
-                <Link href="/blog?cat=guides"   className="nav-dd-item" onClick={() => setOpenDd(null)}>{bl.guides}</Link>
-                <Link href="/blog?cat=news"     className="nav-dd-item" onClick={() => setOpenDd(null)}>{bl.news}</Link>
               </div>
             )}
           </li>
@@ -221,8 +219,6 @@ export default function Nav({ onRdv }: NavProps) {
         <Link href="/blog" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.blog}</Link>
         <div className="mobile-sub">
           <Link href="/blog"             onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.all}</Link>
-          <Link href="/blog?cat=guides"  onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.guides}</Link>
-          <Link href="/blog?cat=news"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{bl.news}</Link>
         </div>
 
         <Link href="/contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</Link>
