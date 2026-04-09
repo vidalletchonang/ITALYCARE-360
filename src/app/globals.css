@@ -2862,9 +2862,10 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   color: #111d35 !important;
 }
 .calc-prog-label {
-  color: #8899bb !important;
+  color: #2d3d60 !important;
   font-size: 11px !important;
   letter-spacing: 1.5px !important;
+  font-weight: 600 !important;
 }
 .calc-progress { border-bottom: 1px solid #edf0f8 !important; padding-bottom: 24px !important; }
 
