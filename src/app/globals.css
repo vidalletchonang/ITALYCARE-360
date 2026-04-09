@@ -2440,8 +2440,9 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(253,250,244,0.75);
-  font-size: 0.95rem;
+  color: #2d3d60;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .im-check {
   color: var(--o);
@@ -2450,19 +2451,19 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 }
 .im-cta-btn {
   background: var(--o);
-  color: var(--bk);
+  color: #0e1420;
   border: none;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 28px;
   cursor: pointer;
   font-family: var(--font-jost);
-  transition: opacity 0.2s;
+  transition: all 0.3s ease;
 }
-.im-cta-btn:hover { opacity: 0.85; }
+.im-cta-btn:hover { background: #dfc06e; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(201,168,76,0.3); }
 @media (max-width: 900px) {
   .im-layout { grid-template-columns: 1fr; gap: 32px; }
   .im-map-wrap { order: 1; }
