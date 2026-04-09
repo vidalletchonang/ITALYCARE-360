@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react'
 import { fr, en, ar, it, ru } from '@/i18n'
 import type { Translation, LangCode } from '@/i18n'
 
@@ -23,17 +23,25 @@ const LangContext = createContext<LangContextValue>({
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<LangCode>('en')
 
-  const setLang = (l: LangCode) => {
+  const setLang = useCallback((l: LangCode) => {
+    console.log('[ITALYCARE] Switching language to:', l)
     setLangState(l)
-    if (typeof window !== 'undefined') {
+    try {
       localStorage.setItem('italycare-lang', l)
+    } catch (e) {
+      console.error('Failed to save language:', e)
     }
-  }
+  }, [])
 
   useEffect(() => {
-    const saved = localStorage.getItem('italycare-lang') as LangCode | null
-    if (saved && ['fr', 'en', 'ar', 'it', 'ru'].includes(saved)) {
-      setLangState(saved)
+    try {
+      const saved = localStorage.getItem('italycare-lang') as LangCode | null
+      if (saved && ['fr', 'en', 'ar', 'it', 'ru'].includes(saved)) {
+        console.log('[ITALYCARE] Restoring language from localStorage:', saved)
+        setLangState(saved)
+      }
+    } catch (e) {
+      console.error('Failed to read language:', e)
     }
   }, [])
 
