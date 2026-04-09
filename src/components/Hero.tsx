@@ -95,10 +95,6 @@ export default function Hero({ onRdv }: HeroProps) {
         </div>
       </div>
 
-      <div className="scroll-ind" style={{ zIndex: 2 }}>
-        <div className="sc-line" />
-        <span className="sc-txt">{t.hero.scroll}</span>
-      </div>
     </section>
   )
 }
