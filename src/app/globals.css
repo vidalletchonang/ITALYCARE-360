@@ -3613,13 +3613,13 @@ nav {
 }
 
 /* --- Marquee: more refined --- */
-.mq { padding: 11px 0 !important; }
+.mq { padding: 16px 0 !important; }
 .mq-item {
-  font-size: 10px !important;
-  letter-spacing: 5px !important;
-  font-weight: 500 !important;
+  font-size: 14px !important;
+  letter-spacing: 4px !important;
+  font-weight: 600 !important;
 }
-.mq-dot { width: 2px !important; height: 2px !important; }
+.mq-dot { width: 4px !important; height: 4px !important; }
 
 /* --- Numbers section: replace green glow with gold --- */
 .nums::before {
