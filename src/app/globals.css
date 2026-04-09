@@ -3468,7 +3468,7 @@ nav {
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: 20px; left: 0; right: 0;
+  bottom: -4px; left: 0; right: 0;
   height: 2px;
   background: var(--o);
   transform: scaleX(0);
