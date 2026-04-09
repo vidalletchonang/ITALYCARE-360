@@ -575,9 +575,9 @@ nav {
 
 .svc-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: #e8ecf5;
+  background: var(--cr3);
   position: relative;
 }
 .sc {
@@ -3516,7 +3516,7 @@ nav {
 
 /* --- Service cards: taller image, refined typography --- */
 .sc-img {
-  height: 200px !important;
+  height: 220px !important;
   border-radius: 0 !important;
   margin-bottom: 24px !important;
   position: relative;
@@ -3557,7 +3557,7 @@ nav {
   font-weight: 500 !important;
   color: var(--o) !important;
 }
-.sc { padding: 32px 28px 36px !important; background: #ffffff !important; }
+.sc { padding: 36px 32px 40px !important; background: #ffffff !important; }
 .sc:hover { background: #f8f9fe !important; }
 
 /* --- Hero paragraph --- */
