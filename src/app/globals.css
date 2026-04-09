@@ -193,7 +193,7 @@ nav {
   border: 1px solid transparent;
   background: none;
   font-family: var(--font-jost);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: all 0.25s ease;
 }
 .lang-btn:hover {
@@ -233,24 +233,7 @@ nav {
   padding: 0 48px;
 }
 
-.hero-glow {
-  position: absolute;
-  top: -100px;
-  right: -60px;
-  width: 580px;
-  height: 580px;
-  background: radial-gradient(circle, rgba(30,61,114,0.32) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero-glow2 {
-  position: absolute;
-  bottom: -60px;
-  left: 80px;
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle, rgba(181,38,30,0.1) 0%, transparent 70%);
-  pointer-events: none;
-}
+.hero-glow, .hero-glow2 { display: none; }
 
 .hero-content { position: relative; z-index: 2; max-width: 720px; }
 
@@ -273,10 +256,11 @@ nav {
 .hero-h1 {
   font-family: var(--font-playfair);
   font-size: clamp(54px, 8vw, 96px);
-  font-weight: 900;
-  line-height: 1.0;
+  font-weight: 400;
+  line-height: 1.05;
   color: #fff;
   margin-bottom: 28px;
+  letter-spacing: -0.02em;
   opacity: 0;
   animation: fadeUp 0.9s 0.5s forwards;
 }
@@ -313,7 +297,7 @@ nav {
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-jost);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 .btn-gold:hover {
@@ -333,7 +317,7 @@ nav {
   font-weight: 500;
   cursor: pointer;
   font-family: var(--font-jost);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: all 0.35s ease;
 }
 .btn-ghost-w:hover {
@@ -548,7 +532,7 @@ nav {
 .val p { font-size: 16px; color: var(--ts); line-height: 1.55; }
 
 /* ===================== SERVICES ===================== */
-.svc { background: #f4f6fb; padding: 90px 48px; position: relative; overflow: hidden; }
+.svc { background: #ffffff; padding: 120px 48px; position: relative; overflow: hidden; }
 .svc-bg-t {
   position: absolute;
   font-family: var(--font-playfair);
@@ -582,8 +566,8 @@ nav {
 .svc-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--cr3);
+  gap: 20px;
+  background: transparent;
   position: relative;
 }
 .sc {
@@ -594,7 +578,7 @@ nav {
   transition: background 0.35s, transform 0.35s, box-shadow 0.35s;
   cursor: pointer;
 }
-.sc:hover { background: #f8f9ff; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+.sc:hover { background: #fafafa; transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
 .sc::after {
   content: '';
   position: absolute;
@@ -639,9 +623,9 @@ nav {
 .sc:hover .sc-lnk { opacity: 1; transform: translateY(0); }
 
 /* ===================== PROCESS ===================== */
-.proc { padding: 100px 48px; background: var(--op); }
+.proc { padding: 130px 48px; background: var(--op); }
 .proc-c { text-align: center; margin-bottom: 14px; }
-.proc-c h2 { font-family: var(--font-playfair); font-size: clamp(34px, 4vw, 48px); font-weight: 700; margin-bottom: 0; }
+.proc-c h2 { font-family: var(--font-playfair); font-size: clamp(34px, 4vw, 48px); font-weight: 400; margin-bottom: 0; letter-spacing: -0.01em; }
 .proc-c h2 em { font-style: italic; color: var(--g); }
 .proc-sub { font-size: 16px; color: var(--ts); font-weight: 400; max-width: 420px; margin: 14px auto 64px; line-height: 1.8; text-align: center; }
 
@@ -717,9 +701,9 @@ nav {
 .ni-l { font-size: 14px; letter-spacing: 1.5px; color: #6E7585; text-transform: uppercase; line-height: 1.5; }
 
 /* ===================== TESTIMONIALS ===================== */
-.testi { padding: 90px 48px; background: #fff; }
+.testi { padding: 120px 48px; background: #fff; }
 .testi-c { text-align: center; margin-bottom: 52px; }
-.testi-c h2 { font-family: var(--font-playfair); font-size: clamp(34px, 4vw, 48px); font-weight: 700; }
+.testi-c h2 { font-family: var(--font-playfair); font-size: clamp(34px, 4vw, 48px); font-weight: 400; letter-spacing: -0.01em; }
 .testi-c h2 em { font-style: italic; color: var(--o); }
 .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .tc {
@@ -730,7 +714,7 @@ nav {
   border-radius: 8px;
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
-.tc:hover { border-bottom-color: var(--o); box-shadow: 0 12px 40px rgba(0,0,0,0.08); transform: translateY(-4px); }
+.tc:hover { border-bottom-color: var(--o); box-shadow: 0 4px 20px rgba(0,0,0,0.05); transform: translateY(-2px); }
 .tc-q { font-family: var(--font-playfair); font-size: 62px; color: var(--ol); line-height: 0.4; display: block; margin-bottom: 18px; }
 .tc-txt { font-family: var(--font-playfair); font-size: 16px; font-style: italic; line-height: 1.75; margin-bottom: 22px; font-weight: 400; color: #1a2744; }
 .tc-auth { display: flex; align-items: center; gap: 12px; }
@@ -741,21 +725,10 @@ nav {
 [dir="rtl"] .tc-stars { right: auto; left: 28px; }
 
 /* ===================== CTA ===================== */
-.cta { padding: 140px 48px; background: var(--cr); text-align: center; position: relative; overflow: hidden; }
-.cta::before {
-  content: 'ITALIA';
-  font-family: var(--font-playfair);
-  font-size: 220px;
-  font-weight: 900;
-  color: rgba(30,61,114,0.04);
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  pointer-events: none;
-  white-space: nowrap;
-}
+.cta { padding: 160px 48px; background: var(--cr); text-align: center; position: relative; overflow: hidden; }
+.cta::before { display: none; }
 .cta-inner { position: relative; }
-.cta h2 { font-family: var(--font-playfair); font-size: clamp(38px, 5vw, 60px); font-weight: 700; line-height: 1.1; margin-bottom: 18px; color: #1a2744; }
+.cta h2 { font-family: var(--font-playfair); font-size: clamp(38px, 5vw, 60px); font-weight: 400; line-height: 1.1; margin-bottom: 18px; color: #1a2744; letter-spacing: -0.01em; }
 .cta h2 em { font-style: italic; color: var(--g); }
 .cta-p { font-size: 18px; color: var(--ts); font-weight: 400; max-width: 600px; margin: 0 auto 48px; line-height: 1.9; }
 .cta-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
@@ -771,7 +744,7 @@ nav {
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-jost);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 .btn-green:hover {
@@ -791,7 +764,7 @@ nav {
   font-weight: 500;
   cursor: pointer;
   font-family: var(--font-jost);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: all 0.35s ease;
 }
 .btn-outline:hover { border-color: var(--o); color: var(--o); }
@@ -820,7 +793,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.fb-logo { font-family: var(--font-playfair); font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 4px; margin-bottom: 3px; }
+.fb-logo { font-family: var(--font-playfair); font-size: 22px; font-weight: 400; color: #fff; letter-spacing: 4px; margin-bottom: 3px; }
 .fb-logo span { color: var(--o); }
 .fb-sub { font-size: 16px; letter-spacing: 3px; color: rgba(255,255,255,0.18); text-transform: uppercase; margin-bottom: 18px; }
 .fb-p { font-size: 16px; line-height: 1.8; font-weight: 400; max-width: 240px; margin-bottom: 20px; }
@@ -1127,7 +1100,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   width: 24px;
   height: 2px;
   background: rgba(255,255,255,0.75);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: all 0.3s;
 }
 .mobile-menu {
@@ -2113,7 +2086,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   background: var(--o);
   color: var(--bk);
   padding: 2px 8px;
-  border-radius: 3px;
+  border-radius: 28px;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -3184,7 +3157,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-jost);
-  border-radius: 3px;
+  border-radius: 28px;
   transition: all 0.3s ease;
   white-space: nowrap;
   display: flex;
@@ -3358,7 +3331,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .cv-dot.active {
   background: var(--o);
   width: 24px;
-  border-radius: 3px;
+  border-radius: 28px;
 }
 
 /* Controls */
@@ -3370,7 +3343,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .cv-progress-bar {
   height: 3px;
   background: rgba(255,255,255,0.1);
-  border-radius: 2px;
+  border-radius: 28px;
   margin-bottom: 12px;
   cursor: pointer;
   position: relative;
@@ -3378,7 +3351,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .cv-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--o), #f0cb6a);
-  border-radius: 2px;
+  border-radius: 28px;
   transition: width 0.3s linear;
 }
 .cv-controls-row {
@@ -3503,7 +3476,7 @@ nav {
   padding: 10px 26px !important;
   font-size: 10px !important;
   letter-spacing: 3px !important;
-  border-radius: 2px !important;
+  border-radius: 28px !important;
   font-weight: 600 !important;
   background: var(--o) !important;
   color: #0d1b38 !important;
@@ -3530,7 +3503,7 @@ nav {
 
 /* --- Gold dividers between major sections --- */
 .svc, .about, .proc, .nums, .testi, .cta {
-  border-top: 1px solid rgba(212,168,67,0.08);
+  border-top: none;
 }
 
 /* --- Service cards: taller image, refined typography --- */
@@ -3606,7 +3579,7 @@ nav {
   opacity: 1 !important;
   background: #dfc06e !important;
   transform: translateY(-3px) !important;
-  box-shadow: 0 8px 28px rgba(201,168,76,0.4) !important;
+  box-shadow: 0 4px 16px rgba(201,168,76,0.2) !important;
 }
 .btn-ghost-w {
   padding: 17px 44px !important;
@@ -3700,14 +3673,14 @@ nav {
   font-size: 14px !important;
   letter-spacing: 3.5px !important;
   padding: 20px 56px !important;
-  border-radius: 3px !important;
+  border-radius: 28px !important;
   font-weight: 700 !important;
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease !important;
 }
 .cta .btn-green:hover {
   background: #dfc06e !important;
   transform: translateY(-3px) !important;
-  box-shadow: 0 8px 28px rgba(201,168,76,0.4) !important;
+  box-shadow: 0 4px 16px rgba(201,168,76,0.2) !important;
 }
 .cta .btn-outline {
   color: #141C2B !important;
@@ -3715,7 +3688,7 @@ nav {
   font-size: 14px !important;
   letter-spacing: 3px !important;
   padding: 19px 52px !important;
-  border-radius: 3px !important;
+  border-radius: 28px !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
 }
