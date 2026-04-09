@@ -4,7 +4,7 @@ import { useLang } from '@/context/LangContext'
 export default function VideoSection() {
   const { t } = useLang()
   return (
-    <section className="video-section">
+    <section className="video-section" id="video">
       <div className="sl" style={{ justifyContent: 'center', marginBottom: 12 }}>
         <div className="sl-ln" /><span>{t.video.label}</span><div className="sl-ln" />
       </div>
