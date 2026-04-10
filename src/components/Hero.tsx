@@ -31,9 +31,12 @@ export default function Hero({ onRdv }: HeroProps) {
 
   return (
     <section className="hero">
-      <img
-        src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
-        alt="Italy landscape"
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
         style={{
           position: 'absolute',
           top: 0,
@@ -43,7 +46,9 @@ export default function Hero({ onRdv }: HeroProps) {
           objectFit: 'cover',
           zIndex: 0,
         }}
-      />
+      >
+        <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-video.mp4`} type="video/mp4" />
+      </video>
       <div
         style={{
           position: 'absolute',
