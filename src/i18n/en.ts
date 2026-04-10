@@ -1108,7 +1108,7 @@ export const en: Translation = {
     { icon: '💬', text: 'WhatsApp · +39 351 750 1164' },
   ],
   footer: {
-    desc: 'Your trusted partner for all your projects in Italy. One contact, total expertise, a human approach.',
+    desc: 'One single partner to realize your life and investment projects in Italy — 360° expertise, a single point of contact, tailored support.',
     cols: [
       { title: 'Services', links: ['Real Estate', 'Renovation', 'Medical Care', 'Export Italy', 'Student Visa', 'Legal', 'Concierge', 'Admin'] },
       { title: 'Company', links: ['About', 'Our Team', 'Partners', 'Testimonials', 'Blog & Guides', 'Careers'] },

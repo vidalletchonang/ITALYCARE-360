@@ -1108,7 +1108,7 @@ export const it: Translation = {
     { icon: '💬', text: 'WhatsApp · +39 351 750 1164' },
   ],
   footer: {
-    desc: "Il tuo partner di fiducia per tutti i tuoi progetti in Italia. Un solo interlocutore, competenza totale, accompagnamento umano.",
+    desc: "Un unico partner per realizzare i tuoi progetti di vita e di investimento in Italia — competenze a 360°, un solo referente, un'assistenza su misura.",
     cols: [
       { title: 'Servizi', links: ['Immobiliare', 'Ristrutturazione', 'Assistenza Medica', 'Export Italy', 'Visto Studente', 'Legale', 'Concierge', 'Amministrativo'] },
       { title: 'Azienda', links: ['Chi siamo', 'Il nostro team', 'Partner', 'Testimonianze', 'Blog & Guide', 'Carriere'] },
