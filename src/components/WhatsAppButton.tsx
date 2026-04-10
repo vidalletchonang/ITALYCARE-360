@@ -10,16 +10,26 @@ const labels: Record<string, string> = {
   en: 'Chat on WhatsApp',
   it: 'Parliamo su WhatsApp',
   ar: 'تحدث معنا على واتساب',
+  ru: 'Напишите нам в WhatsApp',
+}
+
+const messages: Record<string, string> = {
+  fr: 'Bonjour, je souhaite en savoir plus sur les services ITALYCARE 360.',
+  en: 'Hello, I would like to know more about ITALYCARE 360 services.',
+  it: 'Salve, vorrei saperne di più sui servizi ITALYCARE 360.',
+  ar: 'مرحبًا، أود معرفة المزيد عن خدمات ITALYCARE 360.',
+  ru: 'Здравствуйте, я хотел бы узнать больше об услугах ITALYCARE 360.',
 }
 
 export default function WhatsAppButton() {
   const [hovered, setHovered] = useState(false)
   const { lang } = useLang()
   const label = labels[lang] || labels.en
+  const message = messages[lang] || messages.en
 
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Bonjour, je souhaite en savoir plus sur les services ITALYCARE 360.')}`}
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
       className="wa-btn"
