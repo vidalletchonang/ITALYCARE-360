@@ -3901,29 +3901,30 @@ footer, .footer { background: #1a2744 !important; }
 .page-hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 680px;
+  max-width: 760px;
   margin: 0 auto;
 }
 .page-hero-tag {
   display: inline-block;
   font-family: var(--font-jost);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--o);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  font-weight: 600;
 }
 .page-hero h1 {
   font-family: var(--font-playfair);
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(44px, 6vw, 68px);
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
   letter-spacing: -0.01em;
 }
 .page-hero p {
   font-family: var(--font-jost);
-  font-size: 17px;
-  color: rgba(255,255,255,0.75);
+  font-size: 20px;
+  color: rgba(255,255,255,0.88);
   line-height: 1.7;
 }
 
