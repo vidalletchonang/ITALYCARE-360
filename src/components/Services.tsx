@@ -8,7 +8,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 const serviceImages: Record<string, string> = {
   immobilier: `${BASE}/services/immobilier.jpg`,
   renovation: `${BASE}/services/renovation.jpg`,
-  medical: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=800&q=90',
+  medical: `${BASE}/services/medical.jpg`,
   export: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=90',
   'visa-etudiant': `${BASE}/services/visa-etudiant.jpg`,
   juridique: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=90',
