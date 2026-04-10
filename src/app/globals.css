@@ -1697,8 +1697,8 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   margin: 0 auto;
 }
 .tm-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(201,168,76,0.15);
+  background: linear-gradient(135deg, #111d35 0%, #1a2744 100%);
+  border: 1px solid rgba(201,168,76,0.25);
   border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
