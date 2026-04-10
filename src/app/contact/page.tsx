@@ -37,11 +37,11 @@ const HOURS_DETAIL: Record<string, string> = {
 }
 
 const WRITE_US: Record<string, string> = {
-  fr: 'Écrivez-nous',
-  en: 'Write to Us',
-  it: 'Scrivici',
-  ar: 'راسلنا',
-  ru: 'Напишите нам',
+  fr: 'Envoyez-nous un e-mail',
+  en: 'E-mail Us',
+  it: 'Inviaci un\'e-mail',
+  ar: 'راسلنا عبر البريد',
+  ru: 'Напишите нам email',
 }
 
 const CALL_US: Record<string, string> = {
@@ -53,11 +53,11 @@ const CALL_US: Record<string, string> = {
 }
 
 const VISIT_US: Record<string, string> = {
-  fr: 'Rendez-nous visite',
-  en: 'Visit Us',
-  it: 'Vieni a trovarci',
-  ar: 'زورنا',
-  ru: 'Посетите нас',
+  fr: 'Où nous sommes',
+  en: 'Where We Are',
+  it: 'Dove siamo',
+  ar: 'أين نحن',
+  ru: 'Где мы находимся',
 }
 
 export default function ContactPage() {
