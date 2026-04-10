@@ -16,7 +16,7 @@ export const it: Translation = {
     line1: "L'Italia,",
     line2: 'semplificata',
     line3: 'per te.',
-    desc: "Comprare casa in Italia, ottenere un visto studentesco, accedere alle cure mediche italiane, ristrutturare un immobile o esportare il Made in Italy — ITALYCARE 360 accompagna gli stranieri in ogni passo. Un solo interlocutore, nella tua lingua.",
+    desc: "Un unico partner per realizzare i tuoi progetti di vita e di investimento in Italia — competenze a 360°, un solo referente, un'assistenza su misura.",
     btn1: 'Inizia il mio progetto →',
     btn2: 'Vedi i servizi ↓',
     scroll: 'Scorri',

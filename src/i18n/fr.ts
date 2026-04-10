@@ -16,7 +16,7 @@ export const fr: Translation = {
     line1: "L'Italie,",
     line2: 'simplifiée',
     line3: 'pour vous.',
-    desc: "Acheter un bien immobilier en Italie, obtenir un visa étudiant, accéder aux soins médicaux italiens, rénover une maison ou exporter le Made in Italy — ITALYCARE 360 accompagne les étrangers à chaque étape. Un seul interlocuteur, dans votre langue.",
+    desc: "Un partenaire unique pour réaliser vos projets de vie et d'investissement en Italie — des compétences à 360°, un seul référent, un accompagnement sur mesure.",
     btn1: 'Démarrer mon projet →',
     btn2: 'Voir les services ↓',
     scroll: 'Défiler',

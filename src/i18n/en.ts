@@ -16,7 +16,7 @@ export const en: Translation = {
     line1: 'Italy,',
     line2: 'simplified',
     line3: 'for you.',
-    desc: 'Buy property in Italy, get an Italian student visa, access healthcare in Italy, renovate a house or export Made in Italy products — ITALYCARE 360 guides expats through every step. One contact, in your language.',
+    desc: 'One single partner to realize your life and investment projects in Italy — 360° expertise, a single point of contact, tailored support.',
     btn1: 'Start my project →',
     btn2: 'View services ↓',
     scroll: 'Scroll',
