@@ -170,7 +170,7 @@ export default function ServiceDetailClient({ slug }: Props) {
     if (!service) return
     const subject = encodeURIComponent(`ITALYCARE 360 — ${service.t}`)
     const body = encodeURIComponent(`Nom: ${formName}\nEmail: ${formEmail}\n\nMessage:\n${formMessage}\n\nService: ${service.t}`)
-    window.open(`mailto:info@italycare360.com?subject=${subject}&body=${body}`, '_blank')
+    window.open(`mailto:italycare360@gmail.com?subject=${subject}&body=${body}`, '_blank')
     setFormSent(true)
   }
 
