@@ -34,7 +34,6 @@ export default function Hero({ onRdv }: HeroProps) {
       <video
         autoPlay
         muted
-        loop
         playsInline
         poster="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
         style={{
