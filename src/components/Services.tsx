@@ -16,7 +16,7 @@ const serviceImages: Record<string, string> = {
   administratif: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=90',
   evenements: `${BASE}/services/evenements.jpg`,
   'maisons-retraite': `${BASE}/services/maisons-retraite.jpg`,
-  financement: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=90',
+  financement: `${BASE}/services/financement.jpg`,
   professionnels: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=90',
   'silver-economy': 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=90',
   'property-care': `${BASE}/services/property-care.jpg`,
