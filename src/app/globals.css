@@ -3552,8 +3552,8 @@ nav {
 
 /* --- Service cards: taller image, refined typography --- */
 .sc-img {
-  height: 220px !important;
-  border-radius: 0 !important;
+  height: 280px !important;
+  border-radius: 12px 12px 0 0 !important;
   margin-bottom: 24px !important;
   position: relative;
 }
