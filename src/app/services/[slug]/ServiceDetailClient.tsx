@@ -10,7 +10,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const SERVICE_HERO_IMAGES: Record<string, string> = {
   'immobilier': `${BASE}/services/immobilier.jpg`,
-  'renovation': `${BASE}/services/renovation.jpg`,
+  'renovation': `${BASE}/services/renovation-hero.jpg`,
   'medical': `${BASE}/services/medical-hero.jpg`,
   'export': `${BASE}/services/export.jpg`,
   'visa-etudiant': `${BASE}/services/visa-etudiant-hero.jpg`,
