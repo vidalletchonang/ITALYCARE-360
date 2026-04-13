@@ -18,7 +18,7 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   'conciergerie': `${BASE}/services/conciergerie-hero.jpg`,
   'administratif': `${BASE}/services/administratif-hero.jpg`,
   'evenements': `${BASE}/services/evenements-hero.jpg`,
-  'maisons-retraite': `${BASE}/services/maisons-retraite.jpg`,
+  'maisons-retraite': `${BASE}/services/maisons-retraite-hero.jpg`,
   'financement': `${BASE}/services/financement-hero.jpg`,
   'professionnels': `${BASE}/services/professionnels-hero.jpg`,
   'silver-economy': `${BASE}/services/silver-economy-hero.jpg`,
