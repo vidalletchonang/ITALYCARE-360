@@ -3534,6 +3534,29 @@ nav {
   box-shadow: 0 4px 16px rgba(201,168,76,0.35) !important;
 }
 
+/* --- Section dividers --- */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 48px;
+  background: #ffffff;
+}
+.sd-line {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--o), transparent);
+}
+.sd-diamond {
+  width: 10px;
+  height: 10px;
+  background: var(--o);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
 /* --- Gold ornament on section labels --- */
 .sl {
   gap: 14px !important;

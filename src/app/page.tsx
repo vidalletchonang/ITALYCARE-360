@@ -23,7 +23,9 @@ export default function Home() {
       <Hero onRdv={() => setModalOpen(true)} />
       <MarqueeBanner />
       <Services onRdv={() => setModalOpen(true)} />
+      <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
       <Testimonials />
+      <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
       <CTA onRdv={() => setModalOpen(true)} />
       <ContactBar />
       <Footer />
