@@ -14,17 +14,17 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   'medical': `${BASE}/services/medical.jpg`,
   'export': `${BASE}/services/export.jpg`,
   'visa-etudiant': `${BASE}/services/visa-etudiant-hero.jpg`,
-  'juridique': `${BASE}/services/administratif.jpg`,
+  'juridique': `${BASE}/services/juridique-hero.jpg`,
   'conciergerie': `${BASE}/services/conciergerie-hero.jpg`,
   'administratif': `${BASE}/services/administratif.jpg`,
   'evenements': `${BASE}/services/evenements.jpg`,
   'maisons-retraite': `${BASE}/services/maisons-retraite.jpg`,
   'financement': `${BASE}/services/financement.jpg`,
-  'professionnels': `${BASE}/services/financement.jpg`,
-  'silver-economy': `${BASE}/services/silver-economy.jpg`,
+  'professionnels': `${BASE}/services/professionnels-hero.jpg`,
+  'silver-economy': `${BASE}/services/silver-economy-hero.jpg`,
   'property-care': `${BASE}/services/property-care.jpg`,
-  'thermal-wellness': `${BASE}/services/medical.jpg`,
-  'aviation-privee': `${BASE}/services/export.jpg`,
+  'thermal-wellness': `${BASE}/services/thermal-hero.jpg`,
+  'aviation-privee': `${BASE}/services/aviation-hero.jpg`,
   'assistenza-scolastica': `${BASE}/services/assistenza-scolastica.jpg`,
 }
 
@@ -224,7 +224,7 @@ export default function ServiceDetailClient({ slug }: Props) {
         <img
           src={SERVICE_HERO_IMAGES[slug] || ''}
           alt={service.t}
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', zIndex: 0 }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(14,20,32,0.80) 0%, rgba(14,20,32,0.55) 50%, rgba(14,20,32,0.35) 100%)', zIndex: 1 }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 860, margin: '0 auto' }}>
