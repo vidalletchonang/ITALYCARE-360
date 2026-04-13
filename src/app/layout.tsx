@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import { LangProvider } from '@/context/LangContext'
-import Cursor from '@/components/Cursor'
 
 // ─── Google Analytics 4 ───────────────────────────────────────────────────────
 // Remplacez GA_MEASUREMENT_ID par votre vrai ID (ex: G-ABC123XYZ)
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body>
-        <Cursor />
         <LangProvider>
           {children}
         </LangProvider>

@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
@@ -448,7 +447,6 @@ export default function BlogPage() {
   const [modalOpen, setModalOpen] = useState(false)
   return (
     <>
-      <Cursor />
       <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
       <div style={{ paddingTop: '76px', minHeight: '100vh', background: 'var(--cr)' }}>

@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import About from '@/components/About'
 import TeamSection from '@/components/TeamSection'
@@ -40,7 +39,6 @@ export default function AboutPage() {
   const [modalOpen, setModalOpen] = useState(false)
   return (
     <>
-      <Cursor />
       <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
       <div style={{ paddingTop: '76px' }}>

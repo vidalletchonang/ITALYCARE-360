@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Services from '@/components/Services'
 import CostCalculator from '@/components/CostCalculator'
@@ -47,7 +46,6 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Cursor />
       <ScrollFade />
       <Nav onRdv={() => setModalOpen(true)} />
       <div style={{ paddingTop: '76px' }}>

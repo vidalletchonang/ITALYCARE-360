@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
@@ -383,7 +382,6 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
 
   return (
     <>
-      <Cursor />
       <Nav onRdv={() => setModalOpen(true)} />
 
       <div className="article-hero">
