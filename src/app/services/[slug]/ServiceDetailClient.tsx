@@ -6,6 +6,28 @@ import { useLang } from '@/context/LangContext'
 import Cursor from '@/components/Cursor'
 import ContactModal from '@/components/ContactModal'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
+const SERVICE_HERO_IMAGES: Record<string, string> = {
+  'immobilier': `${BASE}/services/immobilier.jpg`,
+  'renovation': `${BASE}/services/renovation.jpg`,
+  'medical': `${BASE}/services/medical.jpg`,
+  'export': `${BASE}/services/export.jpg`,
+  'visa-etudiant': `${BASE}/services/visa-etudiant.jpg`,
+  'juridique': 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80',
+  'conciergerie': 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80',
+  'administratif': `${BASE}/services/administratif.jpg`,
+  'evenements': `${BASE}/services/evenements.jpg`,
+  'maisons-retraite': `${BASE}/services/maisons-retraite.jpg`,
+  'financement': `${BASE}/services/financement.jpg`,
+  'professionnels': 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80',
+  'silver-economy': `${BASE}/services/silver-economy.jpg`,
+  'property-care': `${BASE}/services/property-care.jpg`,
+  'thermal-wellness': 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80',
+  'aviation-privee': 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1920&q=80',
+  'assistenza-scolastica': `${BASE}/services/assistenza-scolastica.jpg`,
+}
+
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
   immobilier: (
     <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
@@ -198,9 +220,14 @@ export default function ServiceDetailClient({ slug }: Props) {
       </div>
 
       {/* Hero Section */}
-      <div style={{ background: `linear-gradient(135deg, ${bk} 0%, ${gd} 100%)`, padding: '4rem 2rem 5rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(30,61,114,0.12) 0%, transparent 50%)' }} />
-        <div style={{ position: 'relative', maxWidth: 860, margin: '0 auto' }}>
+      <div style={{ background: bk, padding: '5rem 2rem 6rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <img
+          src={SERVICE_HERO_IMAGES[slug] || ''}
+          alt={service.t}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(14,20,32,0.80) 0%, rgba(14,20,32,0.55) 50%, rgba(14,20,32,0.35) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'relative', zIndex: 2, maxWidth: 860, margin: '0 auto' }}>
           <div style={{ color: '#d4a843', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
             {SERVICE_ICONS[slug] || null}
           </div>
