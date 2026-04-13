@@ -120,6 +120,17 @@ export default function Footer() {
             </div>
           </div>
           <p className="fb-p">{t.footer.desc}</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px', margin: '20px 0' }}>
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/founder-seal.jpg`}
+              alt="Founder Seal — Italian Real Estate Attorneys"
+              style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(201,168,76,0.4)', objectFit: 'cover' }}
+            />
+            <div style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>
+              Founded by<br />
+              <span style={{ color: 'var(--o)', fontWeight: 600, fontSize: '12px' }}>Fabrizio Permunian</span>
+            </div>
+          </div>
           <div className="socials">
             <a href="#" className="soc">f</a>
             <a href="#" className="soc">in</a>
