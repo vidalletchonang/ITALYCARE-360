@@ -13,7 +13,7 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   'renovation': 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=90',
   'medical': 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=90',
   'export': 'https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?auto=format&fit=crop&w=1920&q=90',
-  'visa-etudiant': 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=90',
+  'visa-etudiant': 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=1920&q=90',
   'juridique': 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1920&q=90',
   'conciergerie': 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1920&q=90',
   'administratif': 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=90',
