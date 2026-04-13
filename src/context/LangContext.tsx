@@ -24,7 +24,6 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<LangCode>('en')
 
   const setLang = useCallback((l: LangCode) => {
-    console.log('[ITALYCARE] Switching language to:', l)
     setLangState(l)
     try {
       localStorage.setItem('italycare-lang', l)
@@ -37,7 +36,6 @@ export function LangProvider({ children }: { children: ReactNode }) {
     try {
       const saved = localStorage.getItem('italycare-lang') as LangCode | null
       if (saved && ['fr', 'en', 'ar', 'it', 'ru'].includes(saved)) {
-        console.log('[ITALYCARE] Restoring language from localStorage:', saved)
         setLangState(saved)
       }
     } catch (e) {
