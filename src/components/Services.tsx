@@ -22,7 +22,7 @@ const serviceImages: Record<string, string> = {
   'property-care': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=90',
   'thermal-wellness': 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=90',
   'aviation-privee': 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=90',
-  'assistenza-scolastica': 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=90',
+  'assistenza-scolastica': `${BASE}/services/assistenza-scolastica.jpg`,
 }
 
 interface ServicesProps {
