@@ -9,23 +9,23 @@ import ContactModal from '@/components/ContactModal'
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const SERVICE_HERO_IMAGES: Record<string, string> = {
-  'immobilier': 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1920&q=90',
-  'renovation': 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=90',
-  'medical': 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=90',
-  'export': 'https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?auto=format&fit=crop&w=1920&q=90',
+  'immobilier': `${BASE}/services/immobilier.jpg`,
+  'renovation': `${BASE}/services/renovation.jpg`,
+  'medical': `${BASE}/services/medical.jpg`,
+  'export': `${BASE}/services/export.jpg`,
   'visa-etudiant': `${BASE}/services/visa-etudiant-hero.jpg`,
-  'juridique': 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1920&q=90',
+  'juridique': `${BASE}/services/administratif.jpg`,
   'conciergerie': `${BASE}/services/conciergerie-hero.jpg`,
-  'administratif': 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=90',
-  'evenements': 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=90',
-  'maisons-retraite': 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=1920&q=90',
-  'financement': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=90',
-  'professionnels': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=90',
-  'silver-economy': 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1920&q=90',
-  'property-care': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1920&q=90',
-  'thermal-wellness': 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=90',
-  'aviation-privee': 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?auto=format&fit=crop&w=1920&q=90',
-  'assistenza-scolastica': 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=90',
+  'administratif': `${BASE}/services/administratif.jpg`,
+  'evenements': `${BASE}/services/evenements.jpg`,
+  'maisons-retraite': `${BASE}/services/maisons-retraite.jpg`,
+  'financement': `${BASE}/services/financement.jpg`,
+  'professionnels': `${BASE}/services/financement.jpg`,
+  'silver-economy': `${BASE}/services/silver-economy.jpg`,
+  'property-care': `${BASE}/services/property-care.jpg`,
+  'thermal-wellness': `${BASE}/services/medical.jpg`,
+  'aviation-privee': `${BASE}/services/export.jpg`,
+  'assistenza-scolastica': `${BASE}/services/assistenza-scolastica.jpg`,
 }
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
