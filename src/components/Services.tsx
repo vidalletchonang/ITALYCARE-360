@@ -13,7 +13,7 @@ const serviceImages: Record<string, string> = {
   'visa-etudiant': `${BASE}/services/visa-etudiant.jpg`,
   juridique: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=90',
   conciergerie: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=90',
-  administratif: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=90',
+  administratif: `${BASE}/services/administratif.jpg`,
   evenements: `${BASE}/services/evenements.jpg`,
   'maisons-retraite': `${BASE}/services/maisons-retraite.jpg`,
   financement: `${BASE}/services/financement.jpg`,
