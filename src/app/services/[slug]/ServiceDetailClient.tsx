@@ -25,7 +25,7 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   'property-care': `${BASE}/services/property-care-hero.jpg`,
   'thermal-wellness': `${BASE}/services/thermal-hero.jpg`,
   'aviation-privee': `${BASE}/services/aviation-hero.jpg`,
-  'assistenza-scolastica': `${BASE}/services/assistenza-scolastica.jpg`,
+  'assistenza-scolastica': `${BASE}/services/assistenza-scolastica-hero.jpg`,
 }
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
