@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLang } from '@/context/LangContext'
 
@@ -24,6 +25,14 @@ export default function Hero({ onRdv }: HeroProps) {
   const { t, lang } = useLang()
   const router = useRouter()
   const stats = heroStats[lang] ?? heroStats.en
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.matchMedia('(max-width: 768px)').matches)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -31,23 +40,41 @@ export default function Hero({ onRdv }: HeroProps) {
 
   return (
     <section className="hero">
-      <video
-        autoPlay
-        muted
-        playsInline
-        poster="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          zIndex: 0,
-        }}
-      >
-        <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-video.mp4`} type="video/mp4" />
-      </video>
+      {isMobile ? (
+        <img
+          src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1200&q=80"
+          alt="Italy"
+          loading="eager"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+          }}
+        />
+      ) : (
+        <video
+          autoPlay
+          muted
+          playsInline
+          preload="metadata"
+          poster="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+          }}
+        >
+          <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-video.mp4`} type="video/mp4" />
+        </video>
+      )}
       <div
         style={{
           position: 'absolute',
