@@ -86,7 +86,6 @@ export default function TeamSection() {
                   <span>{m.initials}</span>
                 </div>
               )}
-              {m.badge && <div className="tm-badge">ITALYCARE 360</div>}
             </div>
             <div className="tm-info">
               <h3 className="tm-name font-playfair">{m.name}</h3>
@@ -111,7 +110,6 @@ export default function TeamSection() {
                     <span>{selected.initials}</span>
                   </div>
                 )}
-                {selected.badge && <div className="tm-badge-lg">ITALYCARE 360</div>}
               </div>
               <div className="tm-modal-content">
                 <h2 className="font-playfair tm-modal-name">{selected.name}</h2>
