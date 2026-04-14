@@ -6,6 +6,7 @@ import TeamSection from '@/components/TeamSection'
 import Process from '@/components/Process'
 import VideoSection from '@/components/VideoSection'
 import Numbers from '@/components/Numbers'
+import WhyChooseUs from '@/components/WhyChooseUs'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
@@ -48,6 +49,7 @@ export default function AboutPage() {
         <Process />
         <VideoSection />
         <TeamSection />
+        <div id="why"><WhyChooseUs /></div>
       </div>
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />

@@ -8,12 +8,12 @@ import type { LangCode } from '@/i18n'
 const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
 
 /* Sub-labels for About dropdown */
-const ABOUT_SUB: Record<string, { story: string; team: string; video: string }> = {
-  fr: { story: 'Notre histoire',    team: 'Notre équipe',   video: 'Vidéo de nos services' },
-  en: { story: 'Our story',         team: 'Our team',       video: 'Our services video' },
-  it: { story: 'La nostra storia',  team: 'Il nostro team', video: 'Video dei nostri servizi' },
-  ar: { story: 'قصتنا',             team: 'فريقنا',         video: 'فيديو خدماتنا' },
-  ru: { story: 'Наша история',      team: 'Наша команда',   video: 'Видео наших услуг' },
+const ABOUT_SUB: Record<string, { story: string; team: string; video: string; why: string }> = {
+  fr: { story: 'Notre histoire',    team: 'Notre équipe',   video: 'Vidéo de nos services', why: 'Pourquoi nous' },
+  en: { story: 'Our story',         team: 'Our team',       video: 'Our services video',    why: 'Why choose us' },
+  it: { story: 'La nostra storia',  team: 'Il nostro team', video: 'Video dei nostri servizi', why: 'Perché noi' },
+  ar: { story: 'قصتنا',             team: 'فريقنا',         video: 'فيديو خدماتنا',         why: 'لماذا نحن' },
+  ru: { story: 'Наша история',      team: 'Наша команда',   video: 'Видео наших услуг',    why: 'Почему мы' },
 }
 
 /* Sub-labels for Blog dropdown */
@@ -142,6 +142,7 @@ export default function Nav({ onRdv }: NavProps) {
                 <Link href="/about"        className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
                 <Link href="/about#team"   className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
                 <Link href="/about#video"  className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
+                <Link href="/about#why"    className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
               </div>
             )}
           </li>
@@ -213,6 +214,7 @@ export default function Nav({ onRdv }: NavProps) {
           <Link href="/about"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
           <Link href="/about#team"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
           <Link href="/about#video"   onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
+          <Link href="/about#why"     onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
         </div>
 
         {/* Blog with sub-items */}

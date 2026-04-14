@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import Nav from '@/components/Nav'
 import Services from '@/components/Services'
 import CostCalculator from '@/components/CostCalculator'
-import WhyChooseUs from '@/components/WhyChooseUs'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
@@ -52,7 +51,6 @@ export default function ServicesPage() {
         <ServicesHero />
         <Services onRdv={() => setModalOpen(true)} />
         <CostCalculator onRdv={() => setModalOpen(true)} />
-        <WhyChooseUs />
       </div>
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
