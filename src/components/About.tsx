@@ -18,10 +18,6 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Conciergerie d\'exception', en: 'Exceptional concierge', it: 'Concierge d\'eccezione', ar: 'خدمة استثنائية', ru: 'Эксклюзивный консьерж' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1468234847176-28606331216a?auto=format&fit=crop&w=1400&q=85', // Tuscan vineyard estate
-    caption: { fr: 'Domaines toscans', en: 'Tuscan estates', it: 'Tenute toscane', ar: 'ضيعات توسكانية', ru: 'Тосканские усадьбы' },
-  },
-  {
     src: 'https://images.unsplash.com/photo-1569949237435-30dbcc25ef6f?auto=format&fit=crop&w=1400&q=85', // Bellagio — Lake Como
     caption: { fr: 'Villas du Lac de Côme', en: 'Lake Como villas', it: 'Ville sul Lago di Como', ar: 'فيلات بحيرة كومو', ru: 'Виллы озера Комо' },
   },
