@@ -50,10 +50,6 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Événements exclusifs', en: 'Exclusive events', it: 'Eventi esclusivi', ar: 'فعاليات حصرية', ru: 'Эксклюзивные мероприятия' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1533674689012-136b487b7736?auto=format&fit=crop&w=1400&q=85', // champagne soirée group
-    caption: { fr: 'Nuits italiennes', en: 'Italian nights', it: 'Notti italiane', ar: 'ليالٍ إيطالية', ru: 'Итальянские ночи' },
-  },
-  {
     src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=85', // grand hall formal portrait
     caption: { fr: "L'art de recevoir", en: 'The art of hospitality', it: "L'arte dell'ospitalità", ar: 'فن الضيافة', ru: 'Искусство гостеприимства' },
   },
