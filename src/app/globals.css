@@ -3710,9 +3710,10 @@ footer, .footer { background: #1a2744 !important; }
 .page-hero {
   position: relative;
   text-align: center;
-  padding: 100px 24px 80px;
+  padding: 120px 24px 140px;
   color: #fff;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 .page-hero-bg {
   position: absolute;
