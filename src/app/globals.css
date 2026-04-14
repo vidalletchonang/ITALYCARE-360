@@ -461,19 +461,29 @@ nav {
 .ag-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20,28,43,0) 40%, rgba(20,28,43,0.65) 100%);
+  background: linear-gradient(180deg, rgba(20,28,43,0) 30%, rgba(20,28,43,0.45) 65%, rgba(20,28,43,0.85) 100%);
 }
 .ag-caption {
   position: absolute;
   left: 32px;
-  bottom: 56px;
+  right: 32px;
+  bottom: 60px;
   color: #fff;
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
-  letter-spacing: 0.02em;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
   z-index: 2;
+}
+.ag-caption::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #d4a843;
+  margin-bottom: 14px;
 }
 .ag-dots {
   position: absolute;
