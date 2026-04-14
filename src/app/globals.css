@@ -2849,7 +2849,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .calc-body {
   background:
     linear-gradient(rgba(20,28,43,0.55), rgba(20,28,43,0.55)),
-    url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1800&q=85');
+    url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1800&q=85');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
