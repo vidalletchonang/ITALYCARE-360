@@ -3897,3 +3897,114 @@ footer, .footer { background: #1a2744 !important; }
   .wcu-grid { grid-template-columns: 1fr; gap: 20px; }
   .wcu-card { padding: 28px 24px; }
 }
+
+/* ── Italy Lifestyle Gallery ── */
+.ils {
+  padding: 130px 6vw;
+  background: #ffffff;
+}
+.ils-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+.ils-tag {
+  display: inline-block;
+  font-family: var(--font-jost);
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--o);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.ils-h2 {
+  font-family: var(--font-playfair);
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  color: #141C2B;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+  line-height: 1.05;
+}
+.ils-h2 em {
+  color: var(--o);
+  font-style: italic;
+}
+.ils-sub {
+  font-size: 18px;
+  color: #555B66;
+  line-height: 1.75;
+}
+
+.ils-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 280px 280px 280px;
+  gap: 14px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.ils-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.ils-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.ils-item:hover img {
+  transform: scale(1.08);
+}
+.ils-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14,20,32,0.85) 0%, rgba(14,20,32,0.1) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px 28px;
+  opacity: 0.85;
+  transition: opacity 0.4s;
+}
+.ils-item:hover .ils-overlay {
+  opacity: 1;
+}
+.ils-caption {
+  font-family: var(--font-playfair);
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* Asymmetric layout — magazine style */
+.ils-item-0 { grid-column: span 2; grid-row: span 2; }
+.ils-item-1 { grid-column: span 1; grid-row: span 1; }
+.ils-item-2 { grid-column: span 1; grid-row: span 2; }
+.ils-item-3 { grid-column: span 1; grid-row: span 1; }
+.ils-item-4 { grid-column: span 1; grid-row: span 1; }
+.ils-item-5 { grid-column: span 2; grid-row: span 1; }
+.ils-item-6 { grid-column: span 1; grid-row: span 1; }
+
+@media (max-width: 900px) {
+  .ils-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 220px 220px 220px 220px;
+  }
+  .ils-item-0, .ils-item-2, .ils-item-5 { grid-column: span 2; grid-row: span 1; }
+  .ils-item-1, .ils-item-3, .ils-item-4, .ils-item-6 { grid-column: span 1; grid-row: span 1; }
+}
+@media (max-width: 600px) {
+  .ils { padding: 80px 20px; }
+  .ils-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 240px);
+  }
+  .ils-item-0, .ils-item-1, .ils-item-2, .ils-item-3, .ils-item-4, .ils-item-5, .ils-item-6 {
+    grid-column: 1; grid-row: auto;
+  }
+}
