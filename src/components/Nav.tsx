@@ -8,12 +8,12 @@ import type { LangCode } from '@/i18n'
 const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
 
 /* Sub-labels for About dropdown */
-const ABOUT_SUB: Record<string, { story: string; team: string; video: string; why: string }> = {
-  fr: { story: 'Notre histoire',    team: 'Notre équipe',   video: 'Vidéo de nos services', why: 'Pourquoi nous' },
-  en: { story: 'Our story',         team: 'Our team',       video: 'Our services video',    why: 'Why choose us' },
-  it: { story: 'La nostra storia',  team: 'Il nostro team', video: 'Video dei nostri servizi', why: 'Perché noi' },
-  ar: { story: 'قصتنا',             team: 'فريقنا',         video: 'فيديو خدماتنا',         why: 'لماذا نحن' },
-  ru: { story: 'Наша история',      team: 'Наша команда',   video: 'Видео наших услуг',    why: 'Почему мы' },
+const ABOUT_SUB: Record<string, { story: string; numbers: string; why: string; process: string; team: string; video: string; lifestyle: string; testimonials: string }> = {
+  fr: { story: 'Notre histoire',    numbers: 'En chiffres',     why: 'Pourquoi nous',  process: 'Notre méthode',    team: 'Notre équipe',    video: 'Vidéo',  lifestyle: "L'art de vivre",    testimonials: 'Témoignages'   },
+  en: { story: 'Our story',         numbers: 'By the numbers',  why: 'Why choose us',  process: 'Our method',       team: 'Our team',        video: 'Video',  lifestyle: 'The art of living', testimonials: 'Testimonials'  },
+  it: { story: 'La nostra storia',  numbers: 'In numeri',       why: 'Perché noi',     process: 'Il nostro metodo', team: 'Il nostro team',  video: 'Video',  lifestyle: "L'arte del vivere", testimonials: 'Testimonianze' },
+  ar: { story: 'قصتنا',             numbers: 'بالأرقام',         why: 'لماذا نحن',      process: 'منهجنا',           team: 'فريقنا',          video: 'فيديو',  lifestyle: 'فنُّ العيش',         testimonials: 'شهادات'        },
+  ru: { story: 'Наша история',      numbers: 'В цифрах',        why: 'Почему мы',      process: 'Наш метод',        team: 'Наша команда',    video: 'Видео',  lifestyle: 'Искусство жизни',    testimonials: 'Отзывы'        },
 }
 
 /* Sub-labels for Blog dropdown */
@@ -139,10 +139,14 @@ export default function Nav({ onRdv }: NavProps) {
             </Link>
             {openDd === 'about' && (
               <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('about')} onMouseLeave={closeMenu}>
-                <Link href="/about"        className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
-                <Link href="/about#team"   className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
-                <Link href="/about#video"  className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
-                <Link href="/about#why"    className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
+                <Link href="/about"               className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
+                <Link href="/about#numbers"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.numbers}</Link>
+                <Link href="/about#why"           className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
+                <Link href="/about#process"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.process}</Link>
+                <Link href="/about#team"          className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
+                <Link href="/about#video"         className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
+                <Link href="/about#lifestyle"     className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.lifestyle}</Link>
+                <Link href="/about#testimonials"  className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.testimonials}</Link>
               </div>
             )}
           </li>
@@ -211,10 +215,14 @@ export default function Nav({ onRdv }: NavProps) {
         {/* About with sub-items */}
         <Link href="/about" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.about}</Link>
         <div className="mobile-sub">
-          <Link href="/about"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
-          <Link href="/about#team"    onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
-          <Link href="/about#video"   onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
-          <Link href="/about#why"     onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
+          <Link href="/about"               onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
+          <Link href="/about#numbers"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.numbers}</Link>
+          <Link href="/about#why"           onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
+          <Link href="/about#process"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.process}</Link>
+          <Link href="/about#team"          onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
+          <Link href="/about#video"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
+          <Link href="/about#lifestyle"     onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.lifestyle}</Link>
+          <Link href="/about#testimonials"  onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.testimonials}</Link>
         </div>
 
         {/* Blog with sub-items */}

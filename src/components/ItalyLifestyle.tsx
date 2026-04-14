@@ -58,7 +58,7 @@ export default function ItalyLifestyle() {
   const captions = CAPTIONS[lang] || CAPTIONS.en
 
   return (
-    <section className="ils">
+    <section className="ils" id="lifestyle">
       <div className="ils-header">
         <span className="ils-tag">{l.tag}</span>
         <h2 className="ils-h2">

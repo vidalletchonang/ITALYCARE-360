@@ -48,7 +48,7 @@ export default function Numbers() {
   }, [])
 
   return (
-    <section className="nums" ref={ref}>
+    <section className="nums" id="numbers" ref={ref}>
       <div className="nums-grid">
         {t.nums.map((item, i) => (
           <StatItem key={i} n={item.n} suffix={item.suffix} l={item.l} active={active} />

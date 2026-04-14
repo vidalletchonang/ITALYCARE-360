@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
   const items = BENEFITS[lang] || BENEFITS.en
 
   return (
-    <section className="wcu">
+    <section className="wcu" id="why">
       <div className="wcu-header">
         <div className="sl" style={{ justifyContent: 'center', marginBottom: 16 }}>
           <div className="sl-ln" /><span>{l.tag}</span><div className="sl-ln" />
