@@ -5,8 +5,6 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import MarqueeBanner from '@/components/MarqueeBanner'
 import Services from '@/components/Services'
-import ItalyLifestyle from '@/components/ItalyLifestyle'
-import Testimonials from '@/components/Testimonials'
 import CTA from '@/components/CTA'
 import ContactBar from '@/components/ContactBar'
 import Footer from '@/components/Footer'
@@ -24,10 +22,6 @@ export default function Home() {
       <Hero onRdv={() => setModalOpen(true)} />
       <MarqueeBanner />
       <Services onRdv={() => setModalOpen(true)} />
-      <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
-      <ItalyLifestyle />
-      <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
-      <Testimonials />
       <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
       <CTA onRdv={() => setModalOpen(true)} />
       <ContactBar />
