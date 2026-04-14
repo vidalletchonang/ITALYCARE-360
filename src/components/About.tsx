@@ -42,7 +42,7 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Aviation privée', en: 'Private aviation', it: 'Aviazione privata', ar: 'طيران خاص', ru: 'Частная авиация' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1400&q=85', // elegant gala reception table
+    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=85', // elegant reception table with white florals
     caption: { fr: 'Réceptions de prestige', en: 'Prestige receptions', it: 'Ricevimenti di prestigio', ar: 'حفلات استقبال فاخرة', ru: 'Престижные приёмы' },
   },
   {
