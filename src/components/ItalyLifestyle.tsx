@@ -43,7 +43,7 @@ const CAPTIONS: Record<string, string[]> = {
 }
 
 const IMAGES = [
-  'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=85', // Venice canal big
+  'https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1200&q=85', // Venice Grand Canal sunset
   'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=85',  // Pizza
   'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=800&q=85',  // Amalfi positano
   'https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=800&q=85',  // Tuscany hills
