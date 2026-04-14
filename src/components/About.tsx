@@ -14,10 +14,6 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Rénovation haut de gamme', en: 'High-end renovation', it: 'Ristrutturazione di lusso', ar: 'تجديد فاخر', ru: 'Премиальный ремонт' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1530538987395-032d1800fdd4?auto=format&fit=crop&w=1400&q=85', // Positano — Amalfi Coast
-    caption: { fr: 'Côte Amalfitaine', en: 'Amalfi Coast', it: 'Costiera Amalfitana', ar: 'ساحل أمالفي', ru: 'Амальфитанское побережье' },
-  },
-  {
     src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85', // luxury dining
     caption: { fr: 'Conciergerie d\'exception', en: 'Exceptional concierge', it: 'Concierge d\'eccezione', ar: 'خدمة استثنائية', ru: 'Эксклюзивный консьерж' },
   },
