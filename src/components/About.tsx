@@ -26,7 +26,7 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Domaines toscans', en: 'Tuscan estates', it: 'Tenute toscane', ar: 'ضيعات توسكانية', ru: 'Тосканские усадьбы' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=1400&q=85', // lake como villa
+    src: 'https://images.unsplash.com/photo-1569949237435-30dbcc25ef6f?auto=format&fit=crop&w=1400&q=85', // Bellagio — Lake Como
     caption: { fr: 'Villas du Lac de Côme', en: 'Lake Como villas', it: 'Ville sul Lago di Como', ar: 'فيلات بحيرة كومو', ru: 'Виллы озера Комо' },
   },
   {
