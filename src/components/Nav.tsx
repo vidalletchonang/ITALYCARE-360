@@ -140,8 +140,7 @@ export default function Nav({ onRdv }: NavProps) {
             {openDd === 'about' && (
               <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('about')} onMouseLeave={closeMenu}>
                 <Link href="/about"               className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
-                <Link href="/about#numbers"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.numbers}</Link>
-                <Link href="/about#why"           className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
+                <Link href="/about#numbers"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
                 <Link href="/about#process"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.process}</Link>
                 <Link href="/about#team"          className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
                 <Link href="/about#video"         className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
@@ -216,8 +215,7 @@ export default function Nav({ onRdv }: NavProps) {
         <Link href="/about" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.about}</Link>
         <div className="mobile-sub">
           <Link href="/about"               onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
-          <Link href="/about#numbers"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.numbers}</Link>
-          <Link href="/about#why"           onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
+          <Link href="/about#numbers"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
           <Link href="/about#process"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.process}</Link>
           <Link href="/about#team"          onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
           <Link href="/about#video"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
