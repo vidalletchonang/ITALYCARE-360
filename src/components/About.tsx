@@ -30,7 +30,7 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Villas du Lac de Côme', en: 'Lake Como villas', it: 'Ville sul Lago di Como', ar: 'فيلات بحيرة كومو', ru: 'Виллы озера Комо' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1400&q=85', // venice
+    src: 'https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=85', // venice grand canal sunset
     caption: { fr: 'Élégance vénitienne', en: 'Venetian elegance', it: 'Eleganza veneziana', ar: 'أناقة البندقية', ru: 'Венецианская элегантность' },
   },
 ]
