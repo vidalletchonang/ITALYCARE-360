@@ -33,6 +33,10 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     src: 'https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=85', // venice grand canal sunset
     caption: { fr: 'Élégance vénitienne', en: 'Venetian elegance', it: 'Eleganza veneziana', ar: 'أناقة البندقية', ru: 'Венецианская элегантность' },
   },
+  {
+    src: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=85', // chef plating caviar fine dining
+    caption: { fr: 'Gastronomie étoilée', en: 'Michelin-starred dining', it: 'Alta gastronomia', ar: 'مطبخ راقٍ', ru: 'Высокая кухня' },
+  },
 ]
 
 /* ── Professional SVG icons for the 4 value cards (right) ── */
