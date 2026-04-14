@@ -1,41 +1,54 @@
 'use client'
 
-import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { useLang } from '@/context/LangContext'
 
-/* ── Orbit item slugs (match service page routes) ── */
-const ORBIT_SLUGS = [
-  'immobilier', 'medical', 'renovation', 'export',
-  'visa-etudiant', 'juridique', 'conciergerie', 'administratif',
+/* ── Luxury images that valorize our services ── */
+const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
+  {
+    src: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1400&q=85', // luxury villa with pool
+    caption: { fr: 'Villas de prestige', en: 'Prestige villas', it: 'Ville di prestigio', ar: 'فيلات فاخرة', ru: 'Престижные виллы' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85', // luxury interior
+    caption: { fr: 'Rénovation haut de gamme', en: 'High-end renovation', it: 'Ristrutturazione di lusso', ar: 'تجديد فاخر', ru: 'Премиальный ремонт' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85', // amalfi coast luxury
+    caption: { fr: 'Côte Amalfitaine', en: 'Amalfi Coast', it: 'Costiera Amalfitana', ar: 'ساحل أمالفي', ru: 'Амальфитанское побережье' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85', // luxury dining
+    caption: { fr: 'Conciergerie d\'exception', en: 'Exceptional concierge', it: 'Concierge d\'eccezione', ar: 'خدمة استثنائية', ru: 'Эксклюзивный консьерж' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1400&q=85', // tuscany hills
+    caption: { fr: 'Domaines toscans', en: 'Tuscan estates', it: 'Tenute toscane', ar: 'ضيعات توسكانية', ru: 'Тосканские усадьбы' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=1400&q=85', // lake como villa
+    caption: { fr: 'Villas du Lac de Côme', en: 'Lake Como villas', it: 'Ville sul Lago di Como', ar: 'فيلات بحيرة كومو', ru: 'Виллы озера Комо' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1400&q=85', // venice
+    caption: { fr: 'Élégance vénitienne', en: 'Venetian elegance', it: 'Eleganza veneziana', ar: 'أناقة البندقية', ru: 'Венецианская элегантность' },
+  },
 ]
-
-/* ── Orbit labels per language ── */
-const ORBIT_LABELS: Record<string, string[]> = {
-  fr: ['Immo',     'Santé',    'Rénov.',   'Export',   'Visa',     'Droit',  'Concierg.', 'Admin'],
-  en: ['Real Est.','Medical',  'Renov.',   'Export',   'Visa',     'Legal',  'Concierge', 'Admin'],
-  it: ['Immobile', 'Medico',   'Ristruttu.','Export',  'Visto',    'Legale', 'Concierg.', 'Amm.'],
-  ar: ['عقارات',   'صحة',      'تجديد',    'تصدير',    'فيزا',    'قانون',  'كونسيرج',   'إداري'],
-  ru: ['Недвиж.',  'Медицина', 'Ремонт',   'Экспорт',  'Виза',    'Право',  'Консьерж',  'Адм.'],
-}
 
 /* ── Professional SVG icons for the 4 value cards (right) ── */
 const VAL_ICONS = [
-  /* Shield + checkmark → Total Trust */
   <svg key="trust" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
     <path d="M9 12l2 2 4-4"/>
   </svg>,
-  /* Clock → 48h Response */
   <svg key="clock" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
     <circle cx="12" cy="12" r="10"/>
     <path d="M12 6v6l4 2"/>
   </svg>,
-  /* Globe → Multi-language */
   <svg key="globe" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
     <circle cx="12" cy="12" r="10"/>
     <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
   </svg>,
-  /* Bar chart → Real-time tracking */
   <svg key="chart" viewBox="0 0 24 24" fill="none" stroke="#d4a843" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
     <path d="M18 20V10M12 20V4M6 20v-6"/>
     <path d="M3 20h18"/>
@@ -44,96 +57,34 @@ const VAL_ICONS = [
 
 export default function About() {
   const { t, lang } = useLang()
-  const ol = ORBIT_LABELS[lang] ?? ORBIT_LABELS.en
+  const [idx, setIdx] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => setIdx(i => (i + 1) % LUX_IMAGES.length), 4000)
+    return () => clearInterval(id)
+  }, [])
 
   return (
     <section className="about" id="about">
       <div className="about-vis">
-        <div className="avis-glow" />
-        <div className="orbit-wrap">
-          <div className="orbit-ring" />
-          <div className="orbit-center">
-            <div className="oc-t">ITALY<br />CARE<br />360°</div>
+        <div className="about-gallery">
+          {LUX_IMAGES.map((img, i) => (
+            <div key={i} className={`ag-slide${i === idx ? ' active' : ''}`}>
+              <img src={img.src} alt={img.caption[lang] || img.caption.en} loading="lazy" />
+              <div className="ag-overlay" />
+              <div className="ag-caption">{img.caption[lang] || img.caption.en}</div>
+            </div>
+          ))}
+          <div className="ag-dots">
+            {LUX_IMAGES.map((_, i) => (
+              <button
+                key={i}
+                className={`ag-dot${i === idx ? ' active' : ''}`}
+                onClick={() => setIdx(i)}
+                aria-label={`Image ${i + 1}`}
+              />
+            ))}
           </div>
-
-          {/* Immo — building */}
-          <Link href={`/services/${ORBIT_SLUGS[0]}`} className="oi oi1" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
-              <path d="M9 21V12h6v9"/>
-            </svg>
-            <div className="oi-lbl">{ol[0]}</div>
-          </Link>
-
-          {/* Santé — stethoscope */}
-          <Link href={`/services/${ORBIT_SLUGS[1]}`} className="oi oi2" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <path d="M4.5 6.5a2 2 0 104 0V11a4.5 4.5 0 009 0v-1a2 2 0 10-2 0v1a2.5 2.5 0 01-5 0V6.5a2 2 0 10-4 0z" strokeWidth="1.5"/>
-              <circle cx="15.5" cy="4.5" r="1" fill="currentColor" stroke="none"/>
-              <circle cx="4.5" cy="4.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-            <div className="oi-lbl">{ol[1]}</div>
-          </Link>
-
-          {/* Rénov. — hammer */}
-          <Link href={`/services/${ORBIT_SLUGS[2]}`} className="oi oi3" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <path d="M15 12l-8.5 8.5a2.12 2.12 0 01-3-3L12 9"/>
-              <path d="M17.64 15L22 10.36 17 5l-4.64 4.64"/>
-              <path d="M13 7l2-2 4 4-2 2"/>
-            </svg>
-            <div className="oi-lbl">{ol[2]}</div>
-          </Link>
-
-          {/* Export — globe with arrow */}
-          <Link href={`/services/${ORBIT_SLUGS[3]}`} className="oi oi4" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-              <path d="M16 8l-4-4-4 4M12 4v8"/>
-            </svg>
-            <div className="oi-lbl">{ol[3]}</div>
-          </Link>
-
-          {/* Visa — passport */}
-          <Link href={`/services/${ORBIT_SLUGS[4]}`} className="oi oi5" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <rect x="3" y="4" width="18" height="16" rx="2"/>
-              <circle cx="12" cy="11" r="3"/>
-              <path d="M8 17h8M9 7h2M13 7h2"/>
-            </svg>
-            <div className="oi-lbl">{ol[4]}</div>
-          </Link>
-
-          {/* Droit — scales of justice */}
-          <Link href={`/services/${ORBIT_SLUGS[5]}`} className="oi oi6" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <path d="M12 3v18M3 21h18"/>
-              <path d="M6 8l-3 6h6L6 8zM18 6l-3 6h6L18 6z"/>
-            </svg>
-            <div className="oi-lbl">{ol[5]}</div>
-          </Link>
-
-          {/* Concierg. — concierge bell */}
-          <Link href={`/services/${ORBIT_SLUGS[6]}`} className="oi oi7" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <path d="M20 16H4a8 8 0 0116 0z"/>
-              <path d="M3 16h18"/>
-              <path d="M12 4v2M12 8v.5"/>
-            </svg>
-            <div className="oi-lbl">{ol[6]}</div>
-          </Link>
-
-          {/* Admin — clipboard */}
-          <Link href={`/services/${ORBIT_SLUGS[7]}`} className="oi oi8" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
-              <rect x="5" y="3" width="14" height="18" rx="2"/>
-              <path d="M9 3a3 3 0 006 0"/>
-              <path d="M9 12h6M9 16h4"/>
-            </svg>
-            <div className="oi-lbl">{ol[7]}</div>
-          </Link>
-
         </div>
       </div>
 
