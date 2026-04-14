@@ -37,6 +37,18 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     src: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=85', // chef plating caviar fine dining
     caption: { fr: 'Gastronomie étoilée', en: 'Michelin-starred dining', it: 'Alta gastronomia', ar: 'مطبخ راقٍ', ru: 'Высокая кухня' },
   },
+  {
+    src: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=85', // private jet interior
+    caption: { fr: 'Aviation privée', en: 'Private aviation', it: 'Aviazione privata', ar: 'طيران خاص', ru: 'Частная авиация' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1400&q=85', // elegant gala reception table
+    caption: { fr: 'Réceptions de prestige', en: 'Prestige receptions', it: 'Ricevimenti di prestigio', ar: 'حفلات استقبال فاخرة', ru: 'Престижные приёмы' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1400&q=85', // concert lights stage
+    caption: { fr: 'Événements exclusifs', en: 'Exclusive events', it: 'Eventi esclusivi', ar: 'فعاليات حصرية', ru: 'Эксклюзивные мероприятия' },
+  },
 ]
 
 /* ── Professional SVG icons for the 4 value cards (right) ── */
