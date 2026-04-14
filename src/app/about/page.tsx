@@ -47,12 +47,17 @@ export default function AboutPage() {
       <div style={{ paddingTop: '76px' }}>
         <AboutHero />
         <About />
+        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <Numbers />
         <Process />
+        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <VideoSection />
         <TeamSection />
+        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <div id="why"><WhyChooseUs /></div>
+        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <ItalyLifestyle />
+        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <Testimonials />
       </div>
       <Footer />

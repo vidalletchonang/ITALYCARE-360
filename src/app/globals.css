@@ -3062,27 +3062,29 @@ nav {
   box-shadow: 0 4px 16px rgba(201,168,76,0.35) !important;
 }
 
-/* --- Section dividers --- */
+/* --- Section dividers — elegant gold diamond --- */
 .section-divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 20px 48px;
-  background: #ffffff;
+  gap: 20px;
+  padding: 56px 48px;
+  background: transparent;
+  position: relative;
 }
 .sd-line {
   flex: 1;
-  max-width: 200px;
+  max-width: 220px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--o), transparent);
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.55), transparent);
 }
 .sd-diamond {
-  width: 10px;
-  height: 10px;
-  background: var(--o);
+  width: 8px;
+  height: 8px;
+  background: #d4a843;
   transform: rotate(45deg);
   flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(212,168,67,0.10), 0 0 0 10px rgba(212,168,67,0.04);
 }
 
 /* --- Gold ornament on section labels --- */

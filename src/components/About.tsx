@@ -18,7 +18,7 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Conciergerie d\'exception', en: 'Exceptional concierge', it: 'Concierge d\'eccezione', ar: 'خدمة استثنائية', ru: 'Эксклюзивный консьерж' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1400&q=85', // tuscany hills
+    src: 'https://images.unsplash.com/photo-1468234847176-28606331216a?auto=format&fit=crop&w=1400&q=85', // Tuscan vineyard estate
     caption: { fr: 'Domaines toscans', en: 'Tuscan estates', it: 'Tenute toscane', ar: 'ضيعات توسكانية', ru: 'Тосканские усадьбы' },
   },
   {
