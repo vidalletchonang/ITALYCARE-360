@@ -3793,3 +3793,107 @@ footer, .footer { background: #1a2744 !important; }
 @media (max-width: 550px) {
   .contact-cards { grid-template-columns: 1fr; }
 }
+
+/* ── Why Choose Us Section ── */
+.wcu {
+  padding: 120px 6vw;
+  background: linear-gradient(170deg, #FBF6EE 0%, #F7F0E3 100%);
+  position: relative;
+}
+.wcu-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 72px;
+}
+.wcu-h2 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: #141C2B;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+.wcu-h2 em {
+  color: var(--o);
+  font-style: italic;
+}
+.wcu-sub {
+  font-size: 18px;
+  color: #555B66;
+  line-height: 1.7;
+}
+.wcu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wcu-card {
+  background: #ffffff;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 18px;
+  padding: 36px 30px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.wcu-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--o);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.wcu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  border-color: var(--o);
+}
+.wcu-card:hover::before {
+  transform: scaleX(1);
+}
+.wcu-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(201,168,76,0.12);
+  color: var(--o);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: background 0.3s;
+}
+.wcu-icon svg {
+  width: 26px;
+  height: 26px;
+}
+.wcu-card:hover .wcu-icon {
+  background: rgba(201,168,76,0.2);
+}
+.wcu-card-title {
+  font-family: var(--font-cormorant);
+  font-size: 22px;
+  font-weight: 600;
+  color: #141C2B;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+.wcu-card-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555B66;
+}
+
+@media (max-width: 900px) {
+  .wcu-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .wcu { padding: 80px 20px; }
+  .wcu-grid { grid-template-columns: 1fr; gap: 20px; }
+  .wcu-card { padding: 28px 24px; }
+}
