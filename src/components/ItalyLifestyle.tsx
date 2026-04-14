@@ -35,11 +35,11 @@ const LABELS: Record<string, { tag: string; h1: string; h2: string; sub: string 
 }
 
 const CAPTIONS: Record<string, string[]> = {
-  fr: ['Venise', 'Gastronomie', 'Amalfi', 'Rome', 'Vignobles', 'Architecture', 'Pise'],
-  en: ['Venice', 'Gastronomy', 'Amalfi', 'Rome', 'Vineyards', 'Architecture', 'Pisa'],
-  it: ['Venezia', 'Gastronomia', 'Amalfi', 'Roma', 'Vigneti', 'Architettura', 'Pisa'],
-  ar: ['البندقية', 'المطبخ', 'أمالفي', 'روما', 'كروم العنب', 'العمارة', 'بيزا'],
-  ru: ['Венеция', 'Гастрономия', 'Амальфи', 'Рим', 'Виноградники', 'Архитектура', 'Пиза'],
+  fr: ['Venise', 'Gastronomie', 'Amalfi', 'Rome', 'Escapades', 'Architecture', 'Pise'],
+  en: ['Venice', 'Gastronomy', 'Amalfi', 'Rome', 'Escapes', 'Architecture', 'Pisa'],
+  it: ['Venezia', 'Gastronomia', 'Amalfi', 'Roma', 'Fughe', 'Architettura', 'Pisa'],
+  ar: ['البندقية', 'المطبخ', 'أمالفي', 'روما', 'رحلات', 'العمارة', 'بيزا'],
+  ru: ['Венеция', 'Гастрономия', 'Амальфи', 'Рим', 'Путешествия', 'Архитектура', 'Пиза'],
 }
 
 const IMAGES = [
@@ -47,7 +47,7 @@ const IMAGES = [
   'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=85',  // Pizza
   'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=800&q=85',  // Amalfi positano
   'https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=800&q=85',  // Tuscany hills
-  'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=85',  // Vineyards Tuscany
+  'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85',  // Convertible autumn drive — Escapes
   'https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1200&q=85', // Rome colosseum sunset
   'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=85',  // Lake Como villa
 ]

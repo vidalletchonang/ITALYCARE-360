@@ -38,7 +38,7 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
     caption: { fr: 'Gastronomie étoilée', en: 'Michelin-starred dining', it: 'Alta gastronomia', ar: 'مطبخ راقٍ', ru: 'Высокая кухня' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=85', // private jet interior
+    src: 'https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=1400&q=85', // private jet champagne couple
     caption: { fr: 'Aviation privée', en: 'Private aviation', it: 'Aviazione privata', ar: 'طيران خاص', ru: 'Частная авиация' },
   },
   {
@@ -48,6 +48,14 @@ const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
   {
     src: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1400&q=85', // concert lights stage
     caption: { fr: 'Événements exclusifs', en: 'Exclusive events', it: 'Eventi esclusivi', ar: 'فعاليات حصرية', ru: 'Эксклюзивные мероприятия' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1533674689012-136b487b7736?auto=format&fit=crop&w=1400&q=85', // champagne soirée group
+    caption: { fr: 'Nuits italiennes', en: 'Italian nights', it: 'Notti italiane', ar: 'ليالٍ إيطالية', ru: 'Итальянские ночи' },
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=85', // grand hall formal portrait
+    caption: { fr: "L'art de recevoir", en: 'The art of hospitality', it: "L'arte dell'ospitalità", ar: 'فن الضيافة', ru: 'Искусство гостеприимства' },
   },
 ]
 
