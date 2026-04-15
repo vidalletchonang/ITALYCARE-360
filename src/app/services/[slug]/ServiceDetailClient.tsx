@@ -25,7 +25,7 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   'thermal-wellness': `${BASE}/services/thermal-hero.jpg`,
   'aviation-privee': `${BASE}/services/aviation-hero.jpg`,
   'assistenza-scolastica': `${BASE}/services/assistenza-scolastica-hero.jpg`,
-  'vehicules': `${BASE}/services/vehicules-hero.jpg`,
+  'vehicules': 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85',
 }
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {

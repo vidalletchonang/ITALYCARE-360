@@ -23,6 +23,7 @@ const serviceImages: Record<string, string> = {
   'thermal-wellness': 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=90',
   'aviation-privee': 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=90',
   'assistenza-scolastica': `${BASE}/services/assistenza-scolastica.jpg`,
+  'vehicules': `${BASE}/services/vehicules.jpg`,
 }
 
 interface ServicesProps {
