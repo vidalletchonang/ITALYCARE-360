@@ -104,7 +104,7 @@ export default function Hero({ onRdv }: HeroProps) {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(180deg, rgba(14,20,32,0.25) 0%, rgba(14,20,32,0.35) 100%)',
+          background: 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(14,20,32,0.10) 100%)',
           zIndex: 1,
         }}
       />
