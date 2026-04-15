@@ -138,7 +138,7 @@ export default function Nav({ onRdv }: NavProps) {
               {t.nav.about}
               <svg className="dd-arrow" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" width="10" height="6"><path d="M1 1l4 4 4-4"/></svg>
             </Link>
-            {openDd === 'about' && (
+            {(openDd === 'about' || openDd === 'about-story') && (
               <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('about')} onMouseLeave={closeMenu}>
                 {/* Notre Histoire — itself contains a sub-flyout */}
                 <div
