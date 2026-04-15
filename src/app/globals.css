@@ -3116,29 +3116,53 @@ nav {
   box-shadow: 0 4px 16px rgba(201,168,76,0.35) !important;
 }
 
-/* --- Section dividers — elegant gold diamond --- */
+/* --- Section dividers — elegant gold diamond (imposing) --- */
 .section-divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 56px 48px;
+  gap: 28px;
+  padding: 96px 48px;
   background: transparent;
   position: relative;
 }
 .sd-line {
   flex: 1;
-  max-width: 220px;
+  max-width: 320px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.55), transparent);
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.70), transparent);
 }
 .sd-diamond {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   background: #d4a843;
   transform: rotate(45deg);
   flex-shrink: 0;
-  box-shadow: 0 0 0 4px rgba(212,168,67,0.10), 0 0 0 10px rgba(212,168,67,0.04);
+  box-shadow:
+    0 0 0 6px rgba(212,168,67,0.14),
+    0 0 0 14px rgba(212,168,67,0.06),
+    0 0 0 24px rgba(212,168,67,0.02);
+}
+.sd-diamond::before,
+.sd-diamond::after {
+  content: '';
+  position: absolute;
+  background: rgba(212,168,67,0.55);
+}
+.sd-diamond::before {
+  top: 50%; left: -40px;
+  width: 32px; height: 1px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.sd-diamond::after {
+  top: 50%; right: -40px;
+  width: 32px; height: 1px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+@media (max-width: 600px) {
+  .section-divider { padding: 56px 24px !important; gap: 18px; }
+  .sd-diamond { width: 10px; height: 10px; }
+  .sd-diamond::before, .sd-diamond::after { display: none; }
 }
 
 /* --- Gold ornament on section labels --- */
@@ -3268,15 +3292,27 @@ nav {
   background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,168,67,0.07) 0%, transparent 70%) !important;
 }
 .ni-n {
-  font-family: var(--font-cormorant) !important;
-  font-size: 62px !important;
-  font-weight: 300 !important;
+  font-family: var(--font-playfair) !important;
+  font-size: clamp(56px, 6vw, 96px) !important;
+  font-weight: 400 !important;
   letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+  margin-bottom: 14px !important;
+  color: #141C2B !important;
 }
 .ni-l {
-  font-size: 10px !important;
-  letter-spacing: 3px !important;
-  color: #6E7585 !important;
+  font-size: clamp(12px, 1vw, 15px) !important;
+  letter-spacing: 3.5px !important;
+  color: #3d4760 !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+.nums { padding: 120px 48px !important; }
+.ni { padding: 56px 24px !important; }
+@media (max-width: 900px) {
+  .nums { padding: 80px 20px !important; }
+  .nums-grid { grid-template-columns: 1fr 1fr !important; }
+  .ni { padding: 44px 18px !important; }
 }
 
 /* --- Testimonials: bigger and bolder --- */
@@ -3892,10 +3928,6 @@ footer, .footer { background: #1a2744 !important; }
 }
 
 /* Refined section dividers — tighter, more sophisticated spacing */
-.section-divider { padding: 72px 48px; }
-@media (max-width: 900px) {
-  .section-divider { padding: 48px 24px; }
-}
 
 /* Lighter, airier section backgrounds on About-like pages */
 .nums, .proc, .team-pg, .video-section, .wcu, .ils, .testi {
