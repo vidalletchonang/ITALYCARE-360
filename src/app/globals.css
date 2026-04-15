@@ -1145,9 +1145,11 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 
   /* Hero */
   .hero { padding: 90px 20px 56px; min-height: auto; }
-  .hero-right { display: flex !important; position: relative !important; right: auto !important; top: auto !important; flex-direction: row !important; gap: 28px; margin-top: 28px; }
-  .hero-stat .n { font-size: 40px !important; }
-  .hero-stat .l { font-size: 9px !important; letter-spacing: 2px !important; }
+  .hero-right { display: flex !important; position: relative !important; right: auto !important; top: auto !important; transform: none !important; flex-direction: row !important; gap: 28px; margin-top: 32px; justify-content: center; align-items: center; opacity: 1 !important; animation: none !important; }
+  .hero-stat { text-align: center !important; }
+  .hero-stat .n { font-size: 38px !important; text-align: center !important; }
+  .hero-stat .l { font-size: 10px !important; letter-spacing: 2px !important; text-align: center !important; white-space: nowrap; }
+  .hdiv { height: 36px !important; }
   .hero-title { font-size: clamp(2.2rem, 9vw, 3.4rem); }
   .hero-desc  { font-size: 0.95rem; max-width: 100%; }
 
@@ -1244,9 +1246,10 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   .hero-p { font-size: 16px !important; line-height: 1.8 !important; max-width: 100% !important; margin-bottom: 32px !important; }
   .hero-actions { flex-direction: column; gap: 12px; align-items: stretch; }
   .hero-actions a, .hero-actions button { width: 100%; text-align: center; justify-content: center; font-size: 13px !important; padding: 16px 24px !important; }
-  .hero-right { display: flex !important; flex-direction: row !important; gap: 24px !important; margin-top: 32px !important; position: relative !important; right: auto !important; top: auto !important; }
-  .hero-stat .n { font-size: 36px !important; }
-  .hero-stat .l { font-size: 9px !important; }
+  .hero-right { display: flex !important; flex-direction: row !important; gap: 20px !important; margin-top: 32px !important; position: relative !important; right: auto !important; top: auto !important; transform: none !important; justify-content: center; align-items: center; opacity: 1 !important; animation: none !important; }
+  .hero-stat { text-align: center !important; }
+  .hero-stat .n { font-size: 32px !important; text-align: center !important; }
+  .hero-stat .l { font-size: 10px !important; text-align: center !important; white-space: nowrap; }
 
   /* About */
   .about-txt { padding: 36px 16px; }
