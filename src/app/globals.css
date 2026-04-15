@@ -3940,3 +3940,102 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); }
 /* Smooth scroll for anchor navigation */
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
+
+/* ========================================================
+   INTERACTIVITY — scroll reveal, gentle parallax, hovers
+   ======================================================== */
+
+/* Auto-reveal on scroll (set by ScrollFade.tsx) */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Section headings reveal slightly differently — a soft slide-in */
+section h2.reveal-init { transform: translateY(20px) scale(0.985); }
+section h2.reveal-visible { transform: translateY(0) scale(1) !important; }
+
+/* Hero frame: micro-parallax on mouse — glide back to center smoothly */
+.hero-frame { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Subtle floating gold halo behind hero frame on hover */
+.hero-frame::after {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  border-radius: 8px;
+  background: radial-gradient(ellipse at center, rgba(212,168,67,0.10) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.hero-frame:hover::after { opacity: 1; }
+
+/* All clickable cards lift gently */
+.svc-card, .wcu-card, .tc, .blog-card, .team-card, .nav-dd-item {
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease,
+    background 0.3s ease;
+}
+.svc-card:hover { transform: translateY(-6px); }
+.wcu-card:hover { transform: translateY(-5px); }
+.tc:hover { transform: translateY(-3px); }
+
+/* Buttons — refined press-down feedback */
+button, .btn, .nav-cta, .nav-estimate-btn {
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
+  transform: scale(0.97);
+}
+
+/* Links underline animation */
+.nav-links > li > a:not(.dd-trigger) {
+  position: relative;
+}
+.nav-links > li > a:not(.dd-trigger)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: var(--o);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-links > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Image hover: gentle zoom on all card images */
+.svc-card img, .blog-card img, .team-card img, .ils-item img, .tm-pdg-photo img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.svc-card:hover img, .blog-card:hover img, .team-card:hover img, .ils-item:hover img {
+  transform: scale(1.06) !important;
+}
+
+/* WhatsApp button: gentle pulse always-on (already pulses, ensure visibility) */
+.wa-btn { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.wa-btn:hover { transform: scale(1.10); }
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init { opacity: 1 !important; transform: none !important; }
+  .hero-frame { transform: none !important; }
+  .svc-card:hover, .wcu-card:hover, .tc:hover { transform: none !important; }
+}
+

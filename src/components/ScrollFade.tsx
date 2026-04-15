@@ -2,16 +2,19 @@
 
 import { useEffect } from 'react'
 
+/* Auto-reveal common elements on scroll, plus subtle parallax on hero & gentle gold cursor glow */
 export default function ScrollFade() {
   useEffect(() => {
-    const items = document.querySelectorAll('.fade-item')
-    if (!items.length) return
+    /* ---------- 1. Scroll reveal ---------- */
+    const candidates = document.querySelectorAll(
+      '.fade-item, .reveal, section h2, section .sl, .svc-card, .wcu-card, .tc, .nums-grid > *, .ils-item, .testi-card-img, .vals .val, .proc-step, .team-card, .ag-slide.active, .blog-card, .article-hero, .article-body > *'
+    )
+    if (!candidates.length) return
 
-    // Hide items initially via JS class (not CSS default)
-    items.forEach(el => el.classList.add('fade-hidden'))
+    candidates.forEach(el => el.classList.add('reveal-init'))
 
     if (!('IntersectionObserver' in window)) {
-      items.forEach(el => { el.classList.remove('fade-hidden'); el.classList.add('visible') })
+      candidates.forEach(el => el.classList.add('reveal-visible'))
       return
     }
 
@@ -20,23 +23,41 @@ export default function ScrollFade() {
         entries.forEach((entry, i) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement
-            el.style.transitionDelay = `${(i % 8) * 0.07}s`
-            el.classList.remove('fade-hidden')
-            el.classList.add('visible')
+            el.style.transitionDelay = `${(i % 6) * 0.08}s`
+            el.classList.add('reveal-visible')
             observer.unobserve(el)
           }
         })
       },
-      { threshold: 0.05, rootMargin: '0px 0px 50px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     )
-    items.forEach(el => observer.observe(el))
+    candidates.forEach(el => observer.observe(el))
 
-    // Safety fallback — ensure everything visible after 1.5s
+    /* Safety fallback */
     const fallback = setTimeout(() => {
-      items.forEach(el => { el.classList.remove('fade-hidden'); el.classList.add('visible') })
-    }, 1500)
+      candidates.forEach(el => el.classList.add('reveal-visible'))
+    }, 2200)
 
-    return () => { observer.disconnect(); clearTimeout(fallback) }
+    /* ---------- 2. Gentle parallax on hero text via mouse ---------- */
+    const heroFrame = document.querySelector('.hero-frame') as HTMLElement | null
+    let rafId = 0
+    const onMouse = (e: MouseEvent) => {
+      if (!heroFrame) return
+      cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 8
+        const y = (e.clientY / window.innerHeight - 0.5) * 6
+        heroFrame.style.transform = `translate(${x}px, ${y}px)`
+      })
+    }
+    window.addEventListener('mousemove', onMouse, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+      window.removeEventListener('mousemove', onMouse)
+      cancelAnimationFrame(rafId)
+    }
   }, [])
 
   return null
