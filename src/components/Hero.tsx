@@ -61,6 +61,19 @@ export default function Hero({ onRdv }: HeroProps) {
         />
       ) : (
         <>
+          <img
+            src={endImage}
+            alt="Dolomites, Italy"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: 0,
+            }}
+          />
           <video
             autoPlay
             muted
@@ -75,26 +88,13 @@ export default function Hero({ onRdv }: HeroProps) {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              zIndex: 0,
+              zIndex: 1,
               opacity: videoEnded ? 0 : 1,
               transition: 'opacity 1.2s ease',
             }}
           >
             <source src={`${BASE}/hero-video.mp4`} type="video/mp4" />
           </video>
-          <img
-            src={endImage}
-            alt="Dolomites, Italy"
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              zIndex: 0,
-            }}
-          />
         </>
       )}
       <div
