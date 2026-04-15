@@ -25,6 +25,7 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   'thermal-wellness': `${BASE}/services/thermal-hero.jpg`,
   'aviation-privee': `${BASE}/services/aviation-hero.jpg`,
   'assistenza-scolastica': `${BASE}/services/assistenza-scolastica-hero.jpg`,
+  'vehicules': 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85',
 }
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
@@ -155,6 +156,14 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
       <path d="M4 14v14l20 10 20-10V14"/>
       <path d="M24 24v20"/>
       <path d="M36 19v10"/>
+    </svg>
+  ),
+  'vehicules': (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="52" height="52">
+      <path d="M8 28l4-12a3 3 0 013-2h18a3 3 0 013 2l4 12"/>
+      <path d="M6 28h36v8a2 2 0 01-2 2H8a2 2 0 01-2-2v-8z"/>
+      <circle cx="14" cy="34" r="2.5"/>
+      <circle cx="34" cy="34" r="2.5"/>
     </svg>
   ),
 }

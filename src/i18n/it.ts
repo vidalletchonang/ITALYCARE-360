@@ -1061,6 +1061,57 @@ export const it: Translation = {
           ],
         },
       },
+      {
+        icon: '🚗',
+        t: 'Veicoli — Noleggio e Acquisto',
+        d: "Noleggio o acquisto di veicoli in Italia: pratiche, assicurazione, immatricolazione, consegna. Dalla citycar al veicolo di lusso, troviamo e gestiamo tutto per te.",
+        slug: 'vehicules',
+        details: {
+          hero: "Guida in Italia senza pensieri — gestiamo il noleggio o l'acquisto del tuo veicolo, dalla selezione alla consegna.",
+          whatIs: "Il nostro servizio Veicoli accompagna i clienti nel noleggio a lungo termine o nell'acquisto di auto in Italia. Identifichiamo il modello adatto alle tue esigenze (citycar, SUV, berlina di lusso, veicolo elettrico), negoziamo le condizioni, gestiamo immatricolazione, assicurazione e consegna. Ideale per residenti stranieri, expat e proprietari di seconde case che desiderano un veicolo affidabile senza occuparsi della burocrazia.",
+          includes: [
+            'Consulenza e selezione del veicolo',
+            'Negoziazione di prezzo e condizioni di noleggio/acquisto',
+            'Pratiche di immatricolazione e codice fiscale',
+            'Assicurazione e libretto di circolazione italiano',
+            'Coordinamento con concessionari partner',
+            'Consegna al tuo indirizzo in Italia',
+            'Veicoli nuovi, usati o in leasing',
+          ],
+          notIncludes: [
+            'Costo del veicolo e assicurazione (fatturati al reale)',
+            'Manutenzione meccanica e riparazioni',
+          ],
+          price: 'A partire da 300€ (costi di coordinamento)',
+          duration: 'Da 1 a 4 settimane secondo il veicolo',
+          quiz: [
+            {
+              question: 'Che tipo di veicolo cerchi?',
+              options: [
+                { text: 'Citycar o compatta', points: 1 },
+                { text: 'SUV o berlina familiare', points: 2 },
+                { text: 'Veicolo di lusso o sportivo', points: 2 },
+              ],
+            },
+            {
+              question: 'Noleggio o acquisto?',
+              options: [
+                { text: 'Noleggio a breve termine', points: 1 },
+                { text: 'Noleggio a lungo termine / leasing', points: 2 },
+                { text: 'Acquisto', points: 2 },
+              ],
+            },
+            {
+              question: 'Entro quando ne hai bisogno?',
+              options: [
+                { text: 'Mi sto informando', points: 0 },
+                { text: 'Entro 2-4 settimane', points: 1 },
+                { text: 'Urgente — entro 1 settimana', points: 2 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {

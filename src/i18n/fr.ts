@@ -1061,6 +1061,57 @@ export const fr: Translation = {
           ],
         },
       },
+      {
+        icon: '🚗',
+        t: 'Véhicules — Location & Achat',
+        d: "Location ou achat de véhicules en Italie : démarches, assurance, immatriculation, livraison. De la citadine à la voiture de luxe, nous trouvons et gérons tout pour vous.",
+        slug: 'vehicules',
+        details: {
+          hero: "Roulez en Italie sans tracas — nous gérons la location ou l'achat de votre véhicule, de la sélection à la livraison.",
+          whatIs: "Notre service Véhicules accompagne nos clients pour la location longue durée ou l'achat de voitures en Italie. Nous identifions le modèle adapté à vos besoins (citadine, SUV, berline de luxe, véhicule électrique), négocions les conditions, gérons les démarches d'immatriculation, d'assurance et de livraison. Idéal pour les résidents étrangers, les expatriés et les propriétaires d'une résidence secondaire qui souhaitent un véhicule fiable sans s'occuper des formalités.",
+          includes: [
+            'Conseil et sélection du véhicule',
+            'Négociation prix et conditions de location/achat',
+            "Démarches d'immatriculation et codice fiscale",
+            'Assurance et carte grise italienne',
+            'Coordination avec concessionnaires partenaires',
+            'Livraison à votre adresse en Italie',
+            'Véhicules neufs, occasion ou leasing',
+          ],
+          notIncludes: [
+            'Coût du véhicule et assurance (facturés au réel)',
+            'Entretien mécanique et réparations',
+          ],
+          price: 'À partir de 300€ (frais de coordination)',
+          duration: '1 à 4 semaines selon le véhicule',
+          quiz: [
+            {
+              question: 'Quel type de véhicule recherchez-vous ?',
+              options: [
+                { text: 'Citadine ou compacte', points: 1 },
+                { text: 'SUV ou berline familiale', points: 2 },
+                { text: 'Véhicule de luxe ou sportif', points: 2 },
+              ],
+            },
+            {
+              question: 'Location ou achat ?',
+              options: [
+                { text: 'Location courte durée', points: 1 },
+                { text: 'Location longue durée / leasing', points: 2 },
+                { text: 'Achat', points: 2 },
+              ],
+            },
+            {
+              question: 'Dans quel délai en avez-vous besoin ?',
+              options: [
+                { text: 'Je me renseigne', points: 0 },
+                { text: 'Sous 2 à 4 semaines', points: 1 },
+                { text: 'Urgent — sous 1 semaine', points: 2 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {

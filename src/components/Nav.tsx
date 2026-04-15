@@ -44,6 +44,7 @@ const SVC_SHORT: Record<string, Record<string, string>> = {
   'thermal-wellness':      { fr: 'Thermal Wellness',  en: 'Thermal Wellness',   it: 'Terme & Wellness',    ar: 'علاج حراري',       ru: 'Термы' },
   'aviation-privee':       { fr: 'Aviation Privée',   en: 'Private Aviation',   it: 'Aviazione Privata',   ar: 'طيران خاص',        ru: 'Авиация' },
   'assistenza-scolastica': { fr: 'Scolarité',         en: 'School Assistance',  it: 'Assistenza Scolastica', ar: 'مدرسة',          ru: 'Школа' },
+  'vehicules':             { fr: 'Véhicules',         en: 'Vehicles',           it: 'Veicoli',             ar: 'مركبات',           ru: 'Автомобили' },
 }
 
 interface NavProps {

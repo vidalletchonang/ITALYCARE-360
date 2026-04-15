@@ -1061,6 +1061,57 @@ export const en: Translation = {
           ],
         },
       },
+      {
+        icon: '🚗',
+        t: 'Vehicles — Rental & Purchase',
+        d: "Rent or buy vehicles in Italy: paperwork, insurance, registration, delivery. From city cars to luxury vehicles, we source and handle everything for you.",
+        slug: 'vehicules',
+        details: {
+          hero: "Drive in Italy hassle-free — we handle your vehicle rental or purchase from selection to delivery.",
+          whatIs: "Our Vehicles service supports clients with long-term leasing or car purchases in Italy. We identify the right model for your needs (city car, SUV, luxury sedan, electric vehicle), negotiate terms, handle registration, insurance and delivery. Ideal for foreign residents, expatriates, and second-home owners who want a reliable vehicle without dealing with the paperwork.",
+          includes: [
+            'Vehicle advisory and selection',
+            'Price and terms negotiation for rental or purchase',
+            'Registration and codice fiscale handling',
+            'Italian insurance and registration certificate',
+            'Coordination with partner dealerships',
+            'Delivery to your address in Italy',
+            'New, used or leasing options',
+          ],
+          notIncludes: [
+            'Vehicle cost and insurance (billed at actual cost)',
+            'Mechanical maintenance and repairs',
+          ],
+          price: 'From €300 (coordination fee)',
+          duration: '1 to 4 weeks depending on the vehicle',
+          quiz: [
+            {
+              question: 'What type of vehicle are you looking for?',
+              options: [
+                { text: 'City car or compact', points: 1 },
+                { text: 'SUV or family sedan', points: 2 },
+                { text: 'Luxury or sports vehicle', points: 2 },
+              ],
+            },
+            {
+              question: 'Rental or purchase?',
+              options: [
+                { text: 'Short-term rental', points: 1 },
+                { text: 'Long-term rental / leasing', points: 2 },
+                { text: 'Purchase', points: 2 },
+              ],
+            },
+            {
+              question: 'When do you need it?',
+              options: [
+                { text: "I'm researching", points: 0 },
+                { text: 'Within 2 to 4 weeks', points: 1 },
+                { text: 'Urgent — within 1 week', points: 2 },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
   process: {
