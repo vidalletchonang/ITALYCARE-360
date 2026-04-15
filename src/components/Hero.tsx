@@ -26,6 +26,7 @@ export default function Hero({ onRdv }: HeroProps) {
   const router = useRouter()
   const stats = heroStats[lang] ?? heroStats.en
   const [isMobile, setIsMobile] = useState(false)
+  const [videoEnded, setVideoEnded] = useState(false)
 
   useEffect(() => {
     const check = () => setIsMobile(window.matchMedia('(max-width: 768px)').matches)
@@ -33,6 +34,9 @@ export default function Hero({ onRdv }: HeroProps) {
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
   }, [])
+
+  const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const endImage = `${BASE}/hero-end.jpg`
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -42,8 +46,8 @@ export default function Hero({ onRdv }: HeroProps) {
     <section className="hero">
       {isMobile ? (
         <img
-          src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1200&q=80"
-          alt="Italy"
+          src={endImage}
+          alt="Dolomites, Italy"
           loading="eager"
           style={{
             position: 'absolute',
@@ -56,24 +60,42 @@ export default function Hero({ onRdv }: HeroProps) {
           }}
         />
       ) : (
-        <video
-          autoPlay
-          muted
-          playsInline
-          preload="metadata"
-          poster="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1920&q=80"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0,
-          }}
-        >
-          <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-video.mp4`} type="video/mp4" />
-        </video>
+        <>
+          <video
+            autoPlay
+            muted
+            playsInline
+            preload="metadata"
+            poster={endImage}
+            onEnded={() => setVideoEnded(true)}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: 0,
+              opacity: videoEnded ? 0 : 1,
+              transition: 'opacity 1.2s ease',
+            }}
+          >
+            <source src={`${BASE}/hero-video.mp4`} type="video/mp4" />
+          </video>
+          <img
+            src={endImage}
+            alt="Dolomites, Italy"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: 0,
+            }}
+          />
+        </>
       )}
       <div
         style={{
