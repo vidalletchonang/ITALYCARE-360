@@ -1063,42 +1063,43 @@ export const en: Translation = {
       },
       {
         icon: '🚗',
-        t: 'Vehicles — Rental & Purchase',
-        d: "Rent or buy vehicles in Italy: paperwork, insurance, registration, delivery. From city cars to luxury vehicles, we source and handle everything for you.",
+        t: 'Vehicles — Rental & Buy-Back',
+        d: "Rent a car for your stay in Italy, or sell us your vehicle. Wide fleet available and fast buy-back of your car with a transparent offer.",
         slug: 'vehicules',
         details: {
-          hero: "Drive in Italy hassle-free — we handle your vehicle rental or purchase from selection to delivery.",
-          whatIs: "Our Vehicles service supports clients with long-term leasing or car purchases in Italy. We identify the right model for your needs (city car, SUV, luxury sedan, electric vehicle), negotiate terms, handle registration, insurance and delivery. Ideal for foreign residents, expatriates, and second-home owners who want a reliable vehicle without dealing with the paperwork.",
+          hero: "Whether you're renting for a stay or selling your vehicle, ITALYCARE 360 keeps it simple — no detours, no surprises.",
+          whatIs: "Our Vehicles service is built on two complementary offers. 1) Rental: we provide our clients with vehicles tailored to their travels and stays in Italy — city cars, family sedans, SUVs and luxury models — with delivery, insurance included and 24/7 roadside assistance. 2) Buy-back: we purchase your car in Italy, fast, with a fair valuation, a firm offer within 48 hours, and full handling of the paperwork (ownership transfer, deregistration). Ideal for foreign residents leaving the country, heirs, or anyone looking to sell a vehicle without hassle.",
           includes: [
-            'Vehicle advisory and selection',
-            'Price and terms negotiation for rental or purchase',
-            'Registration and codice fiscale handling',
-            'Italian insurance and registration certificate',
-            'Coordination with partner dealerships',
-            'Delivery to your address in Italy',
-            'New, used or leasing options',
+            'RENTAL — Wide fleet (city, SUV, sedan, luxury)',
+            'RENTAL — Delivery to your accommodation or airport',
+            'RENTAL — Full-coverage insurance included',
+            'RENTAL — 24/7 roadside assistance in 5 languages',
+            'BUY-BACK — Free valuation of your vehicle',
+            'BUY-BACK — Firm offer within 48 hours',
+            'BUY-BACK — Administrative paperwork handled',
+            'BUY-BACK — Fast, secure payment',
           ],
           notIncludes: [
-            'Vehicle cost and insurance (billed at actual cost)',
-            'Mechanical maintenance and repairs',
+            'Fuel and traffic fines for the rental',
+            'Negotiation with third-party buyers for the buy-back',
           ],
-          price: 'From €300 (coordination fee)',
-          duration: '1 to 4 weeks depending on the vehicle',
+          price: 'Rental from €60/day — Buy-back: offer based on market value',
+          duration: 'Rental immediate — Buy-back within 3 to 7 days',
           quiz: [
             {
-              question: 'What type of vehicle are you looking for?',
+              question: 'What would you like to do?',
+              options: [
+                { text: 'Rent a car for my stay', points: 2 },
+                { text: 'Sell my current car in Italy', points: 2 },
+                { text: "I'm just researching", points: 0 },
+              ],
+            },
+            {
+              question: 'For a rental — what type of vehicle?',
               options: [
                 { text: 'City car or compact', points: 1 },
                 { text: 'SUV or family sedan', points: 2 },
                 { text: 'Luxury or sports vehicle', points: 2 },
-              ],
-            },
-            {
-              question: 'Rental or purchase?',
-              options: [
-                { text: 'Short-term rental', points: 1 },
-                { text: 'Long-term rental / leasing', points: 2 },
-                { text: 'Purchase', points: 2 },
               ],
             },
             {

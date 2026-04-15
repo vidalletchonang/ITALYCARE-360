@@ -1063,30 +1063,39 @@ export const fr: Translation = {
       },
       {
         icon: '🚗',
-        t: 'Véhicules — Location & Achat',
-        d: "Location ou achat de véhicules en Italie : démarches, assurance, immatriculation, livraison. De la citadine à la voiture de luxe, nous trouvons et gérons tout pour vous.",
+        t: 'Véhicules — Location & Rachat',
+        d: "Louez une voiture pour votre séjour en Italie, ou vendez-nous votre véhicule. Flotte variée disponible et rachat rapide de votre voiture avec offre transparente.",
         slug: 'vehicules',
         details: {
-          hero: "Roulez en Italie sans tracas — nous gérons la location ou l'achat de votre véhicule, de la sélection à la livraison.",
-          whatIs: "Notre service Véhicules accompagne nos clients pour la location longue durée ou l'achat de voitures en Italie. Nous identifions le modèle adapté à vos besoins (citadine, SUV, berline de luxe, véhicule électrique), négocions les conditions, gérons les démarches d'immatriculation, d'assurance et de livraison. Idéal pour les résidents étrangers, les expatriés et les propriétaires d'une résidence secondaire qui souhaitent un véhicule fiable sans s'occuper des formalités.",
+          hero: "Que vous louiez pour un séjour ou que vous vendiez votre véhicule, ITALYCARE 360 simplifie tout — sans détour, sans mauvaise surprise.",
+          whatIs: "Notre service Véhicules repose sur deux offres complémentaires. 1) Location : nous mettons à disposition de nos clients des véhicules adaptés à leurs déplacements et leurs séjours en Italie — citadines, berlines familiales, SUV et voitures de prestige — avec livraison, assurance incluse et assistance 24/7. 2) Rachat : nous achetons votre voiture en Italie, rapidement, avec une évaluation honnête, une proposition sous 48 h, et une prise en charge complète des formalités (transfert de propriété, radiation). Idéal pour les résidents étrangers qui partent, les héritiers ou toute personne souhaitant vendre un véhicule sans complications.",
           includes: [
-            'Conseil et sélection du véhicule',
-            'Négociation prix et conditions de location/achat',
-            "Démarches d'immatriculation et codice fiscale",
-            'Assurance et carte grise italienne',
-            'Coordination avec concessionnaires partenaires',
-            'Livraison à votre adresse en Italie',
-            'Véhicules neufs, occasion ou leasing',
+            'LOCATION — Flotte variée (citadine, SUV, berline, luxe)',
+            'LOCATION — Livraison à votre hébergement ou à l\'aéroport',
+            'LOCATION — Assurance tous risques incluse',
+            'LOCATION — Assistance routière 24/7 en 5 langues',
+            'RACHAT — Évaluation gratuite de votre véhicule',
+            'RACHAT — Offre ferme sous 48 h',
+            'RACHAT — Formalités administratives prises en charge',
+            'RACHAT — Paiement rapide et sécurisé',
           ],
           notIncludes: [
-            'Coût du véhicule et assurance (facturés au réel)',
-            'Entretien mécanique et réparations',
+            "Carburant et amendes pour la location",
+            "Négociation avec des tiers acheteurs pour le rachat",
           ],
-          price: 'À partir de 300€ (frais de coordination)',
-          duration: '1 à 4 semaines selon le véhicule',
+          price: 'Location dès 60€/jour — Rachat : offre selon cote du véhicule',
+          duration: 'Location immédiate — Rachat sous 3 à 7 jours',
           quiz: [
             {
-              question: 'Quel type de véhicule recherchez-vous ?',
+              question: 'Que souhaitez-vous faire ?',
+              options: [
+                { text: 'Louer une voiture pour mon séjour', points: 2 },
+                { text: 'Vendre ma voiture actuelle en Italie', points: 2 },
+                { text: 'Je me renseigne', points: 0 },
+              ],
+            },
+            {
+              question: 'Pour une location — quel type de véhicule ?',
               options: [
                 { text: 'Citadine ou compacte', points: 1 },
                 { text: 'SUV ou berline familiale', points: 2 },
@@ -1094,18 +1103,10 @@ export const fr: Translation = {
               ],
             },
             {
-              question: 'Location ou achat ?',
-              options: [
-                { text: 'Location courte durée', points: 1 },
-                { text: 'Location longue durée / leasing', points: 2 },
-                { text: 'Achat', points: 2 },
-              ],
-            },
-            {
-              question: 'Dans quel délai en avez-vous besoin ?',
+              question: 'Dans quel délai ?',
               options: [
                 { text: 'Je me renseigne', points: 0 },
-                { text: 'Sous 2 à 4 semaines', points: 1 },
+                { text: 'Dans 2 à 4 semaines', points: 1 },
                 { text: 'Urgent — sous 1 semaine', points: 2 },
               ],
             },

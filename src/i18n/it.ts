@@ -1063,42 +1063,43 @@ export const it: Translation = {
       },
       {
         icon: '🚗',
-        t: 'Veicoli — Noleggio e Acquisto',
-        d: "Noleggio o acquisto di veicoli in Italia: pratiche, assicurazione, immatricolazione, consegna. Dalla citycar al veicolo di lusso, troviamo e gestiamo tutto per te.",
+        t: 'Veicoli — Noleggio e Ritiro',
+        d: "Noleggia un'auto per il tuo soggiorno in Italia, o vendici il tuo veicolo. Ampia flotta disponibile e ritiro rapido della tua auto con offerta trasparente.",
         slug: 'vehicules',
         details: {
-          hero: "Guida in Italia senza pensieri — gestiamo il noleggio o l'acquisto del tuo veicolo, dalla selezione alla consegna.",
-          whatIs: "Il nostro servizio Veicoli accompagna i clienti nel noleggio a lungo termine o nell'acquisto di auto in Italia. Identifichiamo il modello adatto alle tue esigenze (citycar, SUV, berlina di lusso, veicolo elettrico), negoziamo le condizioni, gestiamo immatricolazione, assicurazione e consegna. Ideale per residenti stranieri, expat e proprietari di seconde case che desiderano un veicolo affidabile senza occuparsi della burocrazia.",
+          hero: "Sia che noleggi per un soggiorno, sia che venda il tuo veicolo, ITALYCARE 360 rende tutto semplice — senza giri di parole, senza sorprese.",
+          whatIs: "Il nostro servizio Veicoli si basa su due offerte complementari. 1) Noleggio: mettiamo a disposizione dei nostri clienti veicoli adatti agli spostamenti e ai soggiorni in Italia — citycar, berline familiari, SUV e auto di prestigio — con consegna, assicurazione inclusa e assistenza stradale 24/7. 2) Ritiro: acquistiamo la tua auto in Italia, rapidamente, con valutazione onesta, offerta vincolante entro 48 ore e gestione completa delle pratiche (passaggio di proprietà, radiazione). Ideale per residenti stranieri in partenza, eredi o chiunque voglia vendere un veicolo senza complicazioni.",
           includes: [
-            'Consulenza e selezione del veicolo',
-            'Negoziazione di prezzo e condizioni di noleggio/acquisto',
-            'Pratiche di immatricolazione e codice fiscale',
-            'Assicurazione e libretto di circolazione italiano',
-            'Coordinamento con concessionari partner',
-            'Consegna al tuo indirizzo in Italia',
-            'Veicoli nuovi, usati o in leasing',
+            'NOLEGGIO — Ampia flotta (city, SUV, berlina, lusso)',
+            'NOLEGGIO — Consegna presso il tuo alloggio o aeroporto',
+            'NOLEGGIO — Assicurazione kasko inclusa',
+            'NOLEGGIO — Assistenza stradale 24/7 in 5 lingue',
+            'RITIRO — Valutazione gratuita del tuo veicolo',
+            'RITIRO — Offerta vincolante entro 48 ore',
+            'RITIRO — Pratiche amministrative a carico nostro',
+            'RITIRO — Pagamento rapido e sicuro',
           ],
           notIncludes: [
-            'Costo del veicolo e assicurazione (fatturati al reale)',
-            'Manutenzione meccanica e riparazioni',
+            'Carburante e multe per il noleggio',
+            'Trattativa con terzi acquirenti per il ritiro',
           ],
-          price: 'A partire da 300€ (costi di coordinamento)',
-          duration: 'Da 1 a 4 settimane secondo il veicolo',
+          price: 'Noleggio da 60€/giorno — Ritiro: offerta secondo valore di mercato',
+          duration: 'Noleggio immediato — Ritiro in 3-7 giorni',
           quiz: [
             {
-              question: 'Che tipo di veicolo cerchi?',
+              question: 'Cosa vorresti fare?',
+              options: [
+                { text: 'Noleggiare un\'auto per il mio soggiorno', points: 2 },
+                { text: 'Vendere la mia auto attuale in Italia', points: 2 },
+                { text: 'Mi sto informando', points: 0 },
+              ],
+            },
+            {
+              question: 'Per il noleggio — che tipo di veicolo?',
               options: [
                 { text: 'Citycar o compatta', points: 1 },
                 { text: 'SUV o berlina familiare', points: 2 },
                 { text: 'Veicolo di lusso o sportivo', points: 2 },
-              ],
-            },
-            {
-              question: 'Noleggio o acquisto?',
-              options: [
-                { text: 'Noleggio a breve termine', points: 1 },
-                { text: 'Noleggio a lungo termine / leasing', points: 2 },
-                { text: 'Acquisto', points: 2 },
               ],
             },
             {
