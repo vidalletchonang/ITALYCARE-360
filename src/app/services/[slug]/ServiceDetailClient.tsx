@@ -233,7 +233,7 @@ export default function ServiceDetailClient({ slug }: Props) {
           alt={service.t}
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', zIndex: 0 }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(14,20,32,0.80) 0%, rgba(14,20,32,0.55) 50%, rgba(14,20,32,0.35) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(14,20,32,0.55) 0%, rgba(14,20,32,0.30) 50%, rgba(14,20,32,0.15) 100%)', zIndex: 1 }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 860, margin: '0 auto' }}>
           <div style={{ color: '#d4a843', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
             {SERVICE_ICONS[slug] || null}
