@@ -3,42 +3,44 @@
 import { useEffect, useState } from 'react'
 import { useLang } from '@/context/LangContext'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 /* ── Luxury images that valorize our services ── */
 const LUX_IMAGES: { src: string; caption: Record<string, string> }[] = [
   {
-    src: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1400&q=85', // luxury villa with pool
+    src: `${BASE}/gallery/villas.jpg`,
     caption: { fr: 'Villas de prestige', en: 'Prestige villas', it: 'Ville di prestigio', ar: 'فيلات فاخرة', ru: 'Престижные виллы' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85', // luxury interior
+    src: `${BASE}/gallery/renovation.jpg`,
     caption: { fr: 'Rénovation haut de gamme', en: 'High-end renovation', it: 'Ristrutturazione di lusso', ar: 'تجديد فاخر', ru: 'Премиальный ремонт' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85', // luxury dining
+    src: `${BASE}/gallery/conciergerie.jpg`,
     caption: { fr: 'Conciergerie d\'exception', en: 'Exceptional concierge', it: 'Concierge d\'eccezione', ar: 'خدمة استثنائية', ru: 'Эксклюзивный консьерж' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1400&q=85', // Venice canal twilight
+    src: `${BASE}/gallery/venise.jpg`,
     caption: { fr: 'Élégance vénitienne', en: 'Venetian elegance', it: 'Eleganza veneziana', ar: 'أناقة البندقية', ru: 'Венецианская элегантность' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=85', // chef plating caviar fine dining
+    src: `${BASE}/gallery/gastronomie.jpg`,
     caption: { fr: 'Gastronomie étoilée', en: 'Michelin-starred dining', it: 'Alta gastronomia', ar: 'مطبخ راقٍ', ru: 'Высокая кухня' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=1400&q=85', // private jet champagne couple
+    src: `${BASE}/gallery/aviation.jpg`,
     caption: { fr: 'Aviation privée', en: 'Private aviation', it: 'Aviazione privata', ar: 'طيران خاص', ru: 'Частная авиация' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1400&q=85', // elegant wedding reception table
+    src: `${BASE}/gallery/receptions.jpg`,
     caption: { fr: 'Réceptions de prestige', en: 'Prestige receptions', it: 'Ricevimenti di prestigio', ar: 'حفلات استقبال فاخرة', ru: 'Престижные приёмы' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1400&q=85', // concert lights stage
+    src: `${BASE}/gallery/evenements.jpg`,
     caption: { fr: 'Événements exclusifs', en: 'Exclusive events', it: 'Eventi esclusivi', ar: 'فعاليات حصرية', ru: 'Эксклюзивные мероприятия' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=85', // grand hall formal portrait
+    src: `${BASE}/gallery/art-de-recevoir.jpg`,
     caption: { fr: "L'art de recevoir", en: 'The art of hospitality', it: "L'arte dell'ospitalità", ar: 'فن الضيافة', ru: 'Искусство гостеприимства' },
   },
 ]
