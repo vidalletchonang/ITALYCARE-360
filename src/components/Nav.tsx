@@ -140,10 +140,25 @@ export default function Nav({ onRdv }: NavProps) {
             </Link>
             {openDd === 'about' && (
               <div className="nav-dd nav-dd--sm" onMouseEnter={() => openMenu('about')} onMouseLeave={closeMenu}>
-                <Link href="/about"               className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.story}</Link>
-                <Link href="/about#numbers"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
-                <Link href="/about#process"       className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.process}</Link>
-                <Link href="/about#team"          className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
+                {/* Notre Histoire — itself contains a sub-flyout */}
+                <div
+                  className="nav-dd-item has-sub"
+                  onMouseEnter={() => openMenu('about-story')}
+                  onMouseLeave={() => openMenu('about')}
+                >
+                  <Link href="/about" className="nav-dd-sub-trigger" onClick={() => setOpenDd(null)}>
+                    <span>{ab.story}</span>
+                    <svg viewBox="0 0 6 10" fill="none" stroke="currentColor" strokeWidth="1.5" width="6" height="10"><path d="M1 1l4 4-4 4"/></svg>
+                  </Link>
+                  {openDd === 'about-story' && (
+                    <div className="nav-dd-sub" onMouseEnter={() => openMenu('about-story')} onMouseLeave={() => openMenu('about')}>
+                      <Link href="/about#numbers" className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.why}</Link>
+                      <Link href="/about#process" className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.process}</Link>
+                      <Link href="/about#team"    className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.team}</Link>
+                    </div>
+                  )}
+                </div>
+
                 <Link href="/about#video"         className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.video}</Link>
                 <Link href="/about#lifestyle"     className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.lifestyle}</Link>
                 <Link href="/about#testimonials"  className="nav-dd-item" onClick={() => setOpenDd(null)}>{ab.testimonials}</Link>
@@ -215,10 +230,12 @@ export default function Nav({ onRdv }: NavProps) {
         {/* About with sub-items */}
         <Link href="/about" onClick={() => setMenuOpen(false)} style={{ fontWeight: 600 }}>{t.nav.about}</Link>
         <div className="mobile-sub">
-          <Link href="/about"               onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.story}</Link>
-          <Link href="/about#numbers"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
-          <Link href="/about#process"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.process}</Link>
-          <Link href="/about#team"          onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
+          <Link href="/about"               onClick={() => setMenuOpen(false)} className="mobile-sub-item" style={{ fontWeight: 600 }}>{ab.story}</Link>
+          <div className="mobile-sub-nested">
+            <Link href="/about#numbers"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.why}</Link>
+            <Link href="/about#process"       onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.process}</Link>
+            <Link href="/about#team"          onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.team}</Link>
+          </div>
           <Link href="/about#video"         onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.video}</Link>
           <Link href="/about#lifestyle"     onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.lifestyle}</Link>
           <Link href="/about#testimonials"  onClick={() => setMenuOpen(false)} className="mobile-sub-item">{ab.testimonials}</Link>
