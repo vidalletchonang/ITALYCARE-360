@@ -55,9 +55,8 @@ export default function Hero({ onRdv }: HeroProps) {
             left: 0,
             width: '100%',
             height: '100%',
-            objectFit: 'contain',
+            objectFit: 'cover',
             objectPosition: 'center',
-            backgroundColor: '#141C2B',
             zIndex: 0,
           }}
         />
@@ -72,9 +71,8 @@ export default function Hero({ onRdv }: HeroProps) {
               left: 0,
               width: '100%',
               height: '100%',
-              objectFit: 'contain',
+              objectFit: 'cover',
             objectPosition: 'center',
-            backgroundColor: '#141C2B',
               zIndex: 0,
             }}
           />
@@ -91,9 +89,8 @@ export default function Hero({ onRdv }: HeroProps) {
               left: 0,
               width: '100%',
               height: '100%',
-              objectFit: 'contain',
+              objectFit: 'cover',
             objectPosition: 'center',
-            backgroundColor: '#141C2B',
               zIndex: 1,
               opacity: videoEnded ? 0 : 1,
               transition: 'opacity 1.2s ease',
