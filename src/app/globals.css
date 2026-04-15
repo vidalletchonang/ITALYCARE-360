@@ -89,10 +89,6 @@ body {
   margin-left: 0;
   margin-right: auto;
 }
-[dir="rtl"] .scroll-ind {
-  left: auto;
-  right: 48px;
-}
 [dir="rtl"] .hero-tag {
   flex-direction: row-reverse;
 }
@@ -366,31 +362,6 @@ nav {
   text-align: right;
 }
 .hdiv { width: 1px; height: 36px; background: rgba(201,168,76,0.2); margin-left: auto; }
-
-.scroll-ind {
-  position: absolute;
-  bottom: 40px;
-  left: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  animation: fadeUp 1s 1.3s forwards;
-}
-.sc-line {
-  width: 1px;
-  height: 52px;
-  background: linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
-  animation: pulse 2s ease-in-out infinite;
-}
-.sc-txt {
-  font-size: 16px;
-  letter-spacing: 3px;
-  color: rgba(255,255,255,0.65);
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-}
 
 /* ===================== MARQUEE ===================== */
 .mq { background: var(--o); padding: 13px 0; overflow: hidden; }
@@ -3908,3 +3879,72 @@ footer, .footer { background: #1a2744 !important; }
   .testi-edit-grid { grid-template-columns: 1fr; gap: 18px; padding: 0 16px; }
   .testi-card-img { height: 220px; }
 }
+
+/* ========================================================
+   LUXURY POLISH — final harmonization pass
+   Unified frames, softer shadows, refined typography
+   ======================================================== */
+
+/* Unified card rhythm: softer borders, consistent radius */
+.wcu-card,
+.testi-card,
+.svc-card,
+.calc-card {
+  border-color: rgba(201,168,76,0.16);
+  box-shadow: 0 1px 2px rgba(20,28,43,0.02);
+}
+.wcu-card:hover,
+.testi-card:hover,
+.svc-card:hover {
+  box-shadow: 0 14px 48px rgba(20,28,43,0.08), 0 1px 2px rgba(201,168,76,0.06);
+}
+
+/* Refined section dividers — tighter, more sophisticated spacing */
+.section-divider { padding: 72px 48px; }
+@media (max-width: 900px) {
+  .section-divider { padding: 48px 24px; }
+}
+
+/* Lighter, airier section backgrounds on About-like pages */
+.nums, .proc, .team-pg, .video-section, .wcu, .ils, .testi {
+  position: relative;
+}
+
+/* Consistent page-hero bottom spacing */
+.page-hero { margin-bottom: 0; }
+
+/* Softer, more elegant body text contrast */
+body {
+  color: #1a2032;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Luxury button refinement: subtle lift instead of heavy shadow */
+.btn, .nav-cta, .nav-estimate-btn {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+
+/* Elegant fade for section headings */
+.sl span, .ils-tag, .calc-label, .page-hero-tag {
+  font-weight: 500 !important;
+}
+
+/* Soft gold hairline divider after hero on every page */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.55), transparent);
+  z-index: 3;
+}
+
+/* Footer tighten */
+footer { border-top: 1px solid rgba(255,255,255,0.05); }
+
+/* Smooth scroll for anchor navigation */
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
