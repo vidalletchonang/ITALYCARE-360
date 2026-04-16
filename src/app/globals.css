@@ -2104,10 +2104,14 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 /* White card (on light body) */
 .calc-card {
   background: #ffffff !important;
-  border: none !important;
-  border-radius: 16px !important;
-  box-shadow: 0 8px 48px rgba(26,39,68,0.13), 0 2px 8px rgba(26,39,68,0.06) !important;
+  border: 1px solid rgba(212,168,67,0.15) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 48px rgba(26,39,68,0.10), 0 2px 8px rgba(26,39,68,0.04) !important;
   backdrop-filter: none !important;
+  padding: 44px 40px !important;
+}
+@media (max-width: 600px) {
+  .calc-card { padding: 28px 18px !important; border-radius: 14px !important; }
 }
 
 /* Progress bar */
@@ -2147,13 +2151,51 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   letter-spacing: 0.3px;
 }
 
+/* Service chip grid — 4 columns on desktop, 3 tablet, 2 mobile */
+.calc-grid-sm {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+@media (max-width: 900px) { .calc-grid-sm { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .calc-grid-sm { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+
+/* City grid — 3 columns */
+.calc-grid-city {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 600px) { .calc-grid-city { grid-template-columns: repeat(2, 1fr); } }
+
+/* Budget / Timeline grids */
+.calc-grid-budget,
+.calc-grid-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 600px) {
+  .calc-grid-budget,
+  .calc-grid-timeline { grid-template-columns: 1fr 1fr; }
+}
+
 /* Service chips */
 .calc-chip {
   background: #f8f9fe !important;
   border: 1px solid #dde3f0 !important;
-  border-radius: 12px !important;
-  padding: 16px 20px !important;
+  border-radius: 14px !important;
+  padding: 22px 16px !important;
   transition: all 0.22s ease !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  cursor: pointer;
 }
 .calc-chip:hover {
   background: #fff8ec !important;
