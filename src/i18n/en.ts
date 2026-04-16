@@ -761,7 +761,7 @@ export const en: Translation = {
         details: {
           hero: 'Find the right certified professional in Italy — we select and verify every expert for you.',
           showcase: [
-            { img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=85', title: 'Architect for Coastal Villa', desc: 'A renowned Sardinian architect matched with a client building a contemporary cliff-side villa. Portfolio review, initial consultation, and project contract — arranged in 5 days.' },
+            { img: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=85', title: 'Architect for Coastal Villa', desc: 'A renowned Sardinian architect matched with a client building a contemporary cliff-side villa. Portfolio review, initial consultation, and project contract — arranged in 5 days.' },
             { img: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=85', title: 'Bilingual Accountant in Milan', desc: 'An English-Italian accountant found for an expat family managing rental income and tax filings. Ongoing monthly support with quarterly fiscal reviews.' },
             { img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=85', title: 'Private Tutor for Children', desc: 'An Italian language tutor and homework helper for two children of an American family in Florence. 3 sessions per week, progress reports to parents — integrated within a week.' },
           ],
