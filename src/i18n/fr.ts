@@ -546,7 +546,7 @@ export const fr: Translation = {
         details: {
           hero: "Célébrez vos moments précieux en Italie — organisation complète de vos événements avec un soin exceptionnel.",
           showcase: [
-            { img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85', title: 'Mariage au bord du lac', desc: 'Une cérémonie de conte de fées sur les rives du Lac de Côme, avec 120 invités dans une villa privée. Design floral, orchestre live et feux d\'artifice — chaque détail orchestré à la perfection.' },
+            { img: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=85', title: 'Mariage au bord du lac', desc: 'Une cérémonie de conte de fées sur les rives du Lac de Côme, avec 120 invités dans une villa privée. Design floral, orchestre live et feux d\'artifice — chaque détail orchestré à la perfection.' },
             { img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=85', title: 'Séminaire d\'entreprise en Toscane', desc: 'Un séminaire de trois jours dans un domaine historique des collines du Chianti. Team-building, gastronomie et sessions stratégiques dans un cadre italien inspirant.' },
             { img: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=85', title: 'Concert privé & soirée de gala', desc: 'Un gala exclusif en cravate noire dans un palais de la Renaissance, avec un artiste italien célèbre en concert. Traiteur, sécurité et logistique invités gérés sans accroc.' },
           ],
