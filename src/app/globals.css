@@ -3808,14 +3808,14 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
    SERVICE FORM — elegant cream section, separated & refined
    ═══════════════════════════════════════════════════════ */
 .sd-form-wrap {
-  background: linear-gradient(170deg, #FBF6EE 0%, #F5EFE2 50%, #EDE5D5 100%);
+  background: linear-gradient(160deg, #111d35 0%, #1a2744 60%, #1e2f5c 100%);
   border-radius: 24px;
   padding: 64px 48px;
   margin-bottom: 32px;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(212,168,67,0.20);
-  box-shadow: 0 8px 40px rgba(20,28,43,0.05);
+  border: 1px solid rgba(212,168,67,0.25);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.20);
 }
 .sd-form-wrap::before {
   content: '';
@@ -3827,10 +3827,10 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 .sd-form-wrap::after {
   content: '';
   position: absolute;
-  inset: 16px;
-  border: 1px solid rgba(212,168,67,0.12);
-  border-radius: 16px;
   pointer-events: none;
+  inset: 16px;
+  border: 1px solid rgba(212,168,67,0.18);
+  border-radius: 16px;
 }
 .sd-form-inner {
   position: relative;
@@ -3842,13 +3842,13 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 .sd-form-title {
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 400;
-  color: #141C2B;
+  color: #F5EDD6;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
 }
 .sd-form-sub {
   font-size: 17px;
-  color: #555B66;
+  color: rgba(245,237,214,0.60);
   line-height: 1.65;
 }
 .sd-form-fields {
@@ -3857,23 +3857,23 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
   gap: 16px;
 }
 .sd-form-input {
-  background: #ffffff;
-  border: 1px solid rgba(212,168,67,0.30);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
   border-radius: 10px;
   padding: 16px 20px;
-  color: #141C2B;
+  color: #ffffff;
   font-size: 16px;
   font-family: var(--font-jost);
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 .sd-form-input::placeholder {
-  color: #8a8e9a;
+  color: rgba(255,255,255,0.40);
   font-weight: 400;
 }
 .sd-form-input:focus {
   border-color: #d4a843;
-  box-shadow: 0 0 0 4px rgba(212,168,67,0.10);
+  box-shadow: 0 0 0 4px rgba(212,168,67,0.15);
 }
 .sd-form-textarea { resize: vertical; }
 .sd-form-btn {
