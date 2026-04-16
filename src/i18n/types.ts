@@ -10,8 +10,15 @@ export interface QuizQuestion {
   options: QuizOption[]
 }
 
+export interface ShowcaseItem {
+  img: string
+  title: string
+  desc: string
+}
+
 export interface ServiceDetails {
   hero: string
+  showcase?: ShowcaseItem[]
   whatIs: string
   includes: string[]
   notIncludes: string[]

@@ -247,6 +247,23 @@ export default function ServiceDetailClient({ slug }: Props) {
         </div>
       </div>
 
+      {/* Showcase — Quintessentially-style examples */}
+      {service.details.showcase && service.details.showcase.length > 0 && (
+        <div className="sd-showcase">
+          {service.details.showcase.map((item: { img: string; title: string; desc: string }, i: number) => (
+            <div key={i} className="sd-showcase-item reveal">
+              <div className="sd-showcase-img">
+                <img src={item.img} alt={item.title} loading="lazy" />
+              </div>
+              <div className="sd-showcase-text">
+                <h3 className="sd-showcase-title">{item.title}</h3>
+                <p className="sd-showcase-desc">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Main Content */}
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '3.5rem 2.5rem' }}>
 

@@ -50,6 +50,11 @@ export const fr: Translation = {
         slug: 'immobilier',
         details: {
           hero: "Investissez en Italie en toute sérénité — nous gérons chaque étape de votre acquisition immobilière.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=85', title: 'Acquisition d\'une villa toscane', desc: 'Un domaine isolé parmi les cyprès et les oliviers. Nous avons identifié, négocié et sécurisé cette propriété de rêve pour une famille américaine en quête de son sanctuaire italien.' },
+            { img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85', title: 'Penthouse de luxe à Milan', desc: 'Un penthouse prestigieux au cœur du quartier de la mode. Due diligence complète, coordination notariale et gestion locative — le tout piloté à distance.' },
+            { img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=85', title: 'Domaine dans les Pouilles', desc: 'Une masseria authentique transformée en investissement locatif de luxe. De la recherche à la supervision des travaux, nous avons livré une propriété clé en main avec rendement immédiat.' },
+          ],
           whatIs: "Notre service immobilier accompagne les acheteurs étrangers de la recherche du bien jusqu'à la signature chez le notaire. Nous vous guidons à travers le cadre juridique et fiscal italien, identifions les opportunités adaptées à votre budget et gérons l'intégralité des démarches administratives. Que vous cherchiez une résidence principale, une maison de vacances ou un investissement locatif, nous sommes à vos côtés.",
           includes: [
             'Sourcing immobilier personnalisé',
@@ -111,6 +116,11 @@ export const fr: Translation = {
         slug: 'renovation',
         details: {
           hero: "Transformez votre bien en Italie sans vous déplacer — nous coordonnons tout depuis votre pays.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85', title: 'Restauration d\'un palazzo historique', desc: 'Un palazzo vénitien du XVIIe siècle remis à neuf avec tout le confort moderne, en préservant ses fresques et sols en marbre d\'origine. Géré entièrement à distance pour un propriétaire basé au Royaume-Uni.' },
+            { img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85', title: 'Loft contemporain à Milan', desc: 'Un espace industriel milanais transformé en loft ouvert et élégant. Architecte italien, matériaux premium, rapports photos hebdomadaires — livré dans les temps et le budget.' },
+            { img: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=800&q=85', title: 'Mas toscan restauré', desc: 'Un casale centenaire transformé en agriturismo de luxe. Murs en pierre, sols en terre cuite, piscine à débordement — coordonné avec des artisans locaux certifiés.' },
+          ],
           whatIs: "Notre service de rénovation gère l'intégralité de vos travaux en Italie, que vous soyez sur place ou à l'étranger. Nous sélectionnons des artisans certifiés, établissons les devis, obtenons les permis nécessaires et assurons un suivi de chantier rigoureux avec rapports photos hebdomadaires. Des petits travaux d'aménagement aux restructurations complètes, chaque projet est géré avec le plus grand soin.",
           includes: [
             'Évaluation technique initiale',
@@ -414,6 +424,11 @@ export const fr: Translation = {
         slug: 'conciergerie',
         details: {
           hero: "Votre vie quotidienne en Italie simplifiée — nous gérons tout pour que vous vous concentriez sur l'essentiel.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=85', title: 'Expérience chef privé', desc: 'Un dîner intime étoilé dans votre villa, avec chef personnel, sommelier et accords mets-vins. De la Côte Amalfitaine au Lac de Côme — la gastronomie italienne à votre porte.' },
+            { img: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=85', title: 'Location de yacht & croisière', desc: 'Un itinéraire sur mesure le long de la côte sarde ou des îles Éoliennes. Yacht, équipage, provisions et excursions à terre — vous n\'avez qu\'à profiter de la mer.' },
+            { img: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=85', title: 'Accès VIP musées & galeries', desc: 'Visites privées après fermeture des Offices, des Musées du Vatican ou de la Pinacothèque de Brera. Pas de file d\'attente — l\'art italien avec un guide expert, rien que pour vous.' },
+          ],
           whatIs: "Notre service de conciergerie premium prend en charge tous les aspects logistiques et pratiques de votre vie en Italie. De votre arrivée à l'aéroport jusqu'à votre installation durable, nous orchestrons chaque détail : hébergement, transport, traductions officielles, domiciliation et assistance quotidienne. Un interlocuteur dédié est disponible 7j/7 pour répondre à toutes vos demandes.",
           includes: [
             'Recherche de biens en location courte ou longue durée',
@@ -530,6 +545,11 @@ export const fr: Translation = {
         slug: 'evenements',
         details: {
           hero: "Célébrez vos moments précieux en Italie — organisation complète de vos événements avec un soin exceptionnel.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85', title: 'Mariage au bord du lac', desc: 'Une cérémonie de conte de fées sur les rives du Lac de Côme, avec 120 invités dans une villa privée. Design floral, orchestre live et feux d\'artifice — chaque détail orchestré à la perfection.' },
+            { img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=85', title: 'Séminaire d\'entreprise en Toscane', desc: 'Un séminaire de trois jours dans un domaine historique des collines du Chianti. Team-building, gastronomie et sessions stratégiques dans un cadre italien inspirant.' },
+            { img: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=85', title: 'Concert privé & soirée de gala', desc: 'Un gala exclusif en cravate noire dans un palais de la Renaissance, avec un artiste italien célèbre en concert. Traiteur, sécurité et logistique invités gérés sans accroc.' },
+          ],
           whatIs: "Notre service événementiel prend en charge l'organisation complète de vos événements en Italie, qu'il s'agisse d'un mariage romantique en Toscane, d'un baptême dans une villa romaine ou d'un séminaire d'entreprise à Milan. Nous gérons la recherche du lieu idéal, la sélection des prestataires, la coordination logistique et le suivi le jour J pour que chaque moment soit parfait.",
           includes: [
             'Design et concept de l\'événement',
@@ -948,6 +968,11 @@ export const fr: Translation = {
         slug: 'aviation-privee',
         details: {
           hero: 'Voyagez vers l\'Italie dans le confort absolu et la discrétion totale — nous gérons chaque détail de votre expérience en aviation privée.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=85', title: 'Vol Milan–Sardaigne', desc: 'Un trajet porte-à-porte sans couture : transfert privé à Milan, vol direct vers Olbia, hélicoptère jusqu\'à votre villa en Costa Smeralda. Temps total : moins de 3 heures.' },
+            { img: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?auto=format&fit=crop&w=800&q=85', title: 'Tour européen multi-villes', desc: 'Un itinéraire d\'une semaine : Londres → Milan → Florence → Rome en jet privé, avec logistique au sol, réservations hôtelières et transferts VIP à chaque escale.' },
+            { img: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=800&q=85', title: 'Vol médical d\'urgence', desc: 'Un avion ambulance organisé en 6 heures pour un transfert patient du Moyen-Orient vers une clinique spécialisée à Milan. Rapidité vitale, gérée avec soin.' },
+          ],
           whatIs: 'Notre service Aviation Privée offre une solution complète pour tous vos besoins de transport aérien vers et autour de l\'Italie. Nous sélectionnons des opérateurs d\'aviation privée certifiés, coordonnons vos vols, transferts terrestres et l\'intégralité de votre itinéraire de voyage. Qu\'il s\'agisse d\'un voyage d\'affaires urgent, d\'un périple de luxe ou d\'un itinéraire multi-destinations complexe, notre équipe assure une exécution sans faille avec une discrétion totale et un standard VIP.',
           includes: [
             'Réservation de jets privés et hélicoptères',
@@ -1068,6 +1093,11 @@ export const fr: Translation = {
         slug: 'vehicules',
         details: {
           hero: "Que vous louiez pour un séjour ou que vous vendiez votre véhicule, ITALYCARE 360 simplifie tout — sans détour, sans mauvaise surprise.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85', title: 'Voiture de luxe pour la Côte Amalfitaine', desc: 'Un cabriolet livré à votre hôtel à Positano pour une semaine de route sur la plus belle côte du monde. Assurance, GPS et assistance routière 24/7 inclus.' },
+            { img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?auto=format&fit=crop&w=800&q=85', title: 'Flotte pour événement corporate à Milan', desc: 'Une flotte de 8 berlines premium coordonnées pour un sommet international de trois jours. Chauffeurs, transferts aéroport et hôtel — synchronisés à la minute.' },
+            { img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=85', title: 'Voiture classique italienne pour mariage', desc: 'Une Alfa Romeo Spider vintage livrée à l\'église le jour de votre mariage. Polie, décorée et conduite par un professionnel — la touche italienne parfaite pour votre cérémonie.' },
+          ],
           whatIs: "Notre service Véhicules repose sur deux offres complémentaires. 1) Location : nous mettons à disposition de nos clients des véhicules adaptés à leurs déplacements et leurs séjours en Italie — citadines, berlines familiales, SUV et voitures de prestige — avec livraison, assurance incluse et assistance 24/7. 2) Rachat : nous achetons votre voiture en Italie, rapidement, avec une évaluation honnête, une proposition sous 48 h, et une prise en charge complète des formalités (transfert de propriété, radiation). Idéal pour les résidents étrangers qui partent, les héritiers ou toute personne souhaitant vendre un véhicule sans complications.",
           includes: [
             'LOCATION — Flotte variée (citadine, SUV, berline, luxe)',

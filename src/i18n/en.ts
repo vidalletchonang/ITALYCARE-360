@@ -50,6 +50,11 @@ export const en: Translation = {
         slug: 'immobilier',
         details: {
           hero: "Invest in Italy with complete peace of mind — we handle every step of your property acquisition.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=85', title: 'Tuscan Villa Acquisition', desc: 'A secluded estate nestled among cypress trees and olive groves. We identified, negotiated, and secured this dream property for an American family seeking their Italian sanctuary.' },
+            { img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85', title: 'Milan Luxury Apartment', desc: 'A prestigious penthouse in the heart of the fashion district. Full due diligence, notarial coordination, and post-purchase property management — all handled remotely.' },
+            { img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=85', title: 'Puglia Countryside Estate', desc: 'An authentic masseria transformed into a luxury rental investment. From sourcing to renovation oversight, we delivered a turnkey property with immediate rental yield.' },
+          ],
           whatIs: "Our real estate service supports foreign buyers from property search to signing at the notary. We guide you through the Italian legal and fiscal framework, identify opportunities matching your budget and manage all administrative procedures. Whether you are looking for a primary residence, holiday home or rental investment, we are by your side every step of the way.",
           includes: [
             'Personalised property sourcing',
@@ -111,6 +116,11 @@ export const en: Translation = {
         slug: 'renovation',
         details: {
           hero: "Transform your Italian property without being on-site — we coordinate everything from your country.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85', title: 'Historic Palazzo Restoration', desc: 'A 17th-century Venetian palazzo brought back to life with modern comforts while preserving its original frescoes and marble floors. Managed entirely remotely for a UK-based owner.' },
+            { img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85', title: 'Contemporary Loft Redesign', desc: 'A Milan industrial space converted into a sleek, open-plan loft. Italian architect, premium materials, weekly photo reports — delivered on time and on budget.' },
+            { img: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=800&q=85', title: 'Tuscan Farmhouse Revival', desc: 'A centuries-old casale transformed into a luxury agriturismo. Stone walls, terracotta floors, infinity pool — all coordinated with certified local artisans.' },
+          ],
           whatIs: "Our renovation service manages all your works in Italy, whether you are present or abroad. We select certified craftsmen, prepare quotes, obtain necessary permits and ensure rigorous site monitoring with weekly photo reports. From small interior works to complete restructuring, every project is handled with the utmost care.",
           includes: [
             'Initial technical assessment',
@@ -414,6 +424,11 @@ export const en: Translation = {
         slug: 'conciergerie',
         details: {
           hero: "Your daily life in Italy simplified — we handle everything so you can focus on what matters.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=85', title: 'Private Chef Experience', desc: 'An intimate Michelin-level dinner at your villa, featuring a personal chef, sommelier, and curated wine pairing. From the Amalfi Coast to Lake Como — we bring the finest Italian gastronomy to your door.' },
+            { img: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=85', title: 'Yacht Charter & Coastal Tour', desc: 'A bespoke sailing itinerary along the Sardinian coast or Aeolian Islands. We arrange the yacht, crew, provisions, and shore excursions — you simply enjoy the sea.' },
+            { img: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=85', title: 'VIP Museum & Gallery Access', desc: 'Private after-hours tours of the Uffizi, Vatican Museums, or Brera Gallery. Skip the crowds — experience Italian art with an expert guide, exclusively arranged for you.' },
+          ],
           whatIs: "Our premium concierge service takes care of all the logistical and practical aspects of your life in Italy. From your arrival at the airport to your long-term settlement, we orchestrate every detail: accommodation, transport, official translations, domiciliation and daily assistance. A dedicated contact is available 7 days a week to handle all your requests.",
           includes: [
             'Short and long-term property rental search',
@@ -530,6 +545,11 @@ export const en: Translation = {
         slug: 'evenements',
         details: {
           hero: 'Celebrate your precious moments in Italy — complete event organisation with exceptional care.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85', title: 'Lakeside Wedding in Lombardy', desc: 'A fairy-tale ceremony on the shores of Lake Como, with 120 guests hosted across a private villa. Floral design, live orchestra, and fireworks — every detail curated to perfection.' },
+            { img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=85', title: 'Corporate Retreat in Tuscany', desc: 'A three-day executive retreat at a historic estate in the Chianti hills. Team-building activities, gourmet dining, and strategy sessions in an inspiring Italian setting.' },
+            { img: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=85', title: 'Private Concert & Gala Evening', desc: 'An exclusive black-tie gala in a Renaissance palace, featuring a live performance by a celebrated Italian artist. Catering, security, and guest logistics handled seamlessly.' },
+          ],
           whatIs: 'Our event planning service takes care of the full organisation of your events in Italy, whether it is a romantic wedding in Tuscany, a christening in a Roman villa or a corporate seminar in Milan. We manage the search for the perfect venue, supplier selection, logistical coordination and on-the-day management to ensure every moment is perfect.',
           includes: [
             'Event design and concept creation',
@@ -948,6 +968,11 @@ export const en: Translation = {
         slug: 'aviation-privee',
         details: {
           hero: 'Travel to Italy in absolute comfort and discretion — we handle every detail of your private aviation experience.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=85', title: 'Milan–Sardinia Charter', desc: 'A seamless door-to-door journey: private transfer in Milan, direct flight to Olbia, helicopter to your Costa Smeralda villa. Total travel time: under 3 hours.' },
+            { img: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?auto=format&fit=crop&w=800&q=85', title: 'Multi-City European Tour', desc: 'A week-long itinerary: London → Milan → Florence → Rome by private jet, with ground logistics, hotel reservations, and VIP transfers at every stop.' },
+            { img: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=800&q=85', title: 'Emergency Medical Flight', desc: 'A last-minute air ambulance arranged within 6 hours for a patient transfer from the Middle East to a specialist clinic in Milan. Life-saving speed, handled with care.' },
+          ],
           whatIs: 'Our Private Aviation service offers a complete solution for all your air travel needs in and around Italy. We select certified private aviation operators, coordinate your flights, ground transfers and full travel itinerary. Whether for an urgent business trip, a luxury leisure journey or a complex multi-destination itinerary, our team ensures seamless execution with total discretion and a VIP standard of service.',
           includes: [
             'Private jet and helicopter booking',
@@ -1068,6 +1093,11 @@ export const en: Translation = {
         slug: 'vehicules',
         details: {
           hero: "Whether you're renting for a stay or selling your vehicle, ITALYCARE 360 keeps it simple — no detours, no surprises.",
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85', title: 'Luxury Car for the Amalfi Coast', desc: 'A convertible delivered to your hotel in Positano for a week-long drive along the most scenic coastline in the world. Insurance, GPS, and 24/7 roadside assistance included.' },
+            { img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?auto=format&fit=crop&w=800&q=85', title: 'Corporate Fleet for Milan Event', desc: 'A fleet of 8 premium sedans coordinated for a three-day international summit. Chauffeurs, airport pickups, and hotel transfers — all synchronized to the minute.' },
+            { img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=85', title: 'Classic Italian Car for Your Wedding', desc: 'A vintage Alfa Romeo Spider delivered to the church on your wedding day. Polished, decorated, and driven by a professional — the perfect Italian touch for your ceremony.' },
+          ],
           whatIs: "Our Vehicles service is built on two complementary offers. 1) Rental: we provide our clients with vehicles tailored to their travels and stays in Italy — city cars, family sedans, SUVs and luxury models — with delivery, insurance included and 24/7 roadside assistance. 2) Buy-back: we purchase your car in Italy, fast, with a fair valuation, a firm offer within 48 hours, and full handling of the paperwork (ownership transfer, deregistration). Ideal for foreign residents leaving the country, heirs, or anyone looking to sell a vehicle without hassle.",
           includes: [
             'RENTAL — Wide fleet (city, SUV, sedan, luxury)',
