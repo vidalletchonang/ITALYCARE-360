@@ -178,6 +178,7 @@ export default function ServiceDetailClient({ slug }: Props) {
   const service = t.services.items.find((item) => item.slug === slug)
 
   const [modalOpen, setModalOpen] = useState(false)
+  const [showcaseIdx, setShowcaseIdx] = useState(0)
   const [formName, setFormName] = useState('')
   const [formEmail, setFormEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
@@ -247,24 +248,34 @@ export default function ServiceDetailClient({ slug }: Props) {
         </div>
       </div>
 
-      {/* Showcase — horizontal scroll carousel */}
-      {service.details.showcase && service.details.showcase.length > 0 && (
-        <div className="sd-showcase">
-          <div className="sd-showcase-track">
-            {service.details.showcase.map((item: { img: string; title: string; desc: string }, i: number) => (
-              <div key={i} className="sd-showcase-item reveal">
-                <div className="sd-showcase-img">
-                  <img src={item.img} alt={item.title} loading="lazy" />
-                </div>
-                <div className="sd-showcase-text">
-                  <h3 className="sd-showcase-title">{item.title}</h3>
-                  <p className="sd-showcase-desc">{item.desc}</p>
+      {/* Showcase — alternating image/text with navigation arrows */}
+      {service.details.showcase && service.details.showcase.length > 0 && (() => {
+        const [scIdx, setScIdx] = [showcaseIdx, setShowcaseIdx]
+        const item = service.details.showcase[scIdx] as { img: string; title: string; desc: string }
+        const isEven = scIdx % 2 === 0
+        return (
+          <div className="sd-showcase">
+            <div className={`sd-showcase-row ${isEven ? '' : 'sd-showcase-reverse'}`} key={scIdx}>
+              <div className="sd-showcase-img">
+                <img src={item.img} alt={item.title} loading="lazy" />
+              </div>
+              <div className="sd-showcase-text">
+                <span className="sd-showcase-counter">{String(scIdx + 1).padStart(2, '0')} / {String(service.details.showcase.length).padStart(2, '0')}</span>
+                <h3 className="sd-showcase-title">{item.title}</h3>
+                <p className="sd-showcase-desc">{item.desc}</p>
+                <div className="sd-showcase-nav">
+                  <button className="sd-showcase-arrow" onClick={() => setScIdx(scIdx > 0 ? scIdx - 1 : service.details.showcase!.length - 1)} aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                  </button>
+                  <button className="sd-showcase-arrow" onClick={() => setScIdx(scIdx < service.details.showcase!.length - 1 ? scIdx + 1 : 0)} aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      )}
+        )
+      })()}
 
       {/* Main Content */}
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '3.5rem 2.5rem' }}>

@@ -3949,41 +3949,30 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 /* ═══════════════════════════════════════════════════════
    SERVICE SHOWCASE — Quintessentially-style magazine layout
    ═══════════════════════════════════════════════════════ */
-/* Horizontal scrollable showcase carousel */
+/* Alternating image/text showcase with navigation arrows */
 .sd-showcase {
-  padding: 64px 0;
+  padding: 0;
   background: #ffffff;
   overflow: hidden;
-  position: relative;
 }
-.sd-showcase-track {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 0 6vw 20px;
-  scrollbar-width: none;
+.sd-showcase-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+  animation: scFadeIn 0.5s ease;
 }
-.sd-showcase-track::-webkit-scrollbar { display: none; }
-
-.sd-showcase-item {
-  flex: 0 0 380px;
-  scroll-snap-align: start;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid rgba(212,168,67,0.18);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+@keyframes scFadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
-.sd-showcase-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
+.sd-showcase-reverse {
+  direction: rtl;
+}
+.sd-showcase-reverse > * {
+  direction: ltr;
 }
 .sd-showcase-img {
   position: relative;
-  height: 240px;
   overflow: hidden;
 }
 .sd-showcase-img img {
@@ -3991,44 +3980,89 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sd-showcase-item:hover .sd-showcase-img img {
-  transform: scale(1.06);
+.sd-showcase-row:hover .sd-showcase-img img {
+  transform: scale(1.04);
 }
 .sd-showcase-text {
-  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 64px;
+  background: #FAFAF7;
 }
-.sd-showcase-text::before {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 2px;
-  background: #d4a843;
-  margin-bottom: 18px;
+.sd-showcase-reverse .sd-showcase-text {
+  background: #ffffff;
+}
+.sd-showcase-counter {
+  font-family: var(--font-jost);
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #d4a843;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .sd-showcase-title {
   font-family: var(--font-playfair);
-  font-size: 22px;
+  font-size: clamp(26px, 2.5vw, 36px);
   font-weight: 400;
   color: #0e1420;
   letter-spacing: -0.01em;
-  line-height: 1.25;
-  margin-bottom: 12px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.sd-showcase-title::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #d4a843;
+  margin-bottom: 20px;
 }
 .sd-showcase-desc {
   font-family: var(--font-jost);
-  font-size: 15px;
+  font-size: clamp(15px, 1.1vw, 18px);
   color: #3d4760;
-  line-height: 1.7;
+  line-height: 1.75;
   font-weight: 400;
+  margin-bottom: 32px;
+}
+.sd-showcase-nav {
+  display: flex;
+  gap: 12px;
+}
+.sd-showcase-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(212,168,67,0.35);
+  background: transparent;
+  color: #1a2744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sd-showcase-arrow:hover {
+  background: #d4a843;
+  border-color: #d4a843;
+  color: #0e1420;
+  transform: scale(1.08);
 }
 
+@media (max-width: 900px) {
+  .sd-showcase-row { grid-template-columns: 1fr; min-height: auto; }
+  .sd-showcase-reverse { direction: ltr; }
+  .sd-showcase-img { height: 300px; }
+  .sd-showcase-text { padding: 36px 28px; }
+}
 @media (max-width: 600px) {
-  .sd-showcase { padding: 40px 0; }
-  .sd-showcase-item { flex: 0 0 300px; }
-  .sd-showcase-img { height: 200px; }
-  .sd-showcase-text { padding: 24px 20px; }
-  .sd-showcase-title { font-size: 19px; }
+  .sd-showcase-img { height: 240px; }
+  .sd-showcase-text { padding: 28px 20px; }
+  .sd-showcase-title { font-size: 22px; }
+  .sd-showcase-arrow { width: 40px; height: 40px; }
 }
 
