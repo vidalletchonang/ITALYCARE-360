@@ -2086,19 +2086,32 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   margin-top: -60px;
 }
 
-/* Header text (on navy) */
+/* Header text (on navy) — centered */
+.calc-header {
+  text-align: center !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+}
 .calc-label {
   color: var(--o) !important;
+  font-size: 13px !important;
+  letter-spacing: 5px !important;
+  font-weight: 600 !important;
+  display: block !important;
+  margin-bottom: 16px !important;
 }
 .calc-h2 {
   color: #f5efe6 !important;
-  font-family: var(--font-cormorant) !important;
-  font-weight: 300 !important;
-  font-size: clamp(2.8rem, 5vw, 4rem) !important;
+  font-family: var(--font-playfair) !important;
+  font-weight: 400 !important;
+  font-size: clamp(36px, 5vw, 60px) !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 14px !important;
 }
 .calc-sub {
-  color: rgba(245,239,230,0.7) !important;
-  font-size: 17px !important;
+  color: rgba(245,239,230,0.65) !important;
+  font-size: 18px !important;
+  line-height: 1.6 !important;
 }
 
 /* White card (on light body) */
