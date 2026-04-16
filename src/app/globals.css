@@ -2140,7 +2140,37 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   letter-spacing: 1.5px !important;
   font-weight: 600 !important;
 }
-.calc-progress { border-bottom: 1px solid #edf0f8 !important; padding-bottom: 24px !important; }
+.calc-progress {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  border-bottom: 1px solid #edf0f8 !important;
+  padding-bottom: 28px !important;
+  margin-bottom: 36px !important;
+  position: relative;
+}
+.calc-prog-step {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex: 1;
+  position: relative;
+}
+.calc-prog-step::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 20px !important;
+  left: 50% !important;
+  width: 100% !important;
+  height: 2px !important;
+  z-index: 0 !important;
+}
+.calc-prog-step:last-child::after { display: none !important; }
+.calc-prog-dot {
+  position: relative !important;
+  z-index: 1 !important;
+}
 
 /* Step */
 .calc-step-title {
