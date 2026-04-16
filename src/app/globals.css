@@ -3958,7 +3958,7 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 .sd-showcase-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 480px;
+  height: 520px;
   animation: scFadeIn 0.5s ease;
 }
 @keyframes scFadeIn {
@@ -3974,6 +3974,7 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 .sd-showcase-img {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 .sd-showcase-img img {
   width: 100%;
@@ -4054,7 +4055,7 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 }
 
 @media (max-width: 900px) {
-  .sd-showcase-row { grid-template-columns: 1fr; min-height: auto; }
+  .sd-showcase-row { grid-template-columns: 1fr; height: auto; }
   .sd-showcase-reverse { direction: ltr; }
   .sd-showcase-img { height: 300px; }
   .sd-showcase-text { padding: 36px 28px; }
