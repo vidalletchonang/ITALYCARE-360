@@ -303,122 +303,43 @@ export default function ServiceDetailClient({ slug }: Props) {
           </div>
         </div>
 
-        {/* Contact Form */}
-        <div style={{ background: bk, borderRadius: 20, padding: '2.5rem', marginBottom: '2rem', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg, ${o}, ${g})` }} />
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 90% 10%, rgba(201,168,76,0.06) 0%, transparent 50%)' }} />
+        {/* Elegant separator before form */}
+        <div className="section-divider" style={{ padding: '56px 0' }}><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
 
-          <div style={{ position: 'relative', maxWidth: 520, margin: '0 auto' }}>
+        {/* Contact Form — elegant cream section */}
+        <div className="sd-form-wrap">
+          <div className="sd-form-inner">
             {!formSent ? (
               <>
-                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                  <h2 style={{ fontFamily: titleFont, fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: cr, marginBottom: '0.75rem' }}>
-                    {sd.formTitle}
-                  </h2>
-                  <p style={{ color: 'rgba(245,237,214,0.6)', fontSize: '1rem', lineHeight: 1.7 }}>
-                    {sd.formSubtitle}
-                  </p>
+                <div className="sd-form-header">
+                  <h2 className="sd-form-title font-playfair">{sd.formTitle}</h2>
+                  <p className="sd-form-sub">{sd.formSubtitle}</p>
                 </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <input
-                    type="text"
-                    placeholder={sd.formName}
-                    value={formName}
-                    onChange={e => setFormName(e.target.value)}
-                    style={{
-                      background: 'rgba(255,255,255,0.06)',
-                      border: '1px solid rgba(255,255,255,0.15)',
-                      borderRadius: 8,
-                      padding: '0.9rem 1.2rem',
-                      color: '#fff',
-                      fontSize: '1rem',
-                      fontFamily: bodyFont,
-                      outline: 'none',
-                    }}
-                  />
-                  <input
-                    type="email"
-                    placeholder={sd.formEmail}
-                    value={formEmail}
-                    onChange={e => setFormEmail(e.target.value)}
-                    style={{
-                      background: 'rgba(255,255,255,0.06)',
-                      border: '1px solid rgba(255,255,255,0.15)',
-                      borderRadius: 8,
-                      padding: '0.9rem 1.2rem',
-                      color: '#fff',
-                      fontSize: '1rem',
-                      fontFamily: bodyFont,
-                      outline: 'none',
-                    }}
-                  />
-                  <textarea
-                    placeholder={sd.formMessage}
-                    value={formMessage}
-                    onChange={e => setFormMessage(e.target.value)}
-                    rows={4}
-                    style={{
-                      background: 'rgba(255,255,255,0.06)',
-                      border: '1px solid rgba(255,255,255,0.15)',
-                      borderRadius: 8,
-                      padding: '0.9rem 1.2rem',
-                      color: '#fff',
-                      fontSize: '1rem',
-                      fontFamily: bodyFont,
-                      outline: 'none',
-                      resize: 'vertical',
-                    }}
-                  />
-                  <button
-                    onClick={handleFormSubmit}
-                    disabled={!formName || !formEmail}
-                    style={{
-                      background: formName && formEmail ? `linear-gradient(135deg, ${o}, #dfc06e)` : 'rgba(255,255,255,0.1)',
-                      color: formName && formEmail ? bk : 'rgba(255,255,255,0.3)',
-                      border: 'none',
-                      borderRadius: 4,
-                      padding: '1rem 2rem',
-                      fontSize: '0.9rem',
-                      fontWeight: 600,
-                      letterSpacing: '2px',
-                      textTransform: 'uppercase',
-                      cursor: formName && formEmail ? 'pointer' : 'not-allowed',
-                      fontFamily: bodyFont,
-                      transition: 'all 0.3s ease',
-                      marginTop: '0.5rem',
-                    }}
-                  >
+                <div className="sd-form-fields">
+                  <input type="text" placeholder={sd.formName} value={formName} onChange={e => setFormName(e.target.value)} className="sd-form-input" />
+                  <input type="email" placeholder={sd.formEmail} value={formEmail} onChange={e => setFormEmail(e.target.value)} className="sd-form-input" />
+                  <textarea placeholder={sd.formMessage} value={formMessage} onChange={e => setFormMessage(e.target.value)} rows={4} className="sd-form-input sd-form-textarea" />
+                  <button onClick={handleFormSubmit} disabled={!formName || !formEmail} className="sd-form-btn">
                     {sd.formSend}
                   </button>
                 </div>
               </>
             ) : (
-              <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✓</div>
-                <h2 style={{ fontFamily: titleFont, color: cr, fontSize: '1.5rem', marginBottom: '0.75rem' }}>
-                  {sd.formSuccess}
-                </h2>
-                <p style={{ color: 'rgba(245,237,214,0.7)', fontSize: '1rem', lineHeight: 1.7 }}>
-                  {sd.formSuccessMsg}
-                </p>
+              <div className="sd-form-success">
+                <div style={{ fontSize: '3rem', marginBottom: '1rem', color: '#d4a843' }}>✓</div>
+                <h2 className="sd-form-title font-playfair">{sd.formSuccess}</h2>
+                <p className="sd-form-sub">{sd.formSuccessMsg}</p>
               </div>
             )}
           </div>
         </div>
 
-        {/* Contact CTA */}
-        <div style={{ background: `linear-gradient(135deg, ${g}, ${gd})`, borderRadius: 16, padding: '2rem', textAlign: 'center' }}>
-          <p style={{ color: cr, fontSize: '1rem', fontWeight: 500, marginBottom: '1rem' }}>
-            {sd.contact}
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem' }}>
-            <a href="mailto:info@italycare360.com" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
-              info@italycare360.com
-            </a>
-            <a href="https://wa.me/393517501164" style={{ background: 'rgba(255,255,255,0.12)', color: cr, textDecoration: 'none', borderRadius: 50, padding: '0.6rem 1.5rem', fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
-              WhatsApp
-            </a>
+        {/* Contact CTA — separated */}
+        <div className="sd-contact-cta">
+          <p className="sd-contact-label">{sd.contact}</p>
+          <div className="sd-contact-links">
+            <a href="mailto:info@italycare360.com" className="sd-contact-pill">info@italycare360.com</a>
+            <a href="https://wa.me/393517501164" className="sd-contact-pill">WhatsApp</a>
           </div>
         </div>
 
