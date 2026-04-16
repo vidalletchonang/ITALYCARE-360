@@ -2079,14 +2079,9 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   background: linear-gradient(90deg, transparent, rgba(212,168,67,0.5), transparent);
 }
 
-/* Marbled navy/gold luxury body with card pulled up to overlap the band */
+/* Clean light body with card pulled up to overlap the band */
 .calc-body {
-  background:
-    linear-gradient(rgba(20,28,43,0.30), rgba(20,28,43,0.30)),
-    url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1800&q=85');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #f4f6fb;
   padding: 0 6vw 80px;
   margin-top: -60px;
 }
