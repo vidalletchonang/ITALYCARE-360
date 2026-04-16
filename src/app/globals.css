@@ -823,7 +823,7 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
   text-decoration: none;
 }
 .soc:hover { border-color: var(--o); color: var(--o); }
-.fc h4 { font-size: 16px; letter-spacing: 3px; text-transform: uppercase; color: #fff; margin-bottom: 18px; font-weight: 500; }
+.fc h4 { font-size: 20px; letter-spacing: 4px; text-transform: uppercase; color: #d4a843; margin-bottom: 22px; font-weight: 600; font-family: var(--font-jost); }
 .fc ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .fc ul li a { font-size: 16px; color: rgba(255,255,255,0.70); text-decoration: none; font-weight: 400; transition: color 0.25s, padding-left 0.25s; }
 .fc ul li a:hover { color: var(--o); padding-left: 4px; }
