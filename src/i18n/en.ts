@@ -180,6 +180,11 @@ export const en: Translation = {
         slug: 'medical',
         details: {
           hero: "Access Italy's top specialists with comprehensive medical support in your own language.",
+          showcase: [
+            { img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=85", title: "Specialist Consultation in Milan", desc: "A cardiac patient from Saudi Arabia connected with Italy's leading cardiologist. Full medical translation, hospital coordination, and post-consultation follow-up — all in Arabic." },
+            { img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=85", title: "Orthopaedic Surgery in Rome", desc: "A hip replacement surgery arranged at a top Roman clinic for a French retiree. Pre-op exams, surgeon selection, rehabilitation plan, and repatriation logistics — coordinated end to end." },
+            { img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=85", title: "Dental Tourism in Bologna", desc: "A complete dental reconstruction for a UK client at 40% less than London prices. Airport transfers, hotel, interpreter, and 5 appointments over 10 days — seamlessly managed." },
+          ],
           whatIs: "Our medical service gives you access to the Italian healthcare system without any language or administrative barriers. We organize your appointments with renowned specialists, provide medical interpretation during consultations, coordinate hospital admissions and manage all medical documents. We also organize thermal and respiratory care stays in Italy. For international patients requiring specialized care not available in their home country, we offer full end-to-end support.",
           includes: [
             'Selection of healthcare facilities',
@@ -240,6 +245,11 @@ export const en: Translation = {
         slug: 'export',
         details: {
           hero: "Import Italian excellence directly from producers — authenticity and quality guaranteed.",
+          showcase: [
+            { img: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85", title: "Olive Oil Direct from Puglia", desc: "Premium extra-virgin olive oil sourced directly from a family estate in Puglia. Quality certified, customs handled, delivered to a Dubai-based distributor in 10 days." },
+            { img: "https://images.unsplash.com/photo-1528698827591-e19cef51a992?auto=format&fit=crop&w=800&q=85", title: "Italian Furniture for a Hotel Chain", desc: "A custom order of handcrafted furniture from Brianza artisans for a luxury hotel in Qatar. Design coordination, factory visits, shipping, and installation managed by us." },
+            { img: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=800&q=85", title: "Wine Collection for Private Cellar", desc: "A curated selection of 200 bottles from Barolo, Brunello, and Amarone producers. Sourced, authenticated, temperature-controlled shipping to a collector in New York." },
+          ],
           whatIs: "Our export service connects you with the best Italian producers in food, fashion, furniture and design. We select verified suppliers, negotiate commercial terms, manage international logistics and assist with all customs procedures and certifications. Whether you are a distributor, reseller or direct buyer, we build your Made in Italy supply chain.",
           includes: [
             'Research and selection of local Italian producers',
@@ -299,6 +309,11 @@ export const en: Translation = {
         slug: 'visa-etudiant',
         details: {
           hero: "Make your dream of studying in Italy a reality — from university enrollment to your arrival and settlement.",
+          showcase: [
+            { img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=85", title: "Architecture Studies in Florence", desc: "A Moroccan student enrolled at the University of Florence. Visa application, accommodation near campus, Italian language course, and bank account — all set up before arrival." },
+            { img: "https://images.unsplash.com/photo-1523050854058-8df90110c8f1?auto=format&fit=crop&w=800&q=85", title: "MBA in Milan", desc: "An Algerian professional accepted at Bocconi University. Student visa, furnished apartment in Navigli, health insurance, and orientation week — organised in 3 weeks." },
+            { img: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=85", title: "Medical Studies in Bologna", desc: "A student from Cameroon enrolled in the English-taught medical programme. Pre-enrollment exam prep, document legalisation, and airport welcome — a turnkey start." },
+          ],
           whatIs: "Our student visa service handles your entire study project in Italy. We advise on universities and programs, prepare your application file, handle your visa request and organize your arrival. Our expertise in the Italian university system and consular procedures ensures the most efficient processing of your application.",
           includes: [
             'Requirements assessment',
@@ -358,6 +373,11 @@ export const en: Translation = {
         slug: 'juridique',
         details: {
           hero: "Protect your interests in Italy with experienced multilingual partner lawyers.",
+          showcase: [
+            { img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=85", title: "Property Purchase Legal Support", desc: "Full legal due diligence for a €2M villa acquisition in Liguria. Title verification, contract review, notarial representation with power of attorney — for a Swiss buyer." },
+            { img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85", title: "Business Incorporation in Italy", desc: "An SRL company set up in Milan for a German entrepreneur. Articles of association, tax registration, VAT number, and corporate bank account — operational in 15 days." },
+            { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=85", title: "Inheritance & Succession", desc: "A complex cross-border inheritance case involving properties in Tuscany and heirs in France and the US. Legal coordination, property valuation, and tax-optimised transfer." },
+          ],
           whatIs: "Our network of Italian partner lawyers covers all areas of law relevant to foreigners in Italy: real estate, tax, corporate, inheritance and family law. We liaise between you and your lawyer, provide necessary legal translations and monitor your case progress. You benefit from high-level Italian legal expertise in your own language.",
           includes: [
             'Real estate law',
@@ -487,6 +507,11 @@ export const en: Translation = {
         slug: 'administratif',
         details: {
           hero: "Simplify your administrative procedures in Italy — our team handles every official document for you.",
+          showcase: [
+            { img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=85", title: "Codice Fiscale & Residency Permit", desc: "A Russian family relocating to Rome. Codice fiscale, residency permit, health card registration, utility contracts, and school enrollment — all completed within one month." },
+            { img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=85", title: "Driving Licence Conversion", desc: "A UK resident in Tuscany needed to convert her driving licence post-Brexit. Translation, medical exam, prefecture appointment, and follow-up — resolved in 6 weeks." },
+            { img: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=85", title: "Tax Registration & Declarations", desc: "Annual tax declarations and AIRE registration for an American couple owning property in Umbria. Accountant coordination, document submission, and ongoing fiscal compliance." },
+          ],
           whatIs: "Navigating Italian bureaucracy can seem like an insurmountable challenge for a foreigner. Our administrative service handles all your official procedures: obtaining the codice fiscale, applying for a permesso di soggiorno, registering residency, vehicle registration and any other administrative document. We save you queues, filing errors and unnecessary delays.",
           includes: [
             'Codice fiscale (Italian tax number)',
@@ -609,6 +634,11 @@ export const en: Translation = {
         slug: 'maisons-retraite',
         details: {
           hero: 'Find the ideal senior residence in Italy — selected according to the medical, cultural and personal needs of your loved one.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1559030623-0226b1241edd?auto=format&fit=crop&w=800&q=85', title: 'Luxury Senior Residence in Veneto', desc: 'A 5-star senior home near Padua selected for a retired German diplomat. Medical staff, garden, activities programme, and regular video calls with family — vetted personally by our team.' },
+            { img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=85', title: 'Assisted Living in Tuscany', desc: 'A small family-run residence in the Chianti hills for an elderly British couple. Personalised care plan, English-speaking staff, and proximity to a hospital — found within 2 weeks.' },
+            { img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=85', title: 'Memory Care in Lombardy', desc: 'A specialised Alzheimer unit in Brescia for a patient from the UAE. Neurologist consultations, family liaison, and monthly progress reports — coordinated in Arabic and Italian.' },
+          ],
           whatIs: 'Our specialist service helps you find the most suitable retirement home or senior residence in Italy based on the medical, linguistic and financial requirements of your loved one. We analyse the medical file, identify matching establishments, arrange visits and handle all admission procedures. Regular follow-up is provided after settling in.',
           includes: [
             'Search for qualified facilities',
@@ -667,6 +697,11 @@ export const en: Translation = {
         slug: 'financement',
         details: {
           hero: 'Finance your projects in Italy — we identify the best banking and financial solutions for your situation.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=85', title: 'Mortgage for Non-Resident Buyer', desc: 'A 70% LTV mortgage secured for a French couple purchasing a villa in Liguria. Bank selection, document preparation, and notarial coordination — approved in 6 weeks.' },
+            { img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=85', title: 'Business Loan for Restaurant', desc: 'Start-up financing obtained for an American entrepreneur opening a restaurant in Rome. Business plan, bank pitch, and guarantee structuring — funded within 8 weeks.' },
+            { img: 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&w=800&q=85', title: 'Renovation Tax Credit Optimisation', desc: 'A €180K renovation project structured to benefit from Italy Superbonus tax credits. Fiscal engineering, certified contractors, and documentation — saving the client 65%.' },
+          ],
           whatIs: 'Our financing service supports you in finding the best solutions to fund your projects in Italy. Whether you wish to take out a mortgage, finance the creation of your company or obtain personal credit, our network of Italian banking and financial partners offers conditions tailored to your profile as a foreigner.',
           includes: [
             'Mortgage advisory',
@@ -725,6 +760,11 @@ export const en: Translation = {
         slug: 'professionnels',
         details: {
           hero: 'Find the right certified professional in Italy — we select and verify every expert for you.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=85', title: 'Architect for Coastal Villa', desc: 'A renowned Sardinian architect matched with a client building a contemporary cliff-side villa. Portfolio review, initial consultation, and project contract — arranged in 5 days.' },
+            { img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=85', title: 'Bilingual Accountant in Milan', desc: 'An English-Italian accountant found for an expat family managing rental income and tax filings. Ongoing monthly support with quarterly fiscal reviews.' },
+            { img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=85', title: 'Private Tutor for Children', desc: 'An Italian language tutor and homework helper for two children of an American family in Florence. 3 sessions per week, progress reports to parents — integrated within a week.' },
+          ],
           whatIs: 'Our professional matching service connects you with the best certified Italian experts across all fields: surveyors, architects, engineers for your real estate and construction projects, specialist doctors, lawyers, accountants and chartered accountants. Every professional is verified, assessed and recommended based on their expertise and ability to work with foreign clients.',
           includes: [
             'Lawyer selection',
@@ -784,6 +824,11 @@ export const en: Translation = {
         slug: 'silver-economy',
         details: {
           hero: 'A comprehensive support service designed for seniors who wish to live, settle or receive care in Italy with complete peace of mind.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1447005497901-b3e9ee359928?auto=format&fit=crop&w=800&q=85', title: 'Senior Relocation from London', desc: 'A retired British couple relocated to Lake Garda. Property search, residency permit, healthcare enrollment, local social integration, and ongoing support — a new chapter, worry-free.' },
+            { img: 'https://images.unsplash.com/photo-1559030623-0226b1241edd?auto=format&fit=crop&w=800&q=85', title: 'Home Care Coordination', desc: 'A live-in caregiver arranged for an elderly parent in Rome. Certified nurse, daily routine, medical liaison, and family video updates — compassionate care at home.' },
+            { img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=85', title: 'Estate Planning for Seniors', desc: 'Comprehensive succession planning for a multinational family with assets in Italy. Legal counsel, notarial acts, and tax optimisation — peace of mind for the entire family.' },
+          ],
           whatIs: 'Our Silver Economy service is specifically designed for seniors who wish to settle, relocate or spend their retirement in Italy. We coordinate every aspect of their project: assisted relocation, healthcare and insurance support, real estate management and lifestyle integration. Families can delegate the entire process to us with full confidence, benefiting from continuous personalised follow-up.',
           includes: [
             'Assisted senior relocation to Italy',
@@ -842,6 +887,11 @@ export const en: Translation = {
         slug: 'property-care',
         details: {
           hero: 'Keep your property in Italy in perfect condition — we manage everything even when you are not there.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85', title: 'Year-Round Villa Management', desc: 'A Tuscan villa maintained while the owners live in Geneva. Monthly inspections, garden care, pool maintenance, emergency repairs, and guest preparation — all reported with photos.' },
+            { img: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=800&q=85', title: 'Rental Turnover Service', desc: 'A Lake Como property managed between Airbnb guests. Professional cleaning, linen change, guest welcome, key handover, and damage check — 48 turnovers per year, zero complaints.' },
+            { img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=85', title: 'Emergency Storm Repair', desc: 'A roof damaged by a winter storm in the Abruzzi mountains. Emergency tarpaulin within 24 hours, insurance claim filed, permanent repair coordinated — owner notified every step.' },
+          ],
           whatIs: 'Our Property Care service ensures the complete maintenance and management of your property in Italy. We coordinate all tradespeople and service providers, carry out regular inspections and handle any emergency on your behalf. Whether you own a city apartment or a country house, our team ensures your property is always protected, maintained and ready for your arrival.',
           includes: [
             'Home insurance activation and management',
@@ -907,6 +957,11 @@ export const en: Translation = {
         slug: 'thermal-wellness',
         details: {
           hero: 'Restore your health and wellbeing in Italy\'s finest thermal and medical wellness centres — fully organised for you.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85', title: 'Thermal Cure in Abano Terme', desc: 'A 2-week therapeutic programme for chronic joint pain at a 5-star thermal hotel in Veneto. Medical consultation, daily treatments, healthy cuisine, and transport — fully organised.' },
+            { img: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=85', title: 'Post-Surgery Rehabilitation', desc: 'A recovery stay in Ischia for a patient after knee surgery. Physiotherapy, thermal pools, medical follow-up, and seaside relaxation — healing in the most beautiful setting.' },
+            { img: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=85', title: 'Luxury Wellness Retreat', desc: 'A week-long detox and anti-stress programme at a spa in Saturnia, Tuscany. Nutrition plan, massage therapy, yoga sessions, and natural thermal springs — a transformative experience.' },
+          ],
           whatIs: 'Our Thermal Wellness service gives you access to the best thermal spas, medical wellness centres and rehabilitation facilities in Italy. We design personalised therapeutic programmes combining traditional treatments (mud therapy, balneotherapy, hydrotherapy) with modern medical wellness approaches. From selecting the right centre to full logistical support throughout your stay, we handle everything.',
           includes: [
             'Research and selection of qualified medical spas and thermal centres',
@@ -1032,6 +1087,11 @@ export const en: Translation = {
         slug: 'assistenza-scolastica',
         details: {
           hero: 'Enroll your children in the best schools in Italy — we manage every step, from school search to final registration.',
+          showcase: [
+            { img: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=85', title: 'International School in Rome', desc: 'Two children of a diplomatic family enrolled at St. George British International School. Application, entrance exam prep, uniform ordering, and first-day orientation — seamless.' },
+            { img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=85', title: 'Public School Integration in Milan', desc: 'A 9-year-old from Morocco enrolled in a public school in Milan. Document translation, school district selection, teacher meetings, and after-school Italian language support.' },
+            { img: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=85', title: 'University Preparation Programme', desc: 'A Russian student prepared for the IMAT exam for medical school admission. Tutor matching, study materials, mock exams, and exam-day logistics — accepted on the first attempt.' },
+          ],
           whatIs: 'Our school assistance service supports foreign families in choosing and enrolling their children in the Italian school system. Whether you are looking for an Italian public school, a bilingual private school, or an international school, we identify the best options based on your child\'s profile, your location, and your educational goals. We handle all administrative procedures: enrollment files, translation and legalization of school records, obtaining the child\'s codice fiscale, and direct coordination with the schools.',
           includes: [
             'Personalised school guidance and orientation',
