@@ -127,9 +127,9 @@ export default function Footer() {
           <p className="fb-p">{t.footer.desc}</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', margin: '20px 0' }}>
             <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/founder-seal.jpg`}
-              alt="Founder Seal — Italian Real Estate Attorneys"
-              style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(201,168,76,0.4)', objectFit: 'cover' }}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/moneta.svg`}
+              alt="Founder"
+              style={{ width: '64px', height: '64px', objectFit: 'contain', filter: 'sepia(1) saturate(4) hue-rotate(-5deg) brightness(1.05) contrast(1.1)', flexShrink: 0 }}
             />
             <div style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>
               Founded by<br />
