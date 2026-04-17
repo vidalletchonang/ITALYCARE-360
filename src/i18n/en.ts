@@ -508,7 +508,7 @@ export const en: Translation = {
         details: {
           hero: "Simplify your administrative procedures in Italy — our team handles every official document for you.",
           showcase: [
-            { img: "https://images.unsplash.com/photo-1586769852044-692d6e3703f0?auto=format&fit=crop&w=800&q=85", title: "Codice Fiscale & Residency Permit", desc: "A Russian family relocating to Rome. Codice fiscale, residency permit, health card registration, utility contracts, and school enrollment — all completed within one month." },
+            { img: "/gallery/russian-family.jpg", title: "Codice Fiscale & Residency Permit", desc: "A Russian family relocating to Rome. Codice fiscale, residency permit, health card registration, utility contracts, and school enrollment — all completed within one month." },
             { img: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=85", title: "Driving Licence Conversion", desc: "A UK resident in Tuscany needed to convert her driving licence post-Brexit. Translation, medical exam, prefecture appointment, and follow-up — resolved in 6 weeks." },
             { img: "https://images.unsplash.com/photo-1554224155-8f4e6241f2f9?auto=format&fit=crop&w=800&q=85", title: "Tax Registration & Declarations", desc: "Annual tax declarations and AIRE registration for an American couple owning property in Umbria. Accountant coordination, document submission, and ongoing fiscal compliance." },
           ],
