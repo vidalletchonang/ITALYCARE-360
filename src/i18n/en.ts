@@ -181,7 +181,7 @@ export const en: Translation = {
         details: {
           hero: "Access Italy's top specialists with comprehensive medical support in your own language.",
           showcase: [
-            { img: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=85", title: "Specialist Consultation in Milan", desc: "A cardiac patient from Saudi Arabia connected with Italy's leading cardiologist. Full medical translation, hospital coordination, and post-consultation follow-up — all in Arabic." },
+            { img: "/gallery/specialist-milan.jpg", title: "Specialist Consultation in Milan", desc: "A cardiac patient from Saudi Arabia connected with Italy's leading cardiologist. Full medical translation, hospital coordination, and post-consultation follow-up — all in Arabic." },
             { img: "/gallery/surgery-rome.jpg", title: "Orthopaedic Surgery in Rome", desc: "A hip replacement surgery arranged at a top Roman clinic for a French retiree. Pre-op exams, surgeon selection, rehabilitation plan, and repatriation logistics — coordinated end to end." },
             { img: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=85", title: "Dental Tourism in Bologna", desc: "A complete dental reconstruction for a UK client at 40% less than London prices. Airport transfers, hotel, interpreter, and 5 appointments over 10 days — seamlessly managed." },
           ],
