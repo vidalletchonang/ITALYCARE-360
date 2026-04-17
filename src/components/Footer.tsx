@@ -118,11 +118,6 @@ export default function Footer() {
             <div>
               <div>ITALY<span style={{ fontStyle: 'italic' }}>Care</span><span className="nl-360">360°</span></div>
             </div>
-            <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/moneta.svg`}
-              alt="Moneta"
-              className="nl-coin"
-            />
           </div>
           <p className="fb-p">{t.footer.desc}</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', margin: '20px 0' }}>
