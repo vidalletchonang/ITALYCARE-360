@@ -310,7 +310,7 @@ export const en: Translation = {
         details: {
           hero: "Make your dream of studying in Italy a reality — from university enrollment to your arrival and settlement.",
           showcase: [
-            { img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=85", title: "Architecture Studies in Florence", desc: "A Moroccan student enrolled at the University of Florence. Visa application, accommodation near campus, Italian language course, and bank account — all set up before arrival." },
+            { img: "/gallery/students-florence.jpg", title: "Architecture Studies in Florence", desc: "A Moroccan student enrolled at the University of Florence. Visa application, accommodation near campus, Italian language course, and bank account — all set up before arrival." },
             { img: "https://images.unsplash.com/photo-1523050854058-8df90110c8f1?auto=format&fit=crop&w=800&q=85", title: "MBA in Milan", desc: "An Algerian professional accepted at Bocconi University. Student visa, furnished apartment in Navigli, health insurance, and orientation week — organised in 3 weeks." },
             { img: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=85", title: "Medical Studies in Bologna", desc: "A student from Cameroon enrolled in the English-taught medical programme. Pre-enrollment exam prep, document legalisation, and airport welcome — a turnkey start." },
           ],

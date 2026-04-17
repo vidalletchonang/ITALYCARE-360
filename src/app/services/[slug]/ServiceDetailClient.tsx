@@ -257,7 +257,7 @@ export default function ServiceDetailClient({ slug }: Props) {
           <div className="sd-showcase">
             <div className={`sd-showcase-row ${isEven ? '' : 'sd-showcase-reverse'}`} key={scIdx}>
               <div className="sd-showcase-img">
-                <img src={item.img} alt={item.title} loading="lazy" />
+                <img src={item.img.startsWith('/') ? `${BASE}${item.img}` : item.img} alt={item.title} loading="lazy" />
               </div>
               <div className="sd-showcase-text">
                 <span className="sd-showcase-counter">{String(scIdx + 1).padStart(2, '0')} / {String(service.details.showcase.length).padStart(2, '0')}</span>
