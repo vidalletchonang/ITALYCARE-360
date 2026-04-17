@@ -374,7 +374,7 @@ export const en: Translation = {
         details: {
           hero: "Protect your interests in Italy with experienced multilingual partner lawyers.",
           showcase: [
-            { img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=85", title: "Property Purchase Legal Support", desc: "Full legal due diligence for a €2M villa acquisition in Liguria. Title verification, contract review, notarial representation with power of attorney — for a Swiss buyer." },
+            { img: "/gallery/legal-handshake.jpg", title: "Property Purchase Legal Support", desc: "Full legal due diligence for a €2M villa acquisition in Liguria. Title verification, contract review, notarial representation with power of attorney — for a Swiss buyer." },
             { img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85", title: "Business Incorporation in Italy", desc: "An SRL company set up in Milan for a German entrepreneur. Articles of association, tax registration, VAT number, and corporate bank account — operational in 15 days." },
             { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=85", title: "Inheritance & Succession", desc: "A complex cross-border inheritance case involving properties in Tuscany and heirs in France and the US. Legal coordination, property valuation, and tax-optimised transfer." },
           ],
