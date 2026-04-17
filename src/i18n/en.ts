@@ -311,7 +311,7 @@ export const en: Translation = {
           hero: "Make your dream of studying in Italy a reality — from university enrollment to your arrival and settlement.",
           showcase: [
             { img: "/gallery/students-florence.jpg", title: "Architecture Studies in Florence", desc: "A Moroccan student enrolled at the University of Florence. Visa application, accommodation near campus, Italian language course, and bank account — all set up before arrival." },
-            { img: "/gallery/mba-milan.jpg", title: "MBA in Milan", desc: "An Algerian professional accepted at Bocconi University. Student visa, furnished apartment in Navigli, health insurance, and orientation week — organised in 3 weeks." },
+            { img: "/gallery/mba-milan.jpg", title: "MBA in Milan", desc: "A Dutch professional accepted at Bocconi University. Student visa, furnished apartment in Navigli, health insurance, and orientation week — organised in 3 weeks." },
             { img: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=85", title: "Medical Studies in Bologna", desc: "A student from Brazil enrolled in the English-taught medical programme. Pre-enrollment exam prep, document legalisation, and airport welcome — a turnkey start." },
           ],
           whatIs: "Our student visa service handles your entire study project in Italy. We advise on universities and programs, prepare your application file, handle your visa request and organize your arrival. Our expertise in the Italian university system and consular procedures ensures the most efficient processing of your application.",
