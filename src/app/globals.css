@@ -4141,3 +4141,66 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
 }
 .vs-yt-link svg:first-child { color: #FF0000; }
 .vs-yt-link:hover svg:first-child { color: #ff6b6b; }
+
+/* Video poster (fallback when YouTube video is unavailable) */
+.video-poster {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.video-poster:hover { transform: translateY(-4px); }
+.video-poster:hover img { transform: scale(1.03); }
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,20,32,0.15) 0%, rgba(14,20,32,0.45) 100%);
+}
+.video-play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 88px;
+  height: 88px;
+  background: rgba(255,255,255,0.95);
+  color: #0e1420;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+.video-poster:hover .video-play-btn {
+  background: #d4a843;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.video-play-btn svg { margin-left: 4px; }
+
+.video-brand {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.95);
+  padding: 8px 18px;
+  border-radius: 50px;
+  color: #0e1420;
+  font-family: var(--font-jost);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
