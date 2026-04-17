@@ -376,7 +376,7 @@ export const en: Translation = {
           showcase: [
             { img: "/gallery/legal-handshake.jpg", title: "Property Purchase Legal Support", desc: "Full legal due diligence for a €2M villa acquisition in Liguria. Title verification, contract review, notarial representation with power of attorney — for a Swiss buyer." },
             { img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85", title: "Business Incorporation in Italy", desc: "An SRL company set up in Milan for a German entrepreneur. Articles of association, tax registration, VAT number, and corporate bank account — operational in 15 days." },
-            { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=85", title: "Inheritance & Succession", desc: "A complex cross-border inheritance case involving properties in Tuscany and heirs in France and the US. Legal coordination, property valuation, and tax-optimised transfer." },
+            { img: "/gallery/inheritance.jpg", title: "Inheritance & Succession", desc: "A complex cross-border inheritance case involving properties in Tuscany and heirs in France and the US. Legal coordination, property valuation, and tax-optimised transfer." },
           ],
           whatIs: "Our network of Italian partner lawyers covers all areas of law relevant to foreigners in Italy: real estate, tax, corporate, inheritance and family law. We liaise between you and your lawyer, provide necessary legal translations and monitor your case progress. You benefit from high-level Italian legal expertise in your own language.",
           includes: [
