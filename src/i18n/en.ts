@@ -445,7 +445,7 @@ export const en: Translation = {
         details: {
           hero: "Your daily life in Italy simplified — we handle everything so you can focus on what matters.",
           showcase: [
-            { img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=85', title: 'Private Chef Experience', desc: 'An intimate Michelin-level dinner at your villa, featuring a personal chef, sommelier, and curated wine pairing. From the Amalfi Coast to Lake Como — we bring the finest Italian gastronomy to your door.' },
+            { img: '/gallery/chef-private.jpg', title: 'Private Chef Experience', desc: 'An intimate Michelin-level dinner at your villa, featuring a personal chef, sommelier, and curated wine pairing. From the Amalfi Coast to Lake Como — we bring the finest Italian gastronomy to your door.' },
             { img: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=85', title: 'Yacht Charter & Coastal Tour', desc: 'A bespoke sailing itinerary along the Sardinian coast or Aeolian Islands. We arrange the yacht, crew, provisions, and shore excursions — you simply enjoy the sea.' },
             { img: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=85', title: 'VIP Museum & Gallery Access', desc: 'Private after-hours tours of the Uffizi, Vatican Museums, or Brera Gallery. Skip the crowds — experience Italian art with an expert guide, exclusively arranged for you.' },
           ],
