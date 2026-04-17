@@ -173,7 +173,7 @@ nav {
   width: 42px;
   height: 42px;
   object-fit: contain;
-  filter: grayscale(1) brightness(1.4) contrast(0.85);
+  filter: sepia(1) saturate(4) hue-rotate(-5deg) brightness(1.05) contrast(1.1);
   margin-left: 8px;
   flex-shrink: 0;
 }
