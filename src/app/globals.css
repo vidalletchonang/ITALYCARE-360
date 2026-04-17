@@ -156,8 +156,31 @@ nav {
   font-weight: 700;
   color: #fff;
   letter-spacing: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 .nl-main span { color: var(--o); }
+.nl-360 {
+  color: #4a90e2 !important;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+.nl-coin {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.4) contrast(0.85);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .nl-360 { font-size: 13px; }
+  .nl-coin { width: 32px; height: 32px; }
+}
 .nl-sub {
   font-size: 16px;
   letter-spacing: 3px;
