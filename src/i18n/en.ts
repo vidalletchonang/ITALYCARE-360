@@ -635,7 +635,7 @@ export const en: Translation = {
         details: {
           hero: 'Find the ideal senior residence in Italy — selected according to the medical, cultural and personal needs of your loved one.',
           showcase: [
-            { img: 'https://images.unsplash.com/photo-1559030623-0226b1241edd?auto=format&fit=crop&w=800&q=85', title: 'Luxury Senior Residence in Veneto', desc: 'A 5-star senior home near Padua selected for a retired German diplomat. Medical staff, garden, activities programme, and regular video calls with family — vetted personally by our team.' },
+            { img: '/gallery/senior-residence.jpg', title: 'Luxury Senior Residence in Veneto', desc: 'A 5-star senior home near Padua selected for a retired German diplomat. Medical staff, garden, activities programme, and regular video calls with family — vetted personally by our team.' },
             { img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=85', title: 'Assisted Living in Tuscany', desc: 'A small family-run residence in the Chianti hills for an elderly British couple. Personalised care plan, English-speaking staff, and proximity to a hospital — found within 2 weeks.' },
             { img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85', title: 'Memory Care in Lombardy', desc: 'A specialised Alzheimer unit in Brescia for a patient from the UAE. Neurologist consultations, family liaison, and monthly progress reports — coordinated in Arabic and Italian.' },
           ],
