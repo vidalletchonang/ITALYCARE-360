@@ -637,7 +637,7 @@ export const en: Translation = {
           showcase: [
             { img: '/gallery/senior-residence.jpg', title: 'Luxury Senior Residence in Veneto', desc: 'A 5-star senior home near Padua selected for a retired German diplomat. Medical staff, garden, activities programme, and regular video calls with family — vetted personally by our team.' },
             { img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=85', title: 'Assisted Living in Tuscany', desc: 'A small family-run residence in the Chianti hills for an elderly British couple. Personalised care plan, English-speaking staff, and proximity to a hospital — found within 2 weeks.' },
-            { img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85', title: 'Memory Care in Lombardy', desc: 'A specialised Alzheimer unit in Brescia for a patient from the UAE. Neurologist consultations, family liaison, and monthly progress reports — coordinated in Arabic and Italian.' },
+            { img: '/gallery/memory-care.jpg', title: 'Memory Care in Lombardy', desc: 'A specialised Alzheimer unit in Brescia for a patient from the UAE. Neurologist consultations, family liaison, and monthly progress reports — coordinated in Arabic and Italian.' },
           ],
           whatIs: 'Our specialist service helps you find the most suitable retirement home or senior residence in Italy based on the medical, linguistic and financial requirements of your loved one. We analyse the medical file, identify matching establishments, arrange visits and handle all admission procedures. Regular follow-up is provided after settling in.',
           includes: [
