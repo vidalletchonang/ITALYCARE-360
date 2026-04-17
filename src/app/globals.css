@@ -4112,3 +4112,32 @@ button:active, .btn:active, .nav-cta:active, .nav-estimate-btn:active {
   .sd-showcase-arrow { width: 40px; height: 40px; }
 }
 
+
+/* YouTube channel link under the video */
+.vs-yt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px auto 0;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #141C2B;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-jost);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.vs-yt-link:hover {
+  background: #141C2B;
+  color: #ffffff;
+  border-color: #d4a843;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.vs-yt-link svg:first-child { color: #FF0000; }
+.vs-yt-link:hover svg:first-child { color: #ff6b6b; }

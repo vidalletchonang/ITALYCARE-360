@@ -135,7 +135,7 @@ export default function Footer() {
             <a href="#" className="soc">f</a>
             <a href="#" className="soc">in</a>
             <a href="#" className="soc">ig</a>
-            <a href="#" className="soc">yt</a>
+            <a href="https://youtube.com/@italycare360" target="_blank" rel="noopener noreferrer" className="soc">yt</a>
           </div>
         </div>
         {t.footer.cols.map((col, i) => (
