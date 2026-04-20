@@ -13,6 +13,10 @@ const SLUGS = [
   'maisons-retraite-italie-choisir',
   'financement-immobilier-italie-non-residents',
   'trouver-architecte-geometre-italie',
+  'silver-economy-retraite-italie-seniors',
+  'property-care-gerer-bien-italie-distance',
+  'thermal-wellness-cures-thermales-italie',
+  'aviation-privee-italie-guide',
 ]
 
 export function generateStaticParams() {
