@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import { LangProvider } from '@/context/LangContext'
+import ChatBotMount from '@/components/ChatBotMount'
 
 // ─── Google Analytics 4 ───────────────────────────────────────────────────────
 // Remplacez GA_MEASUREMENT_ID par votre vrai ID (ex: G-ABC123XYZ)
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <LangProvider>
           {children}
+          <ChatBotMount />
         </LangProvider>
       </body>
     </html>

@@ -1,0 +1,18 @@
+name = "italycare-chat"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Rate limiting KV namespace (optional but recommended)
+# After you run: wrangler kv:namespace create "RATE_KV"
+# Paste the returned id below
+[[kv_namespaces]]
+binding = "RATE_KV"
+id = "REPLACE_WITH_YOUR_KV_ID"
+
+# Logs (helpful during initial setup)
+[observability]
+enabled = true
+
+# Secrets (set via: wrangler secret put ANTHROPIC_API_KEY)
+# DO NOT put the key here
