@@ -170,16 +170,17 @@ nav {
   margin-left: 4px;
 }
 .nl-coin {
-  width: 42px;
-  height: 42px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
   filter: sepia(1) saturate(4) hue-rotate(-5deg) brightness(1.05) contrast(1.1);
-  margin-left: 8px;
+  margin-left: 2px;
   flex-shrink: 0;
+  vertical-align: middle;
 }
 @media (max-width: 600px) {
   .nl-360 { font-size: 13px; }
-  .nl-coin { width: 32px; height: 32px; }
+  .nl-coin { width: 40px; height: 40px; }
 }
 .nl-sub {
   font-size: 16px;
