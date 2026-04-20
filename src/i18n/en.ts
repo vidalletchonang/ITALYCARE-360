@@ -698,7 +698,7 @@ export const en: Translation = {
         details: {
           hero: 'Finance your projects in Italy — we identify the best banking and financial solutions for your situation.',
           showcase: [
-            { img: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43&fit=crop&w=800&q=85", title: "Mortgage for Non-Resident Buyer', desc: 'A 70% LTV mortgage secured for a French couple purchasing a villa in Liguria. Bank selection, document preparation, and notarial coordination — approved in 6 weeks.' },
+            { img: '/gallery/mortgage.jpg', title: 'Mortgage for Non-Resident Buyer', desc: 'A 70% LTV mortgage secured for a French couple purchasing a villa in Liguria. Bank selection, document preparation, and notarial coordination — approved in 6 weeks.' },
             { img: '/gallery/restaurant-loan.jpg', title: 'Business Loan for Restaurant', desc: 'Start-up financing obtained for an American entrepreneur opening a restaurant in Rome. Business plan, bank pitch, and guarantee structuring — funded within 8 weeks.' },
             { img: 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&w=800&q=85', title: 'Renovation Tax Credit Optimisation', desc: 'A €180K renovation project structured to benefit from Italy Superbonus tax credits. Fiscal engineering, certified contractors, and documentation — saving the client 65%.' },
           ],
