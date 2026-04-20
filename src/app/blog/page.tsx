@@ -316,16 +316,16 @@ const ARTICLES = [
     readTime: 5,
     image: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1200&q=80',
     title: {
-      fr: "Aviation privée vers l'Italie : guide pratique pour un voyage VIP sans stress",
-      en: "Private Aviation to Italy: Practical Guide for a Stress-Free VIP Journey",
-      it: "Aviazione Privata verso l'Italia: Guida Pratica per un Viaggio VIP Senza Stress",
-      ar: "الطيران الخاص إلى إيطاليا: الدليل العملي لرحلة VIP خالية من التوتر"
+      fr: "Aviation privée en 2026 : est-ce vraiment intéressant ?",
+      en: "Private Aviation in 2026: Is It Really Worth It?",
+      it: "Aviazione privata nel 2026: ne vale davvero la pena?",
+      ar: "الطيران الخاص في 2026: هل يستحق حقًا؟"
     },
     excerpt: {
-      fr: "Voyager en jet privé ou en hélicoptère vers l'Italie offre confort, discrétion et flexibilité inégalés. Découvrez comment ITALYCARE 360 coordonne votre expérience d'aviation privée de A à Z.",
-      en: "Travelling by private jet or helicopter to Italy offers unmatched comfort, discretion and flexibility. Discover how ITALYCARE 360 coordinates your private aviation experience from start to finish.",
-      it: "Viaggiare in jet privato o in elicottero verso l'Italia offre comfort, discrezione e flessibilità senza pari. Scopri come ITALYCARE 360 coordina la tua esperienza di aviazione privata dalla A alla Z.",
-      ar: "السفر بطائرة خاصة أو مروحية إلى إيطاليا يوفر راحة وسرية ومرونة لا مثيل لها. اكتشف كيف ينسق ITALYCARE 360 تجربة طيرانك الخاص من الألف إلى الياء."
+      fr: "L'aviation privée n'est plus seulement un symbole de luxe — c'est devenu un choix pratique pour ceux qui valorisent le temps, la flexibilité et une expérience de voyage fluide.",
+      en: "Private aviation is no longer just a symbol of luxury—it's becoming a practical choice for those who value time, flexibility, and a smoother travel experience. But is it actually worth it?",
+      it: "L'aviazione privata non è più solo un simbolo di lusso: sta diventando una scelta pratica per chi valorizza il tempo, la flessibilità e un'esperienza di viaggio più fluida.",
+      ar: "لم يعد الطيران الخاص مجرد رمز للفخامة — بل أصبح خيارًا عمليًا لمن يقدّرون الوقت والمرونة وتجربة سفر أكثر سلاسة."
     },
     content: { en: '', fr: '', it: '', ar: '' }
   },

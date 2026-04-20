@@ -315,18 +315,81 @@ const ARTICLES = [
     readTime: 5,
     image: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1200&q=80',
     title: {
-      fr: "Aviation privée vers l'Italie : guide pratique pour un voyage VIP sans stress",
-      en: "Private Aviation to Italy: Practical Guide for a Stress-Free VIP Journey",
-      it: "Aviazione Privata verso l'Italia: Guida Pratica per un Viaggio VIP Senza Stress",
-      ar: "الطيران الخاص إلى إيطاليا: الدليل العملي لرحلة VIP خالية من التوتر"
+      fr: "Aviation privée en 2026 : est-ce vraiment intéressant ?",
+      en: "Private Aviation in 2026: Is It Really Worth It?",
+      it: "Aviazione privata nel 2026: ne vale davvero la pena?",
+      ar: "الطيران الخاص في 2026: هل يستحق حقًا؟"
     },
     excerpt: {
-      fr: "Voyager en jet privé ou en hélicoptère vers l'Italie offre confort, discrétion et flexibilité inégalés. Découvrez comment ITALYCARE 360 coordonne votre expérience d'aviation privée de A à Z.",
-      en: "Travelling by private jet or helicopter to Italy offers unmatched comfort, discretion and flexibility. Discover how ITALYCARE 360 coordinates your private aviation experience from start to finish.",
-      it: "Viaggiare in jet privato o in elicottero verso l'Italia offre comfort, discrezione e flessibilità senza pari. Scopri come ITALYCARE 360 coordina la tua esperienza di aviazione privata dalla A alla Z.",
-      ar: "السفر بطائرة خاصة أو مروحية إلى إيطاليا يوفر راحة وسرية ومرونة لا مثيل لها. اكتشف كيف ينسق ITALYCARE 360 تجربة طيرانك الخاص من الألف إلى الياء."
+      fr: "L'aviation privée n'est plus seulement un symbole de luxe — c'est devenu un choix pratique pour ceux qui valorisent le temps, la flexibilité et une expérience de voyage fluide. Mais est-ce vraiment intéressant ?",
+      en: "Private aviation is no longer just a symbol of luxury—it's becoming a practical choice for those who value time, flexibility, and a smoother travel experience. But is it actually worth it?",
+      it: "L'aviazione privata non è più solo un simbolo di lusso: sta diventando una scelta pratica per chi valorizza il tempo, la flessibilità e un'esperienza di viaggio più fluida. Ma ne vale davvero la pena?",
+      ar: "لم يعد الطيران الخاص مجرد رمز للفخامة — بل أصبح خيارًا عمليًا لمن يقدّرون الوقت والمرونة وتجربة سفر أكثر سلاسة. لكن هل يستحق ذلك فعلًا؟"
     },
-    content: { en: '', fr: '', it: '', ar: '' }
+    content: {
+      en: `Private aviation is no longer just a symbol of luxury—it's becoming a practical choice for those who value time, flexibility, and a smoother travel experience. But is it actually worth it?
+
+For many travelers today, the answer is yes. Not necessarily because it's extravagant, but because it fundamentally changes how you move from one place to another.
+
+## What Really Changes When You Fly Private?
+
+The biggest difference is **control**. Instead of adapting to airline schedules, delays, and crowded airports, the journey is built entirely around you.
+
+You typically arrive at a private terminal just 15–30 minutes before departure, board immediately, and take off without queues or waiting times. Smaller airports also become accessible, meaning you can land much closer to your final destination and avoid long transfers.
+
+This is where private aviation becomes less about luxury and more about **efficiency**. A trip that would normally take an entire day can often be reduced to a few hours door-to-door.
+
+## How Much Does It Cost in 2026?
+
+Costs vary depending on the route, aircraft, and number of passengers, but the range is often more approachable than people expect.
+
+A short flight such as **Milan to Rome** generally starts from around **€5,000 to €8,000**. Medium routes like **Milan to London or Paris** typically fall between **€8,000 and €15,000**. For longer distances, such as **Milan to New York**, prices can range from **€60,000 to over €100,000** depending on the aircraft.
+
+What makes a real difference is how the cost is distributed. When shared among several passengers, the price per person can become comparable to business class—while offering a completely different level of comfort and flexibility.
+
+There are also ways to optimize costs, such as booking **empty legs** (discounted return flights) or **one-way routes**, which can significantly reduce the overall price.
+
+## When Does It Make Sense?
+
+Private aviation isn't always necessary, but in certain situations it becomes the most logical choice.
+
+It's particularly valuable when **time is limited**, when traveling with **family or colleagues**, or when reaching **destinations that are not well connected** by commercial flights. It also offers a level of **privacy** that can be essential for business or simply appreciated for personal travel.
+
+In these cases, the value isn't just in the flight itself, but in the time saved and the quality of the overall experience.
+
+## A More Accessible Option Than Before
+
+The industry has evolved significantly in recent years. You no longer need to own a jet or commit to long-term programs to fly privately.
+
+**On-demand charter services**, **flexible memberships**, and **tailored flight solutions** have made private aviation much more accessible. According to recent European industry data (2025), demand continues to grow, particularly among first-time users who are discovering it as a practical alternative rather than a luxury splurge.
+
+## FAQ: Private Aviation
+
+**Can I book a private jet last minute?**
+Yes, in many cases flights can be arranged within a few hours.
+
+**Is it more affordable if I travel with others?**
+Yes, sharing the cost often makes it surprisingly competitive.
+
+**Do I need a membership?**
+No, most flights today are booked on-demand.
+
+**Is it actually faster than flying commercial?**
+Yes, especially when considering total travel time door-to-door.
+
+## Final Thoughts
+
+Private aviation today is about **traveling better**, not just spending more. It offers a level of flexibility and efficiency that commercial flights simply can't match.
+
+If you've ever felt that travel takes more out of your schedule than it should, this is where the experience changes.
+
+## Ready to Explore Your Options?
+
+Get in touch with us to receive a personalized quote and discover the most efficient way to plan your next trip.`,
+      fr: '',
+      it: '',
+      ar: ''
+    }
   },
 ]
 
