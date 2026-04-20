@@ -1,12 +1,14 @@
 /**
- * ITALYCARE 360 — AI Chat Worker
+ * ITALYCARE 360 — AI Chat Worker (FREE version)
  *
- * Cloudflare Worker that proxies chat messages to Anthropic Claude API.
+ * Cloudflare Worker that proxies chat messages to Google Gemini API (FREE tier).
  * - Hides the API key from the client
  * - Injects the system prompt with full ITALYCARE 360 knowledge base
  * - Returns Server-Sent Events (SSE) stream for real-time responses
  * - Rate limits per IP (30 msgs / hour) via KV
  * - CORS whitelisted for production + dev origins
+ *
+ * Uses: gemini-2.0-flash (free tier: 15 RPM / 1500 RPD / 1M tokens/min)
  */
 
 import { buildSystemPrompt } from './system-prompt.js'
@@ -21,8 +23,8 @@ const ALLOWED_ORIGINS = [
 
 const RATE_LIMIT = 30          // messages per window
 const RATE_WINDOW = 3600       // 1 hour in seconds
-const MODEL = 'claude-sonnet-4-5-20250929'
-const MAX_TOKENS = 1024
+const MODEL = 'gemini-2.0-flash'
+const MAX_OUTPUT_TOKENS = 1024
 
 export default {
   async fetch(request, env) {
@@ -70,50 +72,57 @@ export default {
       return json({ error: 'messages array required' }, 400, corsHeaders)
     }
 
-    /* Validate message format */
-    const validMessages = messages
+    /* Validate + convert messages to Gemini format */
+    const geminiContents = messages
       .filter(m => m && typeof m.content === 'string' && m.content.trim().length > 0)
-      .slice(-20) /* keep last 20 to limit token usage */
+      .slice(-20)
       .map(m => ({
-        role: m.role === 'user' ? 'user' : 'assistant',
-        content: m.content.slice(0, 2000), /* cap length per message */
+        role: m.role === 'user' ? 'user' : 'model',
+        parts: [{ text: m.content.slice(0, 2000) }],
       }))
 
-    if (validMessages.length === 0) {
+    if (geminiContents.length === 0) {
       return json({ error: 'No valid messages' }, 400, corsHeaders)
     }
 
-    /* Call Anthropic with streaming */
+    /* Call Gemini with streaming */
     try {
-      const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
+      const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:streamGenerateContent?alt=sse&key=${env.GEMINI_API_KEY}`
+
+      const geminiRes = await fetch(geminiUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': env.ANTHROPIC_API_KEY,
-          'anthropic-version': '2023-06-01',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: MODEL,
-          max_tokens: MAX_TOKENS,
-          system: buildSystemPrompt(lang),
-          messages: validMessages,
-          stream: true,
+          systemInstruction: {
+            parts: [{ text: buildSystemPrompt(lang) }],
+          },
+          contents: geminiContents,
+          generationConfig: {
+            maxOutputTokens: MAX_OUTPUT_TOKENS,
+            temperature: 0.7,
+          },
+          safetySettings: [
+            { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
+            { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
+            { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_ONLY_HIGH' },
+            { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_ONLY_HIGH' },
+          ],
         }),
       })
 
-      if (!anthropicRes.ok) {
-        const errorText = await anthropicRes.text()
-        console.error('Anthropic error:', anthropicRes.status, errorText)
+      if (!geminiRes.ok) {
+        const errorText = await geminiRes.text()
+        console.error('Gemini error:', geminiRes.status, errorText)
         return json({ error: 'AI service temporarily unavailable' }, 502, corsHeaders)
       }
 
-      /* Transform Anthropic SSE → our simplified SSE */
+      /* Transform Gemini SSE → our simplified SSE { delta: "text" } */
       const { readable, writable } = new TransformStream()
       const writer = writable.getWriter()
       const encoder = new TextEncoder()
 
       ;(async () => {
-        const reader = anthropicRes.body.getReader()
+        const reader = geminiRes.body.getReader()
         const decoder = new TextDecoder()
         let buffer = ''
 
@@ -131,14 +140,14 @@ export default {
               if (!data) continue
               try {
                 const event = JSON.parse(data)
-                if (event.type === 'content_block_delta' && event.delta?.type === 'text_delta') {
-                  await writer.write(encoder.encode(`data: ${JSON.stringify({ delta: event.delta.text })}\n\n`))
-                } else if (event.type === 'message_stop') {
-                  await writer.write(encoder.encode('data: [DONE]\n\n'))
+                const text = event?.candidates?.[0]?.content?.parts?.[0]?.text
+                if (text) {
+                  await writer.write(encoder.encode(`data: ${JSON.stringify({ delta: text })}\n\n`))
                 }
               } catch {}
             }
           }
+          await writer.write(encoder.encode('data: [DONE]\n\n'))
         } catch (e) {
           console.error('Stream error:', e)
         } finally {
