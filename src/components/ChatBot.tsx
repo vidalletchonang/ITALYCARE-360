@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -23,6 +22,15 @@ const UI: Record<string, {
   bookBanner: string
   bookCta: string
   maxedOut: string
+  formTitle: string
+  formSubtitle: string
+  formName: string
+  formEmail: string
+  formMessage: string
+  formSubmit: string
+  formSending: string
+  formSuccess: string
+  formError: string
 }> = {
   fr: {
     title: 'Assistant ITALYCARE 360',
@@ -39,6 +47,15 @@ const UI: Record<string, {
     bookBanner: '✨ Prêt pour l\'étape suivante ? Nos experts vous offrent une consultation gratuite de 30 min.',
     bookCta: 'Réserver 30 min gratuites →',
     maxedOut: 'Pour approfondir votre projet, parlons de vive voix avec un expert — c\'est gratuit et sans engagement.',
+    formTitle: 'Réservez votre consultation gratuite',
+    formSubtitle: 'Notre expert vous rappellera sous 48h.',
+    formName: 'Votre nom',
+    formEmail: 'Votre email',
+    formMessage: 'Votre projet en une phrase',
+    formSubmit: 'Envoyer ma demande',
+    formSending: 'Envoi en cours…',
+    formSuccess: '✅ Reçu ! Notre expert vous contactera sous 48h.',
+    formError: 'Une erreur est survenue. Contactez-nous directement à italycare360@gmail.com',
   },
   en: {
     title: 'ITALYCARE 360 Assistant',
@@ -55,6 +72,15 @@ const UI: Record<string, {
     bookBanner: '✨ Ready for the next step? Our experts offer a free 30-min consultation.',
     bookCta: 'Book 30 free min →',
     maxedOut: 'To go deeper into your project, let\'s talk with a real expert — it\'s free, no commitment.',
+    formTitle: 'Book your free consultation',
+    formSubtitle: 'Our expert will reply within 48h.',
+    formName: 'Your name',
+    formEmail: 'Your email',
+    formMessage: 'Your project in one sentence',
+    formSubmit: 'Send my request',
+    formSending: 'Sending…',
+    formSuccess: '✅ Got it! Our expert will contact you within 48h.',
+    formError: 'Something went wrong. Contact us directly at italycare360@gmail.com',
   },
   it: {
     title: 'Assistente ITALYCARE 360',
@@ -71,6 +97,15 @@ const UI: Record<string, {
     bookBanner: '✨ Pronto per il prossimo passo? I nostri esperti offrono una consulenza gratuita di 30 min.',
     bookCta: 'Prenota 30 min gratis →',
     maxedOut: 'Per approfondire il progetto, parliamo con un esperto reale — è gratis, senza impegno.',
+    formTitle: 'Prenota la tua consulenza gratuita',
+    formSubtitle: 'Il nostro esperto ti risponderà entro 48h.',
+    formName: 'Il tuo nome',
+    formEmail: 'La tua email',
+    formMessage: 'Il tuo progetto in una frase',
+    formSubmit: 'Invia la richiesta',
+    formSending: 'Invio in corso…',
+    formSuccess: '✅ Ricevuto! Il nostro esperto ti contatterà entro 48h.',
+    formError: 'Qualcosa è andato storto. Scrivici a italycare360@gmail.com',
   },
   ar: {
     title: 'مساعد ITALYCARE 360',
@@ -87,6 +122,15 @@ const UI: Record<string, {
     bookBanner: '✨ مستعد للخطوة التالية؟ خبراؤنا يقدمون استشارة مجانية 30 دقيقة.',
     bookCta: '← احجز 30 دقيقة مجانية',
     maxedOut: 'للتعمق في مشروعك، تحدث مع خبير حقيقي — مجاني وبدون التزام.',
+    formTitle: 'احجز استشارتك المجانية',
+    formSubtitle: 'سيتواصل معك خبيرنا خلال 48 ساعة.',
+    formName: 'اسمك',
+    formEmail: 'بريدك الإلكتروني',
+    formMessage: 'مشروعك في جملة واحدة',
+    formSubmit: 'إرسال الطلب',
+    formSending: 'جاري الإرسال…',
+    formSuccess: '✅ تم الاستلام! سيتواصل معك خبيرنا خلال 48 ساعة.',
+    formError: 'حدث خطأ. راسلنا مباشرة: italycare360@gmail.com',
   },
   ru: {
     title: 'Ассистент ITALYCARE 360',
@@ -103,6 +147,15 @@ const UI: Record<string, {
     bookBanner: '✨ Готовы к следующему шагу? Наши эксперты дают бесплатную 30-минутную консультацию.',
     bookCta: 'Записаться на 30 мин →',
     maxedOut: 'Чтобы углубиться в проект, поговорите с реальным экспертом — бесплатно, без обязательств.',
+    formTitle: 'Запишитесь на бесплатную консультацию',
+    formSubtitle: 'Наш эксперт свяжется с вами в течение 48 часов.',
+    formName: 'Ваше имя',
+    formEmail: 'Ваш email',
+    formMessage: 'Ваш проект в одном предложении',
+    formSubmit: 'Отправить запрос',
+    formSending: 'Отправляется…',
+    formSuccess: '✅ Получено! Наш эксперт свяжется с вами в течение 48 часов.',
+    formError: 'Произошла ошибка. Напишите нам на italycare360@gmail.com',
   },
 }
 
@@ -121,6 +174,11 @@ export default function ChatBot() {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
+  const [showForm, setShowForm] = useState(false)
+  const [formName, setFormName] = useState('')
+  const [formEmail, setFormEmail] = useState('')
+  const [formMessage, setFormMessage] = useState('')
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const scrollRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
@@ -240,7 +298,38 @@ export default function ChatBot() {
 
   const clearChat = () => {
     setMessages([])
+    setShowForm(false)
+    setFormStatus('idle')
+    setFormName('')
+    setFormEmail('')
+    setFormMessage('')
     try { localStorage.removeItem('italycare-chat') } catch {}
+  }
+
+  const submitLead = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!formName.trim() || !formEmail.trim() || !formMessage.trim()) return
+    setFormStatus('sending')
+
+    try {
+      if (!WORKER_URL) throw new Error('Worker not configured')
+      const res = await fetch(`${WORKER_URL}/lead`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formName.trim(),
+          email: formEmail.trim(),
+          message: formMessage.trim(),
+          lang,
+          conversation: messages,
+        }),
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      setFormStatus('success')
+    } catch (err) {
+      console.error('[Lead]', err)
+      setFormStatus('error')
+    }
   }
 
   return (
@@ -320,15 +409,64 @@ export default function ChatBot() {
             )}
 
             {/* Booking banner — appears after 3 exchanges */}
-            {showBookingBanner && !loading && (
+            {showBookingBanner && !loading && !showForm && formStatus !== 'success' && (
               <div className="chat-booking-banner">
                 <div className="chat-booking-text">
                   {isMaxedOut ? ui.maxedOut : ui.bookBanner}
                 </div>
-                <Link href="/contact" className="chat-booking-cta" onClick={() => setOpen(false)}>
+                <button type="button" className="chat-booking-cta" onClick={() => {
+                  setShowForm(true)
+                  // Pre-fill project field with last user message
+                  const lastUser = [...messages].reverse().find(m => m.role === 'user')
+                  if (lastUser && !formMessage) setFormMessage(lastUser.content)
+                }}>
                   {ui.bookCta}
-                </Link>
+                </button>
               </div>
+            )}
+
+            {/* Inline lead form */}
+            {showForm && formStatus !== 'success' && (
+              <form className="chat-lead-form" onSubmit={submitLead}>
+                <div className="chat-lead-title">{ui.formTitle}</div>
+                <div className="chat-lead-sub">{ui.formSubtitle}</div>
+                <input
+                  type="text"
+                  className="chat-lead-input"
+                  placeholder={ui.formName}
+                  value={formName}
+                  onChange={e => setFormName(e.target.value)}
+                  required
+                  autoFocus
+                />
+                <input
+                  type="email"
+                  className="chat-lead-input"
+                  placeholder={ui.formEmail}
+                  value={formEmail}
+                  onChange={e => setFormEmail(e.target.value)}
+                  required
+                />
+                <textarea
+                  className="chat-lead-input"
+                  placeholder={ui.formMessage}
+                  value={formMessage}
+                  onChange={e => setFormMessage(e.target.value)}
+                  rows={3}
+                  required
+                />
+                <button type="submit" className="chat-lead-submit" disabled={formStatus === 'sending'}>
+                  {formStatus === 'sending' ? ui.formSending : ui.formSubmit}
+                </button>
+                {formStatus === 'error' && (
+                  <div className="chat-lead-error">{ui.formError}</div>
+                )}
+              </form>
+            )}
+
+            {/* Success confirmation */}
+            {formStatus === 'success' && (
+              <div className="chat-lead-success">{ui.formSuccess}</div>
             )}
           </div>
 
