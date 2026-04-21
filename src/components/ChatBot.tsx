@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -19,73 +20,94 @@ const UI: Record<string, {
   poweredBy: string
   close: string
   book: string
+  bookBanner: string
+  bookCta: string
+  maxedOut: string
 }> = {
   fr: {
     title: 'Assistant ITALYCARE 360',
-    subtitle: 'Votre conseiller IA 24/7',
+    subtitle: 'Pré-qualification rapide',
     placeholder: 'Posez votre question…',
     send: 'Envoyer',
-    welcome: 'Bonjour ! Je suis votre conseiller ITALYCARE 360. Je réponds en 5 langues à toutes vos questions sur l\'Italie : immobilier, visa, fiscalité, déménagement, et bien plus encore. Comment puis-je vous aider ?',
-    suggestions: ['Acheter une villa en Toscane', 'Obtenir un visa étudiant', 'Frais et services', 'Prendre rendez-vous'],
+    welcome: 'Bonjour ! Je suis votre conseiller ITALYCARE 360. Posez-moi vos questions sur l\'Italie — je vous oriente en 2-3 échanges et vous mets en contact avec l\'expert adapté.',
+    suggestions: ['Acheter une villa en Toscane', 'Visa étudiant', 'Frais et services', 'Prendre rendez-vous'],
     thinking: 'L\'assistant réfléchit…',
-    error: 'Désolé, une erreur est survenue. Réessayez ou contactez-nous directement.',
-    poweredBy: 'Propulsé par Claude AI',
+    error: 'Désolé, une erreur est survenue. Contactez-nous directement.',
+    poweredBy: 'Powered by AI',
     close: 'Fermer',
-    book: 'Prendre rendez-vous',
+    book: 'Prendre rendez-vous gratuit',
+    bookBanner: '✨ Prêt pour l\'étape suivante ? Nos experts vous offrent une consultation gratuite de 30 min.',
+    bookCta: 'Réserver 30 min gratuites →',
+    maxedOut: 'Pour approfondir votre projet, parlons de vive voix avec un expert — c\'est gratuit et sans engagement.',
   },
   en: {
     title: 'ITALYCARE 360 Assistant',
-    subtitle: 'Your 24/7 AI advisor',
+    subtitle: 'Quick pre-qualification',
     placeholder: 'Ask your question…',
     send: 'Send',
-    welcome: 'Hello! I\'m your ITALYCARE 360 advisor. I answer in 5 languages any questions about Italy: real estate, visa, taxes, relocation, and much more. How can I help you?',
-    suggestions: ['Buy a villa in Tuscany', 'Get a student visa', 'Fees and services', 'Book a consultation'],
+    welcome: 'Hello! I\'m your ITALYCARE 360 advisor. Ask me your questions about Italy — I\'ll guide you in 2-3 exchanges then connect you with the right expert.',
+    suggestions: ['Buy a villa in Tuscany', 'Student visa', 'Fees and services', 'Book a consultation'],
     thinking: 'Assistant is thinking…',
-    error: 'Sorry, something went wrong. Try again or contact us directly.',
-    poweredBy: 'Powered by Claude AI',
+    error: 'Sorry, something went wrong. Please contact us directly.',
+    poweredBy: 'Powered by AI',
     close: 'Close',
-    book: 'Book consultation',
+    book: 'Book free consultation',
+    bookBanner: '✨ Ready for the next step? Our experts offer a free 30-min consultation.',
+    bookCta: 'Book 30 free min →',
+    maxedOut: 'To go deeper into your project, let\'s talk with a real expert — it\'s free, no commitment.',
   },
   it: {
     title: 'Assistente ITALYCARE 360',
-    subtitle: 'Il tuo consulente IA 24/7',
+    subtitle: 'Pre-qualifica veloce',
     placeholder: 'Fai la tua domanda…',
     send: 'Invia',
-    welcome: 'Ciao! Sono il tuo consulente ITALYCARE 360. Rispondo in 5 lingue a tutte le domande sull\'Italia: immobiliare, visti, tasse, trasferimento e molto altro. Come posso aiutarti?',
-    suggestions: ['Comprare una villa in Toscana', 'Ottenere un visto studente', 'Costi e servizi', 'Prenota consulenza'],
+    welcome: 'Ciao! Sono il tuo consulente ITALYCARE 360. Fammi le tue domande sull\'Italia — ti oriento in 2-3 scambi e ti connetto con l\'esperto giusto.',
+    suggestions: ['Comprare una villa in Toscana', 'Visto studente', 'Costi e servizi', 'Prenota consulenza'],
     thinking: 'L\'assistente sta pensando…',
-    error: 'Scusa, qualcosa è andato storto. Riprova o contattaci direttamente.',
-    poweredBy: 'Powered by Claude AI',
+    error: 'Scusa, qualcosa è andato storto. Contattaci direttamente.',
+    poweredBy: 'Powered by AI',
     close: 'Chiudi',
-    book: 'Prenota consulenza',
+    book: 'Prenota consulenza gratuita',
+    bookBanner: '✨ Pronto per il prossimo passo? I nostri esperti offrono una consulenza gratuita di 30 min.',
+    bookCta: 'Prenota 30 min gratis →',
+    maxedOut: 'Per approfondire il progetto, parliamo con un esperto reale — è gratis, senza impegno.',
   },
   ar: {
     title: 'مساعد ITALYCARE 360',
-    subtitle: 'مستشارك الذكي على مدار الساعة',
+    subtitle: 'تأهيل سريع',
     placeholder: 'اطرح سؤالك…',
     send: 'إرسال',
-    welcome: 'مرحبًا! أنا مستشارك في ITALYCARE 360. أجيب بخمس لغات على جميع أسئلتكم حول إيطاليا: العقارات، التأشيرة، الضرائب، الانتقال، وأكثر. كيف يمكنني مساعدتك؟',
-    suggestions: ['شراء فيلا في توسكانا', 'الحصول على تأشيرة طالب', 'الرسوم والخدمات', 'حجز استشارة'],
+    welcome: 'مرحبًا! أنا مستشارك في ITALYCARE 360. اطرح أسئلتك حول إيطاليا — سأوجهك في 2-3 تبادلات ثم أصلك بالخبير المناسب.',
+    suggestions: ['شراء فيلا في توسكانا', 'تأشيرة طالب', 'الرسوم والخدمات', 'حجز استشارة'],
     thinking: 'المساعد يفكر…',
-    error: 'عذرًا، حدث خطأ. أعد المحاولة أو اتصل بنا مباشرة.',
-    poweredBy: 'مدعوم من Claude AI',
+    error: 'عذرًا، حدث خطأ. تواصل معنا مباشرة.',
+    poweredBy: 'Powered by AI',
     close: 'إغلاق',
-    book: 'احجز استشارة',
+    book: 'احجز استشارة مجانية',
+    bookBanner: '✨ مستعد للخطوة التالية؟ خبراؤنا يقدمون استشارة مجانية 30 دقيقة.',
+    bookCta: '← احجز 30 دقيقة مجانية',
+    maxedOut: 'للتعمق في مشروعك، تحدث مع خبير حقيقي — مجاني وبدون التزام.',
   },
   ru: {
     title: 'Ассистент ITALYCARE 360',
-    subtitle: 'Ваш ИИ-консультант 24/7',
-    placeholder: 'Задайте ваш вопрос…',
+    subtitle: 'Быстрая квалификация',
+    placeholder: 'Задайте вопрос…',
     send: 'Отправить',
-    welcome: 'Здравствуйте! Я ваш консультант ITALYCARE 360. Отвечаю на 5 языках на все вопросы об Италии: недвижимость, визы, налоги, переезд и многое другое. Чем могу помочь?',
-    suggestions: ['Купить виллу в Тоскане', 'Получить студенческую визу', 'Стоимость и услуги', 'Записаться на консультацию'],
+    welcome: 'Здравствуйте! Я ваш консультант ITALYCARE 360. Задавайте вопросы об Италии — я помогу за 2-3 обмена и свяжу с подходящим экспертом.',
+    suggestions: ['Купить виллу в Тоскане', 'Студенческая виза', 'Стоимость и услуги', 'Записаться'],
     thinking: 'Ассистент думает…',
-    error: 'Извините, что-то пошло не так. Попробуйте снова или свяжитесь с нами напрямую.',
-    poweredBy: 'На базе Claude AI',
+    error: 'Извините, произошла ошибка. Свяжитесь с нами напрямую.',
+    poweredBy: 'Powered by AI',
     close: 'Закрыть',
-    book: 'Записаться',
+    book: 'Бесплатная консультация',
+    bookBanner: '✨ Готовы к следующему шагу? Наши эксперты дают бесплатную 30-минутную консультацию.',
+    bookCta: 'Записаться на 30 мин →',
+    maxedOut: 'Чтобы углубиться в проект, поговорите с реальным экспертом — бесплатно, без обязательств.',
   },
 }
+
+const MAX_USER_MESSAGES = 5  // After this, chat becomes "booking only"
+const SHOW_BANNER_AFTER = 3  // Show prominent booking banner after N user messages
 
 interface Message {
   role: 'user' | 'assistant'
@@ -103,6 +125,10 @@ export default function ChatBot() {
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
   const ui = UI[lang] || UI.en
+
+  const userMessageCount = messages.filter(m => m.role === 'user').length
+  const showBookingBanner = userMessageCount >= SHOW_BANNER_AFTER
+  const isMaxedOut = userMessageCount >= MAX_USER_MESSAGES
 
   /* Load conversation from localStorage */
   useEffect(() => {
@@ -292,6 +318,18 @@ export default function ChatBot() {
                 </div>
               </div>
             )}
+
+            {/* Booking banner — appears after 3 exchanges */}
+            {showBookingBanner && !loading && (
+              <div className="chat-booking-banner">
+                <div className="chat-booking-text">
+                  {isMaxedOut ? ui.maxedOut : ui.bookBanner}
+                </div>
+                <Link href="/contact" className="chat-booking-cta" onClick={() => setOpen(false)}>
+                  {ui.bookCta}
+                </Link>
+              </div>
+            )}
           </div>
 
           <form
@@ -306,8 +344,9 @@ export default function ChatBot() {
               className="chat-input"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={ui.placeholder}
+              placeholder={isMaxedOut ? ui.maxedOut : ui.placeholder}
               rows={1}
+              disabled={isMaxedOut}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault()
@@ -315,7 +354,7 @@ export default function ChatBot() {
                 }
               }}
             />
-            <button type="submit" className="chat-send" disabled={loading || !input.trim()} aria-label={ui.send}>
+            <button type="submit" className="chat-send" disabled={loading || !input.trim() || isMaxedOut} aria-label={ui.send}>
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                 <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
               </svg>
