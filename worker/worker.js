@@ -77,13 +77,17 @@ async function handleChat(request, env, corsHeaders) {
   let body
   try { body = await request.json() } catch { return json({ error: 'Invalid JSON' }, 400, corsHeaders) }
 
-  const { messages, lang = 'en' } = body
+  const { messages, lang = 'en', advisorName = 'Maria' } = body
   if (!Array.isArray(messages) || messages.length === 0) {
     return json({ error: 'messages array required' }, 400, corsHeaders)
   }
 
+  /* Sanitize advisor name — only allow short alphabetic string */
+  const safeName = typeof advisorName === 'string' && /^[A-Za-zÀ-ÿ]{2,20}$/.test(advisorName)
+    ? advisorName : 'Maria'
+
   const openaiMessages = [
-    { role: 'system', content: buildSystemPrompt(lang) },
+    { role: 'system', content: buildSystemPrompt(lang, safeName) },
     ...messages
       .filter(m => m && typeof m.content === 'string' && m.content.trim().length > 0)
       .slice(-20)

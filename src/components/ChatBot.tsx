@@ -162,6 +162,28 @@ const UI: Record<string, {
 const MAX_USER_MESSAGES = 5  // After this, chat becomes "booking only"
 const SHOW_BANNER_AFTER = 3  // Show prominent booking banner after N user messages
 
+/* Italian first names — randomly picked at session start */
+const ADVISOR_NAMES = [
+  'Maria', 'Giulia', 'Sofia', 'Alessandra', 'Lucia',
+  'Francesca', 'Valentina', 'Chiara', 'Elena', 'Isabella',
+  'Beatrice', 'Martina', 'Aurora', 'Elisa', 'Federica',
+]
+
+function pickAdvisorName() {
+  return ADVISOR_NAMES[Math.floor(Math.random() * ADVISOR_NAMES.length)]
+}
+
+function welcomeMessage(name: string, lang: string) {
+  const templates: Record<string, string> = {
+    fr: `Ciao ! Je m'appelle ${name}, votre conseillère ITALYCARE 360. Dites-moi votre projet en Italie — je vous oriente en quelques échanges puis je vous connecte avec l'expert adapté.`,
+    en: `Ciao! I'm ${name}, your ITALYCARE 360 advisor. Tell me about your project in Italy — I'll guide you in a few exchanges and connect you with the right expert.`,
+    it: `Ciao! Sono ${name}, la tua consulente ITALYCARE 360. Dimmi del tuo progetto in Italia — ti oriento in pochi scambi e ti connetto con l'esperto giusto.`,
+    ar: `!Ciao أنا ${name}، مستشارتك في ITALYCARE 360. أخبرني عن مشروعك في إيطاليا — سأوجهك في بضع تبادلات ثم أصلك بالخبير المناسب.`,
+    ru: `Ciao! Меня зовут ${name}, я ваш консультант ITALYCARE 360. Расскажите о вашем проекте в Италии — я помогу в нескольких обменах и свяжу вас с нужным экспертом.`,
+  }
+  return templates[lang] || templates.en
+}
+
 interface Message {
   role: 'user' | 'assistant'
   content: string
@@ -179,6 +201,7 @@ export default function ChatBot() {
   const [formEmail, setFormEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [advisorName, setAdvisorName] = useState<string>('')
   const scrollRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
@@ -188,20 +211,12 @@ export default function ChatBot() {
   const showBookingBanner = userMessageCount >= SHOW_BANNER_AFTER
   const isMaxedOut = userMessageCount >= MAX_USER_MESSAGES
 
-  /* Load conversation from localStorage */
+  /* Fresh session on every page load — pick a random advisor name */
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem('italycare-chat')
-      if (stored) setMessages(JSON.parse(stored).slice(-20))
-    } catch {}
+    setAdvisorName(pickAdvisorName())
+    // Also clear any stale localStorage from previous versions
+    try { localStorage.removeItem('italycare-chat') } catch {}
   }, [])
-
-  /* Save conversation */
-  useEffect(() => {
-    if (messages.length > 0) {
-      try { localStorage.setItem('italycare-chat', JSON.stringify(messages.slice(-20))) } catch {}
-    }
-  }, [messages])
 
   /* Auto-scroll to bottom */
   useEffect(() => {
@@ -247,7 +262,7 @@ export default function ChatBot() {
       const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: newMessages, lang }),
+        body: JSON.stringify({ messages: newMessages, lang, advisorName }),
       })
 
       if (!response.ok || !response.body) {
@@ -360,7 +375,7 @@ export default function ChatBot() {
                 aria-hidden="true"
               />
               <div>
-                <div className="chat-title">{ui.title}</div>
+                <div className="chat-title">{advisorName ? `${advisorName} · ITALYCARE 360` : ui.title}</div>
                 <div className="chat-subtitle">
                   <span className="chat-online-dot" />
                   {ui.subtitle}
@@ -376,10 +391,10 @@ export default function ChatBot() {
 
           <div className="chat-messages" ref={scrollRef}>
             {/* Welcome */}
-            {messages.length === 0 && (
+            {messages.length === 0 && advisorName && (
               <>
                 <div className="chat-message chat-message-bot">
-                  <div className="chat-bubble-bot">{ui.welcome}</div>
+                  <div className="chat-bubble-bot">{welcomeMessage(advisorName, lang)}</div>
                 </div>
                 <div className="chat-suggestions">
                   {ui.suggestions.map((s, i) => (
