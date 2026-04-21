@@ -8,7 +8,7 @@ compatibility_flags = ["nodejs_compat"]
 # Paste the returned id below
 [[kv_namespaces]]
 binding = "RATE_KV"
-id = "REPLACE_WITH_YOUR_KV_ID"
+id = "765a4f6546d94316bc73707ba58e1a0c"
 
 # Logs (helpful during initial setup)
 [observability]
