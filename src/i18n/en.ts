@@ -1025,7 +1025,7 @@ export const en: Translation = {
           hero: 'Travel to Italy in absolute comfort and discretion — we handle every detail of your private aviation experience.',
           showcase: [
             { img: '/gallery/milan-sardinia.jpg', title: 'Milan–Sardinia Charter', desc: 'A seamless door-to-door journey: private transfer in Milan, direct flight to Olbia, helicopter to your Costa Smeralda villa. Total travel time: under 3 hours.' },
-            { img: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?auto=format&fit=crop&w=800&q=85', title: 'Multi-City European Tour', desc: 'A week-long itinerary: London → Milan → Florence → Rome by private jet, with ground logistics, hotel reservations, and VIP transfers at every stop.' },
+            { img: '/gallery/vip-tour.jpg', title: 'Multi-City European Tour', desc: 'A week-long itinerary: London → Milan → Florence → Rome by private jet, with ground logistics, hotel reservations, and VIP transfers at every stop.' },
             { img: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=800&q=85', title: 'Emergency Medical Flight', desc: 'A last-minute air ambulance arranged within 6 hours for a patient transfer from the Middle East to a specialist clinic in Milan. Life-saving speed, handled with care.' },
           ],
           whatIs: 'Our Private Aviation service offers a complete solution for all your air travel needs in and around Italy. We select certified private aviation operators, coordinate your flights, ground transfers and full travel itinerary. Whether for an urgent business trip, a luxury leisure journey or a complex multi-destination itinerary, our team ensures seamless execution with total discretion and a VIP standard of service.',
