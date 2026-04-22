@@ -4669,3 +4669,66 @@ textarea.chat-lead-input {
   line-height: 1.6;
   animation: bookingPulse 0.4s cubic-bezier(0.16,1,0.3,1);
 }
+
+/* Music player — elegant floating toggle */
+.music-btn {
+  position: fixed;
+  top: 92px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20,28,43,0.85);
+  color: rgba(245,237,214,0.7);
+  border: 1px solid rgba(212,168,67,0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 498;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+.music-btn:hover {
+  color: #d4a843;
+  border-color: #d4a843;
+  transform: scale(1.08);
+}
+.music-btn.playing {
+  background: linear-gradient(135deg, rgba(212,168,67,0.15), rgba(212,168,67,0.05));
+  border-color: #d4a843;
+  color: #d4a843;
+}
+.music-waves {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5px;
+  background: #d4a843;
+  padding: 3px 4px;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(212,168,67,0.4);
+}
+.music-waves span {
+  width: 2px;
+  background: #0e1420;
+  border-radius: 1px;
+  animation: musicWave 1s ease-in-out infinite;
+}
+.music-waves span:nth-child(1) { height: 6px; animation-delay: 0s; }
+.music-waves span:nth-child(2) { height: 10px; animation-delay: 0.2s; }
+.music-waves span:nth-child(3) { height: 6px; animation-delay: 0.4s; }
+@keyframes musicWave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+[dir="rtl"] .music-btn { right: auto; left: 32px; }
+
+@media (max-width: 600px) {
+  .music-btn { top: 82px; right: 16px; width: 38px; height: 38px; }
+  [dir="rtl"] .music-btn { right: auto; left: 16px; }
+}
+

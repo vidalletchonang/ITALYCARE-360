@@ -188,13 +188,13 @@ async function handleLead(request, env, corsHeaders) {
     return json({ error: 'Invalid email' }, 400, corsHeaders)
   }
 
-  /* Rate limit leads (5 per IP per hour to block spam) */
+  /* Rate limit leads (20 per IP per hour to block spam) */
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown'
   if (env.RATE_KV) {
     const key = `lead:${ip}`
     const raw = await env.RATE_KV.get(key)
     const count = raw ? parseInt(raw, 10) : 0
-    if (count >= 5) {
+    if (count >= 20) {
       return json({ error: 'Too many submissions' }, 429, corsHeaders)
     }
     await env.RATE_KV.put(key, String(count + 1), { expirationTtl: 3600 })
@@ -238,8 +238,14 @@ async function handleLead(request, env, corsHeaders) {
 
   /* Send via Resend */
   try {
-    const to = env.LEAD_EMAIL_TO || 'italycare360@gmail.com'
-    const from = env.LEAD_EMAIL_FROM || 'ITALYCARE 360 Chatbot <onboarding@resend.dev>'
+    /* Sanitize and validate recipient email */
+    const rawTo = (env.LEAD_EMAIL_TO || 'italycare360@gmail.com').trim()
+    const toEmail = rawTo.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/)?.[0]
+    if (!toEmail) {
+      console.error('Invalid LEAD_EMAIL_TO:', JSON.stringify(rawTo))
+      return json({ error: 'Email recipient misconfigured' }, 500, corsHeaders)
+    }
+    const from = (env.LEAD_EMAIL_FROM || 'ITALYCARE 360 Chatbot <onboarding@resend.dev>').trim()
     const resendRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -248,7 +254,7 @@ async function handleLead(request, env, corsHeaders) {
       },
       body: JSON.stringify({
         from,
-        to,
+        to: [toEmail],
         reply_to: email,
         subject: `[New Lead] ${name} — ${langLabel}`,
         html,
