@@ -1154,7 +1154,7 @@ export const en: Translation = {
         details: {
           hero: "Whether you're renting for a stay or selling your vehicle, ITALYCARE 360 keeps it simple — no detours, no surprises.",
           showcase: [
-            { img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85', title: 'Luxury Car for the Amalfi Coast', desc: 'A convertible delivered to your hotel in Positano for a week-long drive along the most scenic coastline in the world. Insurance, GPS, and 24/7 roadside assistance included.' },
+            { img: '/gallery/amalfi-car.jpg', title: 'Luxury Car for the Amalfi Coast', desc: 'A convertible delivered to your hotel in Positano for a week-long drive along the most scenic coastline in the world. Insurance, GPS, and 24/7 roadside assistance included.' },
             { img: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=85', title: 'Corporate Fleet for Milan Event', desc: 'A fleet of 8 premium sedans coordinated for a three-day international summit. Chauffeurs, airport pickups, and hotel transfers — all synchronized to the minute.' },
             { img: '/gallery/wedding-car.jpg', title: 'Classic Italian Car for Your Wedding', desc: 'A vintage Alfa Romeo Spider delivered to the church on your wedding day. Polished, decorated, and driven by a professional — the perfect Italian touch for your ceremony.' },
           ],
