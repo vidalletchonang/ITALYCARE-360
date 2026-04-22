@@ -4732,3 +4732,134 @@ textarea.chat-lead-input {
   [dir="rtl"] .music-btn { right: auto; left: 16px; }
 }
 
+
+/* ═══════════════════════════════════════════════════════
+   EDITORIAL POLISH — inspired by Visaplanetworld aesthetic
+   Minimalist luxury, serif italic accents, numbered sections
+   ═══════════════════════════════════════════════════════ */
+
+/* Numbered section labels (§ 01, § 02...) on major sections */
+.svc .sl span::before,
+.wcu .sl span::before,
+.testi .sl span::before,
+.ils .sl span::before {
+  content: '§ 01 · ';
+  font-family: var(--font-playfair);
+  font-style: italic;
+  font-weight: 400;
+  color: #d4a843;
+  letter-spacing: 0.04em;
+  margin-right: 4px;
+  opacity: 0.9;
+}
+.wcu .sl span::before { content: '§ 02 · '; }
+.ils .sl span::before { content: '§ 03 · '; }
+.testi .sl span::before { content: '§ 04 · '; }
+
+/* Increase section vertical breathing room (luxury feel) */
+.svc, .wcu, .testi, .proc, .ils, .nums {
+  padding-top: clamp(80px, 10vw, 160px) !important;
+  padding-bottom: clamp(80px, 10vw, 160px) !important;
+}
+
+/* Editorial italic emphasis — replace "em" inside h2 with refined italic */
+section h2 em,
+.svc-h2 em,
+.wcu-h2 em,
+.ils-h2 em,
+.testi h2 em {
+  font-family: var(--font-playfair) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  color: #d4a843 !important;
+  letter-spacing: 0.005em;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Section label tracking — more refined uppercase */
+.sl span {
+  font-family: var(--font-jost) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.35em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  color: rgba(212,168,67,0.85) !important;
+}
+
+/* Subtle horizontal divider under section labels */
+.sl-ln {
+  background: rgba(212,168,67,0.45) !important;
+  width: 28px !important;
+  height: 1px !important;
+}
+
+/* Card shadows — lighter, more elegant */
+.svc-card, .wcu-card, .tc, .blog-card, .team-card {
+  box-shadow: 0 1px 2px rgba(20,28,43,0.04), 0 2px 8px rgba(20,28,43,0.03) !important;
+}
+.svc-card:hover, .wcu-card:hover, .tc:hover, .blog-card:hover {
+  box-shadow: 0 10px 28px rgba(20,28,43,0.08), 0 1px 2px rgba(20,28,43,0.06) !important;
+}
+
+/* Refined link underlines — editorial style */
+.article-body a, .sd-body a {
+  color: #d4a843;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212,168,67,0.4);
+  transition: border-color 0.3s ease;
+}
+.article-body a:hover, .sd-body a:hover {
+  border-bottom-color: #d4a843;
+}
+
+/* Signature-style accent under hero paragraph (founder feel) */
+.hero-p::after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 1px;
+  background: rgba(212,168,67,0.6);
+  margin-top: 24px;
+}
+
+/* More refined section heading weight */
+.svc-h2, .wcu-h2, .ils-h2, .about-h2, section h2:not(.article-h2):not(.calc-h2) {
+  font-weight: 400 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.08 !important;
+}
+
+/* Light gray divider between sections (visual rhythm) */
+.section-divider .sd-line {
+  max-width: 120px !important;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.4), transparent) !important;
+}
+
+/* Elegant CTA button refinement — pill shape + subtle lift */
+.btn-gold, .nav-cta, .sd-form-btn {
+  border-radius: 48px !important;
+  letter-spacing: 0.18em !important;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s !important;
+}
+.btn-gold:hover, .nav-cta:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 26px rgba(212,168,67,0.28) !important;
+}
+
+/* Mobile — preserve breathing room but compact */
+@media (max-width: 768px) {
+  .svc, .wcu, .testi, .proc, .ils, .nums {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+  .svc .sl span::before,
+  .wcu .sl span::before,
+  .testi .sl span::before,
+  .ils .sl span::before {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+  }
+}
+
