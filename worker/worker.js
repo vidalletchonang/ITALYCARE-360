@@ -53,9 +53,119 @@ export default {
       return handleLead(request, env, corsHeaders)
     }
 
+    /* ───────── TRANSLATE ENDPOINT (blog articles) ───────── */
+    if (url.pathname === '/translate') {
+      return handleTranslate(request, env, corsHeaders)
+    }
+
     /* ───────── CHAT ENDPOINT (default) ───────── */
     return handleChat(request, env, corsHeaders)
   },
+}
+
+/* ═══════════════════════════════════════════════════════
+   Translation handler (Groq Llama) — for blog articles
+   Preserves markdown structure: ##, **, *, |tables|, ![](), -
+   ═══════════════════════════════════════════════════════ */
+async function handleTranslate(request, env, corsHeaders) {
+  let body
+  try { body = await request.json() } catch { return json({ error: 'Invalid JSON' }, 400, corsHeaders) }
+
+  const { text = '', targetLang = 'en', sourceLang = 'it' } = body
+
+  /* Length caps — protect against abuse */
+  if (typeof text !== 'string' || text.length < 10) {
+    return json({ error: 'text required (min 10 chars)' }, 400, corsHeaders)
+  }
+  if (text.length > 25_000) {
+    return json({ error: 'text too long (max 25k chars)' }, 413, corsHeaders)
+  }
+
+  /* Allowed language codes only */
+  const VALID_LANGS = ['fr', 'en', 'it', 'de', 'ar', 'ru']
+  if (!VALID_LANGS.includes(targetLang) || !VALID_LANGS.includes(sourceLang)) {
+    return json({ error: 'Invalid language code' }, 400, corsHeaders)
+  }
+  if (targetLang === sourceLang) {
+    return json({ translated: text }, 200, corsHeaders)
+  }
+
+  /* Rate limit: 120 translations per IP per hour (generous, cached client-side) */
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown'
+  if (env.RATE_KV) {
+    const key = `tr:${ip}`
+    const raw = await env.RATE_KV.get(key)
+    const count = raw ? parseInt(raw, 10) : 0
+    if (count >= 120) {
+      return json({ error: 'Translation rate limit reached' }, 429, corsHeaders)
+    }
+    await env.RATE_KV.put(key, String(count + 1), { expirationTtl: 3600 })
+  }
+
+  const langNames = {
+    fr: 'French (Français)',
+    en: 'English',
+    it: 'Italian (Italiano)',
+    de: 'German (Deutsch)',
+    ar: 'Arabic (العربية)',
+    ru: 'Russian (Русский)',
+  }
+
+  const systemPrompt = `You are a professional editorial translator for a luxury concierge service in Italy.
+
+Your task: translate the user's text from ${langNames[sourceLang]} into ${langNames[targetLang]}.
+
+STRICT RULES:
+1. Output ONLY the translated text. No preamble, no notes, no quotes around it.
+2. Preserve ALL markdown formatting EXACTLY:
+   - \`## heading\` stays \`## heading\` (translated)
+   - \`**bold**\` stays \`**bold**\` (translated)
+   - \`*italic*\` stays \`*italic*\` (translated)
+   - \`- bullet item\` stays \`- bullet item\` (translated)
+   - \`![alt](url)\` → translate the alt text, KEEP the URL verbatim
+   - \`| col1 | col2 |\` tables — translate cells only, keep separator lines
+   - Blank lines stay blank
+3. Keep Italian brand-specific terms (codice fiscale, permesso di soggiorno, bollo, rogito, notaio, Agenzia delle Entrate, DOP, DOCG, IGP, Made in Italy, dolce vita, Motorizzazione) in Italian — these are terms the reader should recognise.
+4. Keep Italian place names as-is (Toscana, Puglia, Milano).
+5. Keep brand name "ITALYCARE 360" in Latin letters even in Arabic/Russian.
+6. Keep numbers, currencies (€), percentages, dates exactly as written.
+7. The tone is: authoritative yet accessible, reassuring, warm — for readers aged 45-65.`
+
+  try {
+    const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${env.GROQ_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: text },
+        ],
+        max_tokens: 4096,
+        temperature: 0.3,
+        stream: false,
+      }),
+    })
+
+    if (!groqRes.ok) {
+      console.error('[translate] Groq upstream not ok', groqRes.status)
+      return json({ error: 'Translation service unavailable' }, 502, corsHeaders)
+    }
+
+    const data = await groqRes.json()
+    const translated = data?.choices?.[0]?.message?.content?.trim()
+    if (!translated) {
+      return json({ error: 'Empty translation' }, 502, corsHeaders)
+    }
+
+    return json({ translated, targetLang, sourceLang }, 200, corsHeaders)
+  } catch {
+    console.error('[translate] unexpected error')
+    return json({ error: 'Internal server error' }, 500, corsHeaders)
+  }
 }
 
 /* ═══════════════════════════════════════════════════════

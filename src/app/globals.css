@@ -6140,3 +6140,102 @@ section h2 em,
 
 [dir="rtl"] .article-table th,
 [dir="rtl"] .article-table td { text-align: right; }
+
+/* =====================================================================
+   ARTICLE AUTO-TRANSLATION — skeleton loader + translation notice
+   ===================================================================== */
+
+/* Banner that tells the reader: this was auto-translated */
+.article-translate-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  margin: 0 0 28px;
+  background: rgba(212, 168, 67, 0.08);
+  border: 1px solid rgba(212, 168, 67, 0.25);
+  border-radius: 999px;
+  color: #8a6a1e;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: var(--font-jost), sans-serif;
+}
+.article-translate-notice svg { stroke: #d4a843; flex-shrink: 0; }
+
+/* Soft error banner if translation fails */
+.article-translate-error {
+  margin: 24px 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #fef3e6;
+  color: #8a5a1e;
+  font-size: 14px;
+  border-left: 3px solid #d4a843;
+  font-family: var(--font-jost), sans-serif;
+}
+
+/* Skeleton while translating — elegant pulsing placeholder */
+.article-skeleton {
+  padding: 20px 0 60px;
+}
+.article-skeleton-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #d4a843;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 13.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 28px;
+  padding: 10px 18px;
+  background: rgba(212, 168, 67, 0.1);
+  border-radius: 999px;
+  border: 1px solid rgba(212, 168, 67, 0.3);
+  animation: skel-pulse 1.6s ease-in-out infinite;
+}
+.article-skeleton-pulse svg {
+  animation: skel-spin 2.2s linear infinite;
+}
+.article-skeleton-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.article-skeleton-lines > div {
+  height: 18px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(20, 28, 43, 0.05), rgba(20, 28, 43, 0.1), rgba(20, 28, 43, 0.05));
+  background-size: 400% 100%;
+  animation: skel-shimmer 1.8s ease-in-out infinite;
+}
+.article-skeleton-lines > div:nth-child(1) { width: 72%; height: 30px; background-size: 400% 100%; }
+.article-skeleton-lines > div:nth-child(2) { width: 96%; }
+.article-skeleton-lines > div:nth-child(3) { width: 88%; }
+.article-skeleton-lines > div:nth-child(4) { width: 64%; }
+.article-skeleton-lines > div:nth-child(5) { width: 92%; }
+.article-skeleton-lines > div:nth-child(6) { width: 78%; }
+
+@keyframes skel-pulse {
+  0%, 100% { opacity: 0.85; }
+  50%      { opacity: 1; }
+}
+@keyframes skel-shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes skel-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-skeleton-pulse,
+  .article-skeleton-pulse svg,
+  .article-skeleton-lines > div { animation: none !important; }
+}
+
+[dir="rtl"] .article-translate-notice,
+[dir="rtl"] .article-skeleton-pulse { direction: rtl; }

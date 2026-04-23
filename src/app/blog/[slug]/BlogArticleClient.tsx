@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -2359,12 +2359,87 @@ function renderMarkdown(text: string): JSX.Element[] {
   return out
 }
 
+const WORKER_URL = process.env.NEXT_PUBLIC_CHAT_WORKER_URL || ''
+
+/** LocalStorage cache helpers for auto-translated articles */
+function cacheKey(slug: string, lang: string) {
+  return `italycare-tr:${slug}:${lang}`
+}
+function readCache(slug: string, lang: string): string | null {
+  if (typeof window === 'undefined') return null
+  try {
+    return localStorage.getItem(cacheKey(slug, lang))
+  } catch { return null }
+}
+function writeCache(slug: string, lang: string, text: string) {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.setItem(cacheKey(slug, lang), text)
+  } catch {
+    // Quota exceeded — clear old translations and retry
+    try {
+      Object.keys(localStorage).filter(k => k.startsWith('italycare-tr:')).forEach(k => localStorage.removeItem(k))
+      localStorage.setItem(cacheKey(slug, lang), text)
+    } catch {}
+  }
+}
+
+/** Pick the best available source content (prefer IT, fallback to EN/FR/DE/RU/AR) */
+function pickSource(content: Record<string, string>): { text: string; lang: string } {
+  const priority = ['it', 'en', 'fr', 'de', 'ru', 'ar']
+  for (const l of priority) {
+    const v = content[l]
+    if (v && v.trim().length > 50) return { text: v, lang: l }
+  }
+  return { text: '', lang: 'it' }
+}
+
 export default function BlogArticleClient({ slug }: { slug: string }) {
   const { lang, t } = useLang()
   const [modalOpen, setModalOpen] = useState(false)
+  const [translated, setTranslated] = useState<string | null>(null)
+  const [translating, setTranslating] = useState(false)
+  const [translateError, setTranslateError] = useState(false)
   const l = lang as LangCode
 
   const article = ARTICLES.find(a => a.slug === slug)
+
+  /* Auto-translate the article body if the current language has no content */
+  useEffect(() => {
+    setTranslated(null)
+    setTranslateError(false)
+    if (!article) return
+
+    const nativeContent = (article.content as Record<string, string>)[l]
+    if (nativeContent && nativeContent.trim().length > 50) return    // already have native content
+
+    const cached = readCache(slug, l)
+    if (cached) { setTranslated(cached); return }
+
+    if (!WORKER_URL) return                                          // no backend configured → fallback used
+    const source = pickSource(article.content as Record<string, string>)
+    if (!source.text) return
+
+    let cancelled = false
+    setTranslating(true)
+    fetch(`${WORKER_URL.replace(/\/$/, '')}/translate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: source.text, targetLang: l, sourceLang: source.lang }),
+    })
+      .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
+      .then(data => {
+        if (cancelled || !data?.translated) return
+        const t = data.translated as string
+        writeCache(slug, l, t)
+        setTranslated(t)
+      })
+      .catch(() => { if (!cancelled) setTranslateError(true) })
+      .finally(() => { if (!cancelled) setTranslating(false) })
+
+    return () => { cancelled = true }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [l, slug])
 
   const backLabels: Record<string, string> = {
     fr: '← Retour au Blog', en: '← Back to Blog', de: '← Back to Blog', it: '← Torna al Blog', ar: '→ العودة للمدونة'
@@ -2412,13 +2487,69 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
 
       <div className="article-body">
         <p className="article-excerpt">{article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en || (article.excerpt as Record<string, string>).it || ''}</p>
+
+        {/* Language banner — shown when content has been auto-translated */}
+        {translated && !translating && (
+          <div className="article-translate-notice">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>
+            </svg>
+            <span>
+              {{
+                fr: 'Article traduit automatiquement depuis l\u2019italien',
+                en: 'Article automatically translated from Italian',
+                it: 'Articolo tradotto automaticamente dall\u2019italiano',
+                de: 'Artikel automatisch aus dem Italienischen \u00fcbersetzt',
+                ar: 'تمت ترجمة المقال تلقائيًا من الإيطالية',
+                ru: 'Статья переведена автоматически с итальянского',
+              }[l] || 'Article automatically translated from Italian'}
+            </span>
+          </div>
+        )}
+
         <div className="article-content">
-          {renderMarkdown(
-            article.content[l as keyof typeof article.content]
-              || (article.content as Record<string, string>).it
-              || article.content.en
-              || (article.content as Record<string, string>).fr
-              || ''
+          {translating ? (
+            <div className="article-skeleton" role="status" aria-live="polite">
+              <div className="article-skeleton-pulse">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>
+                </svg>
+                <span>
+                  {{
+                    fr: 'Traduction en cours\u2026',
+                    en: 'Translating\u2026',
+                    it: 'Traduzione in corso\u2026',
+                    de: '\u00dcbersetzung l\u00e4uft\u2026',
+                    ar: 'جاري الترجمة\u2026',
+                    ru: 'Перевод\u2026',
+                  }[l] || 'Translating\u2026'}
+                </span>
+              </div>
+              <div className="article-skeleton-lines">
+                <div /><div /><div /><div /><div /><div />
+              </div>
+            </div>
+          ) : (
+            renderMarkdown(
+              translated
+                || article.content[l as keyof typeof article.content]
+                || (article.content as Record<string, string>).it
+                || article.content.en
+                || (article.content as Record<string, string>).fr
+                || ''
+            )
+          )}
+          {translateError && !translating && !translated && (
+            <div className="article-translate-error">
+              {{
+                fr: '\u26a0\ufe0f Impossible de traduire automatiquement cet article. Affichage dans la langue d\u2019origine.',
+                en: '\u26a0\ufe0f Could not auto-translate this article. Showing in source language.',
+                it: '\u26a0\ufe0f Impossibile tradurre automaticamente. Mostrato nella lingua originale.',
+                de: '\u26a0\ufe0f Automatische \u00dcbersetzung fehlgeschlagen. Ursprungssprache angezeigt.',
+                ar: '\u26a0\ufe0f تعذّرت الترجمة التلقائية. عرض باللغة الأصلية.',
+                ru: '\u26a0\ufe0f Автоперевод невозможен. Показан оригинал.',
+              }[l] || 'Could not translate.'}
+            </div>
           )}
         </div>
 
