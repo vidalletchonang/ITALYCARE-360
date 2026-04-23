@@ -17,6 +17,16 @@ const FLAGS: Record<LangCode, string> = {
   ru: '🇷🇺',
 }
 
+/* Full language names */
+const LANG_NAMES: Record<LangCode, string> = {
+  fr: 'Français',
+  en: 'English',
+  it: 'Italiano',
+  de: 'Deutsch',
+  ar: 'العربية',
+  ru: 'Русский',
+}
+
 /* Sub-labels for About dropdown */
 const ABOUT_SUB: Record<string, { story: string; numbers: string; why: string; process: string; team: string; video: string; lifestyle: string; testimonials: string }> = {
   fr: { story: 'Notre histoire',    numbers: 'En chiffres',     why: 'Pourquoi nous',  process: 'Notre méthode',    team: 'Notre équipe',    video: 'Vidéo',  lifestyle: "L'art de vivre",    testimonials: 'Témoignages'   },
@@ -206,19 +216,37 @@ export default function Nav({ onRdv }: NavProps) {
         </ul>
 
         <div className="nav-right">
-          <div className="langs">
-            {LANGS.map(l => (
-              <button
-                key={l}
-                className={`lang-btn${lang === l ? ' active' : ''}`}
-                onClick={() => setLang(l)}
-                aria-label={l.toUpperCase()}
-                title={l.toUpperCase()}
-              >
-                <span className="lang-flag">{FLAGS[l]}</span>
-                <span className="lang-code">{l.toUpperCase()}</span>
-              </button>
-            ))}
+          <div
+            className="lang-picker"
+            onMouseEnter={() => openMenu('langs')}
+            onMouseLeave={closeMenu}
+          >
+            <button
+              className="lang-trigger"
+              onClick={() => setOpenDd(openDd === 'langs' ? null : 'langs')}
+              aria-label="Choose language"
+            >
+              <span className="lang-flag">{FLAGS[lang]}</span>
+              <span className="lang-code">{lang.toUpperCase()}</span>
+              <svg className="dd-arrow" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" width="10" height="6"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            {openDd === 'langs' && (
+              <div className="lang-dropdown" onMouseEnter={() => openMenu('langs')} onMouseLeave={closeMenu}>
+                <div className="lang-dropdown-scroll">
+                  {LANGS.map(l => (
+                    <button
+                      key={l}
+                      className={`lang-item${lang === l ? ' active' : ''}`}
+                      onClick={() => { setLang(l); setOpenDd(null) }}
+                    >
+                      <span className="lang-flag">{FLAGS[l]}</span>
+                      <span className="lang-name">{LANG_NAMES[l]}</span>
+                      <span className="lang-code-sm">{l.toUpperCase()}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           <Link href="/services#calculator" className="nav-estimate-btn">
             {{ fr:'Devis', en:'Estimate', it:'Preventivo', de:'Kostenvoranschlag', ar:'تقدير', ru:'Оценка' }[lang] || 'Estimate'}
