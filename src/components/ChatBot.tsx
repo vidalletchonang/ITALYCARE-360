@@ -244,6 +244,22 @@ export default function ChatBot() {
     try { localStorage.removeItem('italycare-chat') } catch {}
   }, [])
 
+  /* When the user changes the site language while the chat is closed,
+     silently reset so the next opening shows a fresh welcome in the new language.
+     Don't reset if the chat is open & mid-conversation (disruptive).            */
+  const langRef = useRef(lang)
+  useEffect(() => {
+    if (langRef.current !== lang) {
+      if (!open) {
+        setMessages([])
+        setShowForm(false)
+        setFormStatus('idle')
+        setError(false)
+      }
+      langRef.current = lang
+    }
+  }, [lang, open])
+
   /* Auto-scroll to bottom */
   useEffect(() => {
     if (scrollRef.current) {
