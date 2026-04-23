@@ -7,14 +7,14 @@ import Footer from '@/components/Footer'
 const T = {
   title: {
     fr: 'Politique de Confidentialit\u00e9',
-    en: 'Privacy Policy',
+    en: 'Privacy Policy', de: 'Privacy Policy',
     it: 'Informativa sulla Privacy',
     ar: '\u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629',
     ru: '\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438',
   },
   updated: {
     fr: 'Derni\u00e8re mise \u00e0 jour : 8 avril 2026',
-    en: 'Last updated: April 8, 2026',
+    en: 'Last updated: April 8, 2026', de: 'Last updated: April 8, 2026',
     it: 'Ultimo aggiornamento: 8 aprile 2026',
     ar: '\u0622\u062e\u0631 \u062a\u062d\u062f\u064a\u062b: 8 \u0623\u0628\u0631\u064a\u0644 2026',
     ru: '\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435: 8 \u0430\u043f\u0440\u0435\u043b\u044f 2026',

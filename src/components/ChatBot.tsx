@@ -157,6 +157,31 @@ const UI: Record<string, {
     formSuccess: '✅ Получено! Наш эксперт свяжется с вами в течение 48 часов.',
     formError: 'Произошла ошибка. Напишите нам на italycare360@gmail.com',
   },
+  de: {
+    title: 'ITALYCARE 360 Assistent',
+    subtitle: 'Schnelle Vorqualifizierung',
+    placeholder: 'Stellen Sie Ihre Frage…',
+    send: 'Senden',
+    welcome: 'Ciao! Ich bin Ihre ITALYCARE 360 Beraterin. Erzählen Sie mir von Ihrem Projekt in Italien — in wenigen Austauschen verbinde ich Sie mit dem passenden Experten.',
+    suggestions: ['Villa in Toskana kaufen', 'Studentenvisum', 'Leistungen & Preise', 'Beratung buchen'],
+    thinking: 'Der Assistent überlegt…',
+    error: 'Entschuldigung, etwas ist schiefgegangen. Kontaktieren Sie uns direkt.',
+    poweredBy: 'Powered by AI',
+    close: 'Schließen',
+    book: 'Kostenlose Beratung',
+    bookBanner: '✨ Bereit für den nächsten Schritt? Unsere Experten bieten eine kostenlose 30-min Beratung.',
+    bookCta: '30 Min kostenlos buchen →',
+    maxedOut: 'Um tiefer in Ihr Projekt einzutauchen, sprechen Sie mit einem echten Experten — kostenlos, unverbindlich.',
+    formTitle: 'Buchen Sie Ihre kostenlose Beratung',
+    formSubtitle: 'Unser Experte antwortet innerhalb von 48 Stunden.',
+    formName: 'Ihr Name',
+    formEmail: 'Ihre E-Mail',
+    formMessage: 'Ihr Projekt in einem Satz',
+    formSubmit: 'Anfrage senden',
+    formSending: 'Wird gesendet…',
+    formSuccess: '✅ Erhalten! Unser Experte kontaktiert Sie innerhalb von 48 Stunden.',
+    formError: 'Etwas ist schiefgegangen. Kontaktieren Sie uns direkt: info@italycare360.com',
+  },
 }
 
 const MAX_USER_MESSAGES = 5  // After this, chat becomes "booking only"
@@ -180,6 +205,7 @@ function welcomeMessage(name: string, lang: string) {
     it: `Ciao! Sono ${name}, la tua consulente ITALYCARE 360. Dimmi del tuo progetto in Italia — ti oriento in pochi scambi e ti connetto con l'esperto giusto.`,
     ar: `!Ciao أنا ${name}، مستشارتك في ITALYCARE 360. أخبرني عن مشروعك في إيطاليا — سأوجهك في بضع تبادلات ثم أصلك بالخبير المناسب.`,
     ru: `Ciao! Меня зовут ${name}, я ваш консультант ITALYCARE 360. Расскажите о вашем проекте в Италии — я помогу в нескольких обменах и свяжу вас с нужным экспертом.`,
+    de: `Ciao! Ich heiße ${name}, Ihre ITALYCARE 360 Beraterin. Erzählen Sie mir von Ihrem Projekt in Italien — in wenigen Austauschen verbinde ich Sie mit dem passenden Experten.`,
   }
   return templates[lang] || templates.en
 }

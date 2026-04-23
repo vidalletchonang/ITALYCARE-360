@@ -10,13 +10,14 @@ interface HeroProps {
 
 const estimateLabel: Record<string, string> = {
   fr: 'Estimer mon projet', en: 'Estimate my project',
-  it: 'Stima il progetto', ar: 'قدّر مشروعي', ru: 'Оценить проект',
+  it: 'Stima il progetto', de: 'Projekt kalkulieren', ar: 'قدّر مشروعي', ru: 'Оценить проект',
 }
 
 const heroStats: Record<string, [string, string, string]> = {
   fr: ['Couverture services', 'Pays clients', 'Satisfaction client'],
   en: ['Service coverage', 'Client countries', 'Client satisfaction'],
   it: ['Copertura servizi', 'Paesi clienti', 'Soddisfazione clienti'],
+  de: ['Leistungsspektrum', 'Herkunftsländer', 'Kundenzufriedenheit'],
   ar: ['تغطية الخدمات', 'دول العملاء', 'رضا العملاء'],
   ru: ['Покрытие услуг', 'Стран клиентов', 'Удовлетворённость'],
 }

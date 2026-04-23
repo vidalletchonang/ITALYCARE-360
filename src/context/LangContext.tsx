@@ -1,10 +1,10 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react'
-import { fr, en, ar, it, ru } from '@/i18n'
+import { fr, en, ar, it, ru, de } from '@/i18n'
 import type { Translation, LangCode } from '@/i18n'
 
-const translations: Record<LangCode, Translation> = { fr, en, ar, it, ru }
+const translations: Record<LangCode, Translation> = { fr, en, ar, it, ru, de }
 
 interface LangContextValue {
   lang: LangCode
@@ -35,7 +35,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const saved = localStorage.getItem('italycare-lang') as LangCode | null
-      if (saved && ['fr', 'en', 'ar', 'it', 'ru'].includes(saved)) {
+      if (saved && ['fr', 'en', 'ar', 'it', 'ru', 'de'].includes(saved)) {
         setLangState(saved)
       }
     } catch (e) {

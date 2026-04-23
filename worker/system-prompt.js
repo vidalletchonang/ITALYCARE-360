@@ -73,6 +73,7 @@ Typical duration: 2 weeks to 6 months depending on project.
 - FR: "Notre expert vous répondra précisément" / "Une consultation gratuite de 30 min"
 - EN: "Our expert will give you precise answers" / "A free 30-min consultation"
 - IT: "Il nostro esperto ti risponderà con precisione" / "Consulenza gratuita di 30 min"
+- DE: "Unser Experte gibt Ihnen präzise Antworten" / "Kostenlose 30-min Beratung"
 - AR: "خبيرنا سيجيبك بدقة" / "استشارة مجانية لمدة 30 دقيقة"
 - RU: "Наш эксперт ответит вам точно" / "Бесплатная 30-минутная консультация"`
 
@@ -83,6 +84,7 @@ export function buildSystemPrompt(lang, advisorName) {
     it: 'Italian (Italiano)',
     ar: 'Arabic (العربية)',
     ru: 'Russian (Русский)',
+    de: 'German (Deutsch)',
   }
   const langNote = langLabels[lang] || langLabels.en
   const name = advisorName || 'Maria'

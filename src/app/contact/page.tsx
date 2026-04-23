@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 
 const TITLE: Record<string, string> = {
   fr: 'Contactez-nous',
-  en: 'Contact Us',
+  en: 'Contact Us', de: 'Contact Us',
   it: 'Contattaci',
   ar: 'اتصل بنا',
   ru: 'Свяжитесь с нами',
@@ -14,7 +14,7 @@ const TITLE: Record<string, string> = {
 
 const SUBTITLE: Record<string, string> = {
   fr: 'Nous sommes à votre disposition pour répondre à toutes vos questions.',
-  en: 'We are available to answer all your questions.',
+  en: 'We are available to answer all your questions.', de: 'We are available to answer all your questions.',
   it: 'Siamo a vostra disposizione per rispondere a tutte le vostre domande.',
   ar: 'نحن متاحون للإجابة على جميع أسئلتكم.',
   ru: 'Мы готовы ответить на все ваши вопросы.',
@@ -30,7 +30,7 @@ const HOURS_TITLE: Record<string, string> = {
 
 const HOURS_DETAIL: Record<string, string> = {
   fr: 'Lundi – Jeudi : 9h00 – 16h30\nVendredi : 9h00 – 14h30',
-  en: 'Monday – Thursday: 9:00 AM – 4:30 PM\nFriday: 9:00 AM – 2:30 PM',
+  en: 'Monday – Thursday: 9:00 AM – 4:30 PM\nFriday: 9:00 AM – 2:30 PM', de: 'Monday – Thursday: 9:00 AM – 4:30 PM\nFriday: 9:00 AM – 2:30 PM',
   it: 'Lunedì – Giovedì: 9:00 – 16:30\nVenerdì: 9:00 – 14:30',
   ar: 'الإثنين – الخميس: 9:00 – 16:30\nالجمعة: 9:00 – 14:30',
   ru: 'Понедельник – Четверг: 9:00 – 16:30\nПятница: 9:00 – 14:30',
@@ -38,7 +38,7 @@ const HOURS_DETAIL: Record<string, string> = {
 
 const WRITE_US: Record<string, string> = {
   fr: 'Envoyez-nous un e-mail',
-  en: 'E-mail Us',
+  en: 'E-mail Us', de: 'E-mail Us',
   it: 'Inviaci un\'e-mail',
   ar: 'راسلنا عبر البريد',
   ru: 'Напишите нам email',
@@ -46,7 +46,7 @@ const WRITE_US: Record<string, string> = {
 
 const CALL_US: Record<string, string> = {
   fr: 'Appelez-nous',
-  en: 'Call Us',
+  en: 'Call Us', de: 'Call Us',
   it: 'Chiamaci',
   ar: 'اتصل بنا',
   ru: 'Позвоните нам',
@@ -54,7 +54,7 @@ const CALL_US: Record<string, string> = {
 
 const VISIT_US: Record<string, string> = {
   fr: 'Où nous sommes',
-  en: 'Where We Are',
+  en: 'Where We Are', de: 'Where We Are',
   it: 'Dove siamo',
   ar: 'أين نحن',
   ru: 'Где мы находимся',

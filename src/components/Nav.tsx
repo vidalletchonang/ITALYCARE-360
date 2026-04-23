@@ -5,13 +5,24 @@ import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import type { LangCode } from '@/i18n'
 
-const LANGS: LangCode[] = ['fr', 'en', 'ar', 'it', 'ru']
+const LANGS: LangCode[] = ['fr', 'en', 'it', 'de', 'ar', 'ru']
+
+/* Flag emojis for each language */
+const FLAGS: Record<LangCode, string> = {
+  fr: '🇫🇷',
+  en: '🇬🇧',
+  it: '🇮🇹',
+  de: '🇩🇪',
+  ar: '🇸🇦',
+  ru: '🇷🇺',
+}
 
 /* Sub-labels for About dropdown */
 const ABOUT_SUB: Record<string, { story: string; numbers: string; why: string; process: string; team: string; video: string; lifestyle: string; testimonials: string }> = {
   fr: { story: 'Notre histoire',    numbers: 'En chiffres',     why: 'Pourquoi nous',  process: 'Notre méthode',    team: 'Notre équipe',    video: 'Vidéo',  lifestyle: "L'art de vivre",    testimonials: 'Témoignages'   },
   en: { story: 'Our story',         numbers: 'By the numbers',  why: 'Why choose us',  process: 'Our method',       team: 'Our team',        video: 'Video',  lifestyle: 'The art of living', testimonials: 'Testimonials'  },
   it: { story: 'La nostra storia',  numbers: 'In numeri',       why: 'Perché noi',     process: 'Il nostro metodo', team: 'Il nostro team',  video: 'Video',  lifestyle: "L'arte del vivere", testimonials: 'Testimonianze' },
+  de: { story: 'Unsere Geschichte', numbers: 'In Zahlen',       why: 'Warum wir',      process: 'Unsere Methode',   team: 'Unser Team',      video: 'Video',  lifestyle: 'Die Kunst zu leben', testimonials: 'Referenzen'   },
   ar: { story: 'قصتنا',             numbers: 'بالأرقام',         why: 'لماذا نحن',      process: 'منهجنا',           team: 'فريقنا',          video: 'فيديو',  lifestyle: 'فنُّ العيش',         testimonials: 'شهادات'        },
   ru: { story: 'Наша история',      numbers: 'В цифрах',        why: 'Почему мы',      process: 'Наш метод',        team: 'Наша команда',    video: 'Видео',  lifestyle: 'Искусство жизни',    testimonials: 'Отзывы'        },
 }
@@ -21,30 +32,31 @@ const BLOG_SUB: Record<string, { all: string; guides: string; news: string }> = 
   fr: { all: 'Tous les articles', guides: 'Guides pratiques', news: 'Actualités' },
   en: { all: 'All articles',      guides: 'Practical guides', news: 'News'       },
   it: { all: 'Tutti gli articoli', guides: 'Guide pratiche', news: 'Notizie'     },
+  de: { all: 'Alle Artikel',      guides: 'Praktische Guides', news: 'Aktuelles' },
   ar: { all: 'كل المقالات',       guides: 'أدلة عملية',      news: 'أخبار'       },
   ru: { all: 'Все статьи',        guides: 'Практические гиды', news: 'Новости'   },
 }
 
 /* Short service names for dropdown menu */
 const SVC_SHORT: Record<string, Record<string, string>> = {
-  'immobilier':            { fr: 'Immobilier',        en: 'Real Estate',        it: 'Immobiliare',         ar: 'عقارات',           ru: 'Недвижимость' },
-  'renovation':            { fr: 'Rénovation',        en: 'Renovation',         it: 'Ristrutturazione',    ar: 'تجديد',            ru: 'Ремонт' },
-  'medical':               { fr: 'Suivi Médical',     en: 'Medical Care',       it: 'Assistenza Medica',   ar: 'رعاية طبية',       ru: 'Медицина' },
-  'export':                { fr: 'Export Italy',      en: 'Export Italy',       it: 'Export Italy',        ar: 'تصدير إيطالي',     ru: 'Экспорт' },
-  'visa-etudiant':         { fr: 'Visa Étudiant',     en: 'Student Visa',       it: 'Visto Studente',      ar: 'تأشيرة طالب',      ru: 'Виза студента' },
-  'juridique':             { fr: 'Juridique',         en: 'Legal',              it: 'Legale',              ar: 'قانوني',           ru: 'Юридическая' },
-  'conciergerie':          { fr: 'Conciergerie',      en: 'Concierge',          it: 'Concierge',           ar: 'كونسيرج',          ru: 'Консьерж' },
-  'administratif':         { fr: 'Administratif',     en: 'Administrative',     it: 'Amministrativo',      ar: 'إداري',            ru: 'Админ.' },
-  'evenements':            { fr: 'Événements',        en: 'Events',             it: 'Eventi',              ar: 'فعاليات',          ru: 'Мероприятия' },
-  'maisons-retraite':      { fr: 'Maisons Retraite',  en: 'Retirement Homes',   it: 'Case di Riposo',      ar: 'دور مسنين',        ru: 'Дома престарелых' },
-  'financement':           { fr: 'Financement',       en: 'Financing',          it: 'Finanziamento',       ar: 'تمويل',            ru: 'Финансирование' },
-  'professionnels':        { fr: 'Professionnels',    en: 'Professionals',      it: 'Professionisti',      ar: 'مهنيون',           ru: 'Специалисты' },
-  'silver-economy':        { fr: 'Silver Economy',    en: 'Silver Economy',     it: 'Silver Economy',      ar: 'Silver Economy',   ru: 'Silver Economy' },
-  'property-care':         { fr: 'Property Care',     en: 'Property Care',      it: 'Property Care',       ar: 'Property Care',    ru: 'Property Care' },
-  'thermal-wellness':      { fr: 'Thermal Wellness',  en: 'Thermal Wellness',   it: 'Terme & Wellness',    ar: 'علاج حراري',       ru: 'Термы' },
-  'aviation-privee':       { fr: 'Aviation Privée',   en: 'Private Aviation',   it: 'Aviazione Privata',   ar: 'طيران خاص',        ru: 'Авиация' },
-  'assistenza-scolastica': { fr: 'Scolarité',         en: 'School Assistance',  it: 'Assistenza Scolastica', ar: 'مدرسة',          ru: 'Школа' },
-  'vehicules':             { fr: 'Véhicules',         en: 'Vehicles',           it: 'Veicoli',             ar: 'مركبات',           ru: 'Автомобили' },
+  'immobilier':            { fr: 'Immobilier',        en: 'Real Estate',        it: 'Immobiliare',         de: 'Immobilien',           ar: 'عقارات',           ru: 'Недвижимость' },
+  'renovation':            { fr: 'Rénovation',        en: 'Renovation',         it: 'Ristrutturazione',    de: 'Renovierung',          ar: 'تجديد',            ru: 'Ремонт' },
+  'medical':               { fr: 'Suivi Médical',     en: 'Medical Care',       it: 'Assistenza Medica',   de: 'Medizinische Betreuung', ar: 'رعاية طبية',       ru: 'Медицина' },
+  'export':                { fr: 'Export Italy',      en: 'Export Italy',       it: 'Export Italy',        de: 'Export Italy',         ar: 'تصدير إيطالي',     ru: 'Экспорт' },
+  'visa-etudiant':         { fr: 'Visa Étudiant',     en: 'Student Visa',       it: 'Visto Studente',      de: 'Studentenvisum',       ar: 'تأشيرة طالب',      ru: 'Виза студента' },
+  'juridique':             { fr: 'Juridique',         en: 'Legal',              it: 'Legale',              de: 'Recht',                ar: 'قانوني',           ru: 'Юридическая' },
+  'conciergerie':          { fr: 'Conciergerie',      en: 'Concierge',          it: 'Concierge',           de: 'Concierge',            ar: 'كونسيرج',          ru: 'Консьерж' },
+  'administratif':         { fr: 'Administratif',     en: 'Administrative',     it: 'Amministrativo',      de: 'Verwaltung',           ar: 'إداري',            ru: 'Админ.' },
+  'evenements':            { fr: 'Événements',        en: 'Events',             it: 'Eventi',              de: 'Events',               ar: 'فعاليات',          ru: 'Мероприятия' },
+  'maisons-retraite':      { fr: 'Maisons Retraite',  en: 'Retirement Homes',   it: 'Case di Riposo',      de: 'Seniorenresidenzen',   ar: 'دور مسنين',        ru: 'Дома престарелых' },
+  'financement':           { fr: 'Financement',       en: 'Financing',          it: 'Finanziamento',       de: 'Finanzierung',         ar: 'تمويل',            ru: 'Финансирование' },
+  'professionnels':        { fr: 'Professionnels',    en: 'Professionals',      it: 'Professionisti',      de: 'Fachleute',            ar: 'مهنيون',           ru: 'Специалисты' },
+  'silver-economy':        { fr: 'Silver Economy',    en: 'Silver Economy',     it: 'Silver Economy',      de: 'Silver Economy',       ar: 'Silver Economy',   ru: 'Silver Economy' },
+  'property-care':         { fr: 'Property Care',     en: 'Property Care',      it: 'Property Care',       de: 'Property Care',        ar: 'Property Care',    ru: 'Property Care' },
+  'thermal-wellness':      { fr: 'Thermal Wellness',  en: 'Thermal Wellness',   it: 'Terme & Wellness',    de: 'Thermal Wellness',     ar: 'علاج حراري',       ru: 'Термы' },
+  'aviation-privee':       { fr: 'Aviation Privée',   en: 'Private Aviation',   it: 'Aviazione Privata',   de: 'Privatluftfahrt',      ar: 'طيران خاص',        ru: 'Авиация' },
+  'assistenza-scolastica': { fr: 'Scolarité',         en: 'School Assistance',  it: 'Assistenza Scolastica', de: 'Schulberatung',      ar: 'مدرسة',          ru: 'Школа' },
+  'vehicules':             { fr: 'Véhicules',         en: 'Vehicles',           it: 'Veicoli',             de: 'Fahrzeuge',            ar: 'مركبات',           ru: 'Автомобили' },
 }
 
 interface NavProps {
@@ -200,13 +212,16 @@ export default function Nav({ onRdv }: NavProps) {
                 key={l}
                 className={`lang-btn${lang === l ? ' active' : ''}`}
                 onClick={() => setLang(l)}
+                aria-label={l.toUpperCase()}
+                title={l.toUpperCase()}
               >
-                {l.toUpperCase()}
+                <span className="lang-flag">{FLAGS[l]}</span>
+                <span className="lang-code">{l.toUpperCase()}</span>
               </button>
             ))}
           </div>
           <Link href="/services#calculator" className="nav-estimate-btn">
-            {{ fr:'Devis', en:'Estimate', it:'Preventivo', ar:'تقدير', ru:'Оценка' }[lang] || 'Estimate'}
+            {{ fr:'Devis', en:'Estimate', it:'Preventivo', de:'Kostenvoranschlag', ar:'تقدير', ru:'Оценка' }[lang] || 'Estimate'}
           </Link>
           <button className="nav-cta" onClick={onRdv}>
             {t.nav.cta}
@@ -260,7 +275,8 @@ export default function Nav({ onRdv }: NavProps) {
               className={`lang-btn${lang === l ? ' active' : ''}`}
               onClick={() => { setLang(l); setMenuOpen(false) }}
             >
-              {l.toUpperCase()}
+              <span className="lang-flag">{FLAGS[l]}</span>
+              <span className="lang-code">{l.toUpperCase()}</span>
             </button>
           ))}
         </div>

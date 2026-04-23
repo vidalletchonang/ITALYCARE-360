@@ -16,13 +16,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Acheter un bien immobilier en Italie : guide complet pour les étrangers",
-      en: "Buying Property in Italy: The Complete Guide for Foreigners",
+      en: "Buying Property in Italy: The Complete Guide for Foreigners", de: "Buying Property in Italy: The Complete Guide for Foreigners",
       it: "Acquistare un immobile in Italia: guida completa per stranieri",
       ar: "شراء عقار في إيطاليا: الدليل الشامل للأجانب"
     },
     excerpt: {
       fr: "L'achat immobilier en Italie est une opportunité exceptionnelle, mais le processus peut sembler complexe pour les étrangers. Découvrez les étapes essentielles, les documents nécessaires et les pièges à éviter.",
-      en: "Buying property in Italy is an exceptional opportunity, but the process can seem complex for foreigners. Discover the essential steps, required documents and pitfalls to avoid.",
+      en: "Buying property in Italy is an exceptional opportunity, but the process can seem complex for foreigners. Discover the essential steps, required documents and pitfalls to avoid.", de: "Buying property in Italy is an exceptional opportunity, but the process can seem complex for foreigners. Discover the essential steps, required documents and pitfalls to avoid.",
       it: "L'acquisto di un immobile in Italia è un'opportunità eccezionale, ma il processo può sembrare complesso per gli stranieri. Scopri i passi essenziali, i documenti necessari e le insidie da evitare.",
       ar: "شراء العقارات في إيطاليا فرصة استثنائية، لكن العملية قد تبدو معقدة للأجانب. اكتشف الخطوات الأساسية والوثائق المطلوبة والأخطاء التي يجب تجنبها."
     },
@@ -36,13 +36,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Rénovation en Italie depuis l'étranger : comment coordonner vos travaux à distance",
-      en: "Renovation in Italy from Abroad: How to Coordinate Your Works Remotely",
+      en: "Renovation in Italy from Abroad: How to Coordinate Your Works Remotely", de: "Renovation in Italy from Abroad: How to Coordinate Your Works Remotely",
       it: "Ristrutturazione in Italia dall'Estero: Come Coordinare i Lavori a Distanza",
       ar: "تجديد العقارات في إيطاليا من الخارج: كيفية تنسيق الأعمال عن بُعد"
     },
     excerpt: {
       fr: "Gérer une rénovation à distance en Italie est un défi que de nombreux propriétaires étrangers affrontent. Voici comment ITALYCARE 360 transforme ce défi en succès.",
-      en: "Managing a renovation remotely in Italy is a challenge many foreign property owners face. Here's how ITALYCARE 360 turns this challenge into success.",
+      en: "Managing a renovation remotely in Italy is a challenge many foreign property owners face. Here's how ITALYCARE 360 turns this challenge into success.", de: "Managing a renovation remotely in Italy is a challenge many foreign property owners face. Here's how ITALYCARE 360 turns this challenge into success.",
       it: "Gestire una ristrutturazione a distanza in Italia è una sfida che molti proprietari stranieri affrontano. Ecco come ITALYCARE 360 trasforma questa sfida in successo.",
       ar: "إدارة التجديد عن بُعد في إيطاليا تحدٍّ يواجهه كثير من أصحاب العقارات الأجانب. إليك كيف يحوّل ITALYCARE 360 هذا التحدي إلى نجاح."
     },
@@ -56,13 +56,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Soins médicaux en Italie : ce que les patients étrangers doivent savoir",
-      en: "Medical Care in Italy: What Foreign Patients Need to Know",
+      en: "Medical Care in Italy: What Foreign Patients Need to Know", de: "Medical Care in Italy: What Foreign Patients Need to Know",
       it: "Cure Mediche in Italia: Cosa Devono Sapere i Pazienti Stranieri",
       ar: "الرعاية الطبية في إيطاليا: ما يحتاج المرضى الأجانب معرفته"
     },
     excerpt: {
       fr: "L'Italie dispose de l'un des meilleurs systèmes de santé au monde. Mais naviguer en tant que patient étranger sans parler italien peut s'avérer très difficile. Voici notre guide complet.",
-      en: "Italy has one of the best healthcare systems in the world. But navigating as a foreign patient without speaking Italian can be very challenging. Here is our complete guide.",
+      en: "Italy has one of the best healthcare systems in the world. But navigating as a foreign patient without speaking Italian can be very challenging. Here is our complete guide.", de: "Italy has one of the best healthcare systems in the world. But navigating as a foreign patient without speaking Italian can be very challenging. Here is our complete guide.",
       it: "L'Italia ha uno dei migliori sistemi sanitari al mondo. Ma navigare come paziente straniero senza parlare italiano può essere molto difficile. Ecco la nostra guida completa.",
       ar: "تمتلك إيطاليا أحد أفضل أنظمة الرعاية الصحية في العالم. لكن التعامل كمريض أجنبي دون إتقان الإيطالية يمكن أن يكون صعباً جداً."
     },
@@ -76,13 +76,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Visa étudiant pour l'Italie : guide complet 2025",
-      en: "Student Visa for Italy: Complete Guide 2025",
+      en: "Student Visa for Italy: Complete Guide 2025", de: "Student Visa for Italy: Complete Guide 2025",
       it: "Visto Studente per l'Italia: Guida Completa 2025",
       ar: "تأشيرة الطالب لإيطاليا: الدليل الشامل 2025"
     },
     excerpt: {
       fr: "Étudier en Italie est le rêve de milliers d'étudiants dans le monde. Mais obtenir le visa étudiant et gérer toutes les démarches administratives peut être un parcours du combattant. Voici tout ce que vous devez savoir.",
-      en: "Studying in Italy is the dream of thousands of students worldwide. But obtaining the student visa and managing all administrative procedures can be challenging. Here is everything you need to know.",
+      en: "Studying in Italy is the dream of thousands of students worldwide. But obtaining the student visa and managing all administrative procedures can be challenging. Here is everything you need to know.", de: "Studying in Italy is the dream of thousands of students worldwide. But obtaining the student visa and managing all administrative procedures can be challenging. Here is everything you need to know.",
       it: "Studiare in Italia è il sogno di migliaia di studenti in tutto il mondo. Ma ottenere il visto studente e gestire tutte le procedure amministrative può essere impegnativo.",
       ar: "الدراسة في إيطاليا حلم آلاف الطلاب حول العالم. لكن الحصول على تأشيرة الطالب وإدارة جميع الإجراءات الإدارية قد يكون أمراً صعباً."
     },
@@ -96,13 +96,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Exporter des produits italiens : opportunités et démarches pour les importateurs",
-      en: "Exporting Italian Products: Opportunities and Steps for Importers",
+      en: "Exporting Italian Products: Opportunities and Steps for Importers", de: "Exporting Italian Products: Opportunities and Steps for Importers",
       it: "Esportare Prodotti Italiani: Opportunità e Procedure per gli Importatori",
       ar: "تصدير المنتجات الإيطالية: الفرص والإجراءات للمستوردين"
     },
     excerpt: {
       fr: "Le Made in Italy est une marque de qualité reconnue dans le monde entier. Découvrez comment accéder aux meilleurs producteurs italiens et construire une chaîne d'approvisionnement solide.",
-      en: "Made in Italy is a quality brand recognized worldwide. Discover how to access the best Italian producers and build a solid supply chain.",
+      en: "Made in Italy is a quality brand recognized worldwide. Discover how to access the best Italian producers and build a solid supply chain.", de: "Made in Italy is a quality brand recognized worldwide. Discover how to access the best Italian producers and build a solid supply chain.",
       it: "Il Made in Italy è un marchio di qualità riconosciuto in tutto il mondo. Scopri come accedere ai migliori produttori italiani.",
       ar: "المنتجات الإيطالية علامة جودة معترف بها عالمياً. اكتشف كيفية الوصول إلى أفضل المنتجين الإيطاليين."
     },
@@ -116,13 +116,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Droit immobilier et fiscal en Italie : ce que tout étranger doit connaître",
-      en: "Real Estate and Tax Law in Italy: What Every Foreigner Must Know",
+      en: "Real Estate and Tax Law in Italy: What Every Foreigner Must Know", de: "Real Estate and Tax Law in Italy: What Every Foreigner Must Know",
       it: "Diritto Immobiliare e Fiscale in Italia: Quello che Ogni Straniero Deve Sapere",
       ar: "قانون العقارات والضرائب في إيطاليا: ما يجب على كل أجنبي معرفته"
     },
     excerpt: {
       fr: "Le système juridique et fiscal italien a ses spécificités que tout investisseur étranger doit comprendre avant d'agir. Nos avocats partenaires vous expliquent l'essentiel.",
-      en: "The Italian legal and tax system has specificities that every foreign investor must understand before acting. Our partner lawyers explain the essentials.",
+      en: "The Italian legal and tax system has specificities that every foreign investor must understand before acting. Our partner lawyers explain the essentials.", de: "The Italian legal and tax system has specificities that every foreign investor must understand before acting. Our partner lawyers explain the essentials.",
       it: "Il sistema legale e fiscale italiano ha specificità che ogni investitore straniero deve comprendere prima di agire.",
       ar: "يتمتع النظام القانوني والضريبي الإيطالي بخصوصيات يجب على كل مستثمر أجنبي فهمها قبل التصرف."
     },
@@ -136,13 +136,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Codice Fiscale et Permesso di Soggiorno : le guide pratique pour les étrangers",
-      en: "Codice Fiscale and Permesso di Soggiorno: The Practical Guide for Foreigners",
+      en: "Codice Fiscale and Permesso di Soggiorno: The Practical Guide for Foreigners", de: "Codice Fiscale and Permesso di Soggiorno: The Practical Guide for Foreigners",
       it: "Codice Fiscale e Permesso di Soggiorno: La Guida Pratica per Stranieri",
       ar: "الرقم الضريبي وتصريح الإقامة: الدليل العملي للأجانب"
     },
     excerpt: {
       fr: "Le codice fiscale et le permesso di soggiorno sont deux documents fondamentaux pour tout étranger souhaitant vivre, travailler ou investir en Italie. Voici tout ce que vous devez savoir.",
-      en: "The codice fiscale and permesso di soggiorno are two fundamental documents for any foreigner wishing to live, work or invest in Italy. Here is everything you need to know.",
+      en: "The codice fiscale and permesso di soggiorno are two fundamental documents for any foreigner wishing to live, work or invest in Italy. Here is everything you need to know.", de: "The codice fiscale and permesso di soggiorno are two fundamental documents for any foreigner wishing to live, work or invest in Italy. Here is everything you need to know.",
       it: "Il codice fiscale e il permesso di soggiorno sono due documenti fondamentali per qualsiasi straniero che desideri vivere, lavorare o investire in Italia.",
       ar: "الرقم الضريبي وتصريح الإقامة وثيقتان أساسيتان لأي أجنبي يرغب في العيش أو العمل أو الاستثمار في إيطاليا."
     },
@@ -156,13 +156,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Service de conciergerie en Italie : vivez l'Italie sans contraintes",
-      en: "Concierge Service in Italy: Experience Italy Without Constraints",
+      en: "Concierge Service in Italy: Experience Italy Without Constraints", de: "Concierge Service in Italy: Experience Italy Without Constraints",
       it: "Servizio Concierge in Italia: Vivi l'Italia Senza Vincoli",
       ar: "خدمة الكونسيرج في إيطاليا: اعش إيطاليا بلا قيود"
     },
     excerpt: {
       fr: "L'Italie est magnifique, mais s'y installer ou y séjourner en tant qu'étranger nécessite une logistique considérable. Notre service de conciergerie premium vous simplifie chaque aspect.",
-      en: "Italy is magnificent, but settling or staying there as a foreigner requires considerable logistics. Our premium concierge service simplifies every aspect for you.",
+      en: "Italy is magnificent, but settling or staying there as a foreigner requires considerable logistics. Our premium concierge service simplifies every aspect for you.", de: "Italy is magnificent, but settling or staying there as a foreigner requires considerable logistics. Our premium concierge service simplifies every aspect for you.",
       it: "L'Italia è magnifica, ma stabilirsi o soggiornare come straniero richiede una logistica considerevole.",
       ar: "إيطاليا رائعة، لكن الاستقرار أو الإقامة فيها كأجنبي يتطلب لوجستيات كبيرة."
     },
@@ -176,13 +176,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Organiser son mariage en Italie : le guide ultime pour les couples internationaux",
-      en: "Planning Your Wedding in Italy: The Ultimate Guide for International Couples",
+      en: "Planning Your Wedding in Italy: The Ultimate Guide for International Couples", de: "Planning Your Wedding in Italy: The Ultimate Guide for International Couples",
       it: "Organizzare il Matrimonio in Italia: La Guida Definitiva per le Coppie Internazionali",
       ar: "تنظيم حفل زفافك في إيطاليا: الدليل الشامل للأزواج الدوليين"
     },
     excerpt: {
       fr: "Un mariage en Italie est le rêve de millions de couples dans le monde. Toscane, Lac de Côme, Rome... Découvrez comment concrétiser votre rêve avec l'aide d'ITALYCARE 360.",
-      en: "A wedding in Italy is the dream of millions of couples worldwide. Tuscany, Lake Como, Rome... Discover how to make your dream come true with ITALYCARE 360.",
+      en: "A wedding in Italy is the dream of millions of couples worldwide. Tuscany, Lake Como, Rome... Discover how to make your dream come true with ITALYCARE 360.", de: "A wedding in Italy is the dream of millions of couples worldwide. Tuscany, Lake Como, Rome... Discover how to make your dream come true with ITALYCARE 360.",
       it: "Un matrimonio in Italia è il sogno di milioni di coppie nel mondo. Toscana, Lago di Como, Roma...",
       ar: "الزفاف في إيطاليا حلم ملايين الأزواج حول العالم. توسكانا، بحيرة كومو، روما..."
     },
@@ -196,13 +196,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Choisir une maison de retraite en Italie : critères essentiels et meilleures régions",
-      en: "Choosing a Retirement Home in Italy: Essential Criteria and Best Regions",
+      en: "Choosing a Retirement Home in Italy: Essential Criteria and Best Regions", de: "Choosing a Retirement Home in Italy: Essential Criteria and Best Regions",
       it: "Scegliere una Casa di Riposo in Italia: Criteri Essenziali e Migliori Regioni",
       ar: "اختيار دار المسنين في إيطاليا: المعايير الأساسية وأفضل المناطق"
     },
     excerpt: {
       fr: "L'Italie est l'une des meilleures destinations au monde pour les retraités — qualité de vie exceptionnelle, cuisine saine, climat agréable et soins de santé de premier ordre.",
-      en: "Italy is one of the best destinations in the world for retirees — exceptional quality of life, healthy cuisine, pleasant climate, and first-class healthcare.",
+      en: "Italy is one of the best destinations in the world for retirees — exceptional quality of life, healthy cuisine, pleasant climate, and first-class healthcare.", de: "Italy is one of the best destinations in the world for retirees — exceptional quality of life, healthy cuisine, pleasant climate, and first-class healthcare.",
       it: "L'Italia è una delle migliori destinazioni al mondo per i pensionati — qualità di vita eccezionale, cucina sana, clima piacevole e assistenza sanitaria di prima classe.",
       ar: "إيطاليا من أفضل الوجهات في العالم للمتقاعدين - جودة حياة استثنائية وطبخ صحي ومناخ لطيف ورعاية صحية متميزة."
     },
@@ -216,13 +216,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Financer un projet immobilier en Italie en tant que non-résident : ce qu'il faut savoir",
-      en: "Financing Real Estate in Italy as a Non-Resident: What You Need to Know",
+      en: "Financing Real Estate in Italy as a Non-Resident: What You Need to Know", de: "Financing Real Estate in Italy as a Non-Resident: What You Need to Know",
       it: "Finanziare un Progetto Immobiliare in Italia da Non Residente: Cosa Sapere",
       ar: "تمويل مشروع عقاري في إيطاليا كغير مقيم: ما تحتاج معرفته"
     },
     excerpt: {
       fr: "Obtenir un financement immobilier en Italie en tant qu'étranger non-résident est possible, mais requiert une préparation rigoureuse. Voici notre guide complet.",
-      en: "Obtaining real estate financing in Italy as a foreign non-resident is possible, but requires rigorous preparation. Here is our complete guide.",
+      en: "Obtaining real estate financing in Italy as a foreign non-resident is possible, but requires rigorous preparation. Here is our complete guide.", de: "Obtaining real estate financing in Italy as a foreign non-resident is possible, but requires rigorous preparation. Here is our complete guide.",
       it: "Ottenere un finanziamento immobiliare in Italia come straniero non residente è possibile, ma richiede una preparazione rigorosa.",
       ar: "الحصول على تمويل عقاري في إيطاليا كأجنبي غير مقيم أمر ممكن، لكنه يتطلب تحضيراً دقيقاً."
     },
@@ -236,13 +236,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Trouver les bons professionnels en Italie : architectes, géomètres, médecins et avocats",
-      en: "Finding the Right Professionals in Italy: Architects, Surveyors, Doctors and Lawyers",
+      en: "Finding the Right Professionals in Italy: Architects, Surveyors, Doctors and Lawyers", de: "Finding the Right Professionals in Italy: Architects, Surveyors, Doctors and Lawyers",
       it: "Trovare i Giusti Professionisti in Italia: Architetti, Geometri, Medici e Avvocati",
       ar: "إيجاد المهنيين المناسبين في إيطاليا: المعماريون والمساحون والأطباء والمحامون"
     },
     excerpt: {
       fr: "Trouver un professionnel fiable en Italie, surtout sans parler la langue, est l'un des plus grands défis pour les étrangers. ITALYCARE 360 met à votre disposition un réseau vérifié de spécialistes.",
-      en: "Finding a reliable professional in Italy, especially without speaking the language, is one of the biggest challenges for foreigners. ITALYCARE 360 provides you with a verified network of specialists.",
+      en: "Finding a reliable professional in Italy, especially without speaking the language, is one of the biggest challenges for foreigners. ITALYCARE 360 provides you with a verified network of specialists.", de: "Finding a reliable professional in Italy, especially without speaking the language, is one of the biggest challenges for foreigners. ITALYCARE 360 provides you with a verified network of specialists.",
       it: "Trovare un professionista affidabile in Italia, soprattutto senza parlare la lingua, è una delle maggiori sfide per gli stranieri.",
       ar: "إيجاد مهني موثوق في إيطاليا، خاصة دون إتقان اللغة، أحد أكبر التحديات للأجانب."
     },
@@ -256,13 +256,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "S'installer en Italie après 60 ans : le guide complet pour les seniors",
-      en: "Settling in Italy After 60: The Complete Guide for Seniors",
+      en: "Settling in Italy After 60: The Complete Guide for Seniors", de: "Settling in Italy After 60: The Complete Guide for Seniors",
       it: "Trasferirsi in Italia Dopo i 60 Anni: La Guida Completa per i Senior",
       ar: "الاستقرار في إيطاليا بعد سن الستين: الدليل الشامل لكبار السن"
     },
     excerpt: {
       fr: "L'Italie est l'une des destinations préférées des retraités du monde entier. Climat exceptionnel, gastronomie, culture et soins de santé de qualité : découvrez comment ITALYCARE 360 accompagne les seniors dans leur projet de vie en Italie.",
-      en: "Italy is one of the most sought-after destinations for retirees worldwide. Exceptional climate, gastronomy, culture and quality healthcare: discover how ITALYCARE 360 supports seniors in their Italian lifestyle project.",
+      en: "Italy is one of the most sought-after destinations for retirees worldwide. Exceptional climate, gastronomy, culture and quality healthcare: discover how ITALYCARE 360 supports seniors in their Italian lifestyle project.", de: "Italy is one of the most sought-after destinations for retirees worldwide. Exceptional climate, gastronomy, culture and quality healthcare: discover how ITALYCARE 360 supports seniors in their Italian lifestyle project.",
       it: "L'Italia è una delle destinazioni preferite dai pensionati di tutto il mondo. Clima eccezionale, gastronomia, cultura e sanità di qualità: scopri come ITALYCARE 360 accompagna i senior nel loro progetto di vita in Italia.",
       ar: "إيطاليا من الوجهات المفضلة للمتقاعدين حول العالم. مناخ استثنائي وطبخ وثقافة ورعاية صحية متميزة: اكتشف كيف يرافق ITALYCARE 360 كبار السن في مشروع حياتهم الإيطالية."
     },
@@ -276,13 +276,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Gérer son bien immobilier en Italie à distance : nos solutions Property Care",
-      en: "Managing Your Property in Italy Remotely: Our Property Care Solutions",
+      en: "Managing Your Property in Italy Remotely: Our Property Care Solutions", de: "Managing Your Property in Italy Remotely: Our Property Care Solutions",
       it: "Gestire il Proprio Immobile in Italia a Distanza: Le Nostre Soluzioni Property Care",
       ar: "إدارة عقارك في إيطاليا عن بُعد: حلول Property Care لدينا"
     },
     excerpt: {
       fr: "Posséder un bien en Italie sans y vivre soulève de nombreux défis : entretien, sécurité, urgences. Découvrez comment notre service Property Care vous garantit une gestion complète et sereine de votre propriété.",
-      en: "Owning property in Italy without living there raises many challenges: maintenance, security, emergencies. Discover how our Property Care service guarantees complete and worry-free management of your property.",
+      en: "Owning property in Italy without living there raises many challenges: maintenance, security, emergencies. Discover how our Property Care service guarantees complete and worry-free management of your property.", de: "Owning property in Italy without living there raises many challenges: maintenance, security, emergencies. Discover how our Property Care service guarantees complete and worry-free management of your property.",
       it: "Possedere un immobile in Italia senza viverci solleva molte sfide: manutenzione, sicurezza, emergenze. Scopri come il nostro servizio Property Care garantisce una gestione completa e serena della tua proprietà.",
       ar: "امتلاك عقار في إيطاليا دون الإقامة فيه يطرح تحديات عديدة: الصيانة والأمن والطوارئ. اكتشف كيف تضمن خدمة Property Care لدينا إدارة كاملة ومريحة لممتلكاتك."
     },
@@ -296,13 +296,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Cures thermales en Italie : bienfaits, meilleures stations et comment s'organiser",
-      en: "Thermal Cures in Italy: Benefits, Best Resorts and How to Organise Your Stay",
+      en: "Thermal Cures in Italy: Benefits, Best Resorts and How to Organise Your Stay", de: "Thermal Cures in Italy: Benefits, Best Resorts and How to Organise Your Stay",
       it: "Cure Termali in Italia: Benefici, Migliori Stazioni e Come Organizzarsi",
       ar: "العلاجات الحرارية في إيطاليا: الفوائد وأفضل المنتجعات وكيفية التنظيم"
     },
     excerpt: {
       fr: "L'Italie est l'une des premières destinations mondiales pour les cures thermales et le wellness médical. Fangothérapie, balnéothérapie, hydrokinésithérapie : découvrez comment organiser votre séjour thérapeutique avec ITALYCARE 360.",
-      en: "Italy is one of the world's leading destinations for thermal cures and medical wellness. Mud therapy, balneotherapy, hydrotherapy: discover how to organise your therapeutic stay with ITALYCARE 360.",
+      en: "Italy is one of the world's leading destinations for thermal cures and medical wellness. Mud therapy, balneotherapy, hydrotherapy: discover how to organise your therapeutic stay with ITALYCARE 360.", de: "Italy is one of the world's leading destinations for thermal cures and medical wellness.",
       it: "L'Italia è una delle principali destinazioni mondiali per le cure termali e il wellness medico. Fangoterapia, balneoterapia, idrokinesiterapia: scopri come organizzare il tuo soggiorno terapeutico con ITALYCARE 360.",
       ar: "إيطاليا من الوجهات الأولى عالميًا للعلاجات الحرارية والعافية الطبية. علاج الطين والمعالجة المائية: اكتشف كيف تنظم إقامتك العلاجية مع ITALYCARE 360."
     },
@@ -316,13 +316,13 @@ const ARTICLES = [
     image: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1200&q=80',
     title: {
       fr: "Aviation privée en 2026 : est-ce vraiment intéressant ?",
-      en: "Private Aviation in 2026: Is It Really Worth It?",
+      en: "Private Aviation in 2026: Is It Really Worth It?", de: "Private Aviation in 2026: Is It Really Worth It?",
       it: "Aviazione privata nel 2026: ne vale davvero la pena?",
       ar: "الطيران الخاص في 2026: هل يستحق حقًا؟"
     },
     excerpt: {
       fr: "L'aviation privée n'est plus seulement un symbole de luxe — c'est devenu un choix pratique pour ceux qui valorisent le temps, la flexibilité et une expérience de voyage fluide. Mais est-ce vraiment intéressant ?",
-      en: "Private aviation is no longer just a symbol of luxury—it's becoming a practical choice for those who value time, flexibility, and a smoother travel experience. But is it actually worth it?",
+      en: "Private aviation is no longer just a symbol of luxury—it's becoming a practical choice for those who value time, flexibility, and a smoother travel experience. But is it actually worth it?", de: "Private aviation is no longer just a symbol of luxury—it's becoming a practical choice.",
       it: "L'aviazione privata non è più solo un simbolo di lusso: sta diventando una scelta pratica per chi valorizza il tempo, la flessibilità e un'esperienza di viaggio più fluida. Ma ne vale davvero la pena?",
       ar: "لم يعد الطيران الخاص مجرد رمز للفخامة — بل أصبح خيارًا عمليًا لمن يقدّرون الوقت والمرونة وتجربة سفر أكثر سلاسة. لكن هل يستحق ذلك فعلًا؟"
     },
@@ -420,11 +420,11 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
   const article = ARTICLES.find(a => a.slug === slug)
 
   const backLabels: Record<string, string> = {
-    fr: '← Retour au Blog', en: '← Back to Blog', it: '← Torna al Blog', ar: '→ العودة للمدونة'
+    fr: '← Retour au Blog', en: '← Back to Blog', de: '← Back to Blog', it: '← Torna al Blog', ar: '→ العودة للمدونة'
   }
   const ctaLabels: Record<string, string> = {
     fr: 'Prendre rendez-vous gratuit →',
-    en: 'Book free consultation →',
+    en: 'Book free consultation →', de: 'Book free consultation →',
     it: 'Prenota consulenza gratuita →',
     ar: '← احجز استشارة مجانية'
   }

@@ -1,4 +1,4 @@
-export type LangCode = 'fr' | 'en' | 'ar' | 'it' | 'ru'
+export type LangCode = 'fr' | 'en' | 'ar' | 'it' | 'ru' | 'de'
 
 export interface QuizOption {
   text: string
