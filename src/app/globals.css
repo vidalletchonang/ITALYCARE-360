@@ -730,9 +730,52 @@ nav {
   transition: background 0.3s;
 }
 .ni:hover { background: rgba(201,168,76,0.07); }
-.ni-n { font-family: var(--font-playfair); font-size: 54px; font-weight: 900; color: #141C2B; line-height: 1; margin-bottom: 8px; }
-.ni-n span { color: var(--o); }
+.ni-n {
+  font-family: var(--font-playfair);
+  font-size: 54px;
+  font-weight: 900;
+  color: #141C2B;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+}
+.ni-num-val { color: #141C2B; display: inline-block; transition: color 0.25s ease; }
+.ni-suffix { color: var(--o); }
 .ni-l { font-size: 14px; letter-spacing: 1.5px; color: #6E7585; text-transform: uppercase; line-height: 1.5; }
+
+/* Active counting state — subtle golden pulse + scale while counting */
+.ni-active .ni-num-val {
+  color: var(--o);
+  animation: ni-pulse 2s ease-out forwards;
+  text-shadow: 0 0 24px rgba(212,168,67,0.35);
+}
+.ni-active {
+  transform: scale(1);
+  animation: ni-bump 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ni-done .ni-num-val {
+  color: #141C2B;
+  text-shadow: none;
+  transition: color 0.6s ease, text-shadow 0.6s ease;
+}
+@keyframes ni-pulse {
+  0%   { transform: scale(1);     filter: brightness(1); }
+  50%  { transform: scale(1.06);  filter: brightness(1.15); }
+  100% { transform: scale(1);     filter: brightness(1); }
+}
+@keyframes ni-bump {
+  0%   { box-shadow: inset 0 0 0 0 rgba(212,168,67,0); }
+  50%  { box-shadow: inset 0 0 0 2px rgba(212,168,67,0.35); }
+  100% { box-shadow: inset 0 0 0 0 rgba(212,168,67,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ni-active .ni-num-val,
+  .ni-active { animation: none !important; }
+}
 
 /* ===================== TESTIMONIALS ===================== */
 .testi { padding: 120px 48px; background: #fff; }
