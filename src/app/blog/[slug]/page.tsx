@@ -19,6 +19,7 @@ const SLUGS = [
   'aviation-privee-italie-guide',
   'scolarite-ecoles-italie-enfants-expats',
   'importer-vehicule-italie-guide',
+  'codice-fiscale-residence-permit-italy-2026',
 ]
 
 export function generateStaticParams() {

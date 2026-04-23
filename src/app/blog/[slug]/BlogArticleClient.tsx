@@ -571,25 +571,370 @@ Réservez un appel gratuit de 30 min — nous vous disons s'il faut importer ou 
       ar: ''
     }
   },
+  {
+    slug: 'codice-fiscale-residence-permit-italy-2026',
+    category: 'administratif',
+    date: '2026-04-23',
+    readTime: 8,
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85',
+    title: {
+      fr: "Codice Fiscale et permis de s\u00e9jour en Italie en 2026 : de quoi ont vraiment besoin les acheteurs \u00e9trangers ?",
+      en: "Codice Fiscale and Residence Permit in Italy 2026: What Do Foreign Buyers Actually Need?",
+      it: "Codice fiscale e permesso di soggiorno in Italia nel 2026: di cosa hanno davvero bisogno gli acquirenti stranieri?",
+      ar: "الرقم الضريبي وتصريح الإقامة في إيطاليا 2026: ما الذي يحتاجه المشترون الأجانب فعلاً؟"
+    },
+    excerpt: {
+      fr: "Acheter un bien en Italie ou s'y installer n\u00e9cessite-t-il les deux ? On clarifie la diff\u00e9rence entre codice fiscale et permis de s\u00e9jour, et comment l'obtenir \u00e0 distance via un repr\u00e9sentant l\u00e9gal.",
+      en: "If you are planning to move to Italy or buy property, you will need a codice fiscale and, in some cases, a residence permit. Here is the clear 2026 breakdown of what foreign buyers actually need — and how to get it remotely.",
+      it: "Se stai pianificando di trasferirti in Italia o acquistare un immobile, avrai bisogno di un codice fiscale e, in alcuni casi, di un permesso di soggiorno. Ecco cosa serve davvero nel 2026.",
+      ar: "إذا كنت تخطط للانتقال إلى إيطاليا أو شراء عقار، فستحتاج إلى الرقم الضريبي وأحياناً تصريح الإقامة. إليك ما يحتاجه المشترون الأجانب فعلاً في 2026."
+    },
+    content: {
+      en: `If you are planning to move to Italy or buy property, you will need a **codice fiscale** and, in some cases, a residence permit. The codice fiscale is required for any legal or financial transaction, while the residence permit is only necessary if you plan to stay in Italy for more than 90 days. Today, many applicants obtain their codice fiscale remotely through a legal representative in Italy.
+
+## Do You Really Need Both?
+
+This is one of the most common points of confusion for foreign clients.
+
+In practice, the **codice fiscale is always required**, while the residence permit depends on your situation.
+
+If your goal is simply to buy property in Italy, you do not need a residence permit. However, you cannot proceed without a codice fiscale, as it is required for signing the notarial deed, opening a bank account, and handling any utility contracts.
+
+The residence permit only becomes relevant if you intend to live in Italy for more than 90 days.
+
+## What Is a Codice Fiscale and Why It Comes First
+
+The **codice fiscale** is essentially your tax identification number in Italy. It is issued by the Italian Revenue Agency (*Agenzia delle Entrate*) and is used in every legal and financial interaction.
+
+In real estate transactions, it is one of the very first requirements. Without it, a notary cannot complete the purchase.
+
+In our experience, most international buyers request it well before coming to Italy, especially when planning a closing date.
+
+![Signing a codice fiscale application with an Italian legal representative](https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=85)
+
+## Can You Get a Codice Fiscale Remotely in 2026?
+
+Yes — and this is where things have evolved significantly in recent years.
+
+While it is still possible to apply directly at an Italian consulate, many consulates today inform applicants that processing times can be long or that they cannot issue it immediately.
+
+For this reason, they often suggest an alternative approach: appointing a **legal representative in Italy** who can apply on your behalf at the Agenzia delle Entrate.
+
+This has become standard practice, particularly for:
+
+- US and UK buyers purchasing property remotely
+- Clients working with tight timelines (e.g. upcoming notarial deed)
+- Investors who have not yet travelled to Italy
+
+In practical terms, the process works as follows:
+
+- You sign a delegation
+- Your lawyer submits the application directly in Italy
+- The codice fiscale is issued within a few days
+
+This approach is fully compliant with Italian regulations and is often the fastest and most reliable solution.
+
+## When a Residence Permit Is Actually Required
+
+The **residence permit** (*permesso di soggiorno*) is a separate matter and is often misunderstood.
+
+You only need it if you plan to stay in Italy beyond the standard 90-day Schengen limit.
+
+Typical cases include:
+
+- relocating permanently
+- retiring in Italy under elective residency
+- working or starting a business
+- long-term stays as a digital nomad
+
+Of course, if you are simply purchasing a property as an investment or second home and staying short-term, no residence permit is required.
+
+![Italian residence permit and passport on a professional desk](https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1400&q=85)
+
+## How the Residence Permit Process Works
+
+Unlike the codice fiscale, the residence permit **cannot be obtained remotely**. The process starts after you enter Italy and must be initiated within **8 days of arrival**, only after having obtained a long-term visa.
+
+You will need to:
+
+- submit an application through the postal system
+- attend an appointment at the local police headquarters (*Questura*)
+- provide biometric data
+- wait for the permit to be issued
+
+Processing times can vary, but in most cases range between **2 and 4 months**, according to data from the Italian Ministry of the Interior (2026 update).
+
+## A Practical Timeline for Buyers
+
+In real transactions, this is how things typically unfold:
+
+- The codice fiscale is obtained first, often remotely through a lawyer
+- The property purchase can proceed without any residence requirement
+- The residence permit is only addressed later, if relocation is your final goal
+
+This distinction is crucial and often overlooked by first-time buyers.
+
+## Common Mistakes We See
+
+Many delays and complications come from simple misunderstandings. The most frequent issues include:
+
+- assuming a residence permit is required to buy property
+- waiting too long to request a codice fiscale
+- relying solely on consulate timelines when a faster legal route is available
+- confusing visa requirements with residency obligations
+
+Addressing these points early can significantly streamline the process.
+
+## FAQ
+
+**Do I need a residence permit to buy property in Italy?**
+No, only a codice fiscale is required.
+
+**Can I get a codice fiscale without going to Italy?**
+Yes, through a legal representative.
+
+**How long does it take to get a codice fiscale?**
+Usually, a few days if requested through a lawyer in Italy.
+
+**When is a residence permit mandatory?**
+Only if you stay in Italy longer than 90 days.
+
+**Can a consulate issue the codice fiscale?**
+Yes, but many now recommend applying through a representative in Italy.
+
+## Conclusion
+
+For foreign buyers, the key takeaway is simple: **the codice fiscale is essential and immediate, while the residence permit is situational**.
+
+Understanding this difference — and knowing that the codice fiscale can often be obtained remotely through a legal representative — allows you to move forward quickly and avoid unnecessary delays.
+
+## Ready to Secure Your Italian Paperwork?
+
+If you are planning to purchase property or relocate to Italy, our legal team can assist you with obtaining your codice fiscale remotely and managing the entire process.
+
+Contact ITALYCARE 360 for tailored assistance and due diligence support.`,
+      fr: `Si vous projetez de vous installer en Italie ou d'y acheter un bien, vous aurez besoin d'un **codice fiscale** et, dans certains cas, d'un permis de séjour. Le codice fiscale est requis pour toute transaction juridique ou financière, tandis que le permis de séjour n'est nécessaire que si vous comptez rester plus de 90 jours. Aujourd'hui, de nombreux demandeurs l'obtiennent à distance via un représentant légal en Italie.
+
+## Avez-vous vraiment besoin des deux ?
+
+C'est l'une des confusions les plus fréquentes chez les clients étrangers.
+
+En pratique, **le codice fiscale est toujours requis**, alors que le permis de séjour dépend de votre situation.
+
+Si votre objectif est simplement d'acheter un bien en Italie, vous n'avez pas besoin de permis de séjour. En revanche, impossible d'avancer sans codice fiscale : il est indispensable pour signer l'acte notarié, ouvrir un compte bancaire et gérer les contrats d'énergie.
+
+Le permis de séjour ne devient pertinent que si vous souhaitez vivre en Italie plus de 90 jours.
+
+## Qu'est-ce que le codice fiscale et pourquoi passe-t-il en premier ?
+
+Le **codice fiscale** est votre numéro d'identification fiscale en Italie. Il est délivré par l'Agence des impôts italienne (*Agenzia delle Entrate*) et utilisé dans toute interaction juridique ou financière.
+
+Dans une transaction immobilière, c'est l'une des toutes premières exigences. Sans lui, un notaire ne peut pas finaliser l'achat.
+
+Dans notre expérience, la plupart des acheteurs internationaux le demandent bien avant leur venue en Italie, surtout lorsqu'une date de closing est prévue.
+
+![Signature d'une demande de codice fiscale avec un représentant légal italien](https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=85)
+
+## Peut-on obtenir un codice fiscale à distance en 2026 ?
+
+Oui — et c'est là que les choses ont beaucoup évolué ces dernières années.
+
+Il est toujours possible de le demander directement dans un consulat italien, mais beaucoup de consulats préviennent aujourd'hui que les délais peuvent être longs ou qu'ils ne peuvent pas le délivrer immédiatement.
+
+Pour cette raison, ils suggèrent souvent une alternative : désigner un **représentant légal en Italie** qui dépose la demande pour vous à l'Agenzia delle Entrate.
+
+C'est devenu la pratique standard, en particulier pour :
+
+- les acheteurs américains et britanniques achetant à distance
+- les clients avec un calendrier serré (ex. acte notarié imminent)
+- les investisseurs qui ne se sont pas encore déplacés en Italie
+
+Concrètement, le processus se déroule ainsi :
+
+- Vous signez une procuration
+- Votre avocat dépose la demande directement en Italie
+- Le codice fiscale est délivré en quelques jours
+
+Cette approche est parfaitement conforme à la réglementation italienne et constitue souvent la solution la plus rapide et fiable.
+
+## Quand un permis de séjour est-il vraiment nécessaire ?
+
+Le **permis de séjour** (*permesso di soggiorno*) est une question distincte, et souvent mal comprise.
+
+Vous n'en avez besoin que si vous prévoyez de rester en Italie au-delà de la limite standard Schengen de 90 jours.
+
+Cas typiques :
+
+- relocalisation permanente
+- retraite en Italie en résidence élective
+- travail ou création d'entreprise
+- séjour long comme nomade numérique
+
+Évidemment, si vous achetez simplement une propriété comme investissement ou résidence secondaire et que vous restez peu de temps, aucun permis de séjour n'est nécessaire.
+
+![Permis de séjour italien et passeport sur un bureau professionnel](https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1400&q=85)
+
+## Comment se déroule la demande de permis de séjour ?
+
+Contrairement au codice fiscale, le permis de séjour **ne peut pas s'obtenir à distance**. Le processus démarre après votre entrée en Italie et doit être initié dans les **8 jours suivant l'arrivée**, uniquement après obtention d'un visa long séjour.
+
+Vous devrez :
+
+- déposer un dossier via La Poste
+- vous rendre au rendez-vous au commissariat local (*Questura*)
+- fournir vos données biométriques
+- attendre la délivrance du titre
+
+Les délais varient, mais dans la plupart des cas ils vont de **2 à 4 mois**, selon les données du Ministère italien de l'Intérieur (mise à jour 2026).
+
+## Un calendrier pratique pour les acheteurs
+
+Dans une transaction réelle, voici comment les choses se déroulent habituellement :
+
+- Le codice fiscale est obtenu en premier, souvent à distance via un avocat
+- L'achat immobilier peut se faire sans aucune obligation de résidence
+- Le permis de séjour n'est traité qu'après, si la relocalisation est votre objectif final
+
+Cette distinction est cruciale et souvent négligée par les primo-acheteurs.
+
+## Les erreurs fréquentes que nous observons
+
+Beaucoup de retards viennent de simples malentendus. Les plus courants :
+
+- croire qu'un permis de séjour est requis pour acheter un bien
+- attendre trop longtemps avant de demander le codice fiscale
+- se fier uniquement aux délais des consulats alors qu'une voie juridique plus rapide existe
+- confondre les exigences de visa avec les obligations de résidence
+
+Clarifier ces points tôt dans le processus permet d'éviter bien des complications.
+
+## FAQ
+
+**Ai-je besoin d'un permis de séjour pour acheter un bien en Italie ?**
+Non, seul le codice fiscale est requis.
+
+**Puis-je obtenir le codice fiscale sans me rendre en Italie ?**
+Oui, via un représentant légal.
+
+**Combien de temps faut-il pour obtenir le codice fiscale ?**
+Généralement quelques jours via un avocat en Italie.
+
+**Quand le permis de séjour devient-il obligatoire ?**
+Uniquement si vous restez en Italie plus de 90 jours.
+
+**Un consulat peut-il délivrer le codice fiscale ?**
+Oui, mais beaucoup recommandent désormais de passer par un représentant en Italie.
+
+## Conclusion
+
+Pour les acheteurs étrangers, la règle est simple : **le codice fiscale est essentiel et immédiat, le permis de séjour est situationnel**.
+
+Comprendre cette différence — et savoir que le codice fiscale peut souvent s'obtenir à distance via un représentant légal — permet d'avancer rapidement et d'éviter des retards inutiles.
+
+## Prêt à sécuriser vos démarches italiennes ?
+
+Si vous envisagez un achat immobilier ou une relocalisation en Italie, notre équipe juridique vous accompagne pour obtenir votre codice fiscale à distance et gérer l'ensemble du processus.
+
+Contactez ITALYCARE 360 pour une assistance sur-mesure et un accompagnement due diligence.`,
+      it: '',
+      ar: ''
+    }
+  },
 ]
 
-function renderMarkdown(text: string): JSX.Element[] {
-  return text.split('\n').map((line, i) => {
-    if (line.startsWith('## ')) {
-      return <h2 key={i} className="article-h2 font-playfair">{line.replace('## ', '')}</h2>
+/**
+ * Lightweight markdown renderer supporting:
+ *   - `## heading`
+ *   - `**bold**` inline
+ *   - `*italic*` inline
+ *   - `- bullet` (consecutive lines grouped into <ul>)
+ *   - `![alt](url)` inline figure
+ *   - blank lines → paragraph breaks
+ */
+function renderInline(text: string, baseKey: number | string): React.ReactNode[] {
+  // First split on **bold**, then further split each plain segment on *italic*
+  const bold = text.split(/\*\*(.*?)\*\*/g)
+  const out: React.ReactNode[] = []
+  bold.forEach((seg, i) => {
+    if (i % 2 === 1) {
+      out.push(<strong key={`${baseKey}-b${i}`}>{seg}</strong>)
+    } else {
+      // split on *italic* (not preceded/followed by *)
+      const italics = seg.split(/\*([^*\s][^*]*?)\*/g)
+      italics.forEach((sub, j) => {
+        if (j % 2 === 1) {
+          out.push(<em key={`${baseKey}-i${i}-${j}`}>{sub}</em>)
+        } else if (sub) {
+          out.push(<span key={`${baseKey}-t${i}-${j}`}>{sub}</span>)
+        }
+      })
     }
-    if (line.trim() === '') return <br key={i} />
-    // Replace **bold** inline
-    const parts = line.split(/\*\*(.*?)\*\*/g)
-    if (parts.length > 1) {
-      return (
-        <p key={i} className="article-p">
-          {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : part)}
-        </p>
-      )
-    }
-    return <p key={i} className="article-p">{line}</p>
   })
+  return out
+}
+
+function renderMarkdown(text: string): JSX.Element[] {
+  const lines = text.split('\n')
+  const out: JSX.Element[] = []
+  let listBuffer: string[] = []
+
+  const flushList = () => {
+    if (listBuffer.length === 0) return
+    const items = listBuffer
+    out.push(
+      <ul key={`ul-${out.length}`} className="article-ul">
+        {items.map((li, j) => (
+          <li key={j} className="article-li">{renderInline(li, `li${j}`)}</li>
+        ))}
+      </ul>
+    )
+    listBuffer = []
+  }
+
+  lines.forEach((line, i) => {
+    // Bullet list item
+    if (/^\s*-\s+/.test(line)) {
+      listBuffer.push(line.replace(/^\s*-\s+/, ''))
+      return
+    }
+    flushList()
+
+    // Inline image: ![alt](url)
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)\s*$/)
+    if (imgMatch) {
+      const alt = imgMatch[1]
+      const src = imgMatch[2]
+      out.push(
+        <figure key={i} className="article-figure">
+          <img src={src} alt={alt} loading="lazy" />
+          {alt && <figcaption className="article-caption">{alt}</figcaption>}
+        </figure>
+      )
+      return
+    }
+
+    // Heading ##
+    if (line.startsWith('## ')) {
+      out.push(
+        <h2 key={i} className="article-h2 font-playfair">{line.replace('## ', '')}</h2>
+      )
+      return
+    }
+
+    // Empty line → spacer
+    if (line.trim() === '') {
+      out.push(<br key={i} />)
+      return
+    }
+
+    // Paragraph with inline **bold** / *italic*
+    out.push(
+      <p key={i} className="article-p">{renderInline(line, i)}</p>
+    )
+  })
+
+  flushList() // flush any trailing list
+  return out
 }
 
 export default function BlogArticleClient({ slug }: { slug: string }) {

@@ -351,6 +351,26 @@ const ARTICLES = [
     content: { en: '', fr: '', it: '', ar: '' }
   },
   {
+    slug: 'codice-fiscale-residence-permit-italy-2026',
+    category: 'administratif',
+    date: '2026-04-23',
+    readTime: 8,
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85',
+    title: {
+      fr: "Codice Fiscale et permis de s\u00e9jour en Italie en 2026 : de quoi ont vraiment besoin les acheteurs \u00e9trangers ?",
+      en: "Codice Fiscale and Residence Permit in Italy 2026: What Do Foreign Buyers Actually Need?", de: "Codice Fiscale and Residence Permit in Italy 2026: What Do Foreign Buyers Actually Need?",
+      it: "Codice fiscale e permesso di soggiorno in Italia nel 2026: di cosa hanno davvero bisogno gli acquirenti stranieri?",
+      ar: "الرقم الضريبي وتصريح الإقامة في إيطاليا 2026: ما الذي يحتاجه المشترون الأجانب فعلاً؟"
+    },
+    excerpt: {
+      fr: "Acheter un bien en Italie ou s'y installer n\u00e9cessite-t-il les deux ? On clarifie la diff\u00e9rence entre codice fiscale (toujours requis, obtenable \u00e0 distance via un repr\u00e9sentant l\u00e9gal) et permis de s\u00e9jour (uniquement si vous restez plus de 90 jours).",
+      en: "Do you really need both to buy property or relocate to Italy? We clarify the difference between the codice fiscale (always required, obtainable remotely through a legal representative) and the residence permit (only if you stay more than 90 days).", de: "Do you really need both to buy property or relocate to Italy? We clarify the difference between the codice fiscale and the residence permit.",
+      it: "Servono davvero entrambi per comprare casa o trasferirsi in Italia? Chiariamo la differenza tra codice fiscale (sempre richiesto, ottenibile a distanza tramite un rappresentante legale) e permesso di soggiorno (solo se resti pi\u00f9 di 90 giorni).",
+      ar: "هل تحتاج فعلاً إلى كليهما لشراء عقار أو الانتقال إلى إيطاليا؟ نوضح الفرق بين الرقم الضريبي (مطلوب دائمًا ويمكن الحصول عليه عن بُعد) وتصريح الإقامة (فقط إذا أقمت أكثر من 90 يومًا)."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
+  {
     slug: 'importer-vehicule-italie-guide',
     category: 'vehicules',
     date: '2026-03-25',
