@@ -6,13 +6,11 @@ import { useLang } from '@/context/LangContext'
 import { trackRdvOpen, trackCalendlyOpen } from '@/lib/analytics'
 
 // =====================================================================
-// CALENDLY SETUP:
-// 1. Créez un compte sur https://calendly.com
-// 2. Créez un événement "Consultation 30 min"
-// 3. Remplacez l'URL ci-dessous par votre lien Calendly
-// Exemple: https://calendly.com/italycare360/consultation-30min
+// CALENDLY SETUP
+// Compte actif : administrator-italianrealestatelawyers
+// (compte dédié connecté à info@italycare360.com pour les notifications)
 // =====================================================================
-const CALENDLY_URL = 'https://calendly.com/italycare360/30min'
+const CALENDLY_URL = 'https://calendly.com/administrator-italianrealestatelawyers/30min'
 
 // Lead goes to our Cloudflare Worker → Resend → info@italycare360.com.
 // Same secure pipeline as the chatbot lead form (rate-limited, input-validated).
