@@ -30,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Jost:wght@400;500;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://italycare-chat.italycare360.workers.dev" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@400;500;600;700&family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
 
         {/* Google Analytics 4 */}
         {GA_ID && (

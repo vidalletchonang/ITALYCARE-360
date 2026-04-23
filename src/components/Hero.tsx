@@ -50,6 +50,7 @@ export default function Hero({ onRdv }: HeroProps) {
           src={endImage}
           alt="Dolomites, Italy"
           loading="eager"
+          fetchPriority="high"
           style={{
             position: 'absolute',
             top: 0,
@@ -66,6 +67,8 @@ export default function Hero({ onRdv }: HeroProps) {
           <img
             src={endImage}
             alt="Dolomites, Italy"
+            loading="eager"
+            fetchPriority="high"
             style={{
               position: 'absolute',
               top: 0,

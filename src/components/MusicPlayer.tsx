@@ -50,7 +50,7 @@ export default function MusicPlayer() {
         ref={audioRef}
         src={TRACK}
         loop
-        preload="metadata"
+        preload="none"
         onLoadedData={() => setLoaded(true)}
       />
       <button
