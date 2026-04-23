@@ -1138,18 +1138,31 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
-  background: none;
-  border: none;
-  padding: 6px;
+  background: rgba(212,168,67,0.12);
+  border: 1px solid rgba(212,168,67,0.45);
+  border-radius: 10px;
+  padding: 10px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
+.hamburger:hover,
+.hamburger:focus-visible {
+  background: rgba(212,168,67,0.25);
+  border-color: #d4a843;
+  outline: none;
+}
+.hamburger:active { transform: scale(0.94); }
 .hamburger span {
   display: block;
-  width: 24px;
-  height: 2px;
-  background: rgba(255,255,255,0.75);
+  width: 22px;
+  height: 2.5px;
+  background: #d4a843;
   border-radius: 28px;
   transition: all 0.3s;
 }
@@ -1188,8 +1201,24 @@ footer { background: var(--bk); padding: 70px 48px 36px; color: rgba(255,255,255
 
 /* ── TABLET 901px–1100px ─────────────────────────────── */
 @media (max-width: 1100px) {
-  nav { padding: 0 28px; }
-  .nav-links { gap: 16px; }
+  nav { padding: 0 24px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 12px; letter-spacing: 1.6px; }
+}
+
+/* ── TABLET LANDSCAPE 769px–900px : keep nav links compact ── */
+@media (min-width: 769px) and (max-width: 900px) {
+  nav { padding: 0 18px; height: 64px; }
+  .nav-logo-shield img { height: 44px !important; }
+  .nl-main { font-size: 16px !important; letter-spacing: 2px !important; }
+  .nl-coin { width: 26px !important; height: 26px !important; }
+  .nav-links { display: flex !important; gap: 10px !important; }
+  .nav-links a { font-size: 11px !important; letter-spacing: 1.2px !important; padding: 6px 4px !important; }
+  .nav-links a::after { display: none !important; }
+  .nav-cta { display: none !important; }
+  .nav-estimate-btn { display: none !important; }
+  .hamburger { display: none !important; }
+  .lang-trigger { padding: 6px 10px !important; }
 }
 
 /* ── ≤ 900px (tablet portrait + mobile) ──────────────── */
