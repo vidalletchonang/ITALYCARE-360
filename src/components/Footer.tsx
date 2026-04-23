@@ -122,8 +122,11 @@ export default function Footer() {
           <p className="fb-p">{t.footer.desc}</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', margin: '20px 0' }}>
             <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/moneta.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/moneta.png`}
               alt="Founder"
+              width={64}
+              height={64}
+              loading="lazy"
               style={{ width: '64px', height: '64px', objectFit: 'contain', filter: 'sepia(1) saturate(4) hue-rotate(-5deg) brightness(1.05) contrast(1.1)', flexShrink: 0 }}
             />
             <div style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>

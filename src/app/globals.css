@@ -5147,6 +5147,106 @@ section h2 em,
 [dir="rtl"] .lang-item { text-align: right; border-left: none; border-right: 3px solid transparent; }
 [dir="rtl"] .lang-item.active { border-right-color: #d4a843; }
 
+/* ============================================================
+   RESPONSIVE POLISH (end-of-file overrides — phone / tablet)
+   ============================================================ */
+
+/* ---------- Tablet (601-900px): 2-col testimonials, better use of width ---------- */
+@media (min-width: 601px) and (max-width: 900px) {
+  .testi-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .svc-grid   { grid-template-columns: 1fr 1fr !important; }
+  .proc-steps { grid-template-columns: 1fr 1fr !important; }
+  .nums-grid  { grid-template-columns: repeat(2, 1fr) !important; }
+  .vals       { grid-template-columns: repeat(2, 1fr) !important; }
+  .blog-grid  { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ---------- Very small phones (≤ 480px) ---------- */
+@media (max-width: 480px) {
+  /* Nav tight */
+  nav { padding: 0 10px !important; }
+  .nav-logo { gap: 6px !important; }
+  .nav-logo-shield img { height: 38px !important; }
+  .nl-main { font-size: 14px !important; letter-spacing: 1.5px !important; }
+  .nl-coin { width: 22px !important; height: 22px !important; }
+
+  /* Numbers: stack for breathing room */
+  .nums { padding: 56px 16px !important; }
+  .nums-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .ni { padding: 32px 20px !important; }
+  .ni-n { font-size: clamp(40px, 11vw, 60px) !important; }
+
+  /* Hero microtuning */
+  .hero-h1 { font-size: clamp(26px, 8.4vw, 38px) !important; }
+  .hero-p  { font-size: 13.5px !important; }
+  .hero-stat .n { font-size: 22px !important; }
+  .hero-stat .l { font-size: 6px !important; letter-spacing: 0.5px !important; }
+
+  /* Services / Process: 1-col on very small */
+  .svc  { padding: 52px 16px !important; }
+  .proc { padding: 52px 16px !important; }
+  .svc-grid   { grid-template-columns: 1fr !important; }
+  .proc-steps { grid-template-columns: 1fr !important; }
+
+  /* Testimonials tight */
+  .testi { padding: 56px 14px !important; }
+  .tc    { padding: 26px 18px !important; }
+
+  /* Reels — prevent horizontal overflow */
+  .reels-section { padding: 64px 14px 72px !important; }
+  .reels-row     { padding: 8px 14px 22px !important; margin: 0 -14px !important; gap: 14px !important; }
+  .reel          { flex-basis: 82vw !important; max-width: 320px !important; border-radius: 16px !important; }
+  .reel-txt      { font-size: 15px !important; }
+  .reels-h2      { font-size: clamp(28px, 8vw, 40px) !important; }
+
+  /* ItalyLifestyle grid */
+  .ils { padding: 56px 14px !important; }
+  .ils-h2 { font-size: clamp(28px, 8vw, 40px) !important; }
+
+  /* Blog filter chips touch-friendly */
+  .blog-filter-btn, .bf-btn { min-height: 36px !important; padding: 8px 14px !important; }
+
+  /* WhatsApp: hide tooltip on mobile, keep the floating button */
+  .wa-tooltip { display: none !important; }
+  .whatsapp-button:active { transform: scale(0.92) !important; }
+
+  /* ChatBot bubble: avoid collision with WhatsApp and make smaller */
+  .chat-bubble { width: 54px !important; height: 54px !important; bottom: 20px !important; left: 16px !important; }
+
+  /* Contact modal: full-height bottom sheet */
+  .modal-bg { align-items: flex-end !important; }
+  .modal-inner, .tm-modal-inner {
+    max-height: 100vh !important;
+    height: 100vh !important;
+    border-radius: 18px 18px 0 0 !important;
+    overflow-y: auto !important;
+  }
+  .modal-head { padding: 18px 16px !important; }
+  .modal-body { padding: 16px !important; }
+
+  /* Footer tight */
+  footer { padding: 40px 14px 18px !important; }
+
+  /* Section dividers narrower */
+  .section-divider { padding: 22px 0 !important; }
+
+  /* Ensure nothing overflows horizontally */
+  html, body { overflow-x: hidden; }
+  img, video, iframe { max-width: 100%; }
+}
+
+/* ---------- Touch feedback everywhere (mobile/tablet) ---------- */
+@media (hover: none) and (pointer: coarse) {
+  /* Ensure buttons & links have min tap-target */
+  button, a, .nav-link, .lang-item, .blog-filter-btn, .bf-btn {
+    min-height: 40px;
+  }
+  /* Remove hover lifts that never trigger on touch */
+  .sc:hover, .tc:hover, .blog-card:hover, .svc-card:hover, .reel:hover {
+    transform: none;
+  }
+}
+
 /* ===================== ITALY REELS (Instagram-style vertical videos) ===================== */
 .reels-section {
   padding: 110px 48px 120px;

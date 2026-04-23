@@ -113,9 +113,12 @@ export default function Nav({ onRdv }: NavProps) {
           </div>
           <div className="nl-text">
             <div className="nl-main">ITALY<span style={{ fontStyle: 'italic' }}>Care</span><span className="nl-360">360°</span><img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/moneta.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/moneta.png`}
               alt="Moneta"
               className="nl-coin"
+              width={40}
+              height={40}
+              loading="eager"
             /></div>
           </div>
         </div>

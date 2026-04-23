@@ -163,7 +163,7 @@ function Reel({ r, idx }: { r: typeof REELS[number]; idx: number }) {
           />
         )}
         {videoFailed && (
-          <img src={r.poster} alt={locationText} loading="lazy" />
+          <img src={r.poster} alt={locationText} loading="lazy" width={260} height={464} />
         )}
         <div className="reel-gradient" />
       </div>

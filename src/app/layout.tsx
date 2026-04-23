@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import { LangProvider } from '@/context/LangContext'
@@ -10,6 +10,14 @@ import MusicPlayerMount from '@/components/MusicPlayerMount'
 // Obtenez-le sur : https://analytics.google.com → Admin → Flux de données → Web
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-PCT2YT8RWG'
 // ─────────────────────────────────────────────────────────────────────────────
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+  themeColor: '#141C2B',
+}
 
 export const metadata: Metadata = {
   title: 'ITALYCARE 360 — Acheter un bien en Italie | Visa Étudiant Italie | Services pour Étrangers',

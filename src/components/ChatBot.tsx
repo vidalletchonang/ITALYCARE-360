@@ -395,9 +395,12 @@ export default function ChatBot() {
           <div className="chat-header">
             <div className="chat-header-left">
               <img
-                src={`${BASE}/moneta.svg`}
+                src={`${BASE}/moneta.png`}
                 alt=""
                 className="chat-header-coin"
+                width={36}
+                height={36}
+                loading="lazy"
                 aria-hidden="true"
               />
               <div>
