@@ -8,6 +8,7 @@ import VideoSection from '@/components/VideoSection'
 import Numbers from '@/components/Numbers'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ItalyLifestyle from '@/components/ItalyLifestyle'
+import ItalyReels from '@/components/ItalyReels'
 import Testimonials from '@/components/Testimonials'
 import MarqueeBanner from '@/components/MarqueeBanner'
 import Footer from '@/components/Footer'
@@ -60,6 +61,7 @@ export default function AboutPage() {
         <VideoSection />
         <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <ItalyLifestyle />
+        <ItalyReels />
         <MarqueeBanner />
         <Testimonials />
       </div>
