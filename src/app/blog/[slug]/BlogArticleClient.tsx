@@ -2411,9 +2411,15 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
       </div>
 
       <div className="article-body">
-        <p className="article-excerpt">{article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en}</p>
+        <p className="article-excerpt">{article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en || (article.excerpt as Record<string, string>).it || ''}</p>
         <div className="article-content">
-          {renderMarkdown(article.content[l as keyof typeof article.content] || article.content.en)}
+          {renderMarkdown(
+            article.content[l as keyof typeof article.content]
+              || (article.content as Record<string, string>).it
+              || article.content.en
+              || (article.content as Record<string, string>).fr
+              || ''
+          )}
         </div>
 
         <div className="article-cta">
