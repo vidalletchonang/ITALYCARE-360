@@ -114,7 +114,8 @@ async function handleChat(request, env, corsHeaders) {
     })
 
     if (!groqRes.ok) {
-      console.error('Groq error:', groqRes.status, await groqRes.text())
+      // Log status only — never the response body (may echo user content)
+      console.error('[chat] Groq upstream not ok', groqRes.status)
       return json({ error: 'AI service temporarily unavailable' }, 502, corsHeaders)
     }
 
@@ -150,8 +151,9 @@ async function handleChat(request, env, corsHeaders) {
             } catch {}
           }
         }
-      } catch (e) {
-        console.error('Stream error:', e)
+      } catch {
+        // Swallow — do not log stream contents (contains user/assistant text)
+        console.error('[chat] stream interrupted')
       } finally {
         await writer.close()
       }
@@ -165,8 +167,8 @@ async function handleChat(request, env, corsHeaders) {
         'Connection': 'keep-alive',
       },
     })
-  } catch (err) {
-    console.error('Worker chat error:', err)
+  } catch {
+    console.error('[chat] unexpected error')
     return json({ error: 'Internal server error' }, 500, corsHeaders)
   }
 }
@@ -178,13 +180,45 @@ async function handleLead(request, env, corsHeaders) {
   let body
   try { body = await request.json() } catch { return json({ error: 'Invalid JSON' }, 400, corsHeaders) }
 
-  const { name, email, message, lang = 'en', conversation = [] } = body
+  /* Limit total payload size to protect against spam / memory abuse */
+  const approxSize = JSON.stringify(body).length
+  if (approxSize > 30_000) {
+    return json({ error: 'Payload too large' }, 413, corsHeaders)
+  }
 
-  /* Basic validation */
-  if (!name || !email || !message) {
+  const {
+    name = '',
+    email = '',
+    message = '',
+    phone = '',
+    service = '',
+    lang = 'en',
+    source = 'chatbot',
+    consent = false,
+    conversation = [],
+  } = body
+
+  /* Explicit GDPR consent is required */
+  if (consent !== true) {
+    return json({ error: 'Consent is required' }, 400, corsHeaders)
+  }
+
+  /* Presence + length validation — no control chars in name, strict email */
+  const nm = String(name).trim().slice(0, 120)
+  const em = String(email).trim().slice(0, 254).toLowerCase()
+  const ms = String(message).trim().slice(0, 2000)
+  const ph = String(phone).trim().slice(0, 40)
+  const sv = String(service).trim().slice(0, 120)
+  const src = /^(chatbot|contact-modal)$/.test(String(source)) ? String(source) : 'chatbot'
+
+  if (!nm || !em || !ms) {
     return json({ error: 'name, email and message are required' }, 400, corsHeaders)
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (/[\r\n\t]/.test(nm) || /[<>]/.test(nm)) {
+    return json({ error: 'Invalid characters in name' }, 400, corsHeaders)
+  }
+  /* Stricter RFC-5321-ish email regex (rejects "a@b.c") */
+  if (!/^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/.test(em)) {
     return json({ error: 'Invalid email' }, 400, corsHeaders)
   }
 
@@ -201,32 +235,40 @@ async function handleLead(request, env, corsHeaders) {
   }
 
   /* Build email body */
-  const langLabel = { fr: 'French', en: 'English', it: 'Italian', ar: 'Arabic', ru: 'Russian' }[lang] || lang
+  const langLabel = { fr: 'French', en: 'English', it: 'Italian', de: 'German', ar: 'Arabic', ru: 'Russian' }[lang] || lang
   const now = new Date().toISOString()
 
-  const convHtml = conversation.length
-    ? conversation.map((m) => {
-        const role = m.role === 'user' ? '🙋 Visitor' : '🤖 Assistant'
-        const text = escapeHtml(String(m.content || '').slice(0, 500))
+  /* Cap conversation size too (20 msgs, 500 chars each already enforced below) */
+  const convoTrim = Array.isArray(conversation) ? conversation.slice(-20) : []
+  const convHtml = convoTrim.length
+    ? convoTrim.map((m) => {
+        const role = m && m.role === 'user' ? '🙋 Visitor' : '🤖 Assistant'
+        const text = escapeHtml(String((m && m.content) || '').slice(0, 500))
         return `<p style="margin:4px 0"><strong>${role}:</strong><br/>${text}</p>`
       }).join('\n<hr style="border:none;border-top:1px solid #eee"/>\n')
     : '<p style="color:#999">No prior conversation.</p>'
+
+  const sourceLabel = src === 'contact-modal' ? 'Contact modal (consultation form)' : 'AI Chatbot'
+  const phoneRow = ph ? `<tr><td style="padding:6px 0;color:#666">Phone</td><td style="padding:6px 0">${escapeHtml(ph)}</td></tr>` : ''
+  const serviceRow = sv ? `<tr><td style="padding:6px 0;color:#666">Service</td><td style="padding:6px 0">${escapeHtml(sv)}</td></tr>` : ''
 
   const html = `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:620px;margin:0 auto;padding:24px;background:#fafafa">
       <div style="background:#141C2B;color:#d4a843;padding:20px 24px;border-radius:10px 10px 0 0">
         <h1 style="margin:0;font-size:20px;font-weight:500;letter-spacing:2px">NEW LEAD · ITALYCARE 360</h1>
-        <p style="margin:4px 0 0;opacity:0.7;font-size:12px">From the AI chatbot · ${now}</p>
+        <p style="margin:4px 0 0;opacity:0.7;font-size:12px">${escapeHtml(sourceLabel)} · ${now}</p>
       </div>
       <div style="background:white;padding:24px;border-radius:0 0 10px 10px;border:1px solid #eee">
         <table style="width:100%;border-collapse:collapse;margin-bottom:20px">
-          <tr><td style="padding:6px 0;color:#666;width:120px">Name</td><td style="padding:6px 0;font-weight:600">${escapeHtml(name)}</td></tr>
-          <tr><td style="padding:6px 0;color:#666">Email</td><td style="padding:6px 0"><a href="mailto:${encodeURIComponent(email)}" style="color:#d4a843">${escapeHtml(email)}</a></td></tr>
+          <tr><td style="padding:6px 0;color:#666;width:120px">Name</td><td style="padding:6px 0;font-weight:600">${escapeHtml(nm)}</td></tr>
+          <tr><td style="padding:6px 0;color:#666">Email</td><td style="padding:6px 0"><a href="mailto:${encodeURIComponent(em)}" style="color:#d4a843">${escapeHtml(em)}</a></td></tr>
+          ${phoneRow}
+          ${serviceRow}
           <tr><td style="padding:6px 0;color:#666">Language</td><td style="padding:6px 0">${langLabel}</td></tr>
-          <tr><td style="padding:6px 0;color:#666">IP</td><td style="padding:6px 0;color:#999;font-size:12px">${ip}</td></tr>
+          <tr><td style="padding:6px 0;color:#666">Consent</td><td style="padding:6px 0;color:#1e8a5a;font-weight:600">✓ Given</td></tr>
         </table>
         <h3 style="color:#141C2B;border-bottom:2px solid #d4a843;padding-bottom:8px;margin-top:24px">Their project</h3>
-        <p style="background:#f5f2e8;padding:14px;border-radius:8px;border-left:3px solid #d4a843;line-height:1.6">${escapeHtml(message)}</p>
+        <p style="background:#f5f2e8;padding:14px;border-radius:8px;border-left:3px solid #d4a843;line-height:1.6">${escapeHtml(ms)}</p>
         <h3 style="color:#141C2B;border-bottom:2px solid #d4a843;padding-bottom:8px;margin-top:24px">Chat history</h3>
         <div style="font-size:13px;color:#333;line-height:1.5">${convHtml}</div>
         <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;color:#999;font-size:12px">
@@ -242,7 +284,8 @@ async function handleLead(request, env, corsHeaders) {
     const rawTo = (env.LEAD_EMAIL_TO || 'italycare360@gmail.com').trim()
     const toEmail = rawTo.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/)?.[0]
     if (!toEmail) {
-      console.error('Invalid LEAD_EMAIL_TO:', JSON.stringify(rawTo))
+      // Log a non-PII sentinel; do NOT log env value itself
+      console.error('[lead] LEAD_EMAIL_TO misconfigured')
       return json({ error: 'Email recipient misconfigured' }, 500, corsHeaders)
     }
     const from = (env.LEAD_EMAIL_FROM || 'ITALYCARE 360 Chatbot <onboarding@resend.dev>').trim()
@@ -255,21 +298,21 @@ async function handleLead(request, env, corsHeaders) {
       body: JSON.stringify({
         from,
         to: [toEmail],
-        reply_to: email,
-        subject: `[New Lead] ${name} — ${langLabel}`,
+        reply_to: em,
+        subject: `[New Lead · ${src}] ${nm} — ${langLabel}`,
         html,
       }),
     })
 
     if (!resendRes.ok) {
-      const err = await resendRes.text()
-      console.error('Resend error:', resendRes.status, err)
+      // Log status only — Resend body can echo the subject which contains the lead's name
+      console.error('[lead] Resend upstream not ok', resendRes.status)
       return json({ error: 'Email service error' }, 502, corsHeaders)
     }
 
     return json({ success: true }, 200, corsHeaders)
-  } catch (err) {
-    console.error('Lead error:', err)
+  } catch {
+    console.error('[lead] unexpected error')
     return json({ error: 'Internal server error' }, 500, corsHeaders)
   }
 }

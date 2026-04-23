@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import { trackRdvOpen, trackCalendlyOpen } from '@/lib/analytics'
 
@@ -13,11 +14,30 @@ import { trackRdvOpen, trackCalendlyOpen } from '@/lib/analytics'
 // =====================================================================
 const CALENDLY_URL = 'https://calendly.com/italycare360/30min'
 
-// =====================================================================
-// FORMSPREE SETUP (pour enregistrer les infos client):
-// Remplacez 'YOUR_FORM_ID' par votre ID Formspree
-// =====================================================================
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+// Lead goes to our Cloudflare Worker → Resend → italycare360@gmail.com.
+// Same secure pipeline as the chatbot lead form (rate-limited, input-validated).
+const WORKER_URL = process.env.NEXT_PUBLIC_CHAT_WORKER_URL || ''
+
+const CONSENT_TXT: Record<string, { label: React.ReactNode }> = {
+  fr: { label: (
+    <>J&apos;accepte que mes données soient traitées par ITALYCARE 360 pour me recontacter dans le cadre de ma demande de consultation. Voir la <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">politique de confidentialité</Link>.</>
+  ) },
+  en: { label: (
+    <>I agree that my data will be processed by ITALYCARE 360 to contact me about my consultation request. See our <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</Link>.</>
+  ) },
+  it: { label: (
+    <>Accetto che i miei dati siano trattati da ITALYCARE 360 per ricontattarmi riguardo alla mia richiesta di consulenza. Vedi la <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</Link>.</>
+  ) },
+  de: { label: (
+    <>Ich stimme zu, dass meine Daten von ITALYCARE 360 verarbeitet werden, um mich bezüglich meiner Beratungsanfrage zu kontaktieren. Siehe unsere <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</Link>.</>
+  ) },
+  ar: { label: (
+    <>أوافق على معالجة بياناتي من قبل ITALYCARE 360 للتواصل معي بشأن طلب الاستشارة. راجع <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">سياسة الخصوصية</Link>.</>
+  ) },
+  ru: { label: (
+    <>Я согласен на обработку моих данных ITALYCARE 360 для связи со мной по моему запросу консультации. См. <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">политику конфиденциальности</Link>.</>
+  ) },
+}
 
 interface ContactModalProps {
   open: boolean
@@ -41,6 +61,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
   const [form, setForm] = useState<FormData>({
     name: '', email: '', phone: '', service: '', message: '',
   })
+  const [consent, setConsent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
 
@@ -50,6 +71,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
       setStep('form')
       setError(false)
       setSending(false)
+      setConsent(false)
       setForm({ name: '', email: '', phone: '', service: '', message: '' })
       trackRdvOpen('modal')
     }
@@ -73,22 +95,31 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => setForm(f => ({ ...f, [field]: e.target.value }))
 
-  // Step 1 → save info to Formspree then show Calendly
+  // Step 1 → send info to our Worker → Resend email, then show Calendly
   const handleContinue = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!consent) return               // GDPR guard — button is also disabled
     setSending(true)
     setError(false)
     try {
-      await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          _subject: `ITALYCARE 360 — Nouvelle demande RDV : ${form.name} — ${form.service}`,
-        }),
-      })
+      if (WORKER_URL) {
+        await fetch(`${WORKER_URL.replace(/\/$/, '')}/lead`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            service: form.service,
+            message: form.message || `Consultation request · ${form.service}`,
+            lang,
+            source: 'contact-modal',
+            consent: true,
+          }),
+        })
+      }
     } catch {
-      // on continue even if Formspree fails — Calendly remains the source of truth
+      // We proceed to Calendly either way — Calendly itself sends confirmation
     }
     setSending(false)
     trackCalendlyOpen(form.service)
@@ -182,7 +213,21 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 <textarea value={form.message} onChange={set('message')} rows={3} placeholder="..." />
               </div>
 
-              <button type="submit" className="form-submit" disabled={sending}>
+              {/* GDPR consent */}
+              <div className="form-consent">
+                <input
+                  id="contact-consent"
+                  type="checkbox"
+                  checked={consent}
+                  onChange={e => setConsent(e.target.checked)}
+                  required
+                />
+                <label htmlFor="contact-consent">
+                  {(CONSENT_TXT[lang] || CONSENT_TXT.en).label}
+                </label>
+              </div>
+
+              <button type="submit" className="form-submit" disabled={sending || !consent}>
                 {sending
                   ? t.form.sending
                   : ({ fr: 'Choisir mon créneau →', en: 'Choose my slot →', it: 'Scegli il mio orario →', de: 'Termin wählen →', ar: 'اختر موعدي ←', ru: 'Выбрать время →' }[lang] || 'Choose my slot →')}

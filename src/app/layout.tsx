@@ -1,15 +1,13 @@
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import './globals.css'
 import { LangProvider } from '@/context/LangContext'
 import ChatBotMount from '@/components/ChatBotMount'
 import MusicPlayerMount from '@/components/MusicPlayerMount'
+import CookieConsent from '@/components/CookieConsent'
 
-// ─── Google Analytics 4 ───────────────────────────────────────────────────────
-// Remplacez GA_MEASUREMENT_ID par votre vrai ID (ex: G-ABC123XYZ)
-// Obtenez-le sur : https://analytics.google.com → Admin → Flux de données → Web
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-PCT2YT8RWG'
-// ─────────────────────────────────────────────────────────────────────────────
+/* Google Analytics is no longer loaded eagerly here.
+ * It now lives inside <CookieConsent />, which only injects the GA4 scripts
+ * AFTER the visitor explicitly accepts analytics cookies (GDPR-compliant). */
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -41,33 +39,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://italycare-chat.italycare360.workers.dev" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@400;500;600;700&family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
-
-        {/* Google Analytics 4 */}
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}', {
-                  page_path: window.location.pathname,
-                  send_page_view: true
-                });
-              `}
-            </Script>
-          </>
-        )}
       </head>
       <body>
         <LangProvider>
           {children}
           <MusicPlayerMount />
           <ChatBotMount />
+          <CookieConsent />
         </LangProvider>
       </body>
     </html>

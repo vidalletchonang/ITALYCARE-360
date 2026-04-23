@@ -13,11 +13,12 @@ const T = {
     ru: '\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438',
   },
   updated: {
-    fr: 'Derni\u00e8re mise \u00e0 jour : 8 avril 2026',
-    en: 'Last updated: April 8, 2026', de: 'Last updated: April 8, 2026',
-    it: 'Ultimo aggiornamento: 8 aprile 2026',
-    ar: '\u0622\u062e\u0631 \u062a\u062d\u062f\u064a\u062b: 8 \u0623\u0628\u0631\u064a\u0644 2026',
-    ru: '\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435: 8 \u0430\u043f\u0440\u0435\u043b\u044f 2026',
+    fr: 'Derni\u00e8re mise \u00e0 jour : 23 avril 2026',
+    en: 'Last updated: April 23, 2026',
+    de: 'Letzte Aktualisierung: 23. April 2026',
+    it: 'Ultimo aggiornamento: 23 aprile 2026',
+    ar: '\u0622\u062e\u0631 \u062a\u062d\u062f\u064a\u062b: 23 \u0623\u0628\u0631\u064a\u0644 2026',
+    ru: '\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435: 23 \u0430\u043f\u0440\u0435\u043b\u044f 2026',
   },
   sections: {
     fr: [
@@ -42,12 +43,20 @@ const T = {
         p: "Le traitement de vos donn\u00e9es repose sur :\n\u2022 Votre consentement (formulaires de contact, newsletter)\n\u2022 L'ex\u00e9cution d'un contrat (fourniture de services)\n\u2022 Notre int\u00e9r\u00eat l\u00e9gitime (am\u00e9lioration du site, s\u00e9curit\u00e9)\n\u2022 Obligations l\u00e9gales (conservation fiscale)",
       },
       {
-        h: 'Cookies et technologies',
-        p: "Notre site utilise :\n\u2022 Cookies essentiels : n\u00e9cessaires au fonctionnement du site (pr\u00e9f\u00e9rence de langue)\n\u2022 Cookies analytiques : Google Analytics 4 pour comprendre l'utilisation du site\n\u2022 Cookies tiers : int\u00e9gration Google Maps sur la page Contact\n\nVous pouvez g\u00e9rer vos pr\u00e9f\u00e9rences de cookies dans les param\u00e8tres de votre navigateur.",
+        h: 'Cookies et consentement',
+        p: "Aucun cookie non essentiel n'est d\u00e9pos\u00e9 avant votre consentement explicite via notre banni\u00e8re RGPD.\n\u2022 Pr\u00e9f\u00e9rence de langue (italycare-lang) : stock\u00e9e localement dans votre navigateur, pas de cookie\n\u2022 Consentement (italycare-consent) : stock\u00e9 localement apr\u00e8s votre choix\n\u2022 Google Analytics 4 : charg\u00e9 uniquement apr\u00e8s votre acceptation, avec anonymisation d'IP\n\u2022 Vous pouvez r\u00e9voquer votre consentement \u00e0 tout moment en effa\u00e7ant les donn\u00e9es du site dans votre navigateur",
+      },
+      {
+        h: 'Sous-traitants (pays de l\'UE / UK / US avec clauses contractuelles types)',
+        p: "Vos donn\u00e9es transitent par les sous-traitants suivants, chacun li\u00e9 par contrat (DPA) et s\u00e9curis\u00e9 :\n\u2022 Cloudflare (US + r\u00e9seau mondial) : h\u00e9bergement du serveur d'API (chatbot + formulaires), rate-limiting. Aucune donn\u00e9e durablement stock\u00e9e c\u00f4t\u00e9 Cloudflare.\n\u2022 Resend (US) : envoi de l'e-mail contenant votre demande vers notre bo\u00eete info@italycare360.com. Messages conserv\u00e9s 30 jours max c\u00f4t\u00e9 Resend.\n\u2022 Groq / Meta Llama (US) : mod\u00e8le IA pour l'assistant conversationnel. Chaque session est sans m\u00e9moire persistante ; les messages ne sont pas r\u00e9utilis\u00e9s pour l'entra\u00eenement.\n\u2022 Calendly (US) : prise de rendez-vous. Votre nom/email y sont transmis uniquement si vous choisissez un cr\u00e9neau.\n\u2022 Google (US) : Google Analytics 4 (seulement apr\u00e8s consentement) et Google Maps sur la page contact.\n\u2022 GitHub Pages / Microsoft (US) : h\u00e9bergement du site statique.\n\u2022 Aruba (Italie) : registrar du domaine et serveurs DNS.",
+      },
+      {
+        h: 'Assistant IA (chatbot) - r\u00e9tention des conversations',
+        p: "L'assistant conversationnel est sans m\u00e9moire : chaque session d\u00e9marre \u00e0 z\u00e9ro, aucun message n'est stock\u00e9 sur nos serveurs. Si vous soumettez le formulaire de consultation via le chat, l'historique complet de la conversation est joint \u00e0 l'e-mail envoy\u00e9 \u00e0 info@italycare360.com et conserv\u00e9 selon les d\u00e9lais ci-dessous.",
       },
       {
         h: 'Partage des donn\u00e9es',
-        p: "Nous ne vendons jamais vos donn\u00e9es. Elles peuvent \u00eatre partag\u00e9es avec :\n\u2022 Nos partenaires de services (avocats, agents immobiliers, m\u00e9decins) dans le cadre de votre projet\n\u2022 Google (Analytics, Maps) pour l'analyse du site\n\u2022 Les autorit\u00e9s comp\u00e9tentes en cas d'obligation l\u00e9gale",
+        p: "Nous ne vendons jamais vos donn\u00e9es. Elles peuvent \u00eatre partag\u00e9es avec :\n\u2022 Nos sous-traitants techniques list\u00e9s ci-dessus\n\u2022 Nos partenaires de services (avocats, agents immobiliers, m\u00e9decins) uniquement avec votre accord explicite et dans le cadre de votre projet\n\u2022 Les autorit\u00e9s comp\u00e9tentes en cas d'obligation l\u00e9gale",
       },
       {
         h: 'Dur\u00e9e de conservation',
@@ -88,12 +97,20 @@ const T = {
         p: 'Data processing is based on:\n\u2022 Your consent (contact forms, newsletter)\n\u2022 Performance of a contract (service delivery)\n\u2022 Our legitimate interest (site improvement, security)\n\u2022 Legal obligations (tax record keeping)',
       },
       {
-        h: 'Cookies & Technologies',
-        p: 'Our site uses:\n\u2022 Essential cookies: required for site operation (language preference)\n\u2022 Analytics cookies: Google Analytics 4 to understand site usage\n\u2022 Third-party cookies: Google Maps integration on the Contact page\n\nYou can manage your cookie preferences in your browser settings.',
+        h: 'Cookies & Consent',
+        p: 'No non-essential cookies are placed before your explicit consent via our GDPR banner.\n\u2022 Language preference (italycare-lang): stored locally in your browser, no cookie set\n\u2022 Consent choice (italycare-consent): stored locally after your decision\n\u2022 Google Analytics 4: loaded only after you accept, with IP anonymisation\n\u2022 You can revoke consent at any time by clearing site data in your browser',
+      },
+      {
+        h: 'Third-party processors (EU / UK / US under Standard Contractual Clauses)',
+        p: "Your data transits through the following processors, each bound by a DPA:\n\u2022 Cloudflare (US + global edge): hosts the API endpoint (chatbot + forms) and rate-limits abuse. No durable storage of your data on Cloudflare.\n\u2022 Resend (US): delivers the email of your request to info@italycare360.com. Messages retained on Resend for 30 days max.\n\u2022 Groq / Meta Llama (US): AI model powering the chatbot. Each session is memoryless; your messages are NOT used for training.\n\u2022 Calendly (US): appointment scheduling. Your name/email are forwarded only if you pick a slot.\n\u2022 Google (US): Google Analytics 4 (only after consent) and Google Maps on the contact page.\n\u2022 GitHub Pages / Microsoft (US): hosting of the static site.\n\u2022 Aruba (Italy): domain registrar and DNS servers.",
+      },
+      {
+        h: 'AI Assistant (chatbot) - conversation retention',
+        p: 'The conversational assistant is stateless: every session starts from zero and no message is stored on our servers. If you submit the consultation form from within the chat, the full conversation is attached to the email sent to info@italycare360.com and retained per the retention periods below.',
       },
       {
         h: 'Data Sharing',
-        p: 'We never sell your data. It may be shared with:\n\u2022 Our service partners (lawyers, real estate agents, doctors) as part of your project\n\u2022 Google (Analytics, Maps) for site analysis\n\u2022 Competent authorities when required by law',
+        p: 'We never sell your data. It may be shared with:\n\u2022 The technical processors listed above\n\u2022 Our service partners (lawyers, real estate agents, doctors) only with your explicit agreement and as part of your project\n\u2022 Competent authorities when required by law',
       },
       {
         h: 'Data Retention',

@@ -227,6 +227,7 @@ export default function ChatBot() {
   const [formEmail, setFormEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [formConsent, setFormConsent] = useState(false)
   const [advisorName, setAdvisorName] = useState<string>('')
   const scrollRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -360,12 +361,14 @@ export default function ChatBot() {
     setFormName('')
     setFormEmail('')
     setFormMessage('')
+    setFormConsent(false)
     try { localStorage.removeItem('italycare-chat') } catch {}
   }
 
   const submitLead = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!formName.trim() || !formEmail.trim() || !formMessage.trim()) return
+    if (!formConsent) return   // GDPR guard — button is also disabled
     setFormStatus('sending')
 
     try {
@@ -379,12 +382,14 @@ export default function ChatBot() {
           message: formMessage.trim(),
           lang,
           conversation: messages,
+          consent: true,
+          source: 'chatbot',
         }),
       })
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       setFormStatus('success')
-    } catch (err) {
-      console.error('[Lead]', err)
+    } catch {
+      // Swallow details — never log user PII even on failure
       setFormStatus('error')
     }
   }
@@ -515,7 +520,26 @@ export default function ChatBot() {
                   rows={3}
                   required
                 />
-                <button type="submit" className="chat-lead-submit" disabled={formStatus === 'sending'}>
+                <div className="form-consent">
+                  <input
+                    id="chat-consent"
+                    type="checkbox"
+                    checked={formConsent}
+                    onChange={e => setFormConsent(e.target.checked)}
+                    required
+                  />
+                  <label htmlFor="chat-consent">
+                    {{
+                      fr: <>J&apos;accepte le traitement de mes données pour être recontacté·e. <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></>,
+                      en: <>I agree to my data being processed so you can contact me. <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></>,
+                      it: <>Accetto il trattamento dei miei dati per essere ricontattato/a. <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></>,
+                      de: <>Ich stimme der Verarbeitung meiner Daten zur Kontaktaufnahme zu. <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutz</a></>,
+                      ar: <>أوافق على معالجة بياناتي لإعادة التواصل معي. <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">سياسة الخصوصية</a></>,
+                      ru: <>Я соглашаюсь на обработку моих данных для обратной связи. <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></>,
+                    }[lang] || null}
+                  </label>
+                </div>
+                <button type="submit" className="chat-lead-submit" disabled={formStatus === 'sending' || !formConsent}>
                   {formStatus === 'sending' ? ui.formSending : ui.formSubmit}
                 </button>
                 {formStatus === 'error' && (
