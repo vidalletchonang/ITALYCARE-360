@@ -391,6 +391,186 @@ Get in touch with us to receive a personalized quote and discover the most effic
       ar: ''
     }
   },
+  {
+    slug: 'scolarite-ecoles-italie-enfants-expats',
+    category: 'assistenza-scolastica',
+    date: '2026-03-18',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=85',
+    title: {
+      fr: "Scolariser ses enfants en Italie : écoles publiques, internationales ou bilingues ?",
+      en: "Enrolling Your Children in Italy: Public, International or Bilingual Schools?",
+      it: "Iscrivere i figli a scuola in Italia: statale, internazionale o bilingue?",
+      ar: "تسجيل أطفالك في المدارس في إيطاليا: حكومية أم دولية أم ثنائية اللغة؟"
+    },
+    excerpt: {
+      fr: "Choisir la bonne école pour ses enfants en Italie est l'une des décisions les plus structurantes pour une famille expatriée. Voici comment comparer public, bilingue et international.",
+      en: "Choosing the right school for your children in Italy is one of the most defining decisions for an expat family. Here is how to compare public, bilingual and international options.",
+      it: "Scegliere la scuola giusta per i figli in Italia è una delle decisioni più importanti per una famiglia expat.",
+      ar: "اختيار المدرسة المناسبة لأطفالك في إيطاليا من أهم القرارات للعائلات المغتربة."
+    },
+    content: {
+      en: `## The Italian School System at a Glance
+
+Italy offers a **robust public education system** that is free and of high quality, especially at the primary level. But when you relocate with children, the right fit depends on how long you plan to stay, the child's age, and which language future studies will use.
+
+Three main paths exist for expat families:
+
+- **Public schools** (*scuola statale*) — free, fully Italian, excellent for integration
+- **Bilingual schools** — private or semi-private, Italian + English (or French, German, Spanish)
+- **International schools** — English-instruction, IB or British/American curriculum
+
+## Public Schools: Free and Deeply Italian
+
+Italian public schools are **the fastest way to integrate** a child. In most cities (Milan, Rome, Bologna, Florence) schools host many foreign students and have structured Italian support (*alfabetizzazione*) in the first year.
+
+Best for: children under 10, medium-to-long stays (3+ years), budget-conscious families.
+
+## Bilingual Schools: The Balanced Choice
+
+Bilingual schools deliver about **60% Italian / 40% foreign-language instruction**, giving children academic continuity while they learn Italian. Tuition typically runs €6,000–€12,000 per year.
+
+## International Schools: Seamless Continuity
+
+If you expect to move again within 2-3 years, international schools (IB, British, American, French *lycée*) offer the smoothest path. Tuition is €15,000–€25,000 per year in major cities.
+
+## How ITALYCARE 360 Helps
+
+We handle the enrolment paperwork (vaccination records, translated diplomas, *codice fiscale*), visit shortlisted schools with you, and negotiate priority admissions where possible.
+
+## Ready to Choose the Right School?
+
+Book a free 30-min call — we'll map out the best option for your child's age, your timeline, and your budget.`,
+      fr: `## Le système scolaire italien en un coup d'œil
+
+L'Italie offre un **système public gratuit et solide**, particulièrement au primaire. Mais quand on s'installe en famille, le bon choix dépend de la durée du séjour, de l'âge des enfants et de la langue des études futures.
+
+Trois voies pour les familles expatriées :
+
+- **École publique** (*scuola statale*) — gratuite, 100% italienne, excellente pour l'intégration
+- **École bilingue** — privée ou semi-privée, italien + langue étrangère
+- **École internationale** — enseignement en anglais, cursus IB ou britannique/américain
+
+## L'école publique : gratuite et italienne
+
+Les écoles publiques italiennes sont **le moyen le plus rapide d'intégrer** un enfant. Dans la plupart des villes (Milan, Rome, Bologne, Florence), elles accueillent de nombreux élèves étrangers avec un soutien linguistique structuré la première année.
+
+Idéal pour : enfants de moins de 10 ans, séjours moyens à longs (3+ ans), budgets maîtrisés.
+
+## Les écoles bilingues : l'équilibre
+
+Les écoles bilingues proposent environ **60% italien / 40% langue étrangère**, offrant une continuité scolaire pendant l'apprentissage de l'italien. Frais de scolarité : €6 000 à €12 000 par an.
+
+## Les écoles internationales : la continuité
+
+Si vous prévoyez de repartir d'ici 2-3 ans, une école internationale (IB, britannique, américaine, lycée français) offre la transition la plus fluide. €15 000 à €25 000 par an dans les grandes villes.
+
+## Comment ITALYCARE 360 accompagne
+
+Nous gérons le dossier d'inscription (carnets de vaccination, diplômes traduits, *codice fiscale*), visitons les écoles avec vous, et négocions les admissions prioritaires quand c'est possible.
+
+## Prêt à choisir la bonne école ?
+
+Réservez un appel gratuit de 30 min — nous cartographions la meilleure option selon l'âge de l'enfant, votre calendrier et votre budget.`,
+      it: '',
+      ar: ''
+    }
+  },
+  {
+    slug: 'importer-vehicule-italie-guide',
+    category: 'vehicules',
+    date: '2026-03-25',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=85',
+    title: {
+      fr: "Importer ou acheter un véhicule en Italie : immatriculation, assurance, fiscalité",
+      en: "Importing or Buying a Vehicle in Italy: Registration, Insurance, Taxes",
+      it: "Importare o acquistare un veicolo in Italia: immatricolazione, assicurazione, fiscalità",
+      ar: "استيراد أو شراء سيارة في إيطاليا: التسجيل والتأمين والضرائب"
+    },
+    excerpt: {
+      fr: "Ramener son véhicule en Italie ou en acheter un localement ? Entre immatriculation, bollo, assurance RCA et avantages fiscaux pour non-résidents, on décrypte chaque option.",
+      en: "Bringing your vehicle to Italy or buying locally? Between registration, bollo tax, RCA insurance and tax benefits for non-residents, we decode every option — car, motorcycle, Vespa, boat.",
+      it: "Portare il proprio veicolo in Italia o acquistarne uno in loco? Tra immatricolazione, bollo, assicurazione e vantaggi fiscali, analizziamo ogni opzione.",
+      ar: "إحضار سيارتك إلى إيطاليا أو شراء واحدة محلياً؟ نوضح لك كل الخيارات."
+    },
+    content: {
+      en: `## Import or Buy Locally — How to Decide
+
+Three main factors decide: **how long you will stay**, whether your current vehicle is **EU-type approved**, and how much you value that specific car.
+
+- **Short stay (< 6 months):** driving on your foreign plates is usually fine — no import needed.
+- **Medium (6-12 months):** renting long-term or leasing in Italy is often cheaper than importing.
+- **Long (> 1 year):** importing makes sense if the vehicle is valuable, sentimental, or uncommon in Italy.
+
+## Importing a Vehicle: The 4 Steps
+
+1. **Customs & VAT** — EU vehicles skip import duties. Non-EU pays **10% import duty + 22% VAT**.
+2. **Italian homologation** — the vehicle must meet EU type approval (most modern cars do). A test at the *Motorizzazione* may be required.
+3. **Italian plate registration** — *Pratica auto* at ACI or a dedicated agency. Cost: €300-€600 in fees.
+4. **Insurance (RCA)** — mandatory third-party liability. Rates in Italy are higher than most EU countries, especially for new residents (no *bonus/malus* history).
+
+## Buying Locally: Faster and Cheaper in Most Cases
+
+For most expats, **buying in Italy is simpler**. The used market is strong (*Autoscout24*, dealers, *concessionarie ufficiali*) and ACI handles transfer in 2-3 days.
+
+Expect **bollo** (annual road tax, €100-€800 depending on power) and **superbollo** for cars above 185 kW.
+
+## Vespa, Motorcycle, Boat: Same Principles
+
+Motorcycles and Vespas follow the same path but with lower costs. Boats require *licenza nautica* if over 40 HP. Leisure boats with Italian flag benefit from favourable VAT regimes in some regions.
+
+## Tax Benefits for New Residents
+
+If you become Italian resident with the *Regime Impatriati*, you may deduct part of your vehicle in certain professional setups. We work with Italian tax advisors to maximise this.
+
+## ITALYCARE 360 Handles All the Paperwork
+
+From customs declarations to *pratica auto*, from insurance quotes to Italian plates — we coordinate every step in Italian so you don't have to spend a single afternoon at a counter.
+
+## Ready to Get Your Italian Plates?
+
+Book a free 30-min call — we'll tell you whether to import or buy, and give you a clear cost breakdown.`,
+      fr: `## Importer ou acheter sur place — comment décider
+
+Trois critères décident : **la durée de votre séjour**, si votre véhicule actuel est **homologué UE**, et la valeur sentimentale/économique du véhicule.
+
+- **Court séjour (< 6 mois) :** rouler sous plaques étrangères est OK — pas d'import nécessaire.
+- **Moyen (6-12 mois) :** la LLD ou le leasing italien sont souvent moins chers qu'un import.
+- **Long (> 1 an) :** importer a du sens si le véhicule a de la valeur ou est rare en Italie.
+
+## Importer un véhicule : les 4 étapes
+
+1. **Douane & TVA** — Les véhicules UE sont exonérés. Hors UE : **10% de droits + 22% de TVA**.
+2. **Homologation italienne** — Le véhicule doit répondre aux normes UE (la plupart des modèles récents les respectent). Test à la *Motorizzazione* parfois requis.
+3. **Immatriculation italienne** — *Pratica auto* via ACI ou agence spécialisée. Coût : €300-€600.
+4. **Assurance (RCA)** — Responsabilité civile obligatoire. Tarifs italiens plus élevés que la moyenne UE, surtout sans historique de bonus/malus.
+
+## Acheter sur place : plus simple et souvent plus économique
+
+Pour la plupart des expatriés, **acheter en Italie est plus simple**. Le marché de l'occasion est dynamique (*Autoscout24*, concessionnaires) et ACI gère le transfert en 2-3 jours.
+
+Prévoir le **bollo** (taxe annuelle : €100 à €800 selon la puissance) et le **superbollo** au-delà de 185 kW.
+
+## Vespa, moto, bateau : mêmes principes
+
+Les motos et Vespas suivent le même parcours, à coûts réduits. Les bateaux > 40 CV nécessitent une *licenza nautica*. Certaines régions offrent des régimes TVA favorables pour les bateaux sous pavillon italien.
+
+## Avantages fiscaux pour les nouveaux résidents
+
+En devenant résident italien sous le *Regime Impatriati*, vous pouvez parfois amortir une partie du véhicule dans certaines structures professionnelles. Nous travaillons avec des conseils fiscaux italiens pour maximiser cela.
+
+## ITALYCARE 360 gère toute la paperasse
+
+De la déclaration douanière à la *pratica auto*, des devis d'assurance aux plaques italiennes — nous coordonnons chaque étape en italien. Zéro après-midi perdu au guichet.
+
+## Prêt à obtenir vos plaques italiennes ?
+
+Réservez un appel gratuit de 30 min — nous vous disons s'il faut importer ou acheter, avec un breakdown des coûts.`,
+      it: '',
+      ar: ''
+    }
+  },
 ]
 
 function renderMarkdown(text: string): JSX.Element[] {

@@ -330,13 +330,53 @@ const ARTICLES = [
     },
     content: { en: '', fr: '', it: '', ar: '' }
   },
+  {
+    slug: 'scolarite-ecoles-italie-enfants-expats',
+    category: 'assistenza-scolastica',
+    date: '2026-03-18',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80',
+    title: {
+      fr: "Scolariser ses enfants en Italie : écoles publiques, internationales ou bilingues ?",
+      en: "Enrolling Your Children in Italy: Public, International or Bilingual Schools?", de: "Kinder in Italien einschulen: staatlich, international oder zweisprachig?",
+      it: "Iscrivere i figli a scuola in Italia: statale, internazionale o bilingue?",
+      ar: "تسجيل أطفالك في المدارس في إيطاليا: حكومية أم دولية أم ثنائية اللغة؟"
+    },
+    excerpt: {
+      fr: "Choisir la bonne école pour ses enfants en Italie est l'une des décisions les plus structurantes pour une famille expatriée. Voici comment comparer public, bilingue et international — et comment s'y inscrire sans stress.",
+      en: "Choosing the right school for your children in Italy is one of the most defining decisions for an expat family. Here is how to compare public, bilingual and international options — and how to enrol stress-free.", de: "Die Wahl der richtigen Schule für Ihre Kinder in Italien ist eine der wichtigsten Entscheidungen für Expatriate-Familien.",
+      it: "Scegliere la scuola giusta per i figli in Italia è una delle decisioni più importanti per una famiglia expat. Ecco come confrontare statale, bilingue e internazionale — e come iscriversi senza stress.",
+      ar: "اختيار المدرسة المناسبة لأطفالك في إيطاليا من أهم القرارات للعائلات المغتربة. إليك كيفية المقارنة والتسجيل دون ضغط."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
+  {
+    slug: 'importer-vehicule-italie-guide',
+    category: 'vehicules',
+    date: '2026-03-25',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
+    title: {
+      fr: "Importer ou acheter un véhicule en Italie : immatriculation, assurance, fiscalité",
+      en: "Importing or Buying a Vehicle in Italy: Registration, Insurance, Taxes", de: "Fahrzeug nach Italien importieren oder kaufen: Zulassung, Versicherung, Steuern",
+      it: "Importare o acquistare un veicolo in Italia: immatricolazione, assicurazione, fiscalità",
+      ar: "استيراد أو شراء سيارة في إيطاليا: التسجيل والتأمين والضرائب"
+    },
+    excerpt: {
+      fr: "Ramener son véhicule en Italie ou en acheter un localement ? Entre immatriculation, bollo, assurance RCA et avantages fiscaux pour non-résidents, on décrypte chaque option — voiture, moto, bateau, Vespa.",
+      en: "Bringing your vehicle to Italy or buying locally? Between registration, bollo, RCA insurance and tax benefits for non-residents, we decode every option — car, motorcycle, boat, Vespa.", de: "Ihr Fahrzeug nach Italien bringen oder vor Ort kaufen? Zwischen Zulassung, Bollo-Steuer und Versicherung entschlüsseln wir jede Option.",
+      it: "Portare il proprio veicolo in Italia o acquistarne uno in loco? Tra immatricolazione, bollo, assicurazione RCA e vantaggi fiscali per non residenti, analizziamo ogni opzione.",
+      ar: "إحضار سيارتك إلى إيطاليا أو شراء واحدة محلياً؟ بين التسجيل والتأمين والضرائب، نوضح لك كل الخيارات."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
 ]
 
 function BlogPageContent() {
   const { lang } = useLang()
   const [filter, setFilter] = useState('all')
 
-  const categories = ['all', 'immobilier', 'renovation', 'medical', 'visa-etudiant', 'export', 'juridique', 'administratif', 'conciergerie', 'evenements', 'maisons-retraite', 'financement', 'professionnels', 'silver-economy', 'property-care', 'thermal-wellness', 'aviation-privee']
+  const categories = ['all', 'immobilier', 'renovation', 'medical', 'visa-etudiant', 'export', 'juridique', 'administratif', 'conciergerie', 'evenements', 'maisons-retraite', 'financement', 'professionnels', 'silver-economy', 'property-care', 'thermal-wellness', 'aviation-privee', 'assistenza-scolastica', 'vehicules']
 
   const catLabels: Record<string, Record<string, string>> = {
     all: { fr: 'Tous', en: 'All', de: 'All', it: 'Tutti', ar: 'الكل' },
@@ -356,66 +396,133 @@ function BlogPageContent() {
     'property-care': { fr: 'Property Care', en: 'Property Care', de: 'Property Care', it: 'Property Care', ar: 'Property Care' },
     'thermal-wellness': { fr: 'Thermal Wellness', en: 'Thermal Wellness', de: 'Thermal Wellness', it: 'Thermal Wellness', ar: 'Thermal Wellness' },
     'aviation-privee': { fr: 'Aviation Privée', en: 'Private Aviation', de: 'Private Aviation', it: 'Aviazione Privata', ar: 'الطيران الخاص' },
+    'assistenza-scolastica': { fr: 'Scolarité', en: 'Schooling', de: 'Schule', it: 'Scuola', ar: 'المدرسة' },
+    'vehicules': { fr: 'Véhicules', en: 'Vehicles', de: 'Fahrzeuge', it: 'Veicoli', ar: 'مركبات' },
   }
 
-  const blogTitles: Record<string, string> = {
-    fr: 'Blog & Guides', en: 'Blog & Guides', de: 'Blog & Guides', it: 'Blog & Guide', ar: 'المدونة والأدلة'
-  }
-  const blogSubtitles: Record<string, string> = {
-    fr: 'Conseils experts pour réussir vos projets en Italie',
-    en: 'Expert advice to succeed in your Italian projects', de: 'Expert advice to succeed in your Italian projects',
-    it: 'Consigli esperti per il successo dei vostri progetti in Italia',
-    ar: 'نصائح الخبراء لنجاح مشاريعك في إيطاليا'
-  }
   const readMoreLabels: Record<string, string> = {
-    fr: "Lire l'article →", en: 'Read article →', de: 'Read article →', it: 'Leggi articolo →', ar: '← اقرأ المقال'
+    fr: "Lire l'article", en: 'Read article', de: 'Artikel lesen', it: 'Leggi articolo', ar: 'اقرأ المقال', ru: 'Читать статью',
   }
   const minLabels: Record<string, string> = {
-    fr: 'min de lecture', en: 'min read', de: 'min read', it: 'min di lettura', ar: 'دقيقة قراءة'
+    fr: 'min de lecture', en: 'min read', de: 'Min. Lesezeit', it: 'min di lettura', ar: 'دقيقة قراءة', ru: 'мин. чтения',
+  }
+  const featuredLabel: Record<string, string> = {
+    fr: 'À LA UNE', en: 'FEATURED', de: 'EMPFOHLEN', it: 'IN EVIDENZA', ar: 'المميز', ru: 'В ЦЕНТРЕ',
+  }
+  const allTopicsLabel: Record<string, string> = {
+    fr: 'Explorer par thème', en: 'Browse by topic', de: 'Nach Thema stöbern', it: 'Esplora per tema', ar: 'تصفح حسب الموضوع', ru: 'По темам',
+  }
+  const articleCountLabel: Record<string, (n: number) => string> = {
+    fr: n => `${n} article${n > 1 ? 's' : ''}`,
+    en: n => `${n} article${n > 1 ? 's' : ''}`,
+    de: n => `${n} Artikel`,
+    it: n => `${n} articol${n > 1 ? 'i' : 'o'}`,
+    ar: n => `${n} مقال`,
+    ru: n => `${n} стат${n > 1 ? 'ей' : 'ья'}`,
   }
 
-  const filtered = filter === 'all' ? ARTICLES : ARTICLES.filter(a => a.category === filter)
+  // Sort articles by date descending (most recent first)
+  const sorted = [...ARTICLES].sort((a, b) => b.date.localeCompare(a.date))
+  const filtered = filter === 'all' ? sorted : sorted.filter(a => a.category === filter)
+  const featured = filter === 'all' ? sorted[0] : null
+  const rest = featured ? filtered.filter(a => a.slug !== featured.slug) : filtered
   const l = lang as LangCode
+  const count = articleCountLabel[l] || articleCountLabel.en
+
+  // Category counts (for filter badges)
+  const catCount = (cat: string) => cat === 'all' ? ARTICLES.length : ARTICLES.filter(a => a.category === cat).length
 
   return (
     <div className="blog-page">
-      <div className="blog-page-header">
-        <h1 className="font-playfair blog-page-h1">{blogTitles[l] || blogTitles.en}</h1>
-        <p className="blog-page-sub">{blogSubtitles[l] || blogSubtitles.en}</p>
+      {/* Featured article (only when no filter is active) */}
+      {featured && (
+        <Link href={`/blog/${featured.slug}`} className="blog-featured">
+          <div className="blog-featured-img">
+            <img
+              src={featured.image}
+              alt={featured.title[l as keyof typeof featured.title] || featured.title.en}
+              loading="eager"
+              fetchPriority="high"
+            />
+            <div className="blog-featured-overlay" />
+          </div>
+          <div className="blog-featured-body">
+            <div className="blog-featured-tag">{featuredLabel[l] || featuredLabel.en}</div>
+            <div className="blog-featured-meta">
+              <span className="blog-featured-cat">{catLabels[featured.category]?.[l] || featured.category}</span>
+              <span className="blog-featured-dot">·</span>
+              <span>{featured.date}</span>
+              <span className="blog-featured-dot">·</span>
+              <span>{featured.readTime} {minLabels[l] || minLabels.en}</span>
+            </div>
+            <h2 className="font-playfair blog-featured-title">{featured.title[l as keyof typeof featured.title] || featured.title.en}</h2>
+            <p className="blog-featured-excerpt">{featured.excerpt[l as keyof typeof featured.excerpt] || featured.excerpt.en}</p>
+            <span className="blog-featured-cta">
+              {readMoreLabels[l] || readMoreLabels.en}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </span>
+          </div>
+        </Link>
+      )}
 
+      {/* Filters */}
+      <div className="blog-topics">
+        <div className="blog-topics-header">
+          <h3 className="font-playfair blog-topics-h3">{allTopicsLabel[l] || allTopicsLabel.en}</h3>
+          <span className="blog-topics-count">{count(filtered.length)}</span>
+        </div>
         <div className="blog-filters">
           {categories.map(cat => (
             <button
               key={cat}
+              type="button"
               className={`blog-filter-btn${filter === cat ? ' active' : ''}`}
               onClick={() => setFilter(cat)}
             >
-              {catLabels[cat]?.[l] || catLabels[cat]?.en || cat}
+              <span className="blog-filter-label">{catLabels[cat]?.[l] || catLabels[cat]?.en || cat}</span>
+              <span className="blog-filter-count">{catCount(cat)}</span>
             </button>
           ))}
         </div>
       </div>
 
+      {/* Cards grid */}
       <div className="blog-grid">
-        {filtered.map((article) => (
+        {rest.map((article) => (
           <Link key={article.slug} href={`/blog/${article.slug}`} className="blog-card">
             <div className="blog-card-img">
               <img src={article.image} alt={article.title[l as keyof typeof article.title] || article.title.en} loading="lazy" />
+              <div className="blog-card-grad" />
               <div className="blog-card-cat">{catLabels[article.category]?.[l] || article.category}</div>
             </div>
             <div className="blog-card-body">
               <div className="blog-card-meta">
                 <span>{article.date}</span>
-                <span>·</span>
+                <span className="blog-meta-dot" />
                 <span>{article.readTime} {minLabels[l] || minLabels.en}</span>
               </div>
               <h2 className="font-playfair blog-card-title">{article.title[l as keyof typeof article.title] || article.title.en}</h2>
               <p className="blog-card-excerpt">{article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en}</p>
-              <span className="blog-card-link">{readMoreLabels[l] || readMoreLabels.en}</span>
+              <span className="blog-card-link">
+                <span>{readMoreLabels[l] || readMoreLabels.en}</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
             </div>
           </Link>
         ))}
       </div>
+
+      {rest.length === 0 && (
+        <div className="blog-empty">
+          <p>No articles in this category yet.</p>
+        </div>
+      )}
     </div>
   )
 }

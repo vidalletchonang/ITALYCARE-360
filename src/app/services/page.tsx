@@ -10,11 +10,12 @@ import ScrollFade from '@/components/ScrollFade'
 import { useLang } from '@/context/LangContext'
 
 const HERO: Record<string, { tag: string; h1: string; p: string }> = {
-  fr: { tag: 'NOS SERVICES', h1: 'Que pouvons-nous faire pour vous ?', p: "17 services pour accompagner les étrangers dans chaque aspect de leur vie en Italie — immobilier, santé, visa, juridique et bien plus." },
-  en: { tag: 'OUR SERVICES', h1: 'What can we do for you?', p: '17 services to support foreigners in every aspect of their life in Italy — real estate, healthcare, visa, legal and much more.' },
-  it: { tag: 'I NOSTRI SERVIZI', h1: 'Cosa possiamo fare per voi?', p: '17 servizi per accompagnare gli stranieri in ogni aspetto della vita in Italia — immobiliare, sanità, visto, legale e molto altro.' },
-  ar: { tag: 'خدماتنا', h1: 'ماذا يمكننا أن نقدم لكم؟', p: '17 خدمة لمرافقة الأجانب في كل جانب من حياتهم في إيطاليا — عقارات، صحة، تأشيرة، قانون والمزيد.' },
-  ru: { tag: 'НАШИ УСЛУГИ', h1: 'Что мы можем сделать для вас?', p: '17 услуг для сопровождения иностранцев в каждом аспекте жизни в Италии — недвижимость, здоровье, виза, юриспруденция и многое другое.' },
+  fr: { tag: 'NOS SERVICES', h1: 'Que pouvons-nous faire pour vous ?', p: "18 services pour accompagner les étrangers dans chaque aspect de leur vie en Italie — immobilier, santé, visa, juridique et bien plus." },
+  en: { tag: 'OUR SERVICES', h1: 'What can we do for you?', p: '18 services to support foreigners in every aspect of their life in Italy — real estate, healthcare, visa, legal and much more.' },
+  it: { tag: 'I NOSTRI SERVIZI', h1: 'Cosa possiamo fare per voi?', p: '18 servizi per accompagnare gli stranieri in ogni aspetto della vita in Italia — immobiliare, sanità, visto, legale e molto altro.' },
+  de: { tag: 'UNSERE LEISTUNGEN', h1: 'Was können wir für Sie tun?', p: '18 Leistungen, um Ausländer in jedem Aspekt ihres Lebens in Italien zu begleiten — Immobilien, Gesundheit, Visum, Recht und vieles mehr.' },
+  ar: { tag: 'خدماتنا', h1: 'ماذا يمكننا أن نقدم لكم؟', p: '18 خدمة لمرافقة الأجانب في كل جانب من حياتهم في إيطاليا — عقارات، صحة، تأشيرة، قانون والمزيد.' },
+  ru: { tag: 'НАШИ УСЛУГИ', h1: 'Что мы можем сделать для вас?', p: '18 услуг для сопровождения иностранцев в каждом аспекте жизни в Италии — недвижимость, здоровье, виза, юриспруденция и многое другое.' },
 }
 
 function ServicesHero() {

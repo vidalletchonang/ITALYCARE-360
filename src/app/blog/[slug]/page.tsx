@@ -17,6 +17,8 @@ const SLUGS = [
   'property-care-gerer-bien-italie-distance',
   'thermal-wellness-cures-thermales-italie',
   'aviation-privee-italie-guide',
+  'scolarite-ecoles-italie-enfants-expats',
+  'importer-vehicule-italie-guide',
 ]
 
 export function generateStaticParams() {
