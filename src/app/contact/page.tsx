@@ -2,6 +2,7 @@
 
 import { useLang } from '@/context/LangContext'
 import Nav from '@/components/Nav'
+import MarqueeBanner from '@/components/MarqueeBanner'
 import Footer from '@/components/Footer'
 
 const TITLE: Record<string, string> = {
@@ -128,6 +129,7 @@ export default function ContactPage() {
           />
         </section>
       </main>
+      <MarqueeBanner />
       <Footer />
     </>
   )

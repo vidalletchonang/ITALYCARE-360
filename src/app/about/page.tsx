@@ -9,6 +9,7 @@ import Numbers from '@/components/Numbers'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ItalyLifestyle from '@/components/ItalyLifestyle'
 import Testimonials from '@/components/Testimonials'
+import MarqueeBanner from '@/components/MarqueeBanner'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
@@ -47,19 +48,19 @@ export default function AboutPage() {
       <div style={{ paddingTop: '76px' }}>
         <AboutHero />
         <About />
-        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
+        <MarqueeBanner />
         <Numbers />
         <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <WhyChooseUs />
-        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
+        <MarqueeBanner />
         <Process />
         <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <TeamSection />
-        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
+        <MarqueeBanner />
         <VideoSection />
         <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
         <ItalyLifestyle />
-        <div className="section-divider"><div className="sd-line" /><div className="sd-diamond" /><div className="sd-line" /></div>
+        <MarqueeBanner />
         <Testimonials />
       </div>
       <Footer />

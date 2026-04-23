@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import MarqueeBanner from '@/components/MarqueeBanner'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
@@ -451,7 +452,9 @@ export default function BlogPage() {
       <Nav onRdv={() => setModalOpen(true)} />
       <div style={{ paddingTop: '76px', minHeight: '100vh', background: 'var(--cr)' }}>
         <BlogHero />
+        <MarqueeBanner />
         <BlogPageContent />
+        <MarqueeBanner />
       </div>
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />

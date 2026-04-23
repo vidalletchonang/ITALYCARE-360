@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Nav from '@/components/Nav'
 import Services from '@/components/Services'
 import CostCalculator from '@/components/CostCalculator'
+import MarqueeBanner from '@/components/MarqueeBanner'
 import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import ScrollFade from '@/components/ScrollFade'
@@ -49,9 +50,12 @@ export default function ServicesPage() {
       <Nav onRdv={() => setModalOpen(true)} />
       <div style={{ paddingTop: '76px' }}>
         <ServicesHero />
+        <MarqueeBanner />
         <Services onRdv={() => setModalOpen(true)} />
+        <MarqueeBanner />
         <CostCalculator onRdv={() => setModalOpen(true)} />
       </div>
+      <MarqueeBanner />
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </>
