@@ -55,7 +55,7 @@ const UI: Record<string, {
     formSubmit: 'Envoyer ma demande',
     formSending: 'Envoi en cours…',
     formSuccess: '✅ Reçu ! Notre expert vous contactera sous 48h.',
-    formError: 'Une erreur est survenue. Contactez-nous directement à italycare360@gmail.com',
+    formError: 'Une erreur est survenue. Contactez-nous directement à info@italycare360.com',
   },
   en: {
     title: 'ITALYCARE 360 Assistant',
@@ -80,7 +80,7 @@ const UI: Record<string, {
     formSubmit: 'Send my request',
     formSending: 'Sending…',
     formSuccess: '✅ Got it! Our expert will contact you within 48h.',
-    formError: 'Something went wrong. Contact us directly at italycare360@gmail.com',
+    formError: 'Something went wrong. Contact us directly at info@italycare360.com',
   },
   it: {
     title: 'Assistente ITALYCARE 360',
@@ -105,7 +105,7 @@ const UI: Record<string, {
     formSubmit: 'Invia la richiesta',
     formSending: 'Invio in corso…',
     formSuccess: '✅ Ricevuto! Il nostro esperto ti contatterà entro 48h.',
-    formError: 'Qualcosa è andato storto. Scrivici a italycare360@gmail.com',
+    formError: 'Qualcosa è andato storto. Scrivici a info@italycare360.com',
   },
   ar: {
     title: 'مساعد ITALYCARE 360',
@@ -130,7 +130,7 @@ const UI: Record<string, {
     formSubmit: 'إرسال الطلب',
     formSending: 'جاري الإرسال…',
     formSuccess: '✅ تم الاستلام! سيتواصل معك خبيرنا خلال 48 ساعة.',
-    formError: 'حدث خطأ. راسلنا مباشرة: italycare360@gmail.com',
+    formError: 'حدث خطأ. راسلنا مباشرة: info@italycare360.com',
   },
   ru: {
     title: 'Ассистент ITALYCARE 360',
@@ -155,7 +155,7 @@ const UI: Record<string, {
     formSubmit: 'Отправить запрос',
     formSending: 'Отправляется…',
     formSuccess: '✅ Получено! Наш эксперт свяжется с вами в течение 48 часов.',
-    formError: 'Произошла ошибка. Напишите нам на italycare360@gmail.com',
+    formError: 'Произошла ошибка. Напишите нам на info@italycare360.com',
   },
   de: {
     title: 'ITALYCARE 360 Assistent',

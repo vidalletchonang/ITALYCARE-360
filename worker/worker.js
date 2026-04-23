@@ -8,7 +8,7 @@
  * Secrets:
  *   GROQ_API_KEY      — Groq API key
  *   RESEND_API_KEY    — Resend API key
- *   LEAD_EMAIL_TO     — email recipient (e.g. italycare360@gmail.com)
+ *   LEAD_EMAIL_TO     — email recipient (default: info@italycare360.com)
  *
  * KV binding: RATE_KV (rate-limit storage)
  */
@@ -391,7 +391,7 @@ async function handleLead(request, env, corsHeaders) {
   /* Send via Resend */
   try {
     /* Sanitize and validate recipient email */
-    const rawTo = (env.LEAD_EMAIL_TO || 'italycare360@gmail.com').trim()
+    const rawTo = (env.LEAD_EMAIL_TO || 'info@italycare360.com').trim()
     const toEmail = rawTo.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/)?.[0]
     if (!toEmail) {
       // Log a non-PII sentinel; do NOT log env value itself

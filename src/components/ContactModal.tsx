@@ -14,7 +14,7 @@ import { trackRdvOpen, trackCalendlyOpen } from '@/lib/analytics'
 // =====================================================================
 const CALENDLY_URL = 'https://calendly.com/italycare360/30min'
 
-// Lead goes to our Cloudflare Worker → Resend → italycare360@gmail.com.
+// Lead goes to our Cloudflare Worker → Resend → info@italycare360.com.
 // Same secure pipeline as the chatbot lead form (rate-limited, input-validated).
 const WORKER_URL = process.env.NEXT_PUBLIC_CHAT_WORKER_URL || ''
 
