@@ -351,6 +351,26 @@ const ARTICLES = [
     content: { en: '', fr: '', it: '', ar: '' }
   },
   {
+    slug: 'foreigners-buy-property-italy-2026',
+    category: 'immobilier',
+    date: '2026-02-15',
+    readTime: 10,
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=85',
+    title: {
+      fr: "Les \u00e9trangers peuvent-ils acheter un bien en Italie en 2026 ? Co\u00fbts, r\u00e8gles et risques",
+      en: "Can Foreigners Buy Property in Italy in 2026? Costs, Rules & Risks Explained", de: "K\u00f6nnen Ausl\u00e4nder 2026 in Italien Immobilien kaufen? Kosten, Regeln und Risiken",
+      it: "Gli stranieri possono comprare casa in Italia nel 2026? Costi, regole e rischi",
+      ar: "هل يمكن للأجانب شراء عقار في إيطاليا في 2026؟ التكاليف والقواعد والمخاطر"
+    },
+    excerpt: {
+      fr: "Acheter un bien en Italie en tant qu'\u00e9tranger est tout \u00e0 fait possible, mais le processus n'est pas purement transactionnel. Mise \u00e0 jour f\u00e9vrier 2026 : \u00e9ligibilit\u00e9, \u00e9tapes, v\u00e9rifications juridiques, co\u00fbts r\u00e9els et pi\u00e8ges \u00e0 \u00e9viter.",
+      en: "Buying property in Italy as a foreigner is entirely possible, but it is not a straightforward or purely transactional process. Updated to February 2026: eligibility rules, process, legal checks, real costs and common pitfalls.", de: "Immobilien in Italien als Ausl\u00e4nder zu kaufen ist m\u00f6glich, aber kein rein transaktionaler Prozess. Februar 2026: Berechtigung, Ablauf, rechtliche Pr\u00fcfungen, reale Kosten und h\u00e4ufige Fallstricke.",
+      it: "Comprare casa in Italia come straniero \u00e8 possibile, ma non \u00e8 un processo puramente transazionale. Aggiornamento febbraio 2026: requisiti di idoneit\u00e0, processo, verifiche legali, costi reali e insidie comuni.",
+      ar: "يمكن للأجانب شراء عقار في إيطاليا، لكنها ليست عملية تجارية بحتة. تحديث فبراير 2026: الأهلية والعملية والفحوص القانونية والتكاليف الفعلية والأخطاء الشائعة."
+    },
+    content: { en: '', fr: '', it: '', ar: '' }
+  },
+  {
     slug: 'codice-fiscale-residence-permit-italy-2026',
     category: 'administratif',
     date: '2026-04-23',

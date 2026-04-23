@@ -2218,6 +2218,144 @@ Contattate ITALYCARE 360 per un'assistenza su misura e un supporto di due dilige
       ar: ''
     }
   },
+  {
+    slug: 'foreigners-buy-property-italy-2026',
+    category: 'immobilier',
+    date: '2026-02-15',
+    readTime: 10,
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=85',
+    title: {
+      fr: "Les \u00e9trangers peuvent-ils acheter un bien en Italie en 2026 ? Co\u00fbts, r\u00e8gles et risques",
+      en: "Can Foreigners Buy Property in Italy in 2026? Costs, Rules & Risks Explained",
+      it: "Gli stranieri possono comprare casa in Italia nel 2026? Costi, regole e rischi",
+      ar: "هل يمكن للأجانب شراء عقار في إيطاليا في 2026؟ التكاليف والقواعد والمخاطر"
+    },
+    excerpt: {
+      fr: "Acheter un bien en Italie en tant qu'\u00e9tranger est tout \u00e0 fait possible, mais le processus n'est pas purement transactionnel. Mise \u00e0 jour f\u00e9vrier 2026 : \u00e9ligibilit\u00e9, \u00e9tapes, v\u00e9rifications juridiques, co\u00fbts r\u00e9els et pi\u00e8ges \u00e0 \u00e9viter.",
+      en: "Buying property in Italy as a foreigner is entirely possible, but it is not a straightforward or purely transactional process. Updated to February 2026: eligibility rules, process, legal checks, real costs and common pitfalls.",
+      it: "Comprare casa in Italia come straniero \u00e8 possibile, ma non \u00e8 un processo puramente transazionale. Aggiornamento febbraio 2026: requisiti di idoneit\u00e0, processo, verifiche legali, costi reali e insidie comuni.",
+      ar: "يمكن للأجانب شراء عقار في إيطاليا، لكنها ليست عملية تجارية بحتة. تحديث فبراير 2026: الأهلية والعملية والفحوص القانونية والتكاليف الفعلية والأخطاء الشائعة."
+    },
+    content: {
+      en: `Buying property in Italy as a foreigner is entirely possible, but it is not a straightforward or purely transactional process. Unlike in some other countries, even the early stages — such as signing a preliminary document — can carry legal consequences.
+
+For this reason, understanding how the system works before taking any step is essential. Updated to February 2026, this guide walks you through the key aspects foreign buyers should know: eligibility rules, the purchase process, legal checks, real costs, and the most common pitfalls to avoid.
+
+## Who Can Buy Property in Italy as a Foreigner?
+
+In principle, foreigners can purchase property in Italy. However, eligibility depends on the concept of **reciprocity**.
+
+Reciprocity means that a non-Italian citizen can buy property in Italy only if an Italian citizen would be allowed to purchase property under similar conditions in that person's home country. This principle is applied in practice by notaries at the time of purchase.
+
+In concrete terms:
+
+- **EU/EEA citizens** can buy property freely, without any restriction, thanks to freedom of movement within the European Union.
+- **Non-EU citizens** (such as buyers from the US or the UK) can purchase property if a reciprocity agreement exists between Italy and their country. In most common cases, this requirement is satisfied.
+- Alternatively, **obtaining residency in Italy** removes these limitations altogether, allowing the purchase regardless of reciprocity.
+
+According to the Italian Ministry of Foreign Affairs and notarial practice (2025–2026), these rules are consistently applied in real estate transactions.
+
+## How Does the Property Buying Process Work in Italy?
+
+Buying property in Italy involves a structured legal process. It is important to understand that this is not simply a matter of making an offer — each step can create binding obligations.
+
+The process is typically divided into three main phases.
+
+**1. Purchase Proposal (*Proposta Irrevocabile*)**
+This is usually the first formal step. The buyer submits a written offer, which becomes legally binding if accepted by the seller. At this stage, a deposit is often paid, typically ranging from €5,000 up to 10% of the purchase price. Many foreign buyers underestimate this step, but it can already carry contractual consequences.
+
+**2. Preliminary Contract (*Compromesso*)**
+This is a fully binding agreement between the parties. It sets out the terms of the sale, including timing and conditions, and usually involves a *caparra confirmatoria* (confirmatory deposit) governed by Article 1385 of the Italian Civil Code. If one party withdraws, financial penalties may apply.
+
+**3. Final Deed (*Rogito Notarile*)**
+This is the official transfer of ownership, executed before a notary. At this stage, the remaining balance is paid, along with taxes and fees. The notary verifies the legality of the transaction and registers the transfer.
+
+In standard transactions without financing, the entire process typically takes **2 to 4 months**.
+
+![Signing a preliminary contract before the Italian notary](https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=1400&q=85)
+
+## Legal Checks Before Signing Any Contract in Italy
+
+This is arguably the most critical phase of the entire process. Signing any document without proper verification exposes the buyer to significant legal and financial risks.
+
+Several key checks should always be carried out:
+
+- **Ownership title**: verify the full ownership history of the property, typically over the past 20 years, ensuring there are no mortgages, liens, or third-party rights attached to it.
+- **Urban and cadastral compliance**: the property's actual condition must match what is officially registered. Any discrepancy — such as unauthorised building works — can lead to serious consequences, including potential invalidity of the sale.
+- **Condominium regulations**: if the property is part of a condominium, the internal rules may impose restrictions, for example on short-term rentals or renovation works. Often overlooked, they directly impact how the property is used.
+- **Contract structure**: clauses relating to deposits, penalties, and withdrawal conditions must be carefully reviewed. These determine what happens if the transaction does not proceed as planned.
+
+According to the **Italian National Notary Council (2025 report)**, urban irregularities remain one of the leading causes of real estate disputes in Italy.
+
+## Real Costs of Buying Property in Italy (2026)
+
+The purchase price is only one component of the overall investment. Foreign buyers should take into account several additional costs that significantly affect the total budget.
+
+| Cost item | Primary residence | Second home | Notes |
+|-----------|---------------------|--------------|-------|
+| **Purchase tax** (registration) | ~2% | ~9% | Calculated on cadastral value |
+| **Notary fees** | €2,000 – €5,000 | €2,000 – €5,000 | Based on value and complexity |
+| **Agency fees** | 2 – 5% + VAT | 2 – 5% + VAT | Or €2,000 – €5,000 flat below €100k |
+| **Legal due diligence** | €1,500 – €4,000 | €1,500 – €4,000 | Depends on depth of review |
+| **Cadastral / mortgage taxes** | €50 fixed each | €50 fixed each | Flat-rate amounts |
+
+Overall, these additional costs usually amount to approximately **10 – 20% of the property price**.
+
+![Italian property costs breakdown: taxes, notary and legal fees](https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1400&q=85)
+
+## Common Mistakes Foreign Buyers Make
+
+Many of the issues encountered by foreign buyers do not arise from the property itself, but from misunderstandings of the legal process.
+
+A frequent mistake is **signing the purchase proposal without a proper legal review**, assuming it is a non-binding expression of interest. In reality, it can already create enforceable obligations.
+
+Another common issue is **underestimating the importance of urban compliance checks**. Properties may appear perfectly valid, yet present hidden irregularities that only emerge during a detailed technical review.
+
+Buyers also often overlook **condominium regulations** or pay deposits without fully understanding the contractual protections in place.
+
+*In the Italian system, the key risk is not what you see — it is what you sign.*
+
+## Is Buying Property in Italy Worth It?
+
+Whether buying property in Italy is a good decision largely depends on the buyer's objectives.
+
+On one hand, Italy offers **competitive property prices** compared to other Western European countries, as well as a wide variety of options, from city apartments to historic homes in smaller towns. The legal framework, based on the notarial system, also provides a high level of formal protection.
+
+On the other hand, the process can be **bureaucratically complex**, timelines may vary, and without proper professional support, buyers may face avoidable legal or technical risks.
+
+For well-informed buyers, however, the opportunity can be highly attractive.
+
+## FAQ – Buying Property in Italy (February 2026)
+
+**Can foreigners buy property in Italy?**
+Yes, if reciprocity rules apply (or if the buyer becomes Italian resident).
+
+**Do I need residency to buy?**
+No, residency is not required — but it can simplify the process.
+
+**What is a *compromesso*?**
+A legally binding preliminary contract between buyer and seller.
+
+**Can I lose my deposit?**
+Yes, depending on the contract terms and on which party withdraws.
+
+**How long does it take to buy?**
+Typically 2 – 4 months from accepted offer to final deed.
+
+## Need Legal Support Before Buying in Italy?
+
+Before signing any document, obtaining a legal review can help prevent costly mistakes and unexpected risks. Professional assistance typically includes:
+
+- Contract review
+- Legal due diligence
+- Support throughout the transaction
+
+If you are considering buying property in Italy, seeking guidance at an early stage can make the process significantly smoother and more secure. Book a free 30-minute consultation with ITALYCARE 360 — we will walk you through your specific situation and give you a clear roadmap, without commitment.`,
+      fr: '',
+      it: '',
+      ar: ''
+    }
+  },
 ]
 
 /**
