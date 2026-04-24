@@ -57,32 +57,9 @@ const REELS: {
   location: Record<string, string>
   caption: Record<string, string>
 }[] = [
-  // ───── Our own branded reels (4 — placed first for SEO & reliability) ─────
-  {
-    src: `${BASE}/reels/reel-como.mp4`,
-    poster: `${BASE}/reels/reel-como.jpg`,
-    location: { fr: 'Lac de Côme', en: 'Lake Como', it: 'Lago di Como', de: 'Comer See', ar: 'بحيرة كومو', ru: 'Озеро Комо' },
-    caption: { fr: 'Menaggio, pépite du lac', en: 'Menaggio, lakeside gem', it: 'Menaggio, gioiello sul lago', de: 'Menaggio, Juwel am See', ar: 'ميناجو، جوهرة البحيرة', ru: 'Менаджо, жемчужина озера' },
-  },
-  {
-    src: `${BASE}/reels/reel-events.mp4`,
-    poster: `${BASE}/reels/reel-events.jpg`,
-    location: { fr: 'Événements', en: 'Events', it: 'Eventi', de: 'Events', ar: 'فعاليات', ru: 'События' },
-    caption: { fr: 'Conférences & galas', en: 'Conferences & galas', it: 'Conferenze e gala', de: 'Konferenzen & Galas', ar: 'مؤتمرات وحفلات', ru: 'Конференции и гала' },
-  },
-  {
-    src: `${BASE}/reels/reel-aviation.mp4`,
-    poster: `${BASE}/reels/reel-aviation.jpg`,
-    location: { fr: 'Aviation Privée', en: 'Private Aviation', it: 'Aviazione Privata', de: 'Privatluftfahrt', ar: 'طيران خاص', ru: 'Частная авиация' },
-    caption: { fr: 'Service haut de gamme', en: 'Premium cabin service', it: 'Servizio di alta gamma', de: 'Premium-Service an Bord', ar: 'خدمة فاخرة على متن الطائرة', ru: 'Первоклассный сервис' },
-  },
-  {
-    src: `${BASE}/reels/reel-visa.mp4`,
-    poster: `${BASE}/reels/reel-visa.jpg`,
-    location: { fr: 'Visa & Permis', en: 'Visa & Permits', it: 'Visto & Permessi', de: 'Visum & Aufenthalt', ar: 'تأشيرة وتصاريح', ru: 'Виза и разрешения' },
-    caption: { fr: 'Visa approuvé', en: 'Visa approved', it: 'Visto approvato', de: 'Visum genehmigt', ar: 'تم قبول التأشيرة', ru: 'Виза одобрена' },
-  },
-  // ───── Filler reels from Pexels (CC0) — posters from Unsplash ─────
+  // Note: the 4 branded ITALYCARE 360 reels (visa, real estate, logistics,
+  // after-arrival) are now shown in the richer <ReelsJourney /> section.
+  // This gallery keeps lightweight atmospheric clips for ambiance only.
   {
     src: 'https://videos.pexels.com/video-files/4328989/4328989-hd_1080_1920_25fps.mp4',
     poster: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=85',
