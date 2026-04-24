@@ -32,9 +32,11 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Replace 'italycare360' with your actual GitHub repository name
-          # Remove this line if you are using a custom domain (e.g. www.italycare360.com)
-          NEXT_PUBLIC_BASE_PATH: /ITALYCARE-360
+          # Custom domain (italycare360.com) is served from the root path.
+          # public/CNAME instructs GitHub Pages to use that domain.
+          # If you ever revert to the github.io URL, uncomment the next line:
+          # NEXT_PUBLIC_BASE_PATH: /ITALYCARE-360
+          NEXT_PUBLIC_BASE_PATH: ''
           # Google Analytics 4 — add NEXT_PUBLIC_GA_ID in GitHub repo Secrets
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
           # AI Chat Worker URL — add CHAT_WORKER_URL after deploying the Cloudflare Worker
