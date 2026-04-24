@@ -42,11 +42,14 @@ const LABELS: Record<string, { tag: string; h1: string; h2: string; sub: string 
   },
 }
 
-/* 6 vertical reels. Each has:
- *  - `src`: direct MP4 (Pexels CC0 / free). If it fails to load, the poster stays visible.
- *  - `poster`: high-quality Unsplash fallback so the card always looks beautiful.
- *  - `caption`: lowercase label shown at bottom, Instagram-style.
- *  - `location`: subtitle in gold.
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
+/* Vertical reels. Each has:
+ *  - `src`: direct MP4 (local /reels/ folder for our own content, or Pexels CC0 for fillers).
+ *           If a remote MP4 fails to load, the poster stays visible.
+ *  - `poster`: high-quality image fallback — local JPG for our videos, Unsplash for Pexels.
+ *  - `caption`: short label in 6 languages, Instagram-style.
+ *  - `location`: subtitle in gold, matching one of our 18 service categories when possible.
  */
 const REELS: {
   src: string
@@ -54,6 +57,32 @@ const REELS: {
   location: Record<string, string>
   caption: Record<string, string>
 }[] = [
+  // ───── Our own branded reels (4 — placed first for SEO & reliability) ─────
+  {
+    src: `${BASE}/reels/reel-como.mp4`,
+    poster: `${BASE}/reels/reel-como.jpg`,
+    location: { fr: 'Lac de Côme', en: 'Lake Como', it: 'Lago di Como', de: 'Comer See', ar: 'بحيرة كومو', ru: 'Озеро Комо' },
+    caption: { fr: 'Menaggio, pépite du lac', en: 'Menaggio, lakeside gem', it: 'Menaggio, gioiello sul lago', de: 'Menaggio, Juwel am See', ar: 'ميناجو، جوهرة البحيرة', ru: 'Менаджо, жемчужина озера' },
+  },
+  {
+    src: `${BASE}/reels/reel-events.mp4`,
+    poster: `${BASE}/reels/reel-events.jpg`,
+    location: { fr: 'Événements', en: 'Events', it: 'Eventi', de: 'Events', ar: 'فعاليات', ru: 'События' },
+    caption: { fr: 'Conférences & galas', en: 'Conferences & galas', it: 'Conferenze e gala', de: 'Konferenzen & Galas', ar: 'مؤتمرات وحفلات', ru: 'Конференции и гала' },
+  },
+  {
+    src: `${BASE}/reels/reel-aviation.mp4`,
+    poster: `${BASE}/reels/reel-aviation.jpg`,
+    location: { fr: 'Aviation Privée', en: 'Private Aviation', it: 'Aviazione Privata', de: 'Privatluftfahrt', ar: 'طيران خاص', ru: 'Частная авиация' },
+    caption: { fr: 'Service haut de gamme', en: 'Premium cabin service', it: 'Servizio di alta gamma', de: 'Premium-Service an Bord', ar: 'خدمة فاخرة على متن الطائرة', ru: 'Первоклассный сервис' },
+  },
+  {
+    src: `${BASE}/reels/reel-visa.mp4`,
+    poster: `${BASE}/reels/reel-visa.jpg`,
+    location: { fr: 'Visa & Permis', en: 'Visa & Permits', it: 'Visto & Permessi', de: 'Visum & Aufenthalt', ar: 'تأشيرة وتصاريح', ru: 'Виза и разрешения' },
+    caption: { fr: 'Visa approuvé', en: 'Visa approved', it: 'Visto approvato', de: 'Visum genehmigt', ar: 'تم قبول التأشيرة', ru: 'Виза одобрена' },
+  },
+  // ───── Filler reels from Pexels (CC0) — posters from Unsplash ─────
   {
     src: 'https://videos.pexels.com/video-files/4328989/4328989-hd_1080_1920_25fps.mp4',
     poster: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=85',
