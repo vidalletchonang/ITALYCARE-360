@@ -1,8 +1,12 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (disabled — we use Cloudflare Pages now)
 
+# Production site is served by Cloudflare Pages on italycare360.com.
+# This workflow is kept for historical reasons but no longer runs automatically.
+# If you ever need to fall back to GitHub Pages: re-add public/CNAME and
+# uncomment the "push" trigger below.
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 permissions:
