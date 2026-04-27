@@ -4,6 +4,7 @@ import { LangProvider } from '@/context/LangContext'
 import ChatBotMount from '@/components/ChatBotMount'
 import MusicPlayerMount from '@/components/MusicPlayerMount'
 import CookieConsent from '@/components/CookieConsent'
+import { organizationSchema, websiteSchema } from '@/lib/structured-data'
 
 /* Google Analytics is no longer loaded eagerly here.
  * It now lives inside <CookieConsent />, which only injects the GA4 scripts
@@ -39,6 +40,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://italycare-chat.italycare360.workers.dev" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@400;500;600;700&family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
+
+        {/* Schema.org structured data — Organization + WebSite (global, every page) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationSchema(), websiteSchema()]),
+          }}
+        />
       </head>
       <body>
         <LangProvider>

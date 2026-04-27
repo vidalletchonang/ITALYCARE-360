@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/context/LangContext'
 import ContactModal from '@/components/ContactModal'
+import { serviceSchema, breadcrumbSchema } from '@/lib/structured-data'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -216,8 +217,27 @@ export default function ServiceDetailClient({ slug }: Props) {
   const titleFont = isRTL ? "'Cairo', sans-serif" : "'Playfair Display', serif"
   const bodyFont = isRTL ? "'Cairo', sans-serif" : "'Jost', sans-serif"
 
+  /* Schema.org structured data for this specific service */
+  const heroImage = SERVICE_HERO_IMAGES[service.slug] || ''
+  const fullHeroImage = heroImage.startsWith('http') ? heroImage : `https://italycare360.com${heroImage}`
+  const schemaJson = JSON.stringify([
+    serviceSchema({
+      slug: service.slug,
+      name: service.t,
+      description: service.details.hero,
+      image: fullHeroImage,
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: service.t, url: `/services/${service.slug}` },
+    ]),
+  ])
+
   return (
     <div dir={dir} style={{ background: cr, minHeight: '100vh', fontFamily: bodyFont }}>
+      {/* JSON-LD : Service + Breadcrumb */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
 
       {/* Header */}
       <div style={{ background: bk, padding: '1rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

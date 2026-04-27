@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ContactModal from '@/components/ContactModal'
 import { useLang } from '@/context/LangContext'
 import type { LangCode } from '@/i18n'
+import { blogPostingSchema, breadcrumbSchema } from '@/lib/structured-data'
 
 const ARTICLES = [
   {
@@ -2603,8 +2604,32 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
     )
   }
 
+  /* Schema.org structured data: BlogPosting + breadcrumbs */
+  const articleTitle = article.title[l as keyof typeof article.title] || article.title.en
+  const articleExcerpt = article.excerpt[l as keyof typeof article.excerpt] || article.excerpt.en
+  const articleImageFull = article.image.startsWith('http')
+    ? article.image
+    : `https://italycare360.com${article.image}`
+  const schemaJson = JSON.stringify([
+    blogPostingSchema({
+      slug: article.slug,
+      title: articleTitle,
+      description: articleExcerpt,
+      image: articleImageFull,
+      datePublished: article.date,
+      category: article.category,
+      inLanguage: l,
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Blog', url: '/blog' },
+      { name: articleTitle, url: `/blog/${article.slug}` },
+    ]),
+  ])
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Nav onRdv={() => setModalOpen(true)} />
 
       <div className="article-hero">
