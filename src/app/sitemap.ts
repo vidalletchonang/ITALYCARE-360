@@ -22,6 +22,10 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: 'weekly' 
   { path: '/blog',           priority: 0.9, changeFrequency: 'weekly'  },
   { path: '/contact',        priority: 0.7, changeFrequency: 'monthly' },
   { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly'  },
+  /* Buyer-targeted landing pages (high SEO priority) */
+  { path: '/buyers/us-american-buyers',          priority: 0.95, changeFrequency: 'monthly' },
+  /* Lead-magnet guides */
+  { path: '/guides/americans-buying-italy-2026', priority: 0.85, changeFrequency: 'monthly' },
 ]
 
 /* Mêmes slugs que dans /src/app/services/[slug]/page.tsx */
