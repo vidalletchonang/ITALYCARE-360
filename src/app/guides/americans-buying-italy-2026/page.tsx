@@ -42,7 +42,7 @@ export default function AmericansBuyingItalyGuide() {
           </div>
         </div>
 
-        <nav className="guide-toc">
+        <div className="guide-toc">
           <h2>Table of contents</h2>
           <ol>
             <li><a href="#why-now">1. Why 2026 is a key year for American buyers in Italy</a></li>
@@ -61,7 +61,7 @@ export default function AmericansBuyingItalyGuide() {
             <li><a href="#timeline">14. A realistic 6–12 month timeline</a></li>
             <li><a href="#next">15. What to do next</a></li>
           </ol>
-        </nav>
+        </div>
 
         <section id="why-now" className="guide-section">
           <h2>1. Why 2026 is a key year for American buyers in Italy</h2>
