@@ -15,6 +15,8 @@
 |------------|------|
 | 🌍 Site web | https://italycare360.com |
 | 📸 Instagram | [@italycare360](https://www.instagram.com/italycare360) |
+| 📘 Facebook | [ItalyCare 360](https://www.facebook.com/people/ItalyCare-360/61560213445080/) |
+| 💼 LinkedIn | [ITALYCARE 360](https://www.linkedin.com/company/italycare-360/) |
 | ▶️ YouTube | [@italycare360](https://youtube.com/@italycare360) |
 | 📅 Prise de rendez-vous | [Calendly 30 min](https://calendly.com/administrator-italianrealestatelawyers/30min) |
 | ✉️ Email | info@italycare360.com |
@@ -95,6 +97,8 @@ Via Corso del Popolo 222, 45100 Rovigo, Italie
 📧 [info@italycare360.com](mailto:info@italycare360.com)
 📱 [+39 351 750 1164](tel:+393517501164)
 📸 [Instagram @italycare360](https://www.instagram.com/italycare360)
+📘 [Facebook ItalyCare 360](https://www.facebook.com/people/ItalyCare-360/61560213445080/)
+💼 [LinkedIn ITALYCARE 360](https://www.linkedin.com/company/italycare-360/)
 ▶️ [YouTube @italycare360](https://youtube.com/@italycare360)
 
 ---

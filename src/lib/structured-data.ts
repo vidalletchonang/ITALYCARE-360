@@ -45,6 +45,8 @@ const OPENING_HOURS = [
 
 const SAME_AS = [
   'https://www.instagram.com/italycare360',
+  'https://www.facebook.com/people/ItalyCare-360/61560213445080/',
+  'https://www.linkedin.com/company/italycare-360/',
   'https://youtube.com/@italycare360',
   'https://github.com/vidalletchonang/ITALYCARE-360',
 ]
